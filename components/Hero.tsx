@@ -67,7 +67,7 @@ const Hero = () => {
           data-aos="fade-up"
         >
           <Text
-          as={"h1"}
+          
             w={["100%", "100%", "80%", "80%", "80%", "80%"]}
             mt={["15px", "15px", "15px", "15px", "15px", "15px"]}
             fontSize={["30px", "30px", "30px", "50px", "50px", "40px"]}
@@ -81,7 +81,7 @@ const Hero = () => {
             Luxe Managements - Luxury AirBnBs, Simplified.
           </Text>
           <Text
-          as={"h2"}
+        
             fontSize={["18px", "18px", "24px", "24px", "24px", "24px"]}
             mt={["20px", "20px", "20px", "20px", "20px", "20px"]}
             textAlign={["center", "center", "left", "left", "left", "left"]}
