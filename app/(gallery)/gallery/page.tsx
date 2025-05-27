@@ -484,6 +484,7 @@ const Gallery = () => {
                     loading="lazy"
                     src={item.img.src}
                     alt={item.title}
+                
                     fill // makes the image cover the Box entirely
                     style={{
                       objectFit: "cover", // replicate background-size: cover

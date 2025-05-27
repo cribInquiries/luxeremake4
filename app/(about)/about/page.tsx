@@ -685,6 +685,7 @@ const About = () => {
                   loading="lazy"
                   src={members[currentSlide].src}
                   alt={`Slide ${currentSlide + 1}`}
+               
                   fill // in Next.js 13+, for older use layout="fill"
                   style={{
                     objectFit: "cover", // cover & center just like bg-size/bg-pos

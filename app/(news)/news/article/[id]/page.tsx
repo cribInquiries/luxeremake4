@@ -117,6 +117,7 @@ export default async function ArticlePage({ params }: Props) {
                       loading="lazy"
                       src={`https://images.pexels.com/photos/${article.pexelImgLink}/pexels-photo-${article.pexelImgLink}.jpeg`}
                       alt={article.title ?? ""}
+                  
                       fill // makes the img fill the Box
                       style={{
                         objectFit: "cover", // replicates background-size: cover

@@ -173,7 +173,7 @@ export default function HouseHeroParallax() {
                     quality={70}
                     loader={pexelsLoader}
                     src={product.link}
-                    alt={product.title || ""}
+                    alt={product.title}
                     layout="fill"
                     objectFit="cover"
                   />

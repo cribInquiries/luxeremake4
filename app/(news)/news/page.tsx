@@ -214,6 +214,7 @@ const NewsPage = () => {
                   loading="lazy"
                   src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg"
                   alt="A person working on a laptop in a modern office"
+              
                   fill // makes the img absolutely fill this Box
                   style={{
                     objectFit: "cover", // background-size: cover
@@ -361,7 +362,8 @@ const NewsPage = () => {
                       articles[0]?.featuredImage ||
                       "https://images.pexels.com/photos/1546168/pexels-photo-1546168.jpeg"
                     }
-                    alt={articles[0]?.title || ""}
+                    alt={articles[0]?.title}
+                 
                     fill // in Next.js 13+; for older versions use layout="fill"
                     style={{
                       objectFit: "cover", // replicates background-size: cover
@@ -518,7 +520,8 @@ const NewsPage = () => {
                         1546168 + index * 10
                       }.jpeg`
                     }
-                    alt={article.title || ""}
+                    alt={article.title}
+                
                     fill // in Next.js 13+, for older versions use layout="fill"
                     style={{
                       objectFit: "cover", // replicates background-size: cover

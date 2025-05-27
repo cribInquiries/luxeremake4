@@ -69,7 +69,7 @@ const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
           quality={70}
           loading="lazy"
           src={src}
-          alt={article.title || ""}
+          alt={article.title}
           fill // makes the image fill the Box
           style={{
             objectFit: "cover", // replicates backgroundSize="cover"
