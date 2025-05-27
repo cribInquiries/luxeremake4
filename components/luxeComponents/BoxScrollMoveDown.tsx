@@ -5,6 +5,7 @@ import Image from "next/image";
 import GalleryImgScreenShot from "@/public/images/webImages/GalleryImgScreenShot.png";
 import { Box, HStack, Text } from "@chakra-ui/react";
 import { useRouter } from "next/navigation";
+import TitleSubheading from "./Text/titleSubheading";
 export function BoxScrollMoveDown() {
   const router = useRouter();
   return (
@@ -16,51 +17,14 @@ export function BoxScrollMoveDown() {
               w={["100%", "100%", "100%", "100%", "100%", "100%"]}
               mb={["20px", "20px", "20px", "20px", "20px", "50px"]}
             >
-              <Text
-                as={"h2"}
-                data-aos="fade-up"
-                w={["100%", "100%", "100%", "100%", "100%", "100%"]}
-                mt={["15px", "15px", "15px", "15px", "15px", "15px"]}
-                fontSize={["25px", "25px", "25px", "50px", "50px", "50px"]}
-                fontWeight={700}
-                fontFamily={"arial"}
-                bgClip="text"
-                textAlign={[
-                  "center",
-                  "center",
-                  "center",
-                  "center",
-                  "center",
-                  "center",
-                ]}
-                color={"black"}
-                bgGradient="linear(to-r, teal, blue)"
-              >
-                How our Service Gets You Started
-              </Text>
-              <Text
-                data-aos="fade-up"
-                as={"h3"}
-                fontSize={["16px", "16px", "16px", "18px", "18px", "18px"]}
-                mt={["20px", "20px", "20px", "20px", "20px", "20px"]}
-                textAlign={[
-                  "center",
-                  "center",
-                  "center",
-                  "center",
-                  "center",
-                  "center",
-                ]}
-                fontFamily={"arial"}
-                color={"black"}
-                w={["100%", "100%", "100%", "100%", "100%", "100%"]} // !important
-                fontWeight={300}
+              <TitleSubheading
+                title={"Get Started"}
+                subheading={
+                  "Learn how our Adelaide-based consultants can help you get started."
+                }
+              />
 
-              >
-                Learn how our Adelaide-based consultants can help you get
-                started with personalized services, advice and expert
-                consultation every step of the way.
-              </Text>
+             
               <HStack
                 data-aos="fade-up"
                 justify={[
@@ -77,7 +41,7 @@ export function BoxScrollMoveDown() {
                 zIndex={3}
               >
                 <Box
-                as={"button"}
+                  as={"button"}
                   data-aos="fade-up"
                   mt={"50px"}
                   display={"flex"}

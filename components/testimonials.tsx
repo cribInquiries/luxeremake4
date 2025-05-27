@@ -109,7 +109,7 @@ const Testimonials = () => {
               data-aos="fade-up"
               w={["100%", "100%", "80%", "80%", "80%", "80%"]}
               mt={["15px", "15px", "15px", "15px", "15px", "15px"]}
-              fontSize={["25px", "25px", "25px", "50px", "50px", "50px"]}
+                    textStyle={"heading"}
               fontWeight={700}
               fontFamily={"arial"}
               bgClip="text"
@@ -121,7 +121,7 @@ const Testimonials = () => {
               Look What Our Customers Say!
             </Text>
             <Text
-              fontSize={["16px", "16px", "16px", "18px", "18px", "18px"]}
+              textStyle={"smallText"}
               mt={["20px", "20px", "20px", "20px", "20px", "20px"]}
               textAlign={["center", "center", "left", "left", "left", "left"]}
               fontFamily={"arial"}
@@ -231,7 +231,7 @@ const Testimonials = () => {
             >
               <Text
                 as="h4"
-                fontSize={{ base: "18px", md: "20px" }}
+               textStyle={"basicText"}
                 lineHeight="1.6"
                 color="rgba(0,0,0,0.8)"
                 fontFamily="arial"
@@ -283,7 +283,7 @@ const Testimonials = () => {
               {/* Author name */}
               <Box>
                 <Text
-                  fontSize={{ base: "16px", md: "18px" }}
+                  textStyle={"smallText"}
                   fontWeight="700"
                   color="black"
                   fontFamily="arial"
@@ -291,7 +291,7 @@ const Testimonials = () => {
                   {reviews[currentSlide].name}
                 </Text>
                 <Text
-                  fontSize={{ base: "14px", md: "15px" }}
+                textStyle={"smallText"}
                   color="rgba(0,0,0,0.6)"
                   fontFamily="arial"
                 >

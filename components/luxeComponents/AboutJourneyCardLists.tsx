@@ -457,7 +457,7 @@ const AboutJourneyCardLists = () => {
         textAlign="center"
       >
         <Text
-          fontSize={["28px", "32px", "36px"]}
+          textStyle={"heading"}
           fontWeight="700"
           fontFamily="arial"
           color="black"
@@ -467,7 +467,7 @@ const AboutJourneyCardLists = () => {
         </Text>
 
         <Text
-          fontSize={["17px", "18px", "20px"]}
+          textStyle={"smallText"}
           lineHeight="1.8"
           fontFamily="arial"
           color="#555"
@@ -483,7 +483,7 @@ const AboutJourneyCardLists = () => {
 
         <Box
           display="inline-block"
-          backgroundColor=" #0A0F29"
+          bg="#0A0F29"
           color="white"
           paddingX="40px"
           paddingY="20px"
@@ -492,7 +492,7 @@ const AboutJourneyCardLists = () => {
           fontSize="18px"
           cursor="pointer"
           _hover={{
-            backgroundColor: "#222",
+            bg: "#000",
             transform: "translateY(-3px)",
             boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
             transition: "all 0.3s ease",
@@ -507,5 +507,26 @@ const AboutJourneyCardLists = () => {
     </Box>
   );
 };
+
+//  <Box
+//               ml={{ md: "16px", lg: "24px" }}
+//               bg="#0A0F29"
+//               color="white"
+//               px={{ md: "16px", lg: "20px" }}
+//               py="10px"
+//               borderRadius="4px"
+//               cursor="pointer"
+//               transition="all 0.2s ease"
+//               _hover={{ bg: "#000" }}
+//               onClick={() => handleNavigate("/contact")}
+//             >
+//               <Text
+//                 fontSize={{ md: "13px", lg: "14px" }}
+//                 fontWeight="500"
+//                 whiteSpace="nowrap"
+//               >
+//                 Get a Quote
+//               </Text>
+//             </Box>
 
 export default AboutJourneyCardLists;

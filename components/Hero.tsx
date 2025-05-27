@@ -42,13 +42,7 @@ const Hero = () => {
         flexDirection={"column"}
         justifyContent={"center"}
         alignItems={"center"}
-        fontSize={{
-          base: "40px",
-          sm: "40px",
-          md: "50px",
-          lg: "76px",
-          xl: "96px",
-        }}
+        textStyle={"display"}
         fontWeight={{ base: "400", sm: "400", md: "400", lg: "400", xl: "400" }}
         fontFamily={"arial"}
       >
@@ -67,11 +61,11 @@ const Hero = () => {
           data-aos="fade-up"
         >
           <Text
-          as={"h2"}
+            as={"h2"}
             data-aos="fade-up"
             w={["100%", "100%", "80%", "80%", "80%", "80%"]}
             mt={["15px", "15px", "15px", "15px", "15px", "15px"]}
-            fontSize={["30px", "30px", "30px", "40px", "40px", "40px"]}
+            textStyle={"heading"}
             fontWeight={700}
             fontFamily={"arial"}
             bgClip="text"
@@ -79,12 +73,12 @@ const Hero = () => {
             color={"black"}
             bgGradient="linear(to-r, teal, blue)"
           >
-            Luxe Managements - Luxury AirBnBs, Simplified.
+           Luxury AirBnBs, Simplified.
           </Text>
           <Text
-                    as={"h3"}
+            as={"h3"}
             data-aos="fade-up"
-            fontSize={["18px", "18px", "24px", "24px", "24px", "24px"]}
+            textStyle={"smallText"}
             mt={["20px", "20px", "20px", "20px", "20px", "20px"]}
             textAlign={["center", "center", "left", "left", "left", "left"]}
             fontFamily={"arial"}

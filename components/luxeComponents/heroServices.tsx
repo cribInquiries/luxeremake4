@@ -30,7 +30,7 @@ const HeroServices = () => {
               as={"h2"}
               w={["100%", "100%", "100%", "100%", "100%", "100%"]}
               mt={["15px", "15px", "15px", "15px", "15px", "15px"]}
-              fontSize={["25px", "25px", "25px", "50px", "50px", "50px"]}
+              textStyle={"heading"}
               fontWeight={600}
               fontFamily={"arial"}
               bgClip="text"
@@ -42,7 +42,7 @@ const HeroServices = () => {
             </Text>
             <Text
               as={"h3"}
-              fontSize={["16px", "16px", "16px", "18px", "18px", "18px"]}
+              textStyle={"smallText"}
               mt={["20px", "20px", "20px", "20px", "20px", "20px"]}
               textAlign={["center", "center", "center", "left", "left", "left"]}
               fontFamily={"arial"}
@@ -165,17 +165,14 @@ const HeroServices = () => {
               >
                 <HStack>
                   <Text
+                    textStyle={"heading"}
                     as={"h4"}
-                    fontSize={["30px", "30px", "35px", "35px", "35px", "40px"]}
                     fontWeight={"700"}
                     color={"black"}
                   >
                     40%
                   </Text>
-                  <Text
-                    as={"h4"}
-                    fontSize={["12px", "16px", "14px", "14px", "16px", "16px"]}
-                  >
+                  <Text as={"h4"} textStyle={"smallText"}>
                     {" "}
                     Average Revenue Increase
                   </Text>
@@ -212,7 +209,7 @@ const HeroServices = () => {
               as={"h2"}
               w={["100%", "100%", "100%", "100%", "100%", "100%"]}
               mt={["15px", "15px", "15px", "15px", "15px", "15px"]}
-              fontSize={["25px", "25px", "25px", "50px", "50px", "50px"]}
+              textStyle={"heading"}
               fontWeight={600}
               fontFamily={"arial"}
               bgClip="text"
@@ -224,7 +221,7 @@ const HeroServices = () => {
             </Text>
             <Text
               as={"h3"}
-              fontSize={["16px", "16px", "16px", "18px", "18px", "18px"]}
+              textStyle={"basicText"}
               mt={["20px", "20px", "20px", "20px", "20px", "20px"]}
               textAlign={["center", "center", "center", "left", "left", "left"]}
               fontFamily={"arial"}
@@ -343,17 +340,14 @@ const HeroServices = () => {
               >
                 <HStack>
                   <Text
+                    textStyle={"heading"}
                     as={"h4"}
-                    fontSize={["30px", "30px", "35px", "35px", "35px", "40px"]}
                     fontWeight={"700"}
                     color={"black"}
                   >
                     35%
                   </Text>
-                  <Text
-                    as={"h4"}
-                    fontSize={["12px", "16px", "14px", "14px", "16px", "16px"]}
-                  >
+                  <Text textStyle={"smallText"} as={"h4"}>
                     {" "}
                     Higher Profit Margins
                   </Text>
@@ -369,7 +363,7 @@ const HeroServices = () => {
               as={"h2"}
               w={["100%", "100%", "100%", "100%", "100%", "100%"]}
               mt={["15px", "15px", "15px", "15px", "15px", "15px"]}
-              fontSize={["25px", "25px", "25px", "50px", "50px", "50px"]}
+              textStyle={"heading"}
               fontWeight={600}
               fontFamily={"arial"}
               bgClip="text"
@@ -381,7 +375,7 @@ const HeroServices = () => {
             </Text>
             <Text
               as={"h3"}
-              fontSize={["16px", "16px", "16px", "18px", "18px", "18px"]}
+              textStyle={"smallText"}
               mt={["20px", "20px", "20px", "20px", "20px", "20px"]}
               textAlign={["center", "center", "center", "left", "left", "left"]}
               fontFamily={"arial"}
@@ -462,7 +456,7 @@ const HeroServices = () => {
               as={"h2"}
               w={["100%", "100%", "100%", "100%", "100%", "100%"]}
               mt={["15px", "15px", "15px", "15px", "15px", "15px"]}
-              fontSize={["25px", "25px", "25px", "50px", "50px", "50px"]}
+              textStyle={"heading"}
               fontWeight={600}
               fontFamily={"arial"}
               bgClip="text"
@@ -474,7 +468,7 @@ const HeroServices = () => {
             </Text>
             <Text
               as={"h3"}
-              fontSize={["16px", "16px", "16px", "18px", "18px", "18px"]}
+              textStyle={"smallText"}
               mt={["20px", "20px", "20px", "20px", "20px", "20px"]}
               textAlign={["center", "center", "center", "left", "left", "left"]}
               fontFamily={"arial"}
@@ -598,16 +592,13 @@ const HeroServices = () => {
                 <HStack>
                   <Text
                     as={"h4"}
-                    fontSize={["30px", "30px", "35px", "35px", "35px", "40px"]}
+                    textStyle={"heading"}
                     fontWeight={"700"}
                     color={"black"}
                   >
                     25%
                   </Text>
-                  <Text
-                    as={"h4"}
-                    fontSize={["12px", "16px", "14px", "14px", "16px", "16px"]}
-                  >
+                  <Text textStyle={"smallText"} as={"h4"}>
                     {" "}
                     Reduced Operating Expenses
                   </Text>

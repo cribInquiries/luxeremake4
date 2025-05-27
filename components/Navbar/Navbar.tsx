@@ -78,11 +78,11 @@ const Navbar = () => {
                 index !== items.length - 1 ? "1px solid #F5F5F5" : "none"
               }
             >
-              <Text fontSize="15px" fontWeight="500" mb="4px">
+              <Text  textStyle={"smallText"} fontWeight="500" mb="4px">
                 {item.label}
               </Text>
               {item.description && (
-                <Text fontSize="13px" color="#666" lineHeight="1.4">
+                <Text  textStyle={"smallText"} color="#666" lineHeight="1.4">
                   {item.description}
                 </Text>
               )}
@@ -91,7 +91,7 @@ const Navbar = () => {
         </Box>
         <Box p="12px 20px" bg="#F9F9F9" borderTop="1px solid #F5F5F5">
           <Text
-            fontSize="13px"
+          textStyle={"smallText"}
             fontWeight="500"
             color="#555"
             cursor="pointer"
@@ -136,14 +136,14 @@ const Navbar = () => {
               setMobileMenuOpen(false);
             }}
           >
-            <Text fontSize="15px" fontWeight="500">
+            <Text textStyle={"smallText"} fontWeight="500">
               {item.label}
             </Text>
           </Box>
         ))}
         <Box py="12px" borderTop="1px solid #eee">
           <Text
-            fontSize="13px"
+           textStyle={"smallText"}
             fontWeight="500"
             color="#555"
             cursor="pointer"
@@ -290,20 +290,20 @@ const Navbar = () => {
         >
           <Box display="flex" alignItems="center" flexWrap="wrap">
             <Text
-              fontSize="13px"
+              textStyle={"smallText"}
               color="#666"
               mr="24px"
               mb={{ base: "4px", sm: "0" }}
             >
               Luxury Property Management
             </Text>
-            <Text fontSize="13px" color="#666">
+            <Text  textStyle={"smallText"} color="#666">
               info@luxemanagement.com
             </Text>
           </Box>
           <Box display="flex" alignItems="center" flexWrap="wrap">
             <Text
-              fontSize="13px"
+             textStyle={"smallText"}
               color="#666"
               mr="24px"
               mb={{ base: "4px", sm: "0" }}
@@ -352,7 +352,7 @@ const Navbar = () => {
             </Box>
             <Box>
               <Text
-                fontSize={{ base: "16px", md: "20px" }}
+             textStyle={"smallText"}
                 fontWeight="600"
                 letterSpacing="0.2px"
                 fontFamily="arial"
@@ -362,7 +362,7 @@ const Navbar = () => {
                 Luxe Managements
               </Text>
               <Text
-                fontSize={{ base: "10px", md: "12px" }}
+              textStyle={"smallText"}
                 color="#777777"
                 letterSpacing="0.5px"
                 fontFamily="arial"
@@ -414,7 +414,7 @@ const Navbar = () => {
                   role="group"
                 >
                   <Text
-                    fontSize={{ md: "14px", lg: "16px" }}
+                   textStyle={"smallText"}
                     fontWeight={activePage === item.path ? "600" : "500"}
                     fontFamily="arial"
                     transition="all 0.2s ease"
@@ -499,7 +499,7 @@ const Navbar = () => {
               onClick={() => handleNavigate("/contact")}
             >
               <Text
-                fontSize={{ md: "13px", lg: "14px" }}
+            textStyle={"smallText"}
                 fontWeight="500"
                 whiteSpace="nowrap"
               >
@@ -545,7 +545,7 @@ const Navbar = () => {
                 }}
               >
                 <Text
-                  fontSize="16px"
+              textStyle={"smallText"}
                   fontWeight={activePage === item.path ? "600" : "500"}
                   color={activePage === item.path ? "#000" : "#444"}
                 >
@@ -560,7 +560,7 @@ const Navbar = () => {
                     }
                     transition="transform 0.3s ease"
                   >
-                    <Text fontSize="16px">↓</Text>
+                    <Text textStyle={"smallText"}>↓</Text>
                   </Box>
                 )}
               </Box>
@@ -587,21 +587,21 @@ const Navbar = () => {
             onClick={() => handleNavigate("/contact")}
             textAlign="center"
           >
-            <Text fontSize="15px" fontWeight="500">
+            <Text  textStyle={"smallText"} fontWeight="500">
               Get a Quote
             </Text>
           </Box>
 
           {/* Mobile Contact Info */}
           <Box mt="32px" pt="20px" borderTop="1px solid #eee">
-            <Text fontSize="14px" color="#666" mb="12px">
+            <Text textStyle={"smallText"} color="#666" mb="12px">
               info@luxemanagement.com
             </Text>
-            <Text fontSize="14px" color="#666" mb="12px">
+            <Text  textStyle={"smallText"} color="#666" mb="12px">
               +61 406 631 461
             </Text>
             <Text
-              fontSize="14px"
+           textStyle={"smallText"}
               fontWeight="500"
               color="#333"
               cursor="pointer"

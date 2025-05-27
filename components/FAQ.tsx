@@ -196,7 +196,7 @@ const FAQ = ({ type }: { type: string }) => {
         {/* FAQ Title Section */}
         <Box textAlign="center" mb={16} position="relative">
           <Text
-            fontSize={["42px", "48px", "56px"]}
+              textStyle={"title"}
             fontWeight="800"
             color="#0A1029"
             mb={3}
@@ -220,7 +220,7 @@ const FAQ = ({ type }: { type: string }) => {
           </Text>
           <Text
             as="h3"
-            fontSize={["18px", "20px", "22px"]}
+   textStyle={"basicText"}
             color="#4B5563"
             fontWeight="400"
             maxWidth="1200px"
@@ -262,7 +262,7 @@ const FAQ = ({ type }: { type: string }) => {
               transition="all 0.2s"
               textTransform="capitalize"
               fontWeight={activeCategory === category ? "600" : "400"}
-              fontSize="15px"
+textStyle={"smallText"}
             >
               {category}
             </Box>
@@ -308,13 +308,14 @@ const FAQ = ({ type }: { type: string }) => {
                   {/* Icon indicator */}
 
                   <Text
-                    fontSize={["17px", "18px", "19px"]}
+                 
                     fontWeight="600"
                     color={openIndex === index ? "#0A1029" : "#111827"}
                     pr={10}
                     flex="1"
                     transition="all 0.2s"
                     as={"h4"}
+               textStyle={"basicText"}
                   >
                     {faq.question}
                   </Text>
@@ -347,7 +348,7 @@ const FAQ = ({ type }: { type: string }) => {
                 >
                   <Text
                   as={'h4'}
-                    fontSize={["15px", "16px", "17px"]}
+                 textStyle={"smallText"}
                     color="#4B5563"
                     lineHeight="1.8"
                     position="relative"
@@ -387,10 +388,10 @@ const FAQ = ({ type }: { type: string }) => {
           border="1px solid #E5E7EB"
         >
           <Box flex="1">
-            <Text fontSize="22px" fontWeight="700" color="#0A1029" mb={2} as={'h3'}>
+            <Text textStyle={"basicText"} fontWeight="700" color="#0A1029" mb={2} as={'h3'}>
               Still have questions?
             </Text>
-            <Text fontSize="16px" color="#4B5563" lineHeight="1.6" as={'h4'}>
+            <Text textStyle={"smallText"} color="#4B5563" lineHeight="1.6" as={'h4'}>
               Our team is ready to provide personalized answers to all your
               questions about AirBnB management and how we can help maximize
               your property's potential.
@@ -407,7 +408,7 @@ const FAQ = ({ type }: { type: string }) => {
             px={6}
             borderRadius="full"
             fontWeight="600"
-            fontSize="16px"
+           
             cursor="pointer"
             _hover={{ bg: "#1A2142", transform: "translateY(-2px)" }}
             transition="all 0.3s"
@@ -415,7 +416,7 @@ const FAQ = ({ type }: { type: string }) => {
             whiteSpace="nowrap"
             onClick={() => router.push("/contact")}
           >
-            <Text mr={2}>Contact us</Text>
+            <Text mr={2} textStyle={"smallText"}>Contact us</Text>
             <ArrowRight size={16} />
           </Box>
         </Box>

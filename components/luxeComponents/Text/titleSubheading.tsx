@@ -19,7 +19,7 @@ const TitleSubheading = ({
       >
         <Text
           as={"h2"}
-          fontSize={["40px", "40px", "40px", "60px", "60px", "60px"]}
+          textStyle={"title"}
           fontWeight={700}
           fontFamily={"arial"}
           bgClip="text"
@@ -31,8 +31,8 @@ const TitleSubheading = ({
         <Text
           as={"h3"}
           data-aos="fade-up"
-          w={["90%", "90%", "90%", "50%", "50%", "50%"]}
-          fontSize={["18px", "18px", "18px", "26px", "26px", "26px"]}
+          w={["90%", "90%", "90%", "80%", "80%", "80%"]}
+          textStyle={"basicText"}
           // mt={["20px", "20px", "20px", "20px", "20px", "20px"]}
 
           fontFamily={"arial"}

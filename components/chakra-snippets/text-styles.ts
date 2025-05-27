@@ -10,11 +10,12 @@ export const textStyles = defineTextStyles({
         md:   "14px",
         lg:   "15px",
         xl:   "16px",
-        "2xl":"16px",
+        "2xl":"17px",
       },
    
     },
   },
+  //  textStyle={"smallText"}
   basicText: {
     value: {
       fontSize: {
@@ -23,11 +24,12 @@ export const textStyles = defineTextStyles({
         md:   "20px",
         lg:   "22px",
         xl:   "24px",
-        "2xl":"24px",
+        "2xl":"26px",
       },
      
     },
   },
+  // textStyle={"basicText"}
   subheading: {
     value: {
       fontSize: {
@@ -36,11 +38,12 @@ export const textStyles = defineTextStyles({
         md:   "24px",
         lg:   "26px",
         xl:   "28px",
-        "2xl":"28px",
+        "2xl":"30px",
       },
    
     },
   },
+  // textStyle={"subheading"}
   heading: {
     value: {
       fontSize: {
@@ -49,11 +52,12 @@ export const textStyles = defineTextStyles({
         md:   "32px",
         lg:   "36px",
         xl:   "40px",
-        "2xl":"40px",
+        "2xl":"44px",
       },
    
     },
   },
+  // textStyle={"heading"}
   title: {
     value: {
       fontSize: {
@@ -62,11 +66,12 @@ export const textStyles = defineTextStyles({
         md:   "50px",
         lg:   "60px",
         xl:   "80px",
-        "2xl":"80px",
+        "2xl":"90px",
       },
      
     },
   },
+  // textStyle={"title"}
   display: {
     value: {
       fontSize: {
@@ -75,9 +80,11 @@ export const textStyles = defineTextStyles({
         md:   "70px",
         lg:   "80px",
         xl:   "100px",
-        "2xl":"100px",
+        "2xl":"110px",
       },
      
     },
   },
 })
+
+// textStyle={"display"}

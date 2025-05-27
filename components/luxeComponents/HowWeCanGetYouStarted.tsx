@@ -82,7 +82,7 @@ const HowWeCanGetYouStarted = () => {
       <BoxScrollMoveDown />
       {/* The image box scroll move down ----------------------------- */}
       <Box
-        mt={["-100px", "-100px", "-150px", "-150px", "-150px", "-150px"]}
+        mt={["-100px", "-100px", "-100px", "-100px", "-100px", "-100px"]}
         width="100%"
         position="relative"
         _before={{
@@ -182,7 +182,7 @@ const HowWeCanGetYouStarted = () => {
 
                 {/* Title */}
                 <Text
-                  fontSize={["32px", "36px", "40px"]}
+                  textStyle={"heading"}
                   fontWeight="700"
                   fontFamily="arial"
                   color="black"
@@ -194,20 +194,10 @@ const HowWeCanGetYouStarted = () => {
                 </Text>
 
                 {/* Subtitle */}
-                <Text
-                  fontSize={["20px", "22px", "24px"]}
-                  fontWeight="500"
-                  fontFamily="arial"
-                  color="#555"
-                  marginBottom="30px"
-                  as={"h3"}
-                >
-                  {item.subtitle}
-                </Text>
 
                 {/* Description */}
                 <Text
-                  fontSize={["16px", "17px", "18px"]}
+                  textStyle={"smallText"}
                   lineHeight="1.8"
                   fontFamily="arial"
                   color="#333"
@@ -255,11 +245,16 @@ const HowWeCanGetYouStarted = () => {
                           fontWeight="700"
                           color="#333"
                           marginBottom="8px"
-                        as={"h4"}
+                          as={"h4"}
                         >
                           {stat.value}
                         </Text>
-                        <Text fontSize="14px" fontWeight="500" color="#777"   as={"h4"}>
+                        <Text
+                          fontSize="14px"
+                          fontWeight="500"
+                          color="#777"
+                          as={"h4"}
+                        >
                           {stat.label}
                         </Text>
                       </Box>
@@ -358,7 +353,7 @@ const HowWeCanGetYouStarted = () => {
         textAlign="center"
       >
         <Text
-          fontSize={["28px", "32px", "36px"]}
+          textStyle={"heading"}
           fontWeight="700"
           fontFamily="arial"
           color="black"
@@ -369,7 +364,7 @@ const HowWeCanGetYouStarted = () => {
         </Text>
 
         <Text
-          fontSize={["17px", "18px", "20px"]}
+          textStyle={"smallText"}
           lineHeight="1.8"
           fontFamily="arial"
           color="#555"

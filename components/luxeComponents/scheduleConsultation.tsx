@@ -62,7 +62,7 @@ const ScheduleConsultation = () => {
                 px="4"
                 py="3"
                 borderRadius="full"
-                fontSize={["13px", "14px", "16px"]}
+            textStyle={"smallText"}
               >
                 <Box as="span" mr="1" display="inline-block" />
                 {benefit}
@@ -75,7 +75,7 @@ const ScheduleConsultation = () => {
             <Text
               color="white"
               fontWeight="700"
-              fontSize={["28px", "32px", "40px", "48px", "56px"]}
+           textStyle={"heading"}
               fontFamily="arial"
               lineHeight={["1.2", "1.1"]}
               letterSpacing="-0.02em"
@@ -87,7 +87,7 @@ const ScheduleConsultation = () => {
             {/* Subtitle */}
             <Text
               color="rgba(255, 255, 255, 0.9)"
-              fontSize={["14px", "16px", "18px", "20px", "22px"]}
+               textStyle={"basicText"}
              
               maxWidth="800px"
               mx="auto"
@@ -113,7 +113,7 @@ const ScheduleConsultation = () => {
                 px={["24px", "32px", "40px"]}
                 borderRadius="full"
               
-                fontSize={["14px", "15px", "16px"]}
+                textStyle={"smallText"}
                 fontWeight={isHovered ? "600" : "500"}
                 display="flex"
                 alignItems="center"
@@ -132,7 +132,7 @@ const ScheduleConsultation = () => {
                 _focus={{ outline: "none" }}
               >
                 <Box as={Calendar} size={18} mr="10px" display="inline-block" />
-                <Text>Schedule a consultation</Text>
+                <Text >Schedule a consultation</Text>
               </Box>
             </Box>
 
@@ -164,7 +164,7 @@ const ScheduleConsultation = () => {
               <Text
                 color="white"
                 fontWeight="600"
-                fontSize="20px"
+             textStyle={"smallText"}
                 fontFamily="sans"
               >
                 Schedule Your Free Consultation
