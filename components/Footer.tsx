@@ -32,6 +32,7 @@ const Footer = () => {
                 loading="lazy"
                 src={LuxeLogo || "/placeholder.svg"}
                 alt="Luxe Managements Logo"
+                title="Luxe Managements Logo"
               />
             </Box>
             <Text
@@ -64,6 +65,7 @@ const Footer = () => {
             <Box>
               <Text
                 as="a"
+                title="Luxe Managements Instagram"
                 href="https://www.instagram.com/luxemanagements/"
                 fontSize="14px"
                 color="gray.600"
@@ -90,6 +92,7 @@ const Footer = () => {
             <Box>
               <Text
                 as="a"
+                title="Luxe Managements Instagram"
                 href="https://www.instagram.com/luxemanagements/"
                 fontSize="14px"
                 color="gray.600"
@@ -116,6 +119,7 @@ const Footer = () => {
             <Box>
               <Text
                 as="a"
+                title="Luxe Managements Privacy Policy"
                 href="https://abr.business.gov.au/ABN/View?id=83943962982"
                 fontSize="14px"
                 color="gray.600"
@@ -127,6 +131,7 @@ const Footer = () => {
               </Text>
               <Text
                 as="a"
+                title="Luxe Managements Terms & Conditions"
                 href="https://abr.business.gov.au/ABN/View?id=83943962982"
                 fontSize="14px"
                 color="gray.600"

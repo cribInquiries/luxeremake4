@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     url: "/services",
     images: [
       {
-        url: "/services/og-image.jpg",
+        url: "/services/og-image.png",
         width: 1200,
         height: 630,
         alt: "Styled Airbnb interior by Luxe Managements",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: "Our Services | Luxe Managements",
     description:
       "Hosting, styling, cleaning, and guest care—see how we maximise your Airbnb returns.",
-    images: ["/services/og-image.jpg"],
+    images: ["/services/og-image.png"],
   },
 };
 

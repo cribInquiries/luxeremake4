@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     url: "/contact",
     images: [
       {
-        url: "/contact/og-image.jpg",
+        url: "/contact/og-image.png",
         width: 1200,
         height: 630,
         alt: "Luxe Managements team ready to assist",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: "Contact Us | Luxe Managements",
     description:
       "Reach out today to discuss your Airbnb hosting needs and how we can help.",
-    images: ["/contact/og-image.jpg"],
+    images: ["/contact/og-image.png"],
   },
 };
 const Layout = ({ children }: { children: React.ReactNode }) => {

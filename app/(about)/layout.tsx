@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     url: "/about",
     images: [
       {
-        url: "/about/og-image.jpg",
+        url: "/about/og-image.png",
         width: 1200,
         height: 630,
         alt: "Team at Luxe Managements office",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: "About Us | Luxe Managements",
     description:
       "Meet the team and learn why Luxe Managements is Adelaide’s top choice for Airbnb hosts.",
-    images: ["/about/og-image.jpg"],
+    images: ["/about/og-image.png"],
   },
 };
 

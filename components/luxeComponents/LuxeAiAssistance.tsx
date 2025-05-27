@@ -130,6 +130,7 @@ const LuxeAiAssistance = () => {
               loading="lazy"
               src={luxeLogo.src} // original src expression untouched
               alt={"Luxe Logo"}
+              title="Luxe Logo"
               fill // makes the image fill the Box
               style={{
                 objectFit: "cover", // replicates background-size: cover

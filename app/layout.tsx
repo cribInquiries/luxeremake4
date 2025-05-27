@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     siteName: "Luxe Managements",
     images: [
       {
-        url: "https://www.luxemanagements.com/og-image.jpg",
+        url: "https://www.luxemanagements.com/og-image.png",
         width: 1200,
         height: 630,
         alt: "Luxe Managements AirBnB property management",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Luxe Managements | AirBnB Property Management Adelaide",
     description: "Expert AirBnB management – cleaning, styling & guest care.",
-    images: ["https://www.luxemanagements.com/og-image.jpg"],
+    images: ["https://www.luxemanagements.com/og-image.png"],
   },
   icons: {
     icon: "/favicon.ico",

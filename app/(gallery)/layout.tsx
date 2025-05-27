@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     url: "/gallery",
     images: [
       {
-        url: "/gallery/og-image.jpg",
+        url: "/gallery/og-image.png",
         width: 1200,
         height: 630,
         alt: "Before and after Airbnb styling examples",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: "Gallery | Luxe Managements",
     description:
       "See before-and-after shots of our most stunning Airbnb makeovers.",
-    images: ["/gallery/og-image.jpg"],
+    images: ["/gallery/og-image.png"],
   },
 };
 

@@ -348,6 +348,7 @@ const Navbar = () => {
                 quality={70}
                 src={luxeLogo}
                 alt="Luxe Managements Logo"
+                  title="Luxe Managements Logo"
               />
             </Box>
             <Box>

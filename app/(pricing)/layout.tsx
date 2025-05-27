@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     url: "/pricing",
     images: [
       {
-        url: "/pricing/og-image.jpg",
+        url: "/pricing/og-image.png",
         width: 1200,
         height: 630,
         alt: "Pricing tiers overview",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: "Pricing Plans | Luxe Managements",
     description:
       "Discover our flexible pricing tiers and see which plan fits your Airbnb goals.",
-    images: ["/pricing/og-image.jpg"],
+    images: ["/pricing/og-image.png"],
   },
 };
 

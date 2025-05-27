@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     url: "/news",
     images: [
       {
-        url: "/news/og-image.jpg",
+        url: "/news/og-image.png",
         width: 1200,
         height: 630,
         alt: "Airbnb property featured in our news",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: "News & Updates | Luxe Managements",
     description:
       "Read about our latest launches, success stories, and Airbnb hosting tips.",
-    images: ["/news/og-image.jpg"],
+    images: ["/news/og-image.png"],
   },
 };
 
