@@ -211,7 +211,7 @@ const Services = () => {
                       quality={70}
                       loading="lazy"
                       src={service.img} // your original src left untouched
-                      alt={service.alt ?? ""}
+                      alt={service.title ?? ""}
                       fill // makes the image fill its container
                       style={{
                         objectFit: "cover", // replicates background-size: cover

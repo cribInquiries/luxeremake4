@@ -385,7 +385,7 @@ const AboutJourneyCardLists = () => {
                     quality={70}
                     loading="lazy"
                     src={item.img} // original src untouched
-                    alt={item.alt ?? ""}
+                    alt={item.title ?? ""}
                     fill // makes the image fill the Box
                     style={{
                       objectFit: "cover", // replicates background-size: cover

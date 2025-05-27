@@ -123,7 +123,7 @@ function ThumnailSlider() {
               <HStack justify="center" align="center" h="100%" w="100%">
                 <ImageWithLazyLoading
                   src={imgPreview[key as keyof ImgPreview]}
-                  alt={`image ${key}`}
+                  alt={`House's in our Gallery ${index + 1}`}
                   width={1400}
                   height={800}
                   style={{ borderRadius: "40px" }}

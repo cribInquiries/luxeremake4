@@ -108,7 +108,7 @@ export default function ImageCarousel() {
                 loading="lazy"
                 style={{ borderRadius: "4px" }}
                 src={img || "/placeholder.svg"}
-                alt={`thumbnail-${index}`}
+                alt={`Stunning house image thumbnail-${index}`}
                 width={100}
                 height={50}
                 objectFit="cover"

@@ -129,7 +129,7 @@ const LuxeAiAssistance = () => {
               quality={70}
               loading="lazy"
               src={luxeLogo.src} // original src expression untouched
-              alt={luxeLogo.alt || ""}
+              alt={"Luxe Logo"}
               fill // makes the image fill the Box
               style={{
                 objectFit: "cover", // replicates background-size: cover
@@ -175,7 +175,7 @@ const LuxeAiAssistance = () => {
                   quality={70}
                   loading="lazy"
                   src={luxeLogo.src} // original src expression untouched
-                  alt={luxeLogo.alt || ""}
+                  alt={"Luxe Logo"}
                   fill // Next.js 13+ API; use layout="fill" if on older Next.js
                   style={{
                     objectFit: "cover", // replicates background-size: cover
@@ -258,7 +258,7 @@ const LuxeAiAssistance = () => {
                     quality={70}
                     loading="lazy"
                     src={luxeLogo.src} // original src expression untouched
-                    alt={luxeLogo.alt || ""}
+                    alt={"Luxe Logo"}
                     fill // makes the image fill the Box
                     style={{
                       objectFit: "cover", // replicates background-size: cover

@@ -80,7 +80,7 @@ export function BoxScrollMoveDown() {
           quality={70}
           loading="lazy"
           src={GalleryImgScreenShot}
-          alt="hero"
+          alt="Gallery Screenshot"
           height={720}
           width={1400}
           className="mx-auto rounded-2xl object-cover h-full object-left-top"
