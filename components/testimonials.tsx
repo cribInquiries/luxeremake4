@@ -116,6 +116,7 @@ const Testimonials = () => {
               textAlign={["center", "center", "left", "left", "left", "left"]}
               color={"black"}
               bgGradient="linear(to-r, teal, blue)"
+              as={"h2"}
             >
               Look What Our Customers Say!
             </Text>
@@ -127,6 +128,7 @@ const Testimonials = () => {
               color={"black"}
               w={["100%", "100%", "80%", "80%", "80%", "80%"]}
               fontWeight={300}
+              as={"h3"}
             >
               Check out our numerous positive reviews from satisfied clients.
             </Text>
@@ -228,6 +230,7 @@ const Testimonials = () => {
               alignItems="flex-start"
             >
               <Text
+                as="h4"
                 fontSize={{ base: "18px", md: "20px" }}
                 lineHeight="1.6"
                 color="rgba(0,0,0,0.8)"

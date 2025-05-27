@@ -27,6 +27,7 @@ const HeroServices = () => {
         >
           <Box w={["95%", "95%", "95%", "600px", "600px", "600px"]}>
             <Text
+              as={"h2"}
               w={["100%", "100%", "100%", "100%", "100%", "100%"]}
               mt={["15px", "15px", "15px", "15px", "15px", "15px"]}
               fontSize={["25px", "25px", "25px", "50px", "50px", "50px"]}
@@ -40,6 +41,7 @@ const HeroServices = () => {
               Maximize Your AirBnB Earnings
             </Text>
             <Text
+              as={"h3"}
               fontSize={["16px", "16px", "16px", "18px", "18px", "18px"]}
               mt={["20px", "20px", "20px", "20px", "20px", "20px"]}
               textAlign={["center", "center", "center", "left", "left", "left"]}
@@ -163,6 +165,7 @@ const HeroServices = () => {
               >
                 <HStack>
                   <Text
+                    as={"h4"}
                     fontSize={["30px", "30px", "35px", "35px", "35px", "40px"]}
                     fontWeight={"700"}
                     color={"black"}
@@ -170,6 +173,7 @@ const HeroServices = () => {
                     40%
                   </Text>
                   <Text
+                    as={"h4"}
                     fontSize={["12px", "16px", "14px", "14px", "16px", "16px"]}
                   >
                     {" "}
@@ -205,6 +209,7 @@ const HeroServices = () => {
             display={["block", "block", "block", "none", "none", "none"]}
           >
             <Text
+              as={"h2"}
               w={["100%", "100%", "100%", "100%", "100%", "100%"]}
               mt={["15px", "15px", "15px", "15px", "15px", "15px"]}
               fontSize={["25px", "25px", "25px", "50px", "50px", "50px"]}
@@ -215,9 +220,10 @@ const HeroServices = () => {
               color={"black"}
               bgGradient="linear(to-r, teal, blue)"
             >
-              Professional AirBnB Management
+              Professional AirBnB Property Management
             </Text>
             <Text
+              as={"h3"}
               fontSize={["16px", "16px", "16px", "18px", "18px", "18px"]}
               mt={["20px", "20px", "20px", "20px", "20px", "20px"]}
               textAlign={["center", "center", "center", "left", "left", "left"]}
@@ -227,7 +233,7 @@ const HeroServices = () => {
               fontWeight={300}
             >
               Experience stress-free AirBnB management with our dedicated
-              Adelaide-based team gcg of professionals.
+              Adelaide-based team of professionals.
             </Text>
             <HStack
               justify={[
@@ -337,6 +343,7 @@ const HeroServices = () => {
               >
                 <HStack>
                   <Text
+                    as={"h4"}
                     fontSize={["30px", "30px", "35px", "35px", "35px", "40px"]}
                     fontWeight={"700"}
                     color={"black"}
@@ -344,6 +351,7 @@ const HeroServices = () => {
                     35%
                   </Text>
                   <Text
+                    as={"h4"}
                     fontSize={["12px", "16px", "14px", "14px", "16px", "16px"]}
                   >
                     {" "}
@@ -358,6 +366,7 @@ const HeroServices = () => {
             display={["none", "none", "none", "block", "block", "block"]}
           >
             <Text
+              as={"h2"}
               w={["100%", "100%", "100%", "100%", "100%", "100%"]}
               mt={["15px", "15px", "15px", "15px", "15px", "15px"]}
               fontSize={["25px", "25px", "25px", "50px", "50px", "50px"]}
@@ -371,6 +380,7 @@ const HeroServices = () => {
               Professional AirBnB Property Management
             </Text>
             <Text
+              as={"h3"}
               fontSize={["16px", "16px", "16px", "18px", "18px", "18px"]}
               mt={["20px", "20px", "20px", "20px", "20px", "20px"]}
               textAlign={["center", "center", "center", "left", "left", "left"]}
@@ -397,6 +407,7 @@ const HeroServices = () => {
               zIndex={3}
             >
               <Box
+                as={"button"}
                 my={"25px"}
                 display={"flex"}
                 alignItems={"center"}
@@ -448,6 +459,7 @@ const HeroServices = () => {
         >
           <Box w={["95%", "95%", "95%", "600px", "600px", "600px"]}>
             <Text
+              as={"h2"}
               w={["100%", "100%", "100%", "100%", "100%", "100%"]}
               mt={["15px", "15px", "15px", "15px", "15px", "15px"]}
               fontSize={["25px", "25px", "25px", "50px", "50px", "50px"]}
@@ -461,6 +473,7 @@ const HeroServices = () => {
               Comprehensive Guest Services
             </Text>
             <Text
+              as={"h3"}
               fontSize={["16px", "16px", "16px", "18px", "18px", "18px"]}
               mt={["20px", "20px", "20px", "20px", "20px", "20px"]}
               textAlign={["center", "center", "center", "left", "left", "left"]}
@@ -487,6 +500,7 @@ const HeroServices = () => {
               zIndex={3}
             >
               <Box
+                as={"button"}
                 my={"25px"}
                 display={"flex"}
                 alignItems={"center"}
@@ -583,6 +597,7 @@ const HeroServices = () => {
               >
                 <HStack>
                   <Text
+                    as={"h4"}
                     fontSize={["30px", "30px", "35px", "35px", "35px", "40px"]}
                     fontWeight={"700"}
                     color={"black"}
@@ -590,6 +605,7 @@ const HeroServices = () => {
                     25%
                   </Text>
                   <Text
+                    as={"h4"}
                     fontSize={["12px", "16px", "14px", "14px", "16px", "16px"]}
                   >
                     {" "}

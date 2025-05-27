@@ -10,7 +10,7 @@ import ScheduleConsultation from "@/components/luxeComponents/scheduleConsultati
 import HowWeCanGetYouStarted from "@/components/luxeComponents/HowWeCanGetYouStarted";
 import OurServices from "@/components/luxeComponents/OurServices";
 import StickyGallery from "@/components/houseScrollDown/StickyGallery";
-import FollowingScrollButton from "@/components/luxeComponents/followingScrollButton";
+// import FollowingScrollButton from "@/components/luxeComponents/followingScrollButton";
 
 // Lazy load the GalleryHeroSection component
 const GalleryHeroSection = React.lazy(
@@ -28,7 +28,7 @@ const Home = () => {
         }}
       />
 
-      <FollowingScrollButton />
+      {/* <FollowingScrollButton /> */}
       {/* Render Hero and other components normally */}
       <Hero />
       <OurServices />

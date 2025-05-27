@@ -17,6 +17,7 @@ export function BoxScrollMoveDown() {
               mb={["20px", "20px", "20px", "20px", "20px", "50px"]}
             >
               <Text
+                as={"h2"}
                 data-aos="fade-up"
                 w={["100%", "100%", "100%", "100%", "100%", "100%"]}
                 mt={["15px", "15px", "15px", "15px", "15px", "15px"]}
@@ -38,6 +39,8 @@ export function BoxScrollMoveDown() {
                 How our Service Gets You Started
               </Text>
               <Text
+                data-aos="fade-up"
+                as={"h3"}
                 fontSize={["16px", "16px", "16px", "18px", "18px", "18px"]}
                 mt={["20px", "20px", "20px", "20px", "20px", "20px"]}
                 textAlign={[
@@ -52,6 +55,7 @@ export function BoxScrollMoveDown() {
                 color={"black"}
                 w={["100%", "100%", "100%", "100%", "100%", "100%"]} // !important
                 fontWeight={300}
+
               >
                 Learn how our Adelaide-based consultants can help you get
                 started with personalized services, advice and expert
@@ -73,6 +77,8 @@ export function BoxScrollMoveDown() {
                 zIndex={3}
               >
                 <Box
+                as={"button"}
+                  data-aos="fade-up"
                   mt={"50px"}
                   display={"flex"}
                   alignItems={"center"}

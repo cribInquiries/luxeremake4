@@ -18,6 +18,7 @@ const TitleSubheading = ({
         px={["4%", "4%", "6%", "6%", "6%", "10%"]}
       >
         <Text
+          as={"h2"}
           fontSize={["40px", "40px", "40px", "60px", "60px", "60px"]}
           fontWeight={700}
           fontFamily={"arial"}
@@ -28,6 +29,8 @@ const TitleSubheading = ({
           {title}
         </Text>
         <Text
+          as={"h3"}
+          data-aos="fade-up"
           w={["90%", "90%", "90%", "50%", "50%", "50%"]}
           fontSize={["18px", "18px", "18px", "26px", "26px", "26px"]}
           // mt={["20px", "20px", "20px", "20px", "20px", "20px"]}

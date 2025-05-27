@@ -53,6 +53,8 @@ const GalleryHeroSection = () => {
             zIndex={3}
           >
             <Box
+            as={"button"}
+              data-aos="fade-up"
               my={"40px"}
               display={"flex"}
               alignItems={"center"}

@@ -188,6 +188,7 @@ const HowWeCanGetYouStarted = () => {
                   color="black"
                   lineHeight="1.2"
                   marginBottom="16px"
+                  as={"h2"}
                 >
                   {item.title}
                 </Text>
@@ -199,6 +200,7 @@ const HowWeCanGetYouStarted = () => {
                   fontFamily="arial"
                   color="#555"
                   marginBottom="30px"
+                  as={"h3"}
                 >
                   {item.subtitle}
                 </Text>
@@ -211,6 +213,7 @@ const HowWeCanGetYouStarted = () => {
                   color="#333"
                   fontWeight="400"
                   marginBottom="40px"
+                  as={"p"}
                 >
                   {item.description}
                 </Text>
@@ -252,10 +255,11 @@ const HowWeCanGetYouStarted = () => {
                           fontWeight="700"
                           color="#333"
                           marginBottom="8px"
+                        as={"h4"}
                         >
                           {stat.value}
                         </Text>
-                        <Text fontSize="14px" fontWeight="500" color="#777">
+                        <Text fontSize="14px" fontWeight="500" color="#777"   as={"h4"}>
                           {stat.label}
                         </Text>
                       </Box>
@@ -320,6 +324,7 @@ const HowWeCanGetYouStarted = () => {
                       fontWeight="600"
                       color="white"
                       textShadow="0 1px 2px rgba(0,0,0,0.3)"
+                      as={"h4"}
                     >
                       {item.id === 1
                         ? "Feel free to contact"
@@ -358,6 +363,7 @@ const HowWeCanGetYouStarted = () => {
           fontFamily="arial"
           color="black"
           marginBottom="30px"
+          as={"h2"}
         >
           Join Us on Our Journey
         </Text>
@@ -371,6 +377,7 @@ const HowWeCanGetYouStarted = () => {
           maxWidth="800px"
           margin="0 auto"
           marginBottom="50px"
+          as={"h3"}
         >
           As we continue to grow and innovate, we're looking for property owners
           who share our vision for exceptional hospitality and management
@@ -396,6 +403,7 @@ const HowWeCanGetYouStarted = () => {
           onClick={() => {
             router.push("/contact");
           }}
+          as={"button"}
         >
           <Text>Partner With Us</Text>
         </Box>
