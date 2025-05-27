@@ -62,7 +62,7 @@ const ScheduleConsultation = () => {
                 px="4"
                 py="3"
                 borderRadius="full"
-            textStyle={"smallText"}
+            textStyle={"basicText"}
               >
                 <Box as="span" mr="1" display="inline-block" />
                 {benefit}
@@ -87,7 +87,7 @@ const ScheduleConsultation = () => {
             {/* Subtitle */}
             <Text
               color="rgba(255, 255, 255, 0.9)"
-               textStyle={"smallText"}
+               textStyle={"basicText"}
              
               maxWidth="800px"
               mx="auto"
@@ -113,7 +113,7 @@ const ScheduleConsultation = () => {
                 px={["24px", "32px", "40px"]}
                 borderRadius="full"
               
-                textStyle={"smallText"}
+                textStyle={"basicText"}
                 fontWeight={isHovered ? "600" : "500"}
                 display="flex"
                 alignItems="center"
@@ -164,7 +164,7 @@ const ScheduleConsultation = () => {
               <Text
                 color="white"
                 fontWeight="600"
-             textStyle={"smallText"}
+             textStyle={"basicText"}
                 fontFamily="sans"
               >
                 Schedule Your Free Consultation

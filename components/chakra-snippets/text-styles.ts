@@ -2,7 +2,22 @@
 import { defineTextStyles } from "@chakra-ui/react"
 
 export const textStyles = defineTextStyles({
+
+  
   smallText: {
+    value: {
+      fontSize: {
+        base: "14px",
+        sm:   "14px",
+        md:   "14px",
+        lg:   "16px",
+        xl:   "16px",
+        "2xl":"16px",
+      },
+    },
+  },
+  
+  basicText: {
     value: {
       fontSize: {
         base: "16px",
@@ -14,9 +29,9 @@ export const textStyles = defineTextStyles({
       },
     },
   },
-  //  textStyle={"smallText"}
+  //  textStyle={"basicText"}
  
-  // textStyle={"smallText"}
+  // textStyle={"basicText"}
   subheading: {
     value: {
       fontSize: {

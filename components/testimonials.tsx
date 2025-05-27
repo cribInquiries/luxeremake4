@@ -121,7 +121,7 @@ const Testimonials = () => {
               Look What Our Customers Say!
             </Text>
             <Text
-              textStyle={"smallText"}
+              textStyle={"basicText"}
               mt={["20px", "20px", "20px", "20px", "20px", "20px"]}
               textAlign={["center", "center", "left", "left", "left", "left"]}
               fontFamily={"arial"}
@@ -231,7 +231,7 @@ const Testimonials = () => {
             >
               <Text
                 as="h4"
-               textStyle={"smallText"}
+               textStyle={"basicText"}
                 lineHeight="1.6"
                 color="rgba(0,0,0,0.8)"
                 fontFamily="arial"
@@ -283,7 +283,7 @@ const Testimonials = () => {
               {/* Author name */}
               <Box>
                 <Text
-                  textStyle={"smallText"}
+                  textStyle={"basicText"}
                   fontWeight="700"
                   color="black"
                   fontFamily="arial"
@@ -291,7 +291,7 @@ const Testimonials = () => {
                   {reviews[currentSlide].name}
                 </Text>
                 <Text
-                textStyle={"smallText"}
+                textStyle={"basicText"}
                   color="rgba(0,0,0,0.6)"
                   fontFamily="arial"
                 >

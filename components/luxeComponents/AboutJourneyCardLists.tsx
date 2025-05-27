@@ -467,7 +467,7 @@ const AboutJourneyCardLists = () => {
         </Text>
 
         <Text
-          textStyle={"smallText"}
+          textStyle={"basicText"}
           lineHeight="1.8"
           fontFamily="arial"
           color="#555"

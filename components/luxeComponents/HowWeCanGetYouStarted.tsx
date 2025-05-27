@@ -176,7 +176,7 @@ const HowWeCanGetYouStarted = () => {
                   marginBottom="24px"
                 >
                   <Text
-                          textStyle={"smallText"}
+                          textStyle={"basicText"}
                     fontWeight="600"
                     letterSpacing="1px"
                     color="#555"
@@ -202,7 +202,7 @@ const HowWeCanGetYouStarted = () => {
 
                 {/* Description */}
                 <Text
-                  textStyle={"smallText"}
+                  textStyle={"basicText"}
                   lineHeight="1.8"
                   fontFamily="arial"
                   color="#333"
@@ -304,7 +304,7 @@ const HowWeCanGetYouStarted = () => {
                     width="100%"
                   >
                     <Text
-                        textStyle={"smallText"}
+                        textStyle={"basicText"}
                       fontWeight="600"
                       color="white"
                       textShadow="0 1px 2px rgba(0,0,0,0.3)"
@@ -353,7 +353,7 @@ const HowWeCanGetYouStarted = () => {
         </Text>
 
         <Text
-          textStyle={"smallText"}
+          textStyle={"basicText"}
           lineHeight="1.8"
           fontFamily="arial"
           color="#555"
@@ -376,7 +376,7 @@ const HowWeCanGetYouStarted = () => {
           paddingY="20px"
           borderRadius="12px"
           fontWeight="600"
-       textStyle={"smallText"}
+       textStyle={"basicText"}
           cursor="pointer"
           _hover={{
             backgroundColor: "#222",

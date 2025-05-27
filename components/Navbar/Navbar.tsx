@@ -353,7 +353,7 @@ const Navbar = () => {
             </Box>
             <Box>
               <Text
-             textStyle={"smallText"}
+             textStyle={"basicText"}
                 fontWeight="600"
                 letterSpacing="0.2px"
                 fontFamily="arial"

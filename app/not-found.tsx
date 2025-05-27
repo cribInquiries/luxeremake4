@@ -28,7 +28,7 @@ const NotFound = () => (
 
         <Text
           mt={4}
-         textStyle={"smallText"}
+         textStyle={"basicText"}
           fontWeight="medium"
                  color="black"
         >
@@ -41,7 +41,7 @@ const NotFound = () => (
           mx="auto"
           color="gray.500"
           lineHeight="tall"
-    textStyle={"smallText"}
+    textStyle={"basicText"}
         >
           The link you followed may be broken, or the page has been removed.  
           Let’s get you back on track.
@@ -54,7 +54,7 @@ const NotFound = () => (
           mt={6}
           px={8}
           py={3}
-          textStyle={"smallText"}
+          textStyle={"basicText"}
           fontWeight="semibold"
           color="white"
      bg={"black"}

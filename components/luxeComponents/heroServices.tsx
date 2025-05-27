@@ -42,7 +42,7 @@ const HeroServices = () => {
             </Text>
             <Text
               as={"h3"}
-              textStyle={"smallText"}
+              textStyle={"basicText"}
               mt={["20px", "20px", "20px", "20px", "20px", "20px"]}
               textAlign={["center", "center", "center", "left", "left", "left"]}
               fontFamily={"arial"}
@@ -172,7 +172,7 @@ const HeroServices = () => {
                   >
                     40%
                   </Text>
-                  <Text as={"h4"} textStyle={"smallText"}>
+                  <Text as={"h4"} textStyle={"basicText"}>
                     {" "}
                     Average Revenue Increase
                   </Text>
@@ -221,7 +221,7 @@ const HeroServices = () => {
             </Text>
             <Text
               as={"h3"}
-              textStyle={"smallText"}
+              textStyle={"basicText"}
               mt={["20px", "20px", "20px", "20px", "20px", "20px"]}
               textAlign={["center", "center", "center", "left", "left", "left"]}
               fontFamily={"arial"}
@@ -347,7 +347,7 @@ const HeroServices = () => {
                   >
                     35%
                   </Text>
-                  <Text textStyle={"smallText"} as={"h4"}>
+                  <Text textStyle={"basicText"} as={"h4"}>
                     {" "}
                     Higher Profit Margins
                   </Text>
@@ -375,7 +375,7 @@ const HeroServices = () => {
             </Text>
             <Text
               as={"h3"}
-              textStyle={"smallText"}
+              textStyle={"basicText"}
               mt={["20px", "20px", "20px", "20px", "20px", "20px"]}
               textAlign={["center", "center", "center", "left", "left", "left"]}
               fontFamily={"arial"}
@@ -468,7 +468,7 @@ const HeroServices = () => {
             </Text>
             <Text
               as={"h3"}
-              textStyle={"smallText"}
+              textStyle={"basicText"}
               mt={["20px", "20px", "20px", "20px", "20px", "20px"]}
               textAlign={["center", "center", "center", "left", "left", "left"]}
               fontFamily={"arial"}
@@ -598,7 +598,7 @@ const HeroServices = () => {
                   >
                     25%
                   </Text>
-                  <Text textStyle={"smallText"} as={"h4"}>
+                  <Text textStyle={"basicText"} as={"h4"}>
                     {" "}
                     Reduced Operating Expenses
                   </Text>

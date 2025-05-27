@@ -220,7 +220,7 @@ const FAQ = ({ type }: { type: string }) => {
           </Text>
           <Text
             as="h3"
-   textStyle={"smallText"}
+   textStyle={"basicText"}
             color="#4B5563"
             fontWeight="400"
             maxWidth="1200px"
@@ -262,7 +262,7 @@ const FAQ = ({ type }: { type: string }) => {
               transition="all 0.2s"
               textTransform="capitalize"
               fontWeight={activeCategory === category ? "600" : "400"}
-textStyle={"smallText"}
+textStyle={"basicText"}
             >
               {category}
             </Box>
@@ -315,7 +315,7 @@ textStyle={"smallText"}
                     flex="1"
                     transition="all 0.2s"
                     as={"h4"}
-               textStyle={"smallText"}
+               textStyle={"basicText"}
                   >
                     {faq.question}
                   </Text>
@@ -348,7 +348,7 @@ textStyle={"smallText"}
                 >
                   <Text
                   as={'h4'}
-                 textStyle={"smallText"}
+                 textStyle={"basicText"}
                     color="#4B5563"
                     lineHeight="1.8"
                     position="relative"
@@ -388,10 +388,10 @@ textStyle={"smallText"}
           border="1px solid #E5E7EB"
         >
           <Box flex="1">
-            <Text textStyle={"smallText"} fontWeight="700" color="#0A1029" mb={2} as={'h3'}>
+            <Text textStyle={"basicText"} fontWeight="700" color="#0A1029" mb={2} as={'h3'}>
               Still have questions?
             </Text>
-            <Text textStyle={"smallText"} color="#4B5563" lineHeight="1.6" as={'h4'}>
+            <Text textStyle={"basicText"} color="#4B5563" lineHeight="1.6" as={'h4'}>
               Our team is ready to provide personalized answers to all your
               questions about AirBnB management and how we can help maximize
               your property's potential.
@@ -416,7 +416,7 @@ textStyle={"smallText"}
             whiteSpace="nowrap"
             onClick={() => router.push("/contact")}
           >
-            <Text mr={2} textStyle={"smallText"}>Contact us</Text>
+            <Text mr={2} textStyle={"basicText"}>Contact us</Text>
             <ArrowRight size={16} />
           </Box>
         </Box>

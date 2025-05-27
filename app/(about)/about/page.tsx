@@ -118,7 +118,7 @@ const About = () => {
               Our Story
             </Text>
             <Text
-                   textStyle={"smallText"}
+                   textStyle={"basicText"}
               mt={["20px", "20px", "20px", "20px", "20px", "20px"]}
               textAlign={["center", "center", "center", "left", "left", "left"]}
               fontFamily={"arial"}

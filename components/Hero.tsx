@@ -78,7 +78,7 @@ const Hero = () => {
           <Text
             as={"h3"}
             data-aos="fade-up"
-            textStyle={"smallText"}
+            textStyle={"basicText"}
             mt={["20px", "20px", "20px", "20px", "20px", "20px"]}
             textAlign={["center", "center", "left", "left", "left", "left"]}
             fontFamily={"arial"}
