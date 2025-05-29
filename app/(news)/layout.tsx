@@ -53,7 +53,7 @@ export default function NewsLayout({
     <>
       <Navbar />
       <main>{children}</main>
-      <FAQ type="general" />
+    
       <Footer />
     </>
   );

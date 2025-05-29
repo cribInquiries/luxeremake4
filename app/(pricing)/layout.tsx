@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer";
 // app/pricing/page.tsx
 import { Metadata } from "next";
+import FAQ from "@/components/FAQ";
 
 // eslint-disable-next-line import/no-unused-modules
 export const metadata: Metadata = {
@@ -45,8 +46,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     <>
       <Navbar />
       <div>{children}</div>
-
+      <FAQ type="general" />
       <Footer />
+      
     </>
   );
 };
