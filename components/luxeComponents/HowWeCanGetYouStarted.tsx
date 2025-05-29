@@ -15,7 +15,7 @@ const HowWeCanGetYouStarted = () => {
       icon: <Phone size={20} />,
       stats: [],
       category: "Step 1",
-      img: "https://images.pexels.com/photos/5292227/pexels-photo-5292227.jpeg",
+      img: "https://images.pexels.com/photos/5292227/pexels-photo-5292227.jpeg?auto=compress&cs=tinysrgb&q=75",
       alt: "A person calling on the phone",
     },
     {
@@ -26,7 +26,7 @@ const HowWeCanGetYouStarted = () => {
       icon: <User size={20} />,
       stats: [],
       category: "Step 2",
-      img: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+      img: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&q=75",
       alt: "A person shaking hands with a real estate agent",
     },
     {
@@ -37,7 +37,7 @@ const HowWeCanGetYouStarted = () => {
       icon: <Camera size={20} />,
       stats: [],
       category: "Step 3",
-      img: "https://images.pexels.com/photos/5082576/pexels-photo-5082576.jpeg",
+      img: "https://images.pexels.com/photos/5082576/pexels-photo-5082576.jpeg?auto=compress&cs=tinysrgb&q=75",
       alt: "A camera taking a photo of a house",
     },
     {
@@ -48,7 +48,7 @@ const HowWeCanGetYouStarted = () => {
       icon: <Cog size={20} />,
       stats: [],
       category: "Step 4",
-      img: "https://images.pexels.com/photos/7513208/pexels-photo-7513208.jpeg",
+      img: "https://images.pexels.com/photos/7513208/pexels-photo-7513208.jpeg?auto=compress&cs=tinysrgb&q=75",
       alt: "A person sitting on a couch with a laptop",
     },
   

@@ -32,7 +32,7 @@ const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
   //     alert(res.error);
   //   }
   // };
-  const src = `https://images.pexels.com/photos/${article.pexelImgLink}/pexels-photo-${article.pexelImgLink}.jpeg`;
+  const src = `https://images.pexels.com/photos/${article.pexelImgLink}/pexels-photo-${article.pexelImgLink}.jpeg?auto=compress&cs=tinysrgb&q=75`;
   return (
     <Box
       w={["100%", "48%", "31%"]}

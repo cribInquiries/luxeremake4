@@ -28,7 +28,7 @@ const AboutJourneyCardLists = () => {
         { label: "Market Gap", value: "Affordable Management" },
       ],
       category: "ORIGINS",
-      img: "https://images.pexels.com/photos/5077042/pexels-photo-5077042.jpeg",
+      img: "https://images.pexels.com/photos/5077042/pexels-photo-5077042.jpeg?auto=compress&cs=tinysrgb&q=75",
     },
     {
       id: 2,
@@ -42,7 +42,7 @@ const AboutJourneyCardLists = () => {
         { label: "Team Members", value: "2" },
       ],
       category: "MILESTONE",
-      img: "https://images.pexels.com/photos/261679/pexels-photo-261679.jpeg",
+      img: "https://images.pexels.com/photos/261679/pexels-photo-261679.jpeg?auto=compress&cs=tinysrgb&q=75",
     },
     {
       id: 3,
@@ -56,7 +56,7 @@ const AboutJourneyCardLists = () => {
         { label: "Process Efficiency", value: "↑ 35%" },
       ],
       category: "INNOVATION",
-      img: "https://images.pexels.com/photos/5816299/pexels-photo-5816299.jpeg",
+      img: "https://images.pexels.com/photos/5816299/pexels-photo-5816299.jpeg?auto=compress&cs=tinysrgb&q=75",
     },
     {
       id: 4,
@@ -70,7 +70,7 @@ const AboutJourneyCardLists = () => {
         { label: "Design Cost Savings", value: "40%" },
       ],
       category: "DESIGN",
-      img: "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg",
+      img: "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&q=75",
     },
     {
       id: 5,
@@ -84,7 +84,7 @@ const AboutJourneyCardLists = () => {
         { label: "Nights Hosted", value: "1,000+" },
       ],
       category: "SERVICE",
-      img: "https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg",
+      img: "https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg?auto=compress&cs=tinysrgb&q=75",
     },
     {
       id: 6,
@@ -98,7 +98,7 @@ const AboutJourneyCardLists = () => {
         { label: "Client Savings", value: "↑ 25%" },
       ],
       category: "GROWTH",
-      img: "https://images.pexels.com/photos/4108797/pexels-photo-4108797.jpeg",
+      img: "https://images.pexels.com/photos/4108797/pexels-photo-4108797.jpeg?auto=compress&cs=tinysrgb&q=75",
     },
     {
       id: 7,
@@ -112,7 +112,7 @@ const AboutJourneyCardLists = () => {
         { label: "Market Position", value: "#1 Luxury" },
       ],
       category: "EXPANSION",
-      img: "https://images.pexels.com/photos/31457993/pexels-photo-31457993.jpeg",
+      img: "https://images.pexels.com/photos/31457993/pexels-photo-31457993.jpeg?auto=compress&cs=tinysrgb&q=75",
     },
     {
       id: 8,
@@ -126,7 +126,7 @@ const AboutJourneyCardLists = () => {
         { label: "Growth Projection", value: "150%" },
       ],
       category: "VISION",
-      img: "https://images.pexels.com/photos/68704/pexels-photo-68704.jpeg",
+      img: "https://images.pexels.com/photos/68704/pexels-photo-68704.jpeg?auto=compress&cs=tinysrgb&q=75",
     },
   ];
   const router = useRouter();

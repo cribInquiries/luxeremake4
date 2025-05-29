@@ -22,7 +22,7 @@ const Photography = () => {
     <>
       <TopHeader
         imgUrl={
-          "https://images.pexels.com/photos/414781/pexels-photo-414781.jpeg"
+          "https://images.pexels.com/photos/414781/pexels-photo-414781.jpeg?auto=compress&cs=tinysrgb&q=75"
         }
         wordOne={"Photography"}
         wordTwo={""}
@@ -63,21 +63,21 @@ const Photography = () => {
             cardsData={[
               {
                 imgUrl:
-                  "https://images.pexels.com/photos/7579354/pexels-photo-7579354.jpeg",
+                  "https://images.pexels.com/photos/7579354/pexels-photo-7579354.jpeg?auto=compress&cs=tinysrgb&q=75",
                 title: "First Impressions",
                 description:
                   "Stunning photos create a powerful first impression, compelling potential guests to book your property.",
               },
               {
                 imgUrl:
-                  "https://images.pexels.com/photos/6667212/pexels-photo-6667212.jpeg",
+                  "https://images.pexels.com/photos/6667212/pexels-photo-6667212.jpeg?auto=compress&cs=tinysrgb&q=75",
                 title: "Feature Showcase",
                 description:
                   "We expertly highlight your property's unique features and amenities, setting it apart from competitors.",
               },
               {
                 imgUrl:
-                  "https://images.pexels.com/photos/5077049/pexels-photo-5077049.jpeg",
+                  "https://images.pexels.com/photos/5077049/pexels-photo-5077049.jpeg?auto=compress&cs=tinysrgb&q=75",
                 title: "Booking Catalyst",
                 description:
                   "Professional imagery leads to increased views, higher booking rates, and enhanced revenue.",

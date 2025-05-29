@@ -223,7 +223,7 @@ const PhotographyCardLists = () => {
               <Image
                 quality={70}
                 loading="lazy"
-                src="https://images.pexels.com/photos/776908/pexels-photo-776908.jpeg"
+                src="https://images.pexels.com/photos/776908/pexels-photo-776908.jpeg?auto=compress&cs=tinysrgb&q=75"
                 alt="Amazing camera shot of a house"
                 fill // makes the image fill the Box entirely
                 style={{
@@ -394,7 +394,7 @@ const PhotographyCardLists = () => {
               <Image
                 quality={70}
                 loading="lazy"
-                src="https://images.pexels.com/photos/1336858/pexels-photo-1336858.jpeg"
+                src="https://images.pexels.com/photos/1336858/pexels-photo-1336858.jpeg?auto=compress&cs=tinysrgb&q=75"
                     alt="Amazing camera shot of a house"
                 fill // makes the image fill the Box entirely
                 style={{
@@ -670,7 +670,7 @@ const PhotographyCardLists = () => {
               <Image
                 quality={70}
                 loading="lazy"
-                src="https://images.pexels.com/photos/9125753/pexels-photo-9125753.jpeg"
+                src="https://images.pexels.com/photos/9125753/pexels-photo-9125753.jpeg?auto=compress&cs=tinysrgb&q=75"
                     alt="Amazing camera shot of a house"
                 fill // makes the image absolutely fill the Box
                 style={{
@@ -839,7 +839,7 @@ const PhotographyCardLists = () => {
               <Image
                 quality={70}
                 loading="lazy"
-                src="https://images.pexels.com/photos/8408537/pexels-photo-8408537.jpeg"
+                src="https://images.pexels.com/photos/8408537/pexels-photo-8408537.jpeg?auto=compress&cs=tinysrgb&q=75"
                     alt="Amazing camera shot of a house"
                 fill // makes the image fill the Box entirely
                 style={{

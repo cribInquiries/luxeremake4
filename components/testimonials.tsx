@@ -11,42 +11,42 @@ const Testimonials = () => {
       name: "Danny L.",
       rating: 5,
       image:
-        "https://images.pexels.com/photos/31966004/pexels-photo-31966004.jpeg",
+        "https://images.pexels.com/photos/31966004/pexels-photo-31966004.jpeg?auto=compress&cs=tinysrgb&q=75",
     },
     {
       text: "Their professionalism and dedication were truly exceptional. They made the entire process seamless and stress-free.",
       name: "Cristy D.",
       rating: 4,
       image:
-        "https://images.pexels.com/photos/31971996/pexels-photo-31971996.jpeg",
+        "https://images.pexels.com/photos/31971996/pexels-photo-31971996.jpeg?auto=compress&cs=tinysrgb&q=75",
     },
     {
       text: "Fantastic service! They took the time to understand exactly what I was looking for and found the perfect match. I couldn't be happier!",
       rating: 5,
       name: "Sam B.",
       image:
-        "https://images.pexels.com/photos/31968521/pexels-photo-31968521.jpeg",
+        "https://images.pexels.com/photos/31968521/pexels-photo-31968521.jpeg?auto=compress&cs=tinysrgb&q=75",
     },
     {
       text: "Great experience from start to finish. They kept us informed and made sure we got the best deal possible. I would recommend them to anyone!",
       rating: 5,
       name: "Christian R.",
       image:
-        "https://images.pexels.com/photos/31934179/pexels-photo-31934179.jpeg",
+        "https://images.pexels.com/photos/31934179/pexels-photo-31934179.jpeg?auto=compress&cs=tinysrgb&q=75",
     },
     {
       text: "Very responsive and professional. They helped us find a great property in a short amount of time. Definitely recommend their services!",
       name: "John M.",
       rating: 4,
       image:
-        "https://images.pexels.com/photos/19512726/pexels-photo-19512726.jpeg",
+        "https://images.pexels.com/photos/19512726/pexels-photo-19512726.jpeg?auto=compress&cs=tinysrgb&q=75",
     },
     {
       text: "They were patient and helped us every step of the way. We appreciated their attention to detail and ability to handle any challenge that came up.",
       name: "Michael T.",
       rating: 4,
       image:
-        "https://images.pexels.com/photos/31921683/pexels-photo-31921683.jpeg",
+        "https://images.pexels.com/photos/31921683/pexels-photo-31921683.jpeg?auto=compress&cs=tinysrgb&q=75",
     },
   ]);
 

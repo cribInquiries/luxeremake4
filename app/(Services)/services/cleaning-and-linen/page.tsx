@@ -20,7 +20,7 @@ const CleaningAndLinen = () => {
   return (
     <>
       <TopHeader
-        imgUrl="https://images.pexels.com/photos/1454804/pexels-photo-1454804.jpeg"
+        imgUrl="https://images.pexels.com/photos/1454804/pexels-photo-1454804.jpeg?auto=compress&cs=tinysrgb&q=75"
         wordOne="Cleaning"
         wordTwo="Linen"
         description="Elevate your space with our meticulous cleaning process and premium linen service."
@@ -51,21 +51,21 @@ const CleaningAndLinen = () => {
             cardsData={[
               {
                 imgUrl:
-                  "https://images.pexels.com/photos/8467975/pexels-photo-8467975.jpeg",
+                  "https://images.pexels.com/photos/8467975/pexels-photo-8467975.jpeg?auto=compress&cs=tinysrgb&q=75",
                 title: "Premium Products",
                 description:
                   "We use only the finest, eco-friendly cleaning products to protect your property and the environment.",
               },
               {
                 imgUrl:
-                  "https://images.pexels.com/photos/4239142/pexels-photo-4239142.jpeg",
+                  "https://images.pexels.com/photos/4239142/pexels-photo-4239142.jpeg?auto=compress&cs=tinysrgb&q=75",
                 title: "        Expert Team",
                 description:
                   "Our highly trained professionals bring years of experience in luxury property care.",
               },
               {
                 imgUrl:
-                  "https://images.pexels.com/photos/4239130/pexels-photo-4239130.jpeg",
+                  "https://images.pexels.com/photos/4239130/pexels-photo-4239130.jpeg?auto=compress&cs=tinysrgb&q=75",
                 title: "  Impeccable Detail",
                 description:
                   "We meticulously clean every corner, ensuring no detail is overlooked.",

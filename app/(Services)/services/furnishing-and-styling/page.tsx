@@ -70,7 +70,7 @@ const FurnishingAndStyling = () => {
     <>
       <TopHeader
         imgUrl={
-          "https://images.pexels.com/photos/6782574/pexels-photo-6782574.jpeg"
+          "https://images.pexels.com/photos/6782574/pexels-photo-6782574.jpeg?auto=compress&cs=tinysrgb&q=75"
         }
         wordOne={"Furnishing"}
         wordTwo={"Styling"}
@@ -111,21 +111,21 @@ const FurnishingAndStyling = () => {
             cardsData={[
               {
                 imgUrl:
-                  "https://images.pexels.com/photos/1109541/pexels-photo-1109541.jpeg",
+                  "https://images.pexels.com/photos/1109541/pexels-photo-1109541.jpeg?auto=compress&cs=tinysrgb&q=75",
                 title: "Tailored Design",
                 description:
                   "We create a unique style that reflects your property's character and appeals to your target guests.",
               },
               {
                 imgUrl:
-                  "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg",
+                  "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&q=75",
                 title: "Quality Furnishings",
                 description:
                   "We source and install high-quality, durable furniture that looks great and stands up to frequent use.",
               },
               {
                 imgUrl:
-                  "https://images.pexels.com/photos/7607460/pexels-photo-7607460.jpeg",
+                  "https://images.pexels.com/photos/7607460/pexels-photo-7607460.jpeg?auto=compress&cs=tinysrgb&q=75",
                 title: "Attention to Detail",
                 description:
                   "From artwork to throw pillows, we perfect every detail to a cohesive, inviting space.",
@@ -270,7 +270,7 @@ const FurnishingAndStyling = () => {
               <Image
                 quality={70}
                 loading="lazy"
-                src="https://images.pexels.com/photos/7213549/pexels-photo-7213549.jpeg"
+                src="https://images.pexels.com/photos/7213549/pexels-photo-7213549.jpeg?auto=compress&cs=tinysrgb&q=75"
                 alt="Furnishing and Styling Image"
                 fill // makes the image fill the Box completely
                 style={{
@@ -561,7 +561,7 @@ const FurnishingAndStyling = () => {
                 <Image
                   quality={70}
                   loading="lazy"
-                  src="https://images.pexels.com/photos/31902663/pexels-photo-31902663.jpeg"
+                  src="https://images.pexels.com/photos/31902663/pexels-photo-31902663.jpeg?auto=compress&cs=tinysrgb&q=75"
                   alt="Premium Textiles"
                   fill // makes the image fill the Box
                   style={{
@@ -600,7 +600,7 @@ const FurnishingAndStyling = () => {
                 <Image
                   quality={70}
                   loading="lazy"
-                  src="https://images.pexels.com/photos/4352247/pexels-photo-4352247.jpeg"
+                  src="https://images.pexels.com/photos/4352247/pexels-photo-4352247.jpeg?auto=compress&cs=tinysrgb&q=75"
                   alt="Artisanal Furniture"
                   fill // makes the image fill the Box
                   style={{
@@ -639,7 +639,7 @@ const FurnishingAndStyling = () => {
                 <Image
                   quality={70}
                   loading="lazy"
-                  src="https://images.pexels.com/photos/7303902/pexels-photo-7303902.jpeg"
+                  src="https://images.pexels.com/photos/7303902/pexels-photo-7303902.jpeg?auto=compress&cs=tinysrgb&q=75"
                   alt="Curated Accessories"
                   fill // makes the image fill the Box
                   style={{

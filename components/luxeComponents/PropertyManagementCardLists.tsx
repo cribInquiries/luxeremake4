@@ -221,7 +221,7 @@ const PropertyManagementCardLists = () => {
               <Image
                 quality={70}
                 loading="lazy"
-                src="https://images.pexels.com/photos/7213549/pexels-photo-7213549.jpeg"
+                src="https://images.pexels.com/photos/7213549/pexels-photo-7213549.jpeg?auto=compress&cs=tinysrgb&q=75"
                 alt="stunning house image"
                 fill // makes the image fill the Box entirely
                 style={{
@@ -442,7 +442,7 @@ const PropertyManagementCardLists = () => {
               <Image
                 quality={70}
                 loading="lazy"
-                src="https://images.pexels.com/photos/5667613/pexels-photo-5667613.jpeg"
+                src="https://images.pexels.com/photos/5667613/pexels-photo-5667613.jpeg?auto=compress&cs=tinysrgb&q=75"
                 alt="Property Management Image"
                 fill // makes the image fill the Box entirely
                 style={{
@@ -765,7 +765,7 @@ const PropertyManagementCardLists = () => {
               <Image
                 quality={70}
                 loading="lazy"
-                src="https://images.pexels.com/photos/6195131/pexels-photo-6195131.jpeg"
+                src="https://images.pexels.com/photos/6195131/pexels-photo-6195131.jpeg?auto=compress&cs=tinysrgb&q=75"
            alt="Property Management Image"
                 fill // makes the image fill the Box entirely
                 style={{
@@ -984,7 +984,7 @@ const PropertyManagementCardLists = () => {
               <Image
                 quality={70}
                 loading="lazy"
-                src="https://images.pexels.com/photos/669621/pexels-photo-669621.jpeg"
+                src="https://images.pexels.com/photos/669621/pexels-photo-669621.jpeg?auto=compress&cs=tinysrgb&q=75"
            alt="Property Management Image"
                 fill // makes the image fill the Box entirely
                 style={{

@@ -115,7 +115,7 @@ export default async function ArticlePage({ params }: Props) {
                     <Image
                       quality={70}
                       loading="lazy"
-                      src={`https://images.pexels.com/photos/${article.pexelImgLink}/pexels-photo-${article.pexelImgLink}.jpeg`}
+                      src={`https://images.pexels.com/photos/${article.pexelImgLink}/pexels-photo-${article.pexelImgLink}.jpeg?auto=compress&cs=tinysrgb&q=75`}
                       alt={article.title ?? ""}
                   
                       fill // makes the img fill the Box
@@ -186,7 +186,7 @@ export default async function ArticlePage({ params }: Props) {
                     <Image
                       quality={70}
                       loading="lazy"
-                      src={`https://images.pexels.com/photos/${article.pexelImgLink2}/pexels-photo-${article.pexelImgLink2}.jpeg`}
+                      src={`https://images.pexels.com/photos/${article.pexelImgLink2}/pexels-photo-${article.pexelImgLink2}.jpeg?auto=compress&cs=tinysrgb&q=75`}
                       alt={article.title ?? ""}
                       fill // makes the img fill the Box
                       style={{

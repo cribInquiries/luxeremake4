@@ -223,7 +223,7 @@ const CleaningLinenCardLists = () => {
               <Image
                 quality={70}
                 loading="lazy"
-                src="https://images.pexels.com/photos/6474494/pexels-photo-6474494.jpeg"
+                src="https://images.pexels.com/photos/6474494/pexels-photo-6474494.jpeg?auto=compress&cs=tinysrgb&q=75"
                 alt="Cleaning Linen"
                 fill // makes the image fill the Box entirely
                 style={{
@@ -444,7 +444,7 @@ const CleaningLinenCardLists = () => {
               <Image
                 quality={70}
                 loading="lazy"
-                src="https://images.pexels.com/photos/31472229/pexels-photo-31472229.jpeg"
+                src="https://images.pexels.com/photos/31472229/pexels-photo-31472229.jpeg?auto=compress&cs=tinysrgb&q=75"
                 alt="Cleaning Linen"
                 fill // makes the image fill the Box entirely
                 style={{
@@ -767,7 +767,7 @@ const CleaningLinenCardLists = () => {
               <Image
                 quality={70}
                 loading="lazy"
-                src="https://images.pexels.com/photos/713297/pexels-photo-713297.jpeg"
+                src="https://images.pexels.com/photos/713297/pexels-photo-713297.jpeg?auto=compress&cs=tinysrgb&q=75"
                 alt="stunning house image"
                 fill // makes the image fill the Box entirely
                 style={{
@@ -986,7 +986,7 @@ const CleaningLinenCardLists = () => {
               <Image
                 quality={70}
                 loading="lazy"
-                src="https://images.pexels.com/photos/8293667/pexels-photo-8293667.jpeg"
+                src="https://images.pexels.com/photos/8293667/pexels-photo-8293667.jpeg?auto=compress&cs=tinysrgb&q=75"
                 alt="stunning house image"
                 fill // makes the image fill the Box entirely
                 style={{

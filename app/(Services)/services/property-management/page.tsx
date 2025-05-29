@@ -36,7 +36,7 @@ const PropertyManagement = () => {
   return (
     <>
       <TopHeader
-        imgUrl="https://images.pexels.com/photos/23224995/pexels-photo-23224995.jpeg"
+        imgUrl="https://images.pexels.com/photos/23224995/pexels-photo-23224995.jpeg?auto=compress&cs=tinysrgb&q=75"
         wordOne="Property"
         wordTwo="Management"
         description="Elevate your investment with our comprehensive suite of premium services designed to maximize returns and enhance guest experiences."
@@ -74,21 +74,21 @@ const PropertyManagement = () => {
             cardsData={[
               {
                 imgUrl:
-                  "https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg",
+                  "https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg?auto=compress&cs=tinysrgb&q=75",
                 title: "Bespoke Service",
                 description:
                   "  Tailored management solutions designed specifically for your unique property and investment goals.",
               },
               {
                 imgUrl:
-                  "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg",
+                  "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&q=75",
                 title: "Innovative Technology",
                 description:
                   "Advanced systems and tools that streamline operations and enhance guest satisfaction.",
               },
               {
                 imgUrl:
-                  "https://images.pexels.com/photos/16282306/pexels-photo-16282306.jpeg",
+                  "https://images.pexels.com/photos/16282306/pexels-photo-16282306.jpeg?auto=compress&cs=tinysrgb&q=75",
                 title: "Revenue Maximization",
                 description:
                   "Dynamic pricing and targeted marketing strategies that optimize your property's earning potential.",
@@ -181,7 +181,7 @@ const PropertyManagement = () => {
             <Image
               quality={70}
               loading="lazy"
-              src="https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg"
+              src="https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&q=75"
               alt="Property Management"
               fill // Next.js 13+ API; for older versions use layout="fill"
               style={{

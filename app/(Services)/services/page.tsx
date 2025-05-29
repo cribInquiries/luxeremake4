@@ -29,7 +29,7 @@ const Services = () => {
 
   const serviceItems = [
     {
-      img: "https://images.pexels.com/photos/3184416/pexels-photo-3184416.jpeg",
+      img: "https://images.pexels.com/photos/3184416/pexels-photo-3184416.jpeg?auto=compress&cs=tinysrgb&q=75",
       title: "Property Management",
       logo: <HomeIcon size={22} color="white" />,
       link: "services/property-management",
@@ -45,7 +45,7 @@ const Services = () => {
       ],
     },
     {
-      img: "https://images.pexels.com/photos/4239031/pexels-photo-4239031.jpeg",
+      img: "https://images.pexels.com/photos/4239031/pexels-photo-4239031.jpeg?auto=compress&cs=tinysrgb&q=75",
       title: "Cleaning & Linen",
       logo: <Sparkle size={22} color="white" />,
       link: "services/cleaning-and-linen",
@@ -61,7 +61,7 @@ const Services = () => {
       ],
     },
     {
-      img: "https://images.pexels.com/photos/5570226/pexels-photo-5570226.jpeg",
+      img: "https://images.pexels.com/photos/5570226/pexels-photo-5570226.jpeg?auto=compress&cs=tinysrgb&q=75",
       title: "Furnishing & Styling",
       logo: <Sofa size={22} color="white" />,
       link: "services/furnishing-and-styling",
@@ -77,7 +77,7 @@ const Services = () => {
       ],
     },
     {
-      img: "https://images.pexels.com/photos/30670960/pexels-photo-30670960.jpeg",
+      img: "https://images.pexels.com/photos/30670960/pexels-photo-30670960.jpeg?auto=compress&cs=tinysrgb&q=75",
       title: "Photography",
       logo: <Camera size={22} color="white" />,
       link: "services/photography",
@@ -98,7 +98,7 @@ const Services = () => {
     {
       name: "John Carter",
       role: "Property Owner",
-      image: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg",
+      image: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&q=75",
       quote:
         "Working with this team has been transformative for my property business. Their attention to detail and exceptional service has significantly increased my bookings and guest satisfaction.",
       rating: 5,
@@ -106,7 +106,7 @@ const Services = () => {
     {
       name: "Sophia Moore",
       role: "Real Estate Investor",
-      image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg",
+      image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&q=75",
       quote:
         "I've been working with them for over two years now, and they've consistently exceeded my expectations. My properties have never looked better, and the management is seamless.",
       rating: 5,
@@ -114,7 +114,7 @@ const Services = () => {
     {
       name: "Matt Carson",
       role: "Vacation Rental Host",
-      image: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg",
+      image: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&q=75",
       quote:
         "The photography service transformed my listing. Bookings increased by 40% after updating with their professional photos. Their eye for detail is unmatched.",
       rating: 5,

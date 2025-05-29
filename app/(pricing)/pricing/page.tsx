@@ -287,7 +287,7 @@ const Pricing = () => {
                 <Image
                   quality={70}
                   loading="lazy"
-                  src="https://images.pexels.com/photos/7651924/pexels-photo-7651924.jpeg"
+                  src="https://images.pexels.com/photos/7651924/pexels-photo-7651924.jpeg?auto=compress&cs=tinysrgb&q=75"
                   alt="Comprehensive Management"
                   title="Comprehensive Management"
 

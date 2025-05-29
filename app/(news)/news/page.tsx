@@ -212,7 +212,7 @@ const NewsPage = () => {
                 <Image
                   quality={70}
                   loading="lazy"
-                  src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg"
+                  src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&q=75"
                   alt="A person working on a laptop in a modern office"
               
                   fill // makes the img absolutely fill this Box
@@ -360,7 +360,7 @@ const NewsPage = () => {
                     loading="lazy"
                     src={
                       articles[0]?.featuredImage ||
-                      "https://images.pexels.com/photos/1546168/pexels-photo-1546168.jpeg"
+                      "https://images.pexels.com/photos/1546168/pexels-photo-1546168.jpeg?auto=compress&cs=tinysrgb&q=75"
                     }
                     alt={articles[0]?.title}
                  
@@ -518,7 +518,7 @@ const NewsPage = () => {
                       article.featuredImage ||
                       `https://images.pexels.com/photos/${1546168 + index * 10}/pexels-photo-${
                         1546168 + index * 10
-                      }.jpeg`
+                      }.jpeg?auto=compress&cs=tinysrgb&q=75`
                     }
                     alt={article.title}
                 
