@@ -23,9 +23,9 @@ const ClientProviderWithFallback = dynamic(
 
 // eslint-disable-next-line import/no-unused-modules
 export const metadata: Metadata = {
-  title: "Luxe Managements Airbnb Property Management Adelaide",
+  title: "Luxe Managements: Airbnb Property Management Adelaide",
   description:
-    "Comprehensive Airbnb management services designed to maximize your rental income in Adelaide.",
+    " Airbnb management services designed to maximize your rental income in Adelaide. Our comprehensive solutions include property styling, professional photography, cleaning, and guest care to ensure your property stands out and operates smoothly.",
   metadataBase: new URL("https://www.luxemanagements.com"),
   alternates: {
     canonical: "https://www.luxemanagements.com",
@@ -39,10 +39,10 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Luxe Managements Airbnb Property Management Adelaide",
+    title: "Luxe Managements: Airbnb Property Management Adelaide",
     description:
-    "Comprehensive Airbnb management services designed to maximize your rental income in Adelaide.",
-    url: "https://www.luxemanagements.com",
+    " Airbnb management services designed to maximize your rental income in Adelaide. Our comprehensive solutions include property styling, professional photography, cleaning, and guest care to ensure your property stands out and operates smoothly.",
+   url: "https://www.luxemanagements.com",
     siteName: "Luxe Managements",
     images: [
       {
@@ -56,8 +56,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Luxe Managements Airbnb Property Management Adelaide",
-    description: "Expert Airbnb management – cleaning, styling & guest care.",
+    title: "Luxe Managements: Airbnb Property Management Adelaide",
+    description:
+    " Airbnb management services designed to maximize your rental income in Adelaide. Our comprehensive solutions include property styling, professional photography, cleaning, and guest care to ensure your property stands out and operates smoothly.",
+  
     images: ["https://www.luxemanagements.com/og-image.jpg"],
   },
   icons: {
