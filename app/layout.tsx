@@ -31,7 +31,7 @@ export const viewport: Viewport = {
 
 
 export const metadata: Metadata = {
-  title: "Airbnb Property Management in Adelaide",
+  title: "Airbnb Property Management in Adelaide | Luxe Managements",
   description:
     "Boost your Airbnb rental income with comprehensive property management solutions in Adelaide, offering expert guidance, seamless hosting, and premium guest experiences.",
   metadataBase: new URL("https://www.luxemanagements.com"),
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://www.luxemanagements.com",
-    title: "Airbnb Property Management Adelaide",
+    title: "Airbnb Property Management Adelaide | Luxe Managements",
     description:
       "Boost your Airbnb rental income with comprehensive property management solutions in Adelaide, offering expert guidance, seamless hosting, and premium guest experiences.",
     siteName: "Luxe Managements",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Airbnb Property Management Adelaide",
+    title: "Airbnb Property Management Adelaide | Luxe Managements",
     description:
       "Boost your Airbnb rental income with comprehensive property management solutions in Adelaide, offering expert guidance, seamless hosting, and premium guest experiences.",
     images: ["https://www.luxemanagements.com/og-image.png"],
