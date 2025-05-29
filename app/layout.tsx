@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://www.luxemanagements.com",
-    title: "Airbnb Property Management Adelaide",
+    title: "Best Airbnb Management Adelaide | Luxe Managements",
     description:
   "Luxe Managements delivers top-rated Airbnb property management, housekeeping & guest support in Adelaide. Boost your rental income with expert hosting, professional photos, styling & 5 stars service.",
     siteName: "Luxe Managements",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Airbnb Property Management Adelaide",
+    title: "Best Airbnb Management Adelaide | Luxe Managements",
     description:
   "Luxe Managements delivers top-rated Airbnb property management, housekeeping & guest support in Adelaide. Boost your rental income with expert hosting, professional photos, styling & 5 stars service.",
     images: ["https://www.luxemanagements.com/og-image.png"],
@@ -250,11 +250,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             }),
           }}
         />
-<Script id="vercel-analytics" strategy="lazyOnload">
+
   <Analytics />
         <SpeedInsights />
 
-</Script>
+
       
         <ClientProvider>
           <LuxeAiAssistance />
