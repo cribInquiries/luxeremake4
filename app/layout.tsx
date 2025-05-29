@@ -15,13 +15,12 @@ const inter = Inter({
   display: "swap",
 });
 
-// Client-only Chakra provider with fallback
+// Client-only Chakra provider with a loading fallback (SSR enabled)
 const ClientProvider = dynamic(
   () => import("@/components/chakra-snippets/ClientProvider"),
-  { ssr: false, loading: () => <Loading /> }
+  { loading: () => <Loading /> }
 );
 
-// eslint-disable-next-line import/no-unused-modules
 export const metadata: Metadata = {
   title: "Airbnb Property Management in Adelaide",
   description:
@@ -56,7 +55,6 @@ export const metadata: Metadata = {
   icons: { icon: "/favicon.ico", shortcut: "/favicon.ico", apple: "/apple-touch-icon.png" },
 };
 
-// eslint-disable-next-line import/no-unused-modules
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} antialiased`} suppressHydrationWarning>
