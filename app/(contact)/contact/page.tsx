@@ -366,7 +366,7 @@ const Contact = () => {
       </Box>
 
       <DialogRoot
-        size={"cover"}
+             size={"full"}
         open={isDialogOpen}
         onOpenChange={({ open }) => setIsDialogOpen(open)}
       >
