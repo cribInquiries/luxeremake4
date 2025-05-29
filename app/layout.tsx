@@ -253,7 +253,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <LuxeAiAssistance />
 
           {/* Semantic & a11y: main landmark */}
-          <main id="main-content">{children}</main>
+         {children}
         </ClientProviderWithFallback>
       </body>
     </html>
