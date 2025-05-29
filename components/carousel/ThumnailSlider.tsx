@@ -72,35 +72,45 @@ function ThumnailSlider() {
   };
 
   // Memoized Image with Lazy Loading
-  const ImageWithLazyLoading = React.memo(({ src, alt, width, height }) => {
-    const imgRef = useRef(null);
-    const isVisible = useIntersectionObserver(imgRef, "200px");
-    const placeholder =
-      "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy5zdmcuY29tLz4KPC9zdmc+Cg=="; // Transparent placeholder
+  type ImageWithLazyLoadingProps = {
+    src: StaticImageData | string;
+    alt: string;
+    width: number;
+    height: number;
+    style?: React.CSSProperties;
+  };
 
-    return (
-      <div ref={imgRef}>
-        <Image
-          quality={70}
-          src={isVisible ? src : placeholder} // Use placeholder until image is visible
-          alt={alt}
-          width={width}
-          height={height}
-         
-          loading={"lazy"} // Load image lazily when visible
-          style={{
-            backgroundPosition: "bottom",
-            height: "100%",
-            width: "100%",
-            objectFit: "contain",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            borderRadius: "40px",
-          }}
-        />
-      </div>
-    );
-  });
+  const ImageWithLazyLoading: React.FC<ImageWithLazyLoadingProps> = React.memo(
+    ({ src, alt, width, height, style }) => {
+      const imgRef = useRef<HTMLDivElement>(null);
+      const isVisible = useIntersectionObserver(imgRef, "200px");
+      const placeholder =
+        "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy5zdmcuY29tLz4KPC9zdmc+Cg=="; // Transparent placeholder
+
+      return (
+        <div ref={imgRef}>
+          <Image
+            quality={70}
+            src={isVisible ? src : placeholder} // Use placeholder until image is visible
+            alt={alt}
+            width={width}
+            height={height}
+            loading={"lazy"} // Load image lazily when visible
+            style={{
+              backgroundPosition: "bottom",
+              height: "100%",
+              width: "100%",
+              objectFit: "contain",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              borderRadius: "40px",
+              ...style,
+            }}
+          />
+        </div>
+      );
+    }
+  );
 
   // Ensure display name for debugging purposes
   ImageWithLazyLoading.displayName = "ImageWithLazyLoading";
@@ -117,9 +127,9 @@ function ThumnailSlider() {
           {Object.keys(imgPreview).map((key, index) => (
             <Slider
               key={index}
-              className="xl:h-[500px] sm:h-[500px] h-[200px] w-full rounded-2xl"
-              style={{ borderRadius: "40px" }}
-              thumnailSrc={imgPreview[key as keyof ImgPreview]}
+              className="xl:h-[500px] sm:h-[500px] h-[200px] w-full"
+      
+              thumnailSrc={imgPreview[key as keyof ImgPreview].src}
             >
               <HStack justify="center" align="center" h="100%" w="100%">
                 <ImageWithLazyLoading
@@ -127,7 +137,7 @@ function ThumnailSlider() {
                   alt={`House's in our Gallery ${index + 1}`}
                   width={1400}
                   height={800}
-                  style={{ borderRadius: "40px" }}
+      
                 />
               </HStack>
             </Slider>
