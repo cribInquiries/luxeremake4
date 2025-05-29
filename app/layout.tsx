@@ -81,9 +81,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         {/* === Schema.org: Site Navigation === */}
-        {/* Try adding kew words here an dthese to saee if it helps */}
         <Script
-        
           id="ld-navigation"
           type="application/ld+json"
           strategy="beforeInteractive"
