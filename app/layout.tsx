@@ -1,15 +1,13 @@
 // app/layout.tsx
 import { ReactNode } from "react";
 import dynamic from "next/dynamic";
-import Script from "next/script";
 import { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import Loading from "./loading";
 import LuxeAiAssistance from "@/components/luxeComponents/LuxeAiAssistance";
+import Loading from "./loading";
 
 import { Inter } from "next/font/google";
-
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -18,14 +16,13 @@ const inter = Inter({
 
 const ClientProviderWithFallback = dynamic(
   () => import("@/components/chakra-snippets/ClientProvider"),
-  { loading: () => <Loading /> },
+  { loading: () => <Loading /> }
 );
 
-// eslint-disable-next-line import/no-unused-modules
 export const metadata: Metadata = {
-  title: "Luxe Managements: Airbnb Property Management Adelaide",
+  title: "Luxe Managements Airbnb Property Management Adelaide",
   description:
-    " Airbnb management services designed to maximize your rental income in Adelaide. Our comprehensive solutions include property styling, professional photography, cleaning, and guest care to ensure your property stands out and operates smoothly.",
+    "Airbnb management services designed to maximize your rental income in Adelaide. Our comprehensive solutions include property styling, professional photography, cleaning, and guest care to ensure your property stands out and operates smoothly.",
   metadataBase: new URL("https://www.luxemanagements.com"),
   alternates: {
     canonical: "https://www.luxemanagements.com",
@@ -39,10 +36,10 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Luxe Managements: Airbnb Property Management Adelaide",
+    title: "Luxe Managements Airbnb Property Management Adelaide",
     description:
-    " Airbnb management services designed to maximize your rental income in Adelaide. Our comprehensive solutions include property styling, professional photography, cleaning, and guest care to ensure your property stands out and operates smoothly.",
-   url: "https://www.luxemanagements.com",
+      "Airbnb management services designed to maximize your rental income in Adelaide. Our comprehensive solutions include property styling, professional photography, cleaning, and guest care to ensure your property stands out and operates smoothly.",
+    url: "https://www.luxemanagements.com",
     siteName: "Luxe Managements",
     images: [
       {
@@ -56,10 +53,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Luxe Managements: Airbnb Property Management Adelaide",
+    title: "Luxe Managements Airbnb Property Management Adelaide",
     description:
-    " Airbnb management services designed to maximize your rental income in Adelaide. Our comprehensive solutions include property styling, professional photography, cleaning, and guest care to ensure your property stands out and operates smoothly.",
-  
+      "Airbnb management services designed to maximize your rental income in Adelaide. Our comprehensive solutions include property styling, professional photography, cleaning, and guest care to ensure your property stands out and operates smoothly.",
     images: ["https://www.luxemanagements.com/og-image.jpg"],
   },
   icons: {
@@ -69,7 +65,6 @@ export const metadata: Metadata = {
   },
 };
 
-// eslint-disable-next-line import/no-unused-modules
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html
@@ -77,183 +72,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       className={`${inter.variable} antialiased`}
       suppressHydrationWarning
     >
-      <head>
-        {/* Character set & mobile viewport */}
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        {/* === Schema.org: Site Navigation === */}
-        <Script
-          id="ld-navigation"
-          type="application/ld+json"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              url: "https://www.luxemanagements.com/",
-              name: "Luxe Managements",
-              hasPart: [
-                {
-                  "@type": "SiteNavigationElement",
-                  name: "Home",
-                  url: "https://www.luxemanagements.com/",
-                },
-                {
-                  "@type": "SiteNavigationElement",
-                  name: "Services",
-                  url: "https://www.luxemanagements.com/services",
-                },
-                {
-                  "@type": "SiteNavigationElement",
-                  name: "About Us",
-                  url: "https://www.luxemanagements.com/about",
-                },
-                {
-                  "@type": "SiteNavigationElement",
-                  name: "Testimonials",
-                  url: "https://www.luxemanagements.com/testimonials",
-                },
-                {
-                  "@type": "SiteNavigationElement",
-                  name: "Contact",
-                  url: "https://www.luxemanagements.com/contact",
-                },
-              ],
-            }),
-          }}
-        />
-
-        {/* === Schema.org: LocalBusiness + BreadcrumbList === */}
-        <Script
-          id="ld-business-and-breadcrumbs"
-          type="application/ld+json"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "LocalBusiness",
-                  name: "Luxe Managements",
-                  image: "https://www.luxemanagements.com/logo.png",
-                  "@id": "https://www.luxemanagements.com",
-                  url: "https://www.luxemanagements.com",
-                  telephone: "+61 123 456 789",
-                  address: {
-                    "@type": "PostalAddress",
-                    addressLocality: "Adelaide",
-                    addressRegion: "SA",
-                    addressCountry: "AU",
-                  },
-                  geo: {
-                    "@type": "GeoCoordinates",
-                    latitude: -34.9285,
-                    longitude: 138.6007,
-                  },
-                  openingHoursSpecification: [
-                    {
-                      "@type": "OpeningHoursSpecification",
-                      dayOfWeek: [
-                        "Monday",
-                        "Tuesday",
-                        "Wednesday",
-                        "Thursday",
-                        "Friday",
-                      ],
-                      opens: "09:00",
-                      closes: "17:00",
-                    },
-                  ],
-                  sameAs: [
-                    "https://www.facebook.com/luxemanagements",
-                    "https://www.instagram.com/luxemanagements",
-                    "https://www.tiktok.com/@luxe_managements",
-                  ],
-                },
-                {
-                  "@type": "BreadcrumbList",
-                  itemListElement: [
-                    {
-                      "@type": "ListItem",
-                      position: 1,
-                      name: "Home",
-                      item: "https://www.luxemanagements.com/",
-                    },
-                    {
-                      "@type": "ListItem",
-                      position: 2,
-                      name: "Services",
-                      item: "https://www.luxemanagements.com/services",
-                    },
-                    {
-                      "@type": "ListItem",
-                      position: 3,
-                      name: "Furnishing & Styling",
-                      item: "https://www.luxemanagements.com/services/furnishing-and-styling",
-                    },
-                    {
-                      "@type": "ListItem",
-                      position: 4,
-                      name: "Property Management",
-                      item: "https://www.luxemanagements.com/services/property-management",
-                    },
-                    {
-                      "@type": "ListItem",
-                      position: 5,
-                      name: "Photography",
-                      item: "https://www.luxemanagements.com/services/photography",
-                    },
-                    {
-                      "@type": "ListItem",
-                      position: 6,
-                      name: "Cleaning & Linen",
-                      item: "https://www.luxemanagements.com/services/cleaning-and-linen",
-                    },
-                    {
-                      "@type": "ListItem",
-                      position: 7,
-                      name: "About",
-                      item: "https://www.luxemanagements.com/about",
-                    },
-                    {
-                      "@type": "ListItem",
-                      position: 8,
-                      name: "Testimonials",
-                      item: "https://www.luxemanagements.com/testimonials",
-                    },
-                    {
-                      "@type": "ListItem",
-                      position: 9,
-                      name: "FAQ",
-                      item: "https://www.luxemanagements.com/faq",
-                    },
-                    {
-                      "@type": "ListItem",
-                      position: 10,
-                      name: "Contact",
-                      item: "https://www.luxemanagements.com/contact",
-                    },
-                  ],
-                },
-              ],
-            }),
-          }}
-        />
-      </head>
-
       <body>
-        {/* Accessibility: Skip‐to‐Content */}
-
-        {/* Performance: load non‐critical analytics after hydration */}
+        {/* Analytics and Speed Insights load after hydration */}
         <Analytics />
         <SpeedInsights />
 
         <ClientProviderWithFallback>
           <LuxeAiAssistance />
-
-          {/* Semantic & a11y: main landmark */}
-         {children}
+          <main>{children}</main>
         </ClientProviderWithFallback>
       </body>
     </html>
