@@ -48,7 +48,7 @@ const FeaturedPlatforms = () => {
           w={["30%", "30%", "30%", "30%", "100%"]}
           h={["30%", "30%", "30%", "30%", "100%"]}
         >
-          <a href="https://www.airbnb.com">
+          <a href="https://www.airbnb.com" >
             <Image src={airbnbLogo} width={250} height={250} alt="Airbnb" />
           </a>
         </HStack>
@@ -65,7 +65,7 @@ const FeaturedPlatforms = () => {
           w={["30%", "30%", "30%", "30%", "100%"]}
           h={["30%", "30%", "30%", "30%", "100%"]}
         >
-          <a href="www.booking.com">
+          <a href="https://www.booking.com">
             <Image
               src={bookingComLogo}
               width={250}
@@ -87,7 +87,7 @@ const FeaturedPlatforms = () => {
           w={["30%", "30%", "30%", "30%", "100%"]}
           h={["30%", "30%", "30%", "30%", "100%"]}
         >
-          <a href="www.vrbo.com">
+          <a href="https://www.vrbo.com">
             <Image src={vrboLogo} width={200} height={200} alt="Vrbo" />
           </a>
         </HStack>
@@ -104,7 +104,7 @@ const FeaturedPlatforms = () => {
           w={["30%", "30%", "30%", "30%", "100%"]}
           h={["30%", "30%", "30%", "30%", "100%"]}
         >
-          <a href="www.stayz.com.au">
+          <a href="https://www.stayz.com.au">
             <Image src={stayzLogo} width={200} height={200} alt="Stayz" />
           </a>
         </HStack>
@@ -121,7 +121,7 @@ const FeaturedPlatforms = () => {
           w={["30%", "30%", "30%", "30%", "100%"]}
           h={["30%", "30%", "30%", "30%", "100%"]}
         >
-          <a href="www.realestate.com.au">
+          <a href="https://www.realestate.com.au">
             <Image
               src={realestateLogo}
               width={250}
