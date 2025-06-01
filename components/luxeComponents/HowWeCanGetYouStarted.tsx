@@ -336,7 +336,7 @@ const HowWeCanGetYouStarted = () => {
           fontWeight="700"
           fontFamily="arial"
           color="black"
-          marginBottom="30px"
+          marginBottom="15px"
           as={"h2"}
         >
           Join Us on Our Journey
