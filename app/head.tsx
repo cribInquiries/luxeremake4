@@ -209,12 +209,6 @@ export default function Head() {
                   },
                   {
                     "@type": "ListItem",
-                    "position": 9,
-                    "name": "FAQ",
-                    "item": "https://www.luxemanagements.com/faq"
-                  },
-                  {
-                    "@type": "ListItem",
                     "position": 10,
                     "name": "Contact",
                     "item": "https://www.luxemanagements.com/contact"
