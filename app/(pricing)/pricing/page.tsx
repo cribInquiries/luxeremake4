@@ -566,8 +566,8 @@ const Pricing = () => {
         {/* Call to Action */}
       </Box>
 
-      <FAQ type={"pricing"} />
     </Box>
+
   );
 };
 
