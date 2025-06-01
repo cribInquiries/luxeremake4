@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
   },
   experimental: {
     optimizePackageImports: ["@chakra-ui/react"],
+    optimizeCss: true, // Added for optimized CSS
     serverActions: {
       bodySizeLimit: "100MB",
     },
@@ -19,12 +20,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "cloud.appwrite.io",
       },
-
       {
         protocol: "https",
         hostname: "images.unsplash.com", // Allow Unsplash
       },
-
       {
         protocol: "https",
         hostname: "images.pexels.com", // Allow Pexels
@@ -43,3 +42,5 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+
+

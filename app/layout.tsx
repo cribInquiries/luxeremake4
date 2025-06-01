@@ -31,7 +31,6 @@ export const metadata: Metadata = {
     "Airbnb Property Management Adelaide",
     "Property Management Adelaide",
     "Airbnb Property Management",
-    "Luxe Managements"
   ],
 
   
