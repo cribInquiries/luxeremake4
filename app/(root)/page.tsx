@@ -10,6 +10,7 @@ import ScheduleConsultation from "@/components/luxeComponents/scheduleConsultati
 import HowWeCanGetYouStarted from "@/components/luxeComponents/HowWeCanGetYouStarted";
 import OurServices from "@/components/luxeComponents/OurServices";
 import StickyGallery from "@/components/houseScrollDown/StickyGallery";
+import FeaturedPlatforms from "@/components/luxeComponents/FeaturedPlatforms";
 // import FollowingScrollButton from "@/components/luxeComponents/followingScrollButton";
 
 // Lazy load the GalleryHeroSection component
@@ -31,6 +32,8 @@ const Home = () => {
       {/* <FollowingScrollButton /> */}
       {/* Render Hero and other components normally */}
       <Hero />
+      <FeaturedPlatforms />
+
       <OurServices />
 
       <HowWeCanGetYouStarted />
