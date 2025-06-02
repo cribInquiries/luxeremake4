@@ -25,8 +25,8 @@ export const metadata: Metadata = {
     "Airbnb Property Management Adelaide by Luxe Managements. We provide styling, professional photography, cleaning, and guest care so your Adelaide property stands out and earns more.",
   metadataBase: new URL("https://www.luxemanagements.com"),
   keywords: [
-    "Airbnb",
-    "Adelaide",
+    "Airbnb Management Adelaide",
+    "Adelaide Property Management",
     "Property Management",
     "Airbnb Property Management Adelaide",
     "Property Management Adelaide",
