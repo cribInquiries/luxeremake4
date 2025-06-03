@@ -128,7 +128,7 @@ const Testimonials = () => {
               color={"black"}
               w={["100%", "100%", "80%", "80%", "80%", "80%"]}
               fontWeight={300}
-              as={"h3"}
+              as={"p"}
             >
               Check out our numerous positive reviews from satisfied clients.
             </Text>

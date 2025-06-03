@@ -298,7 +298,7 @@ const HowWeCanGetYouStarted = () => {
                       fontWeight="600"
                       color="white"
                       textShadow="0 1px 2px rgba(0,0,0,0.3)"
-                      as={"h4"}
+                      as={"p"} // change from h4 to h3 for proper hierarchy
                     >
                       {item.id === 1
                         ? "Feel free to contact"
@@ -351,7 +351,7 @@ const HowWeCanGetYouStarted = () => {
           maxWidth="800px"
           margin="0 auto"
           marginBottom="50px"
-          as={"h3"}
+          as={"p"}
         >
           As we continue to grow and innovate, we're looking for property owners
           who share our vision for exceptional hospitality and management

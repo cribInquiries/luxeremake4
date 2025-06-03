@@ -29,7 +29,7 @@ const TitleSubheading = ({
           {title}
         </Text>
         <Text
-          as={"h3"}
+          as={"p"}
           data-aos="fade-up"
           w={["90%", "90%", "90%", "80%", "80%", "80%"]}
           textStyle={"subheading"}

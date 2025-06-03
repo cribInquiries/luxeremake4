@@ -48,7 +48,7 @@ const FeaturedPlatforms = () => {
           w={["30%", "30%", "30%", "30%", "100%"]}
           h={["30%", "30%", "30%", "30%", "100%"]}
         >
-          <a href="https://www.airbnb.com" >
+          <a href="https://www.airbnb.com" target="_blank" rel="noreferrer" aria-label="Airbnb Logo" title="Airbnb" >
             <Image src={airbnbLogo} width={250} height={250} alt="Airbnb" />
           </a>
         </HStack>
@@ -65,7 +65,7 @@ const FeaturedPlatforms = () => {
           w={["30%", "30%", "30%", "30%", "100%"]}
           h={["30%", "30%", "30%", "30%", "100%"]}
         >
-          <a href="https://www.booking.com">
+          <a href="https://www.booking.com" target="_blank" rel="noreferrer" aria-label="Booking.com Logo" title="Booking.com" >
             <Image
               src={bookingComLogo}
               width={250}
@@ -87,7 +87,7 @@ const FeaturedPlatforms = () => {
           w={["30%", "30%", "30%", "30%", "100%"]}
           h={["30%", "30%", "30%", "30%", "100%"]}
         >
-          <a href="https://www.vrbo.com">
+          <a href="https://www.vrbo.com" target="_blank" rel="noreferrer" aria-label="Vrbo Logo" title="Vrbo" >
             <Image src={vrboLogo} width={200} height={200} alt="Vrbo" />
           </a>
         </HStack>
@@ -104,7 +104,7 @@ const FeaturedPlatforms = () => {
           w={["30%", "30%", "30%", "30%", "100%"]}
           h={["30%", "30%", "30%", "30%", "100%"]}
         >
-          <a href="https://www.stayz.com.au">
+          <a href="https://www.stayz.com.au" target="_blank" rel="noreferrer" aria-label="Stayz Logo" title="Stayz" >
             <Image src={stayzLogo} width={200} height={200} alt="Stayz" />
           </a>
         </HStack>
@@ -121,7 +121,7 @@ const FeaturedPlatforms = () => {
           w={["30%", "30%", "30%", "30%", "100%"]}
           h={["30%", "30%", "30%", "30%", "100%"]}
         >
-          <a href="https://www.realestate.com.au">
+          <a href="https://www.realestate.com.au" target="_blank" rel="noreferrer" aria-label="Realestate Logo" title="Realestate" >
             <Image
               src={realestateLogo}
               width={250}

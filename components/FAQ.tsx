@@ -314,7 +314,7 @@ textStyle={"basicText"}
                     pr={10}
                     flex="1"
                     transition="all 0.2s"
-                    as={"h4"}
+                    as={"p"}
                textStyle={"basicText"}
                   >
                     {faq.question}
@@ -347,7 +347,7 @@ textStyle={"basicText"}
                   position="relative"
                 >
                   <Text
-                  as={'h4'}
+                  as={"p"}
                  textStyle={"basicText"}
                     color="#4B5563"
                     lineHeight="1.8"
@@ -391,7 +391,7 @@ textStyle={"basicText"}
             <Text textStyle={"basicText"} fontWeight="700" color="#0A1029" mb={2} as={'h3'}>
               Still have questions?
             </Text>
-            <Text textStyle={"basicText"} color="#4B5563" lineHeight="1.6" as={'h4'}>
+            <Text textStyle={"basicText"} color="#4B5563" lineHeight="1.6" as={"p"}>
               Our team is ready to provide personalized answers to all your
               questions about AirBnB management and how we can help maximize
               your property's potential.

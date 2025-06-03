@@ -41,7 +41,7 @@ const HeroServices = () => {
               Maximize Your AirBnB Earnings
             </Text>
             <Text
-              as={"h3"}
+              as={"p"}
               textStyle={"basicText"}
               mt={["20px", "20px", "20px", "20px", "20px", "20px"]}
               textAlign={["center", "center", "center", "left", "left", "left"]}
@@ -167,13 +167,13 @@ const HeroServices = () => {
                 <HStack>
                   <Text
                     textStyle={"heading"}
-                    as={"h4"}
+                    as={"p"}
                     fontWeight={"700"}
                     color={"black"}
                   >
                     40%
                   </Text>
-                  <Text as={"h4"} textStyle={"basicText"}>
+                  <Text as={"p"} textStyle={"basicText"}>
                     {" "}
                     Average Revenue Increase
                   </Text>
@@ -221,7 +221,7 @@ const HeroServices = () => {
               Professional AirBnB Property Management
             </Text>
             <Text
-              as={"h3"}
+              as={"p"}
               textStyle={"basicText"}
               mt={["20px", "20px", "20px", "20px", "20px", "20px"]}
               textAlign={["center", "center", "center", "left", "left", "left"]}
@@ -343,13 +343,13 @@ const HeroServices = () => {
                 <HStack>
                   <Text
                     textStyle={"heading"}
-                    as={"h4"}
+                    as={"p"}
                     fontWeight={"700"}
                     color={"black"}
                   >
                     35%
                   </Text>
-                  <Text textStyle={"basicText"} as={"h4"}>
+                  <Text textStyle={"basicText"} as={"p"}>
                     {" "}
                     Higher Profit Margins
                   </Text>
@@ -376,7 +376,7 @@ const HeroServices = () => {
               Professional AirBnB Property Management
             </Text>
             <Text
-              as={"h3"}
+              as={"p"}
               textStyle={"basicText"}
               mt={["20px", "20px", "20px", "20px", "20px", "20px"]}
               textAlign={["center", "center", "center", "left", "left", "left"]}
@@ -470,7 +470,7 @@ const HeroServices = () => {
               Comprehensive Guest Services
             </Text>
             <Text
-              as={"h3"}
+              as={"p"}
               textStyle={"basicText"}
               mt={["20px", "20px", "20px", "20px", "20px", "20px"]}
               textAlign={["center", "center", "center", "left", "left", "left"]}
@@ -596,14 +596,14 @@ const HeroServices = () => {
               >
                 <HStack>
                   <Text
-                    as={"h4"}
+                    as={"p"}
                     textStyle={"heading"}
                     fontWeight={"700"}
                     color={"black"}
                   >
                     25%
                   </Text>
-                  <Text textStyle={"basicText"} as={"h4"}>
+                  <Text textStyle={"basicText"} as={"p"}>
                     {" "}
                     Reduced Operating Expenses
                   </Text>
