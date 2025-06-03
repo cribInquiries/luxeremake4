@@ -17,45 +17,7 @@ import FeaturedPlatforms from "@/components/luxeComponents/FeaturedPlatforms";
 const GalleryHeroSection = React.lazy(
   () => import("@/components/luxeComponents/GalleryHeroSection"),
 );
-export const metadata = {
-  title: "Airbnb Management Adelaide | Luxe Managements",
-  description:
-    "Airbnb Property Management Adelaide by Luxe Managements. We provide styling, professional photography, cleaning, and guest care so your Adelaide property stands out and earns more.",
-  keywords: [
-    "Airbnb",
-    "Adelaide",
-    "Property Management",
-    "Airbnb Property Management Adelaide",
-    "Property Management Adelaide",
-    "Airbnb Property Management",
-  ],
-  alternates: {
-    canonical: "https://www.luxemanagements.com",
-  },
-  openGraph: {
-    title: "Airbnb Management Adelaide | Luxe Managements",
-    description:
-      "Airbnb Property Management Adelaide by Luxe Managements. We provide styling, professional photography, cleaning, and guest care so your Adelaide property stands out and earns more.",
-    url: "https://www.luxemanagements.com",
-    siteName: "Luxe Managements",
-    images: [
-      {
-        url: "https://www.luxemanagements.com/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Luxe Managements Airbnb property management",
-      },
-    ],
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Airbnb Management Adelaide | Luxe Managements",
-    description:
-      "Airbnb Property Management Adelaide by Luxe Managements. We provide styling, professional photography, cleaning, and guest care so your Adelaide property stands out and earns more.",
-    images: ["https://www.luxemanagements.com/og-image.jpg"],
-  },
-};
+
 const Home = () => {
   return (
     <>
