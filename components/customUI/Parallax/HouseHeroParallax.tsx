@@ -102,26 +102,26 @@ const products = [
    
     link: "https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg?auto=compress&cs=tinysrgb&q=75",
   },
-  {
+  // {
    
-    link: "https://images.pexels.com/photos/323775/pexels-photo-323775.jpeg?auto=compress&cs=tinysrgb&q=75",
-  },
-  {
+  //   link: "https://images.pexels.com/photos/323775/pexels-photo-323775.jpeg?auto=compress&cs=tinysrgb&q=75",
+  // },
+  // {
    
-    link: "https://images.pexels.com/photos/2371975/pexels-photo-2371975.jpeg?auto=compress&cs=tinysrgb&q=75",
-  },
-  {
+  //   link: "https://images.pexels.com/photos/2371975/pexels-photo-2371975.jpeg?auto=compress&cs=tinysrgb&q=75",
+  // },
+  // {
    
-    link: "https://images.pexels.com/photos/1586298/pexels-photo-1586298.jpeg?auto=compress&cs=tinysrgb&q=75",
-  },
-  {
+  //   link: "https://images.pexels.com/photos/1586298/pexels-photo-1586298.jpeg?auto=compress&cs=tinysrgb&q=75",
+  // },
+  // {
    
-    link: "https://images.pexels.com/photos/2462015/pexels-photo-2462015.jpeg?auto=compress&cs=tinysrgb&q=75",
-  },
-  {
+  //   link: "https://images.pexels.com/photos/2462015/pexels-photo-2462015.jpeg?auto=compress&cs=tinysrgb&q=75",
+  // },
+  // {
    
-    link: "https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&q=75",
-  },
+  //   link: "https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&q=75",
+  // },
 
   // …and any others…
 ];
@@ -138,7 +138,7 @@ const pexelsLoader = ({
 }) => `${src}?auto=compress&cs=tinysrgb&w=${width}&q=${quality || 75}`;
 
 export default function HouseHeroParallax() {
-  const chunkSize = 10;
+  const chunkSize = 8;
   const chunked = [];
 
   for (let i = 0; i < products.length; i += chunkSize) {
