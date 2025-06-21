@@ -38,7 +38,7 @@ const Home = () => {
 
       <HowWeCanGetYouStarted />
 
-      <StickyGallery />
+      {/* <StickyGallery /> */}
 
       {/* Use Suspense to lazy-load GalleryHeroSection */}
       <Suspense fallback={<div>Loading gallery...</div>}>

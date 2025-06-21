@@ -384,14 +384,7 @@ const HowWeCanGetYouStarted = () => {
         </Box>
       </Box>
       {/* Footer Section */}
-      <HStack
-        my={["50px", "50px", "100px", "100px", "100px", "100px"]}
-        justify={"center"}
-        align={"center"}
-        w={"100%"}
-      >
-        <Box w={"90%"} borderTop={"1px solid #e0e0e0"} />
-      </HStack>
+ 
     </Box>
   );
 };
