@@ -199,7 +199,7 @@ export function ClearviewTransformationView({ property }: ClearviewTransformatio
                       margin={{ top: 20, right: 30, left: 10, bottom: 60 }}
                       barCategoryGap="35%"
                     >
-                      <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
+                      <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.15)" vertical={false} />
                       <XAxis
                         dataKey="period"
                         tick={{ fill: "#fff", fontSize: 16, fontWeight: 600 }}
@@ -219,10 +219,16 @@ export function ClearviewTransformationView({ property }: ClearviewTransformatio
                       />
                       <ChartTooltip
                         content={<ChartTooltipContent className="bg-gray-900/95 border-white/20 text-white" />}
-                        cursor={{ fill: "rgba(16, 185, 129, 0.05)" }}
+                        cursor={false}
                         formatter={(value: number) => [`$${value.toLocaleString()}`, "Annual Revenue"]}
                       />
-                      <Bar dataKey="annual" radius={[12, 12, 0, 0]} maxBarSize={150} activeBar={false}>
+                      <Bar
+                        dataKey="annual"
+                        radius={[12, 12, 0, 0]}
+                        maxBarSize={150}
+                        activeBar={false}
+                        style={{ filter: "drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))" }}
+                      >
                         {incomeComparisonData.map((entry, index) => (
                           <Cell key={`cell-${index}`} fill={entry.fill} />
                         ))}
