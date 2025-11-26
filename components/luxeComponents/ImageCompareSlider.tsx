@@ -1,52 +1,52 @@
-import React, { useState, useRef, useEffect } from "react";
-import { Box } from "@chakra-ui/react";
-import badImg from "@/public/images/houseImg/badhouse.png";
-import goodImg from "@/public/images/houseImg/goodHouse.png";
-const ImageCompareSlider = () => {
-  // Define the image URLs as plain strings.
-  const leftImage = goodImg.src; // Use .src to get the URL
-  const rightImage = badImg.src;
+"use client"
 
-  const containerRef = useRef(null);
-  const [sliderX, setSliderX] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
-  const [containerWidth, setContainerWidth] = useState(0);
+import { useState, useRef, useEffect } from "react"
+import { Box } from "@chakra-ui/react"
+
+const ImageCompareSlider = () => {
+  const leftImage = "/placeholder.svg?height=600&width=800"
+  const rightImage = "/placeholder.svg?height=600&width=800"
+
+  const containerRef = useRef(null)
+  const [sliderX, setSliderX] = useState(0)
+  const [isDragging, setIsDragging] = useState(false)
+  const [containerWidth, setContainerWidth] = useState(0)
 
   // Set initial container width and slider position; update on window resize.
   useEffect(() => {
     const updateWidth = () => {
       if (containerRef.current) {
-        const width = containerRef.current.offsetWidth;
-        setContainerWidth(width);
-        setSliderX(width / 2);
+        const width = containerRef.current.offsetWidth
+        setContainerWidth(width)
+        setSliderX(width / 2)
       }
-    };
-    updateWidth();
-    window.addEventListener("resize", updateWidth);
-    return () => window.removeEventListener("resize", updateWidth);
-  }, []);
+    }
+    updateWidth()
+    window.addEventListener("resize", updateWidth)
+    return () => window.removeEventListener("resize", updateWidth)
+  }, [])
 
   // Mouse and touch event handlers to update the slider's position.
-  const handleMouseDown = () => setIsDragging(true);
+  const handleMouseDown = () => setIsDragging(true)
   const handleMouseMove = (e) => {
-    if (!isDragging || !containerRef.current) return;
-    const rect = containerRef.current.getBoundingClientRect();
-    let newX = e.clientX - rect.left;
-    if (newX < 0) newX = 0;
-    if (newX > containerWidth) newX = containerWidth;
-    setSliderX(newX);
-  };
-  const handleMouseUp = () => setIsDragging(false);
-  const handleTouchStart = () => setIsDragging(true);
+    if (!isDragging || !containerRef.current) return
+    const rect = containerRef.current.getBoundingClientRect()
+    let newX = e.clientX - rect.left
+    if (newX < 0) newX = 0
+    if (newX > containerWidth) newX = containerWidth
+    setSliderX(newX)
+  }
+  const handleMouseUp = () => setIsDragging(false)
+  const handleTouchStart = () => setIsDragging(true)
   const handleTouchMove = (e) => {
-    if (!isDragging || !containerRef.current) return;
-    const rect = containerRef.current.getBoundingClientRect();
-    let newX = e.touches[0].clientX - rect.left;
-    if (newX < 0) newX = 0;
-    if (newX > containerWidth) newX = containerWidth;
-    setSliderX(newX);
-  };
-  const handleTouchEnd = () => setIsDragging(false);
+    if (!isDragging || !containerRef.current) return
+    const rect = containerRef.current.getBoundingClientRect()
+    let newX = e.touches[0].clientX - rect.left
+    if (newX < 0) newX = 0
+    if (newX > containerWidth) newX = containerWidth
+    setSliderX(newX)
+  }
+  const handleTouchEnd = () => setIsDragging(false)
 
   return (
     <Box
@@ -154,7 +154,7 @@ const ImageCompareSlider = () => {
         />
       </Box>
     </Box>
-  );
-};
+  )
+}
 
-export default ImageCompareSlider;
+export default ImageCompareSlider
