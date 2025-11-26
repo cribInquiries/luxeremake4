@@ -75,7 +75,7 @@ export function WestBeachTransformationView({ property }: WestBeachTransformatio
         {/* Property Details Section */}
         <section className="py-16 bg-gray-50 border-b border-gray-200">
           <div className="max-w-4xl mx-auto px-6 md:px-12">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
               <div className="flex items-center gap-3 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
                 <div className="w-14 h-14 rounded-full bg-black flex items-center justify-center shrink-0">
                   <MapPin className="w-7 h-7 text-white" />
@@ -118,7 +118,7 @@ export function WestBeachTransformationView({ property }: WestBeachTransformatio
 
               <div className="flex items-center gap-3 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
                 <div className="w-14 h-14 rounded-full bg-black flex items-center justify-center shrink-0">
-                  <div className="w-7 h-7 text-white">ADR</div>
+                  <div className="text-sm font-bold text-white">ADR</div>
                 </div>
                 <div>
                   <div className="text-sm text-gray-700 font-semibold">ADR</div>
@@ -152,7 +152,7 @@ export function WestBeachTransformationView({ property }: WestBeachTransformatio
             </div>
             <div className="mt-12 text-center">
               <div className="inline-block px-8 py-4 bg-green-50 rounded-2xl">
-                <div className="text-3xl font-bold text-green-600">$81,120/year</div>
+                <div className="text-3xl font-bold text-green-600">$64,000/year</div>
                 <div className="text-gray-600 mt-1">Annual Revenue</div>
               </div>
             </div>
@@ -366,22 +366,22 @@ export function WestBeachTransformationView({ property }: WestBeachTransformatio
                 </ResponsiveContainer>
               </ChartContainer>
 
-              <div className="mt-12 flex flex-wrap justify-center gap-8">
-                <div className="flex items-center gap-3 bg-white px-6 py-4 rounded-xl shadow-sm">
+              <div className="mt-12 flex justify-center gap-8 text-base">
+                <div className="flex items-center gap-3">
                   <div className="w-6 h-6 bg-red-500 rounded" />
-                  <span className="text-gray-900 font-semibold text-lg">Traditional: $1,950/month</span>
+                  <span className="text-gray-900 font-semibold text-lg">Traditional Rent: $1,950/month</span>
                 </div>
-                <div className="flex items-center gap-3 bg-white px-6 py-4 rounded-xl shadow-sm">
+                <div className="flex items-center gap-3">
                   <div className="w-6 h-6 bg-green-500 rounded" />
-                  <span className="text-gray-900 font-semibold text-lg">Luxe Airbnb: Average $6,760/month</span>
+                  <span className="text-gray-900 font-semibold text-lg">Luxe Airbnb: Average $5,333/month</span>
                 </div>
               </div>
 
               <div className="mt-8 text-center">
                 <div className="inline-block px-10 py-5 bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl border-2 border-green-200">
-                  <div className="text-4xl font-bold text-green-600 mb-2">+$57,570</div>
+                  <div className="text-4xl font-bold text-green-600 mb-2">+$40,600</div>
                   <div className="text-gray-800 font-semibold text-lg">Additional Annual Revenue</div>
-                  <div className="text-gray-600 mt-1">247% increase with Luxe Management</div>
+                  <div className="text-gray-600 mt-1">173% increase with Luxe Management</div>
                 </div>
               </div>
             </div>
