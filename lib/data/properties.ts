@@ -131,7 +131,7 @@ export const properties: Property[] = [
   {
     slug: "clearview-serene-family-home",
     labelName: "Clearview",
-    title: "Serene Family Home – Pool & Games Close to Adel CBD",
+    title: "Serene Family Home – Pool & Games Close to Adl CBD",
     category: "Property Management",
     tags: ["Styling"],
     description: "Family-friendly Clearview",
@@ -140,7 +140,7 @@ export const properties: Property[] = [
     status: "active",
     img: houseOneImg10,
     subheading:
-      "From dated décor to dream stay—this Clearview family home now earns $105k annually through strategic styling",
+      "From dated décor to dream stay—this Clearview family home earnt $102k annually through strategic styling",
     location: "Clearview",
     mainImage: "/images/cmainshot.jpg",
     carouselImages: [
