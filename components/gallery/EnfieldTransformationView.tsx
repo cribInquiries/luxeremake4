@@ -51,7 +51,7 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
     {
       url: "/images/enfield-kitchen.png",
       title: "Gourmet Kitchen",
-      description: "Modern appliances, timber cabinetry",
+      description: "Open-concept kitchen & living space",
     },
     {
       url: "/images/enfield-dining-living-photo.png",
@@ -186,6 +186,55 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
         </div>
       </section>
 
+      {/* The Hidden Challenge */}
+      <section className="py-28 md:py-40 bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+        <div className="max-w-4xl mx-auto px-6 md:px-12">
+          <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">The Hidden Challenge</h2>
+          <p className="text-2xl md:text-3xl text-white/90 mb-12 leading-relaxed">
+            But the home had a hidden challenge that threatened profitability:
+          </p>
+
+          <ul className="space-y-4 mb-12 text-xl md:text-2xl text-white/80">
+            <li className="flex items-start gap-3">
+              <span className="text-white/50 mt-1">•</span>
+              <span>High-Gloss Flooring</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-white/50 mt-1">•</span>
+              <span>Ultra-white interior palette</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-white/50 mt-1">•</span>
+              <span>Massive feature carpet</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-white/50 mt-1">•</span>
+              <span>High-Gloss fingerprint prone surfaces</span>
+            </li>
+          </ul>
+
+          <p className="text-2xl md:text-3xl text-white font-semibold mb-16 leading-relaxed">
+            External cleaners quoted $400+ per stay. Making the operation unsustainable.
+          </p>
+
+          <div className="bg-gradient-to-br from-green-500 to-emerald-600 rounded-3xl p-10 md:p-12 mb-12 shadow-2xl">
+            <p className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
+              So we made a decision that changed Luxe forever:
+            </p>
+            <p className="text-2xl md:text-3xl text-white font-medium">We created our own in-house cleaning team.</p>
+          </div>
+
+          <p className="text-2xl md:text-3xl text-white/90 font-medium mb-6">
+            Trained in-house. Quality-controlled. Detail-obsessed.
+          </p>
+
+          <p className="text-xl md:text-2xl text-white/70 italic leading-relaxed">
+            This wasn't just cost-saving — it became the foundation of the Luxe standard that every property benefits
+            from today.
+          </p>
+        </div>
+      </section>
+
       {/* Property Showcase */}
       <section className="py-28 bg-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
@@ -234,7 +283,16 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
               <div className="text-gray-600 text-base font-medium">Per week, year-round</div>
             </div>
 
-            <div className="text-center p-8 bg-green-50 rounded-2xl border-2 border-green-500 shadow-xl transform scale-105">
+            <div className="text-center p-8 bg-sky-50 rounded-2xl border-2 border-sky-200">
+              <div className="text-5xl font-bold text-sky-600 mb-3">92%</div>
+              <div className="text-gray-800 font-semibold mb-2">Occupancy Rate</div>
+              <div className="text-gray-600 text-base font-medium inline-flex items-center gap-2 justify-center">
+                Consistently high
+                <span className="inline-block w-2 h-2 bg-sky-500 rounded-full animate-pulse" />
+              </div>
+            </div>
+
+            <div className="text-center p-8 bg-green-50 rounded-2xl border-2 border-green-500 shadow-xl">
               <div className="text-5xl font-bold text-green-600 mb-3">$2,000</div>
               <div className="text-gray-800 font-semibold mb-2">With Luxe Management</div>
               <div className="text-gray-600 text-base font-medium">Per week average</div>
@@ -299,6 +357,60 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
             <p className="text-4xl font-bold text-white mb-2">+$4,000 extra per year</p>
             <p className="text-white/95 text-xl font-medium">111% increase over traditional renting</p>
           </div>
+        </div>
+      </section>
+
+      {/* What Enfield Represents */}
+      <section className="py-28 md:py-40 bg-white">
+        <div className="max-w-5xl mx-auto px-6 md:px-12">
+          <h2 className="text-5xl md:text-6xl font-bold text-black mb-6 text-center">What Enfield Represents</h2>
+          <p className="text-2xl md:text-3xl text-gray-700 text-center mb-16 leading-relaxed max-w-3xl mx-auto">
+            Enfield wasn't just a property we managed. It was the project that taught us everything.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+            <div className="bg-sky-50 rounded-2xl p-10 text-center shadow-sm">
+              <h3 className="text-3xl font-bold text-sky-600">Budget mastery</h3>
+            </div>
+            <div className="bg-green-50 rounded-2xl p-10 text-center shadow-sm">
+              <h3 className="text-3xl font-bold text-green-600">Design at scale</h3>
+            </div>
+            <div className="bg-purple-50 rounded-2xl p-10 text-center shadow-sm">
+              <h3 className="text-3xl font-bold text-purple-600">Problem solving</h3>
+            </div>
+            <div className="bg-gray-100 rounded-2xl p-10 text-center shadow-sm">
+              <h3 className="text-3xl font-bold text-gray-800">System building</h3>
+            </div>
+          </div>
+
+          <div className="text-center space-y-4">
+            <p className="text-2xl md:text-3xl text-black font-medium leading-relaxed">
+              This home didn't just teach us how to manage properties.
+            </p>
+            <p className="text-2xl md:text-3xl font-bold text-cyan-500 leading-relaxed">
+              It taught us how to build excellence from constraints.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Enfield Set Our Standard */}
+      <section className="py-28 md:py-40 bg-gradient-to-br from-gray-900 via-black to-gray-900">
+        <div className="max-w-4xl mx-auto px-6 md:px-12 text-center">
+          <p className="text-sm md:text-base text-gray-400 uppercase tracking-wider font-semibold mb-6">
+            The Foundation of Excellence
+          </p>
+          <h2 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Enfield set our standard.</h2>
+          <p className="text-3xl md:text-4xl text-white mb-12">Now let us set yours.</p>
+
+          <Link
+            href="/contact"
+            className="inline-block bg-gradient-to-r from-cyan-400 to-emerald-500 hover:from-cyan-500 hover:to-emerald-600 text-white font-bold text-xl px-12 py-5 rounded-full transition-all duration-300 shadow-2xl hover:shadow-cyan-500/50 hover:scale-105"
+          >
+            Enquire Now
+          </Link>
+
+          <p className="text-lg text-gray-400 mt-8">The first property that defined everything we do.</p>
         </div>
       </section>
 
