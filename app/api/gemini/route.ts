@@ -1,22 +1,19 @@
 /* eslint-disable import/no-unused-modules */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { NextRequest, NextResponse } from "next/server";
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import { type NextRequest, NextResponse } from "next/server"
+import { GoogleGenerativeAI } from "@google/generative-ai"
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!)
 
 export async function POST(request: NextRequest) {
   try {
-    const { topic } = await request.json();
+    const { topic } = await request.json()
 
     if (!topic || typeof topic !== "string") {
-      return NextResponse.json(
-        { error: "Missing or invalid topic." },
-        { status: 400 },
-      );
+      return NextResponse.json({ error: "Missing or invalid topic." }, { status: 400 })
     }
 
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" })
 
     const preprompt = `
 === ROLE ===
@@ -36,7 +33,7 @@ Founded: 2022
 Mission: Redefine short-term rental management through quality, transparency, and premium experiences for both guests and property owners.
 
 📌 Contact:
-- Email: luxemanagemnets.info@gmail.com / luxemanagements.info@gmail.com
+- Email: info@luxemanagements.com
 - Phone: +61 406 631 461 / +61 406 631 461
 - Office Hours: Mon–Fri: 9AM–5PM, Sat: 10AM–2PM, Sun: Closed
 
@@ -141,114 +138,15 @@ Example Format:
 Now answer the following user query in the voice of Luxe Managements:
 
 "${topic}"
-`;
+`
 
-    const result = await model.generateContent(preprompt);
-    const response = await result.response;
-    const text = await response.text();
+    const result = await model.generateContent(preprompt)
+    const response = await result.response
+    const text = await response.text()
 
-    return NextResponse.json({ text });
+    return NextResponse.json({ text })
   } catch (error: any) {
-    console.error("BACKEND ERROR:", error.message);
-    return NextResponse.json(
-      { error: "Failed to generate content.", details: error.message },
-      { status: 500 },
-    );
+    console.error("BACKEND ERROR:", error.message)
+    return NextResponse.json({ error: "Failed to generate content.", details: error.message }, { status: 500 })
   }
 }
-
-
-// GPT // API route for handling OpenAI GPT requests BELOW
-
-// import { NextRequest, NextResponse } from "next/server";
-
-// // Handle the POST request for OpenAI GPT API
-// export async function POST(request: NextRequest) {
-//   try {
-//     // Get the address from the request body
-//     const { address } = await request.json();
-
-//     // Pre-prompt GPT-4 to ensure it returns the correct real estate metrics
-//     const prompt = `You are a real estate analysis assistant. When given a property address, return the following metrics: revenue, revenue trend, occupancy, occupancy trend, daily rate, daily rate trend, market score, expenses, income, and cap rate. 
-
-//     If this data is not directly available, estimate it based on general market trends and typical calculations. Provide all of these metrics in a detailed, clear format.
-
-//     Property Address: ${address}
-
-//     Please provide the metrics in the following format:
-//     {
-//       "revenue": "value",
-//       "revenueTrend": "value",
-//       "occupancy": "value",
-//       "occupancyTrend": "value",
-//       "dailyRate": "value",
-//       "dailyRateTrend": "value",
-//       "marketScore": "value",
-//       "expenses": "value",
-//       "income": "value",
-//       "capRate": "value"
-//     }`;
-
-//     // Call OpenAI API with the prompt
-//     const response = await fetchOpenAIResponse(prompt);
-
-//     // Log the full response for debugging purposes
-//     console.log("OpenAI Response:", response);
-
-//     // Parse the response content
-//     let parsedResponse = null;
-//     try {
-//       parsedResponse = JSON.parse(response);
-//     } catch (e) {
-//       console.error("Error parsing OpenAI response:", e);
-//       return NextResponse.json(
-//         { error: "Failed to parse OpenAI response" },
-//         { status: 500 },
-//       );
-//     }
-
-//     return NextResponse.json({ response: parsedResponse });
-//   } catch (error) {
-//     console.error("Error fetching OpenAI response:", error);
-//     return NextResponse.json(
-//       { error: error.message || "Failed to fetch OpenAI response" },
-//       { status: 500 },
-//     );
-//   }
-// }
-
-// // Function to call OpenAI API
-// async function fetchOpenAIResponse(prompt: string) {
-//   try {
-//     const res = await fetch("https://api.openai.com/v1/chat/completions", {
-//       method: "POST",
-//       headers: {
-//         "Content-Type": "application/json",
-//         Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
-//       },
-//       body: JSON.stringify({
-//         model: "gpt-4",
-//         messages: [
-//           {
-//             role: "system",
-//             content: "You are a helpful real estate assistant.",
-//           },
-//           { role: "user", content: prompt },
-//         ],
-//         max_tokens: 1000, // Increase token limit
-//       }),
-//     });
-
-//     if (!res.ok) {
-//       const errorData = await res.json();
-//       console.error("OpenAI Error:", errorData);
-//       throw new Error(`OpenAI API Error: ${errorData.error.message}`);
-//     }
-
-//     const data = await res.json();
-//     return data.choices[0].message.content; // Check if this returns a valid structure
-//   } catch (error) {
-//     console.error("Error fetching OpenAI response:", error);
-//     throw new Error("Error fetching OpenAI response");
-//   }
-// }
