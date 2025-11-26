@@ -15,7 +15,7 @@ export function ParklandVistaTransformationView() {
     bathroomCount: 1,
     squareMeters: 80,
     pricePerNight: 220,
-    heroImageUrl: "/images/parkland-vista-main.jpeg",
+    heroImageUrl: "/images/stherophoto.jpg",
     aboutText:
       "Parkland Vista Luxury Retreat offers an elevated stay experience overlooking tranquil parklands, blending modern comfort with a refined, resort-inspired aesthetic. Thoughtfully styled throughout, the home features spacious living areas, premium bedding, and a fully equipped kitchen designed for both short and extended stays. Guests can unwind on the private outdoor patio with leafy views, enjoy high-end amenities, and relax in a space curated for comfort, privacy, and relaxation. With its serene setting and contemporary design, this retreat is perfect for families, couples, or business travellers seeking a peaceful escape without compromising on luxury.",
     highlight1: "Prime CBD Location",
@@ -27,23 +27,20 @@ export function ParklandVistaTransformationView() {
     beforeAfterComparisons: [
       {
         title: "Living Room Styling",
-        beforeImage: "/images/parkland-vista-before.jpeg",
-        afterImage: "/images/parkland-vista-after.jpeg",
+        beforeImage: "/images/stbeforeliving.png",
+        afterImage: "/images/stafterliving.jpg",
       },
     ],
     galleryImages: [
       {
-        src: "/images/parkland-vista-living.jpeg",
+        src: "/images/stgallery1.jpg",
         alt: "Modern living and dining area with gray sofa and glass table",
       },
-      { src: "/images/parkland-vista-bedroom1.jpeg", alt: "Main bedroom with wooden furniture and coastal artwork" },
-      { src: "/images/parkland-vista-bedroom2.jpeg", alt: "Bedroom view looking out to kitchen and living area" },
-      {
-        src: "/images/parkland-vista-kitchen.jpeg",
-        alt: "Contemporary white kitchen with mirror backsplash and LED lighting",
-      },
-      { src: "/images/parkland-vista-exterior.jpeg", alt: "Modern apartment building exterior" },
-      { src: "/images/parkland-vista-patio.jpeg", alt: "Private outdoor patio with parkland views" },
+      { src: "/images/stgallery2.jpg", alt: "Contemporary white kitchen with mirror backsplash and LED lighting" },
+      { src: "/images/stgallery3.jpg", alt: "Alternative kitchen view with stainless steel appliances" },
+      { src: "/images/stgallery4.jpg", alt: "Bedroom with coastal artwork and comfortable bedding" },
+      { src: "/images/stgallery5.jpg", alt: "Modern bathroom with laundry facilities" },
+      { src: "/images/stgallery6.jpg", alt: "Master bedroom with mirrored wardrobes and city views" },
     ],
   }
 
