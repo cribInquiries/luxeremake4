@@ -201,7 +201,17 @@ export function MelbourneStreetTransformationView({ property }: MelbourneStreetT
               <h2 className="text-5xl md:text-6xl font-bold text-black mb-4">The Story</h2>
             </div>
             <p className="text-xl md:text-2xl text-gray-800 leading-relaxed text-pretty font-normal">
-              {property.description}
+              Our journey with this client began when she reached out after purchasing a property with strong short-term
+              rental potential. She wanted to position it as a high-performing investment, and we stepped in to help
+              bring that vision to life. We analysed the local market, projected returns across major booking platforms,
+              and developed a tailored styling and setup plan to highlight the property's strengths. Our team styled the
+              space to create a warm, modern, guest-ready home ideal for short-term stays. Throughout the year, we
+              managed the property with a balance of strong booking performance and the flexibility she
+              needed—coordinating seamlessly whenever she or her family wished to enjoy the home, while still
+              maintaining consistent availability for guest bookings. By the end of the year, the property had achieved
+              a 9.5/10 rating on Booking.com and consistently outperformed traditional rental income. Impressed with the
+              returns and our service, she chose to continue with us long-term, turning a newly purchased home into a
+              high-performing investment supported by a trusted, ongoing partnership.
             </p>
           </div>
         </section>

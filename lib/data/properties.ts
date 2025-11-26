@@ -151,15 +151,14 @@ export const properties: Property[] = [
     subheading:
       "From dated décor to dream stay—this Clearview family home now earns $105k annually through strategic styling",
     location: "Clearview",
-    mainImage: "/images/clearview_main.jpeg",
+    mainImage: "/images/cmainshot.jpg",
     carouselImages: [
-      "/images/clearview_bedroom1.jpeg",
-      "/images/clearview_bedroom2.jpeg",
-      "/images/clearview_bedroom3.jpeg",
-      "/images/clearview_bedroom4.jpeg",
-      "/images/clearview_bedroom5.jpeg",
-      "/images/clearview_games1.jpeg",
-      "/images/clearview_games2.jpeg",
+      "/images/cmainshot.jpg",
+      "/images/cbedroom5new.jpeg",
+      "/images/cbedroom2new.jpeg",
+      "/images/cgameroom1new.jpeg",
+      "/images/cgameroom2new.jpeg",
+      "/images/cbathroom1-edited.jpg",
     ],
     transformationStory: {
       results: {

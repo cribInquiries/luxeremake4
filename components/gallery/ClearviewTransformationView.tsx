@@ -22,12 +22,12 @@ export function ClearviewTransformationView({ property }: ClearviewTransformatio
   ]
 
   const galleryImages = [
-    { src: "/images/cbedroom1.jpg", alt: "Luxurious master bedroom with modern grey headboard" },
-    { src: "/images/cbedroom5new.jpeg", alt: "Fifth bedroom with premium finishes" },
-    { src: "/images/cgameroom1new.jpeg", alt: "Entertainment room with pool table" },
-    { src: "/images/cgameroom2new.jpeg", alt: "Games room with ping pong and pool tables" },
-    { src: "/images/cbedroom1new.jpeg", alt: "Bright modern bedroom with white marble flooring and navy area rug" },
-    { src: "/images/cbedroom2new.jpeg", alt: "Sophisticated bedroom with black furniture and warm lighting" },
+    { src: "/images/cmainshot.jpg", alt: "Modern two-story Clearview family home exterior" },
+    { src: "/images/cbedroom5new.jpeg", alt: "Minimalist bedroom with black furniture and high window" },
+    { src: "/images/cbedroom2new.jpeg", alt: "Master bedroom with balcony access and modern styling" },
+    { src: "/images/cgameroom1new.jpeg", alt: "Entertainment room with pool and ping pong tables" },
+    { src: "/images/cgameroom2new.jpeg", alt: "Games room showing bedroom and entertainment area" },
+    { src: "/images/cbathroom1-edited.jpg", alt: "Luxurious bathroom with marble tiles and glass shower" },
   ]
 
   return (
@@ -50,7 +50,7 @@ export function ClearviewTransformationView({ property }: ClearviewTransformatio
         >
           <div className="absolute inset-0 animate-[zoom_30s_ease-in-out_infinite]">
             <Image
-              src="/images/chero.jpg"
+              src="/images/cmainshot.jpg"
               alt="Modern Clearview Family Home"
               fill
               className="object-cover opacity-50"
