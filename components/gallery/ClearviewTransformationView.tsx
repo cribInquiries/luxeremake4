@@ -161,7 +161,7 @@ export function ClearviewTransformationView({ property }: ClearviewTransformatio
           <div className="max-w-6xl mx-auto px-6 md:px-12">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-4">Revenue Transformation</h2>
-              <p className="text-xl text-white/80 font-medium">
+              <p className="text-xl text-white/90 font-semibold">
                 Traditional rental vs. Luxe-managed Airbnb performance
               </p>
             </div>
@@ -187,7 +187,7 @@ export function ClearviewTransformationView({ property }: ClearviewTransformatio
                       <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
                       <XAxis
                         dataKey="period"
-                        tick={{ fill: "#fff", fontSize: 12 }}
+                        tick={{ fill: "#fff", fontSize: 14, fontWeight: 600 }}
                         tickLine={false}
                         angle={-45}
                         textAnchor="end"
@@ -195,11 +195,11 @@ export function ClearviewTransformationView({ property }: ClearviewTransformatio
                         interval={0}
                       />
                       <YAxis
-                        tick={{ fill: "#fff", fontSize: 12 }}
+                        tick={{ fill: "#fff", fontSize: 14, fontWeight: 600 }}
                         tickLine={false}
                         axisLine={false}
                         tickFormatter={(value) => `$${value / 1000}k`}
-                        width={45}
+                        width={50}
                       />
                       <ChartTooltip
                         content={<ChartTooltipContent />}

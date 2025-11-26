@@ -291,7 +291,9 @@ export function GlenelgTransformationView({ property }: GlenelgTransformationVie
           <div className="max-w-6xl mx-auto px-6 md:px-12">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Revenue Transformation</h2>
-              <p className="text-xl text-gray-600">Traditional rental vs. Luxe-managed Airbnb performance</p>
+              <p className="text-xl text-gray-700 font-medium">
+                Traditional rental vs. Luxe-managed Airbnb performance
+              </p>
             </div>
 
             {/* Annual Comparison */}
@@ -309,9 +311,13 @@ export function GlenelgTransformationView({ property }: GlenelgTransformationVie
                 <ResponsiveContainer width="100%" height="100%">
                   <BarChart data={revenueComparisonData}>
                     <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-                    <XAxis dataKey="period" tick={{ fill: "#666", fontSize: 14 }} tickLine={false} />
+                    <XAxis
+                      dataKey="period"
+                      tick={{ fill: "#374151", fontSize: 15, fontWeight: 600 }}
+                      tickLine={false}
+                    />
                     <YAxis
-                      tick={{ fill: "#666", fontSize: 14 }}
+                      tick={{ fill: "#374151", fontSize: 15, fontWeight: 600 }}
                       tickLine={false}
                       axisLine={false}
                       tickFormatter={(value) => `$${value / 1000}k`}
@@ -331,15 +337,15 @@ export function GlenelgTransformationView({ property }: GlenelgTransformationVie
               </ChartContainer>
               <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="text-center p-6 bg-red-50 rounded-xl">
-                  <div className="text-3xl font-bold text-red-600 mb-2">$24,440</div>
-                  <div className="text-sm text-gray-600">Traditional Rental</div>
+                  <div className="text-4xl md:text-5xl font-bold text-red-600 mb-2">$24,440</div>
+                  <div className="text-base font-semibold text-gray-700">Traditional Rental</div>
                 </div>
                 <div className="flex items-center justify-center">
                   <DollarSign className="w-12 h-12 text-green-500" />
                 </div>
                 <div className="text-center p-6 bg-green-50 rounded-xl">
-                  <div className="text-3xl font-bold text-green-600 mb-2">$38,000</div>
-                  <div className="text-sm text-gray-600">Luxe Airbnb</div>
+                  <div className="text-4xl md:text-5xl font-bold text-green-600 mb-2">$38,000</div>
+                  <div className="text-base font-semibold text-gray-700">Luxe Airbnb</div>
                 </div>
               </div>
               <div className="mt-6 text-center p-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl">
