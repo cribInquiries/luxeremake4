@@ -343,69 +343,67 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
             </div>
           </div>
 
-          <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg">
-            <h3 className="text-3xl font-bold text-black mb-8 text-center">Monthly Revenue Comparison</h3>
-            <ChartContainer
-              config={{
-                traditional: {
-                  label: "Traditional Rent",
-                  color: "#ef4444",
-                },
-                luxe: {
-                  label: "Luxe Airbnb",
-                  color: "#10b981",
-                },
-              }}
-              className="h-[500px] w-full"
-            >
-              <ResponsiveContainer width="100%" height="100%">
-                <LineChart data={monthlyRevenueData} margin={{ top: 20, right: 30, left: 60, bottom: 60 }}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
-                  <XAxis
-                    dataKey="month"
-                    tick={{ fill: "#374151", fontSize: 15, fontWeight: 600 }}
-                    tickLine={false}
-                    domain={[1, 12]}
-                    label={{
-                      value: "Month",
-                      position: "insideBottom",
-                      offset: -10,
-                      style: { fontSize: 16, fontWeight: 700, fill: "#111827" },
-                    }}
-                  />
-                  <YAxis
-                    tick={{ fill: "#374151", fontSize: 15, fontWeight: 600 }}
-                    tickLine={false}
-                    axisLine={false}
-                    tickFormatter={(value) => `$${value / 1000}k`}
-                    label={{
-                      value: "Monthly Revenue",
-                      angle: -90,
-                      position: "insideLeft",
-                      style: { fontSize: 16, fontWeight: 700, fill: "#111827" },
-                    }}
-                  />
-                  <ChartTooltip content={<ChartTooltipContent />} cursor={{ stroke: "#e5e7eb", strokeWidth: 2 }} />
-                  <Line
-                    type="monotone"
-                    dataKey="traditional"
-                    stroke="#ef4444"
-                    strokeWidth={4}
-                    name="Traditional Rent"
-                    dot={false}
-                  />
-                  <Line
-                    type="monotone"
-                    dataKey="luxe"
-                    stroke="#10b981"
-                    strokeWidth={4}
-                    name="Luxe Airbnb"
-                    dot={{ fill: "#10b981", r: 6 }}
-                  />
-                </LineChart>
-              </ResponsiveContainer>
-            </ChartContainer>
-          </div>
+          <h3 className="text-3xl font-bold text-black mb-8 text-center">Monthly Revenue Comparison</h3>
+          <ChartContainer
+            config={{
+              traditional: {
+                label: "Traditional Rent",
+                color: "#ef4444",
+              },
+              luxe: {
+                label: "Luxe Airbnb",
+                color: "#10b981",
+              },
+            }}
+            className="h-[500px] w-full"
+          >
+            <ResponsiveContainer width="100%" height="100%">
+              <LineChart data={monthlyRevenueData} margin={{ top: 20, right: 30, left: 60, bottom: 60 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
+                <XAxis
+                  dataKey="month"
+                  tick={{ fill: "#374151", fontSize: 15, fontWeight: 600 }}
+                  tickLine={false}
+                  domain={[1, 12]}
+                  label={{
+                    value: "Month",
+                    position: "insideBottom",
+                    offset: -10,
+                    style: { fontSize: 16, fontWeight: 700, fill: "#111827" },
+                  }}
+                />
+                <YAxis
+                  tick={{ fill: "#374151", fontSize: 15, fontWeight: 600 }}
+                  tickLine={false}
+                  axisLine={false}
+                  tickFormatter={(value) => `$${value / 1000}k`}
+                  label={{
+                    value: "Monthly Revenue",
+                    angle: -90,
+                    position: "insideLeft",
+                    style: { fontSize: 16, fontWeight: 700, fill: "#111827" },
+                  }}
+                />
+                <ChartTooltip content={<ChartTooltipContent />} cursor={{ stroke: "#e5e7eb", strokeWidth: 2 }} />
+                <Line
+                  type="monotone"
+                  dataKey="traditional"
+                  stroke="#ef4444"
+                  strokeWidth={4}
+                  name="Traditional Rent"
+                  dot={false}
+                />
+                <Line
+                  type="monotone"
+                  dataKey="luxe"
+                  stroke="#10b981"
+                  strokeWidth={4}
+                  name="Luxe Airbnb"
+                  dot={{ fill: "#10b981", r: 6 }}
+                />
+              </LineChart>
+            </ResponsiveContainer>
+          </ChartContainer>
 
           <div className="text-center p-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl shadow-2xl">
             <p className="text-4xl font-bold text-white mb-2">+$21,000 extra per year</p>
