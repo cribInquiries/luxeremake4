@@ -6,6 +6,7 @@ import { EnfieldTransformationView } from "@/components/gallery/EnfieldTransform
 import { WestBeachTransformationView } from "@/components/gallery/WestBeachTransformationView"
 import { SeafordTransformationView } from "@/components/gallery/SeafordTransformationView"
 import { ParklandVistaTransformationView } from "@/components/gallery/ParklandVistaTransformationView"
+import { SouthTerraceTransformationView } from "@/components/gallery/SouthTerraceTransformationView"
 import { notFound } from "next/navigation"
 
 export default function PropertyDetailPage({ params }: { params: { slug: string } }) {
@@ -41,6 +42,10 @@ export default function PropertyDetailPage({ params }: { params: { slug: string 
 
   if (property.slug === "parkland-vista") {
     return <ParklandVistaTransformationView />
+  }
+
+  if (property.slug === "south-terrace-apartment") {
+    return <SouthTerraceTransformationView property={property} />
   }
 
   // For other properties, show a simple detail page
