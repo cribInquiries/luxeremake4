@@ -148,15 +148,15 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="text-center p-8 bg-blue-200 rounded-2xl border-2 border-blue-400 shadow-sm hover:shadow-md transition-shadow">
+            <div className="text-center p-8 bg-cyan-100 rounded-2xl border-2 border-cyan-500 shadow-sm hover:shadow-md transition-shadow">
               <div className="text-2xl md:text-3xl font-bold mb-2">
-                <span className="text-blue-700">$5,000</span> <span className="text-gray-900">Budget</span>
+                <span className="text-cyan-700">$5,000</span> <span className="text-gray-900">Budget</span>
               </div>
               <div className="text-gray-700 font-medium">Full Furnishing</div>
             </div>
-            <div className="text-center p-8 bg-green-200 rounded-2xl border-2 border-green-400 shadow-sm hover:shadow-md transition-shadow">
+            <div className="text-center p-8 bg-emerald-100 rounded-2xl border-2 border-emerald-500 shadow-sm hover:shadow-md transition-shadow">
               <div className="text-2xl md:text-3xl font-bold mb-2">
-                <span className="text-green-700">5</span> <span className="text-gray-900">Bedrooms</span>
+                <span className="text-emerald-700">5</span> <span className="text-gray-900">Bedrooms</span>
               </div>
               <div className="text-gray-700 font-medium">Group Accommodation</div>
             </div>
