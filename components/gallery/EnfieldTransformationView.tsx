@@ -225,46 +225,46 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {/* The Challenge */}
-            <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700">
+            <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700/50 shadow-2xl">
               <h3 className="text-3xl font-bold text-white mb-8">The Challenge</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <X size={24} className="text-red-500 flex-shrink-0 mt-1" />
+                  <X size={24} className="text-red-400 flex-shrink-0 mt-1" strokeWidth={3} />
                   <span className="text-white/90 text-lg">Only $5,000 budget</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <X size={24} className="text-red-500 flex-shrink-0 mt-1" />
+                  <X size={24} className="text-red-400 flex-shrink-0 mt-1" strokeWidth={3} />
                   <span className="text-white/90 text-lg">Five bedrooms to furnish</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <X size={24} className="text-red-500 flex-shrink-0 mt-1" />
+                  <X size={24} className="text-red-400 flex-shrink-0 mt-1" strokeWidth={3} />
                   <span className="text-white/90 text-lg">High-end property expectations</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <X size={24} className="text-red-500 flex-shrink-0 mt-1" />
+                  <X size={24} className="text-red-400 flex-shrink-0 mt-1" strokeWidth={3} />
                   <span className="text-white/90 text-lg">First property launch</span>
                 </div>
               </div>
             </div>
 
             {/* Luxe Solution */}
-            <div className="bg-gradient-to-br from-green-800 to-green-900 rounded-3xl p-8 border border-green-700">
-              <h3 className="text-3xl font-bold text-white mb-8">Luxe Solution</h3>
+            <div className="bg-gradient-to-br from-green-900 via-emerald-900 to-green-950 rounded-3xl p-8 border border-green-700/50 shadow-2xl">
+              <h3 className="text-3xl font-bold text-green-400 mb-8">Luxe Solution</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <Check size={24} className="text-green-400 flex-shrink-0 mt-1" />
+                  <Check size={24} className="text-green-400 flex-shrink-0 mt-1" strokeWidth={3} />
                   <span className="text-white/90 text-lg">Strategic furniture sourcing</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Check size={24} className="text-green-400 flex-shrink-0 mt-1" />
+                  <Check size={24} className="text-green-400 flex-shrink-0 mt-1" strokeWidth={3} />
                   <span className="text-white/90 text-lg">Entertainment features added</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Check size={24} className="text-green-400 flex-shrink-0 mt-1" />
+                  <Check size={24} className="text-green-400 flex-shrink-0 mt-1" strokeWidth={3} />
                   <span className="text-white/90 text-lg">Cohesive luxury aesthetic</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Check size={24} className="text-green-400 flex-shrink-0 mt-1" />
+                  <Check size={24} className="text-green-400 flex-shrink-0 mt-1" strokeWidth={3} />
                   <span className="text-white/90 text-lg">Premium guest experience</span>
                 </div>
               </div>
@@ -439,7 +439,7 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
             External cleaners quoted $400+ per stay. Making the operation unsustainable.
           </p>
 
-          <div className="bg-gradient-to-br from-green-500 to-emerald-600 rounded-3xl p-10 md:p-12 mb-12 shadow-2xl">
+          <div className="bg-gradient-to-br from-green-600 to-emerald-600 rounded-3xl p-10 md:p-12 mb-12 shadow-2xl">
             <p className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
               So we made a decision that changed Luxe forever:
             </p>
