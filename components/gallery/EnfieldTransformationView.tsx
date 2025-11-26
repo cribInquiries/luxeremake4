@@ -407,19 +407,19 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
           <ul className="space-y-4 mb-12 text-xl md:text-2xl text-white/80">
             <li className="flex items-start gap-3">
               <span className="text-white/50 mt-1">•</span>
-              <span>High-Gloss Flooring</span>
+              <span className="text-white/80">High-Gloss Flooring</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-white/50 mt-1">•</span>
-              <span>Ultra-white interior palette</span>
+              <span className="text-white/80">Ultra-white interior palette</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-white/50 mt-1">•</span>
-              <span>Massive feature carpet</span>
+              <span className="text-white/80">Massive feature carpet</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-white/50 mt-1">•</span>
-              <span>High-Gloss fingerprint prone surfaces</span>
+              <span className="text-white/80">High-Gloss fingerprint prone surfaces</span>
             </li>
           </ul>
 
