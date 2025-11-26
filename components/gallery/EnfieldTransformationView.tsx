@@ -5,7 +5,7 @@ import Link from "next/link"
 import { ArrowLeft, Sparkles, X, Check } from "lucide-react"
 import type { Property } from "@/lib/properties"
 import { Line, LineChart, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from "recharts"
-import { ChartTooltip, ChartTooltipContent } from "@/components/ui/chart"
+import { ChartTooltip, ChartTooltipContent, ChartContainer } from "@/components/ui/chart"
 import { ImageLightbox } from "@/components/image-lightbox"
 import { useState } from "react"
 
@@ -339,7 +339,19 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
 
           <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg mb-12">
             <h3 className="text-3xl font-bold text-black mb-8 text-center">Monthly Revenue Comparison</h3>
-            <div className="h-[500px]">
+            <ChartContainer
+              config={{
+                traditional: {
+                  label: "Traditional Rent",
+                  color: "#ef4444",
+                },
+                luxe: {
+                  label: "Luxe Airbnb",
+                  color: "#10b981",
+                },
+              }}
+              className="h-[500px] w-full"
+            >
               <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={monthlyRevenueData} margin={{ top: 20, right: 30, left: 60, bottom: 60 }}>
                   <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
@@ -386,7 +398,7 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
                   />
                 </LineChart>
               </ResponsiveContainer>
-            </div>
+            </ChartContainer>
           </div>
 
           <div className="text-center p-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl shadow-2xl">
