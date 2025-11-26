@@ -176,37 +176,38 @@ export function ClearviewTransformationView({ property }: ClearviewTransformatio
                       color: "#10b981",
                     },
                   }}
-                  className="h-[280px] md:h-[450px] w-full"
+                  className="h-[350px] md:h-[500px] w-full"
                 >
                   <ResponsiveContainer width="100%" height="100%">
                     <BarChart
                       data={incomeComparisonData}
-                      margin={{ top: 20, right: 10, left: 0, bottom: 85 }}
-                      barCategoryGap="20%"
+                      margin={{ top: 20, right: 30, left: 10, bottom: 60 }}
+                      barCategoryGap="35%"
                     >
                       <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
                       <XAxis
                         dataKey="period"
-                        tick={{ fill: "#fff", fontSize: 14, fontWeight: 600 }}
+                        tick={{ fill: "#fff", fontSize: 16, fontWeight: 600 }}
                         tickLine={false}
-                        angle={-45}
-                        textAnchor="end"
-                        height={100}
+                        axisLine={false}
+                        angle={0}
+                        textAnchor="middle"
+                        height={60}
                         interval={0}
                       />
                       <YAxis
-                        tick={{ fill: "#fff", fontSize: 14, fontWeight: 600 }}
+                        tick={{ fill: "#fff", fontSize: 15, fontWeight: 600 }}
                         tickLine={false}
                         axisLine={false}
                         tickFormatter={(value) => `$${value / 1000}k`}
-                        width={50}
+                        width={60}
                       />
                       <ChartTooltip
                         content={<ChartTooltipContent />}
                         cursor={{ fill: "rgba(255,255,255,0.1)" }}
                         formatter={(value: number) => [`$${value.toLocaleString()}`, "Annual Revenue"]}
                       />
-                      <Bar dataKey="annual" radius={[8, 8, 0, 0]} maxBarSize={70}>
+                      <Bar dataKey="annual" radius={[12, 12, 0, 0]} maxBarSize={150}>
                         {incomeComparisonData.map((entry, index) => (
                           <Cell key={`cell-${index}`} fill={entry.fill} />
                         ))}
@@ -216,22 +217,22 @@ export function ClearviewTransformationView({ property }: ClearviewTransformatio
                 </ChartContainer>
               </div>
             </div>
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center p-6 bg-white/10 rounded-xl">
-                <div className="text-3xl font-bold text-red-400 mb-2">$41,600</div>
-                <div className="text-sm text-white/80 font-medium">Traditional Rental</div>
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+              <div className="text-center p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
+                <div className="text-5xl font-bold text-red-400 mb-3">$41,600</div>
+                <div className="text-base text-white/90 font-semibold">Traditional Rental</div>
               </div>
               <div className="flex items-center justify-center">
-                <DollarSign className="w-12 h-12 text-green-500" />
+                <DollarSign className="w-16 h-16 text-emerald-400" strokeWidth={2.5} />
               </div>
-              <div className="text-center p-6 bg-white/10 rounded-xl">
-                <div className="text-3xl font-bold text-green-400 mb-2">$102,200</div>
-                <div className="text-sm text-white/80 font-medium">Luxe Airbnb</div>
+              <div className="text-center p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
+                <div className="text-5xl font-bold text-emerald-400 mb-3">$102,200</div>
+                <div className="text-base text-white/90 font-semibold">Luxe Airbnb</div>
               </div>
             </div>
-            <div className="mt-6 text-center p-6 bg-green-500/20 rounded-xl border border-green-500/30">
-              <p className="text-3xl font-bold text-green-400">+$60,600 additional annual revenue</p>
-              <p className="text-white/90 mt-2 text-lg">145% revenue increase with Luxe Management</p>
+            <div className="mt-8 text-center p-8 bg-emerald-500/10 rounded-2xl border-2 border-emerald-500/30">
+              <p className="text-4xl font-bold text-emerald-400 mb-2">+$60,600 additional annual revenue</p>
+              <p className="text-white/90 mt-2 text-xl font-medium">145% revenue increase with Luxe Management</p>
             </div>
           </div>
         </section>
