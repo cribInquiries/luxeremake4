@@ -1,20 +1,19 @@
 "use client"
-import { useState } from "react"
-import { Box, Text } from "@chakra-ui/react"
 
-import ScheduleConsultation from "@/components/luxeComponents/scheduleConsultation"
+import { useState } from "react"
+import Image from "next/image"
+import Link from "next/link"
+import { properties } from "@/lib/data/properties"
 import { DialogContent, DialogCloseTrigger, DialogRoot } from "@/components/chakra-snippets/dialog"
 import DefaultSlider from "@/components/carousel/DefaultSlider"
 import { X } from "lucide-react"
-import Image from "next/image"
-import { properties } from "@/lib/data/properties"
+import { Box, Text } from "@chakra-ui/react"
+import ScheduleConsultation from "@/components/luxeComponents/scheduleConsultation"
 
-// app/gallery/page.tsx
+const categories = ["All", "Property Management", "Interior Design", "Styling", "Renovation"]
 
-// eslint-disable-next-line import/no-unused-modules
-
-const Gallery = () => {
-  // STATES FOR THE GALLERY & MODAL
+export default function GalleryPage() {
+  const [activeCategory, setActiveCategory] = useState("All")
   const [clickedImage, setClickedImage] = useState<{
     img: string
     title: string
@@ -25,314 +24,180 @@ const Gallery = () => {
     bedrooms?: number
     bathrooms?: number
     carasoleImg?: any
+    status?: string
   } | null>(null)
   const [modalOpen, setModalOpen] = useState(false)
-  const [currentPage, setCurrentPage] = useState(1)
-  const [activeCategory, setActiveCategory] = useState("All")
-
-  // STATES FOR FILTER & SEARCH
-  const [searchTerm, setSearchTerm] = useState("")
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([])
   const [isExpanded, setIsExpanded] = useState(true)
 
-  // Category list
-  const categories = ["All", "Property Management", "Interior Design", "Styling", "Renovation"]
-
-  // Toggle a category
-  const handleCategoryChange = (category: string) => {
-    setActiveCategory(category)
-    if (category === "All") {
-      setSelectedCategories([])
-    } else {
-      setSelectedCategories([category])
-    }
-  }
-
-  // Enhanced gallery items with more details
-  const galleryItems = properties.map((property) => ({
-    img: property.img,
+  const mappedProperties = properties.map((property) => ({
+    id: property.slug,
     title: property.title,
-    subheading: property.subheading,
+    shortDescription: property.description,
+    mainImage: property.img,
     categories: [property.category],
-    brand: property.labelName,
-    location: property.location,
+    services: property.tags,
     bedrooms: property.beds,
     bathrooms: property.baths,
-    carasoleImg: property.carasoleImg,
+    status: property.status,
   }))
 
-  // Filtering logic based on search term and selected categories
-  const filteredGalleryItems = galleryItems.filter((item) => {
-    const lowerSearch = searchTerm.toLowerCase()
-    const matchesSearch =
-      item.title.toLowerCase().includes(lowerSearch) ||
-      item.subheading.toLowerCase().includes(lowerSearch) ||
-      (item.location && item.location.toLowerCase().includes(lowerSearch))
+  const filteredProperties =
+    activeCategory === "All"
+      ? mappedProperties
+      : mappedProperties.filter(
+          (property) =>
+            property.categories.includes(activeCategory) ||
+            (property.services && property.services.includes(activeCategory)),
+        )
 
-    const matchesCategory =
-      selectedCategories.length === 0 || selectedCategories.some((cat) => item.categories.includes(cat))
+  const handleCategoryChange = (category: string) => {
+    setActiveCategory(category)
+  }
 
-    return matchesSearch && matchesCategory
-  })
+  // Only show active properties as clickable cards
+  const activeProperties = filteredProperties.filter((p) => p.status === "active")
 
-  // Items per page
-  const itemsPerPage = 6
-  const totalPages = Math.ceil(filteredGalleryItems.length / itemsPerPage)
-
-  // Get current items
-  const indexOfLastItem = currentPage * itemsPerPage
-  const indexOfFirstItem = indexOfLastItem - itemsPerPage
-  const currentItems = filteredGalleryItems.slice(indexOfFirstItem, indexOfLastItem)
-
-  // Change page
-  const paginate = (pageNumber: number) => setCurrentPage(pageNumber)
+  // Coming soon cards with grey background and no images
+  const comingSoonCount = Math.max(0, 9 - activeProperties.length)
+  const comingSoonCards = Array.from({ length: comingSoonCount }, (_, i) => i)
 
   return (
-    <>
-      {/* Enhanced Header Section with Decorative Elements */}
-      <Box
-        position="relative"
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-        justifyContent="center"
-        textAlign="center"
-        width="100%"
-        paddingY={["60px", "70px", "80px"]}
-        overflow="hidden"
-      >
-        {/* Decorative elements */}
-        <Box
-          position="absolute"
-          top="20px"
-          left="10%"
-          width="40px"
-          height="40px"
-          borderTop="2px solid #e0e0e0"
-          borderLeft="2px solid #e0e0e0"
-          opacity="0.6"
-        />
-        <Box
-          position="absolute"
-          bottom="20px"
-          right="10%"
-          width="40px"
-          height="40px"
-          borderBottom="2px solid #e0e0e0"
-          borderRight="2px solid #e0e0e0"
-          opacity="0.6"
-        />
+    <main className="min-h-screen bg-white">
+      {/* Header Section */}
+      <section className="relative flex flex-col items-center justify-center text-center w-full py-16 md:py-20 lg:py-24 overflow-hidden">
+        {/* Decorative corner elements */}
+        <div className="absolute top-5 left-[10%] w-10 h-10 border-t-2 border-l-2 border-gray-200 opacity-60" />
+        <div className="absolute bottom-5 right-[10%] w-10 h-10 border-b-2 border-r-2 border-gray-200 opacity-60" />
 
-        {/* Main heading with enhanced typography */}
-        <Box position="relative">
-          <Text
-            as="h1"
-            fontSize={["42px", "48px", "56px"]}
-            fontWeight="700"
-            fontFamily="arial"
-            letterSpacing="-0.02em"
-            marginBottom="6px"
-            color="#000"
-          >
-            Gallery
-          </Text>
-          <Box width="40px" height="3px" backgroundColor="#000" margin="0 auto" marginBottom="20px" />
-          <Text
-            fontSize={["16px", "18px", "20px"]}
-            fontWeight="400"
-            fontFamily="arial"
-            color="#666"
-            maxWidth="600px"
-            lineHeight="1.6"
-          >
+        <div className="relative z-10">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-2 text-black">Gallery</h1>
+          <div className="w-10 h-1 bg-black mx-auto mb-6" />
+          <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto px-4 leading-relaxed">
             Check out our latest work showcasing premium properties and exceptional interior design.
-          </Text>
-        </Box>
-      </Box>
+          </p>
+        </div>
+      </section>
 
-      {/* Category Filter Tabs */}
-      <Box
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        width="100%"
-        marginBottom="40px"
-        paddingX={["20px", "30px"]}
-      >
-        <Box display="flex" flexWrap="wrap" justifyContent="center" gap={["10px", "15px", "20px"]}>
+      {/* Category Filter */}
+      <section className="flex justify-center items-center w-full mb-12 px-5 md:px-8">
+        <div className="flex flex-wrap justify-center gap-3 md:gap-4 lg:gap-5">
           {categories.map((category) => (
-            <Box
+            <button
               key={category}
               onClick={() => handleCategoryChange(category)}
-              cursor="pointer"
-              paddingX={["12px", "16px", "20px"]}
-              paddingY={["8px", "10px", "12px"]}
-              borderRadius="30px"
-              backgroundColor={activeCategory === category ? "#000" : "transparent"}
-              border="1px solid"
-              borderColor={activeCategory === category ? "#000" : "#e0e0e0"}
-              transition="all 0.3s ease"
-              _hover={{
-                backgroundColor: activeCategory === category ? "#000" : "#f5f5f5",
-              }}
+              className={`px-4 md:px-5 lg:px-6 py-2 md:py-2.5 lg:py-3 rounded-full border transition-all duration-300 text-sm md:text-base ${
+                activeCategory === category
+                  ? "bg-black text-white border-black font-semibold"
+                  : "bg-transparent text-gray-700 border-gray-200 hover:bg-gray-50"
+              }`}
             >
-              <Text
-                fontSize={["14px", "15px", "16px"]}
-                fontWeight={activeCategory === category ? "600" : "400"}
-                color={activeCategory === category ? "#fff" : "#333"}
-                fontFamily="arial"
-              >
-                {category}
-              </Text>
-            </Box>
+              {category}
+            </button>
           ))}
-        </Box>
-      </Box>
+        </div>
+      </section>
 
-      {/* Main Gallery Container with Enhanced Layout */}
-      <Box
-        width="100%"
-        maxWidth="1400px"
-        margin="0 auto"
-        paddingX={["20px", "30px", "40px", "60px"]}
-        paddingBottom="80px"
-      >
-        {/* Gallery Grid with Improved Visual Appeal */}
-        <Box
-          display="grid"
-          gridTemplateColumns={["1fr", "repeat(2, 1fr)", "repeat(2, 1fr)", "repeat(3, 1fr)"]}
-          gap={["24px", "30px", "40px"]}
-          width="100%"
-        >
-          {currentItems.map((item, index) => (
-            <Box key={index} position="relative">
-              {/* Property Image with Enhanced Hover Effects */}
-              <Box
-                position="relative"
-                onClick={() => {
-                  setClickedImage(item)
-                  setModalOpen(true)
-                }}
-                cursor="pointer"
-                overflow="hidden"
-                borderRadius="16px"
-                boxShadow="0 4px 20px rgba(0, 0, 0, 0.08)"
-                height={["280px", "300px", "320px"]}
-                width="100%"
-              >
-                {/* Main Image */}
-                <Box
-                  position="relative" // establish containing block for the Image
-                  overflow="hidden" // crop image when scaling
-                  height="100%"
-                  width="100%"
-                  transition="transform 0.5s ease"
-                  _hover={{ transform: "scale(1.05)" }}
-                >
+      {/* Gallery Grid */}
+      <section className="w-full max-w-[1400px] mx-auto px-5 md:px-8 lg:px-12 xl:px-16 pb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10 w-full">
+          {activeProperties.map((property) => (
+            <Link key={property.id} href={`/gallery/${property.id}`} className="group cursor-pointer">
+              <article>
+                {/* Property Image */}
+                <div className="relative overflow-hidden rounded-2xl shadow-lg h-72 md:h-80 lg:h-[320px] w-full mb-4">
                   <Image
-                    quality={70}
-                    loading="lazy"
-                    src={item.img.src || "/placeholder.svg"}
-                    alt={item.title}
-                    fill // makes the image cover the Box entirely
-                    style={{
-                      objectFit: "cover", // replicate background-size: cover
-                      objectPosition: "center", // replicate background-position: center
-                    }}
-                    sizes="(max-width: 768px) 100vw, 100vw" // adjust as needed for responsiveness
+                    src={property.mainImage || "/placeholder.svg"}
+                    alt={property.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
-                </Box>
 
-                {/* Hover Overlay with Property Details */}
-                <Box
-                  position="absolute"
-                  bottom="0"
-                  left="0"
-                  right="0"
-                  padding="20px"
-                  background="linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0) 100%)"
-                  color="white"
-                  opacity="0"
-                  transition="opacity 0.3s ease"
-                  _groupHover={{
-                    opacity: 1,
-                  }}
-                  borderBottomRadius="16px"
-                  height="70%"
-                  display="flex"
-                  flexDirection="column"
-                  justifyContent="flex-end"
-                  pointerEvents="none"
-                />
+                  {/* Category Badge */}
+                  <div className="absolute top-4 left-4 px-3 py-1.5 bg-black/70 backdrop-blur-sm rounded-full z-10">
+                    <span className="text-xs font-semibold text-white uppercase tracking-wide">
+                      {property.categories[0]}
+                    </span>
+                  </div>
 
-                {/* Category Tag */}
-                <Box
-                  position="absolute"
-                  top="16px"
-                  left="16px"
-                  paddingX="12px"
-                  paddingY="6px"
-                  backgroundColor="rgba(0,0,0,0.7)"
-                  borderRadius="20px"
-                  zIndex="1"
-                >
-                  <Text fontSize="12px" fontWeight="600" color="white" textTransform="uppercase" letterSpacing="0.5px">
-                    {item.categories[0]}
-                  </Text>
-                </Box>
-              </Box>
+                  {property.services && property.services.length > 0 && (
+                    <div className="absolute top-16 left-4 flex flex-wrap gap-1.5 max-w-[calc(100%-5rem)] z-10">
+                      {property.services.map((service, index) => (
+                        <span
+                          key={index}
+                          className="px-2 py-0.5 bg-white/90 backdrop-blur-sm rounded-md text-[10px] font-medium text-gray-800"
+                        >
+                          {service}
+                        </span>
+                      ))}
+                    </div>
+                  )}
 
-              {/* Property Information Below Image */}
-              <Box paddingTop="16px" paddingX="4px">
-                <Text fontSize={["18px", "20px"]} fontWeight="600" color="#000" marginBottom="4px" fontFamily="arial">
-                  {item.title}
-                </Text>
+                  {/* Hover Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
+                </div>
 
-                <Box display="flex" alignItems="center" marginBottom="8px">
-                  <Text fontSize="14px" color="#666" fontFamily="arial">
-                    {item.location}
-                  </Text>
-                </Box>
-
-                <Box display="flex" alignItems="center" gap="16px">
-                  <Box display="flex" alignItems="center">
-                    <Text fontSize="14px" fontWeight="500" color="#333">
-                      {item.bedrooms} Beds
-                    </Text>
-                  </Box>
-
-                  <Box display="flex" alignItems="center">
-                    <Text fontSize="14px" fontWeight="500" color="#333">
-                      {item.bathrooms} Baths
-                    </Text>
-                  </Box>
-                </Box>
-              </Box>
-            </Box>
+                {/* Property Information */}
+                <div className="px-1">
+                  <h2 className="text-lg md:text-xl font-semibold text-black mb-1">{property.title}</h2>
+                  <p className="text-sm text-gray-600 mb-2">{property.shortDescription}</p>
+                  <div className="flex items-center gap-4">
+                    <span className="text-sm font-medium text-gray-700">
+                      {property.bedrooms} {property.bedrooms === 1 ? "Bed" : "Beds"}
+                    </span>
+                    <span className="text-sm font-medium text-gray-700">
+                      {property.bathrooms} {property.bathrooms === 1 ? "Bathroom" : "Bathrooms"}
+                    </span>
+                  </div>
+                </div>
+              </article>
+            </Link>
           ))}
-        </Box>
 
-        {/* Pagination Controls */}
-        {totalPages > 1 && (
-          <Box display="flex" justifyContent="center" alignItems="center" marginTop="60px" gap="8px">
-            {Array.from({ length: totalPages }).map((_, index) => (
-              <Box
-                key={index}
-                onClick={() => paginate(index + 1)}
-                cursor="pointer"
-                width="10px"
-                height="10px"
-                borderRadius="50%"
-                backgroundColor={currentPage === index + 1 ? "#000" : "#e0e0e0"}
-                transition="all 0.3s ease"
-                _hover={{
-                  backgroundColor: currentPage === index + 1 ? "#000" : "#aaa",
-                }}
-              />
-            ))}
-          </Box>
-        )}
-      </Box>
+          {comingSoonCards.map((index) => (
+            <article key={`coming-soon-${index}`} className="opacity-60">
+              {/* Coming Soon Image */}
+              <div className="relative overflow-hidden rounded-2xl shadow-lg h-72 md:h-80 lg:h-[320px] w-full mb-4 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-white/50 flex items-center justify-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="text-gray-500"
+                    >
+                      <path d="M12 5v14" />
+                      <path d="M5 12h14" />
+                    </svg>
+                  </div>
+                  <p className="text-lg font-semibold text-gray-600">Coming Soon</p>
+                  <p className="text-sm text-gray-500 mt-1">New Property</p>
+                </div>
+
+                {/* Coming Soon Badge */}
+                <div className="absolute top-4 left-4 px-3 py-1.5 bg-gray-500/70 backdrop-blur-sm rounded-full z-10">
+                  <span className="text-xs font-semibold text-white uppercase tracking-wide">Upcoming</span>
+                </div>
+              </div>
+
+              {/* Coming Soon Information */}
+              <div className="px-1">
+                <h2 className="text-lg md:text-xl font-semibold text-gray-500 mb-1">New Property</h2>
+                <p className="text-sm text-gray-400 mb-2">Stay tuned for details</p>
+                <div className="flex items-center gap-4">
+                  <span className="text-sm font-medium text-gray-400">TBA</span>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
 
       {/* Enhanced Modal Dialog for Clicked Image */}
       <DialogRoot size="full" open={modalOpen} onOpenChange={(details) => setModalOpen(details.open)}>
@@ -433,35 +298,17 @@ const Gallery = () => {
         </DialogContent>
       </DialogRoot>
 
-      {/* Enhanced Separator with Design Element */}
-      <Box
-        position="relative"
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        width="100%"
-        marginY={["60px", "80px", "100px"]}
-        paddingX="20px"
-      >
-        <Box width="100%" height="1px" backgroundColor="#e0e0e0" />
-        <Box position="absolute" backgroundColor="white" paddingX="20px">
-          <Box
-            width="40px"
-            height="40px"
-            borderRadius="50%"
-            border="1px solid #e0e0e0"
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-          >
-            <Box width="20px" height="20px" borderRadius="50%" backgroundColor="#000" />
-          </Box>
-        </Box>
-      </Box>
+      {/* Decorative Separator */}
+      <div className="relative flex justify-center items-center w-full my-16 md:my-20 lg:my-24 px-5">
+        <div className="w-full h-px bg-gray-200" />
+        <div className="absolute bg-white px-5">
+          <div className="w-10 h-10 rounded-full border border-gray-200 flex justify-center items-center">
+            <div className="w-5 h-5 rounded-full bg-black" />
+          </div>
+        </div>
+      </div>
 
       <ScheduleConsultation />
-    </>
+    </main>
   )
 }
-
-export default Gallery
