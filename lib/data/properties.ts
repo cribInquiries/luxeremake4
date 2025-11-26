@@ -66,6 +66,8 @@ import houseSixImg7 from "@/public/images/dalts/houseSix/WEB/7.jpg"
 import houseSixImg8 from "@/public/images/dalts/houseSix/WEB/8.jpg"
 import houseSixImg9 from "@/public/images/dalts/houseSix/WEB/9.jpg"
 
+import stGallery1 from "@/public/images/stgallery1.jpg"
+
 export interface Property {
   slug: string
   labelName: string
@@ -223,7 +225,7 @@ export const properties: Property[] = [
     beds: 2,
     baths: 1,
     status: "active",
-    img: houseThreeImg10,
+    img: stGallery1,
     subheading: "Heart of Adelaide CBD with stunning parkland views",
     location: "Adelaide CBD",
     mainImage: "/images/stgallery1.jpg",
