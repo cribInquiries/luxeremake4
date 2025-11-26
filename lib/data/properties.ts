@@ -141,13 +141,30 @@ export const properties: Property[] = [
     title: "Serene Family Home – Pool & Games Close to Adel CBD",
     category: "Property Management",
     tags: ["Styling"],
-    description: "Peaceful Family Stay",
+    description:
+      "A fast-tracked transformation that turned an outdated six-bedroom family home into a $105,000/year Airbnb powerhouse. With tight deadlines and a strategic bedding system upgrade, this property now delivers exceptional guest experiences and industry-leading returns.",
     beds: 6,
     baths: 4,
     status: "active",
     img: houseOneImg10,
-    subheading: "Peaceful Family Stay with pool and games close to Adelaide CBD",
+    subheading:
+      "From dated décor to dream stay—this Clearview family home now earns $105k annually through strategic styling",
     location: "Clearview",
+    mainImage: "/images/clearview_main.jpeg",
+    carouselImages: [
+      "/images/clearview_bedroom1.jpeg",
+      "/images/clearview_bedroom2.jpeg",
+      "/images/clearview_bedroom3.jpeg",
+      "/images/clearview_bedroom4.jpeg",
+      "/images/clearview_bedroom5.jpeg",
+      "/images/clearview_games1.jpeg",
+      "/images/clearview_games2.jpeg",
+    ],
+    transformationStory: {
+      results: {
+        occupancyRate: 88,
+      },
+    },
     carasoleImg: [
       {
         img1: houseOneImg10,
