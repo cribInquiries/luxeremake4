@@ -219,7 +219,7 @@ export function ClearviewTransformationView({ property }: ClearviewTransformatio
                       />
                       <ChartTooltip
                         content={<ChartTooltipContent className="bg-gray-900/95 border-white/20 text-white" />}
-                        cursor={{ fill: "rgba(16, 185, 129, 0.1)" }}
+                        cursor={{ fill: "rgba(16, 185, 129, 0.05)" }}
                         formatter={(value: number) => [`$${value.toLocaleString()}`, "Annual Revenue"]}
                       />
                       <Bar dataKey="annual" radius={[12, 12, 0, 0]} maxBarSize={150}>
