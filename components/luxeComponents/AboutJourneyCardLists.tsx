@@ -1,24 +1,14 @@
-import React from "react";
-import { Box, Text } from "@chakra-ui/react";
-import {
-  Check,
-  Calendar,
-  Award,
-  TrendingUp,
-  Home,
-  Zap,
-  Users,
-  Globe,
-  Briefcase,
-} from "lucide-react";
-import { useRouter } from "next/navigation";
-import Image from "next/image";
+"use client"
+import { Box, Text } from "@chakra-ui/react"
+import { Calendar, Award, TrendingUp, Home, Zap, Users, Globe, Briefcase } from "lucide-react"
+import { useRouter } from "next/navigation"
+import Image from "next/image"
 
 const AboutJourneyCardLists = () => {
   const journey = [
     {
       id: 1,
-      title: "Early 2023",
+      title: "Early 2024",
       subtitle: "The Beginning",
       description:
         "Our founder Habibur started his own AirBnb, experiencing firsthand the frustrations and hidden costs of hosting. Unable to find an affordable, effective management solution, he identified a major gap in the market—and Luxe Managements was concieved.",
@@ -32,7 +22,7 @@ const AboutJourneyCardLists = () => {
     },
     {
       id: 2,
-      title: "December 2023 – Official Launch",
+      title: "December 2024 – Official Launch",
       subtitle: "First Steps",
       description:
         "Luxe Managements was officially established and secured its first client, beginning the journey toward a better, smarter hosting experience. This milestone marked the transition from concept to reality, validating our business model and approach to AirBnB management.",
@@ -46,7 +36,7 @@ const AboutJourneyCardLists = () => {
     },
     {
       id: 3,
-      title: "February 2024 – Innovation in Operations",
+      title: "February 2025 – Innovation in Operations",
       subtitle: "Operational Excellence",
       description:
         "After recognizing inefficiencies in cleaning and turnover management, Luxe developed a proprietary amenity and bedding system, cutting maintenance costs by over 50%. This innovation allowed Luxe to deliver higher quality service while maintaining competitive pricing for our clients.",
@@ -60,7 +50,7 @@ const AboutJourneyCardLists = () => {
     },
     {
       id: 4,
-      title: "April 2024 – Elevating Property Presentation",
+      title: "April 2025 – Elevating Property Presentation",
       subtitle: "Visual Excellence",
       description:
         "Luxe built an in-house system for styling, photography, and furnishing, delivering higher-quality, cost-effective services compared to external providers. Our dedicated design team now creates bespoke interiors that maximize appeal and booking rates for each unique property.",
@@ -74,7 +64,7 @@ const AboutJourneyCardLists = () => {
     },
     {
       id: 5,
-      title: "June 2024 – Proven Guest Excellence",
+      title: "June 2025 – Proven Guest Excellence",
       subtitle: "Customer Satisfaction",
       description:
         "Through the introduction of a leading guest satisfaction system, Luxe achieved an average review score of 4.98 out of 5 stars and hosted over 1,000 nights across their portfolio. Our commitment to exceptional guest experiences has become our hallmark, driving repeat bookings and referrals.",
@@ -88,7 +78,7 @@ const AboutJourneyCardLists = () => {
     },
     {
       id: 6,
-      title: "Mid-2024 – Full Independence",
+      title: "Mid-2025 – Full Independence",
       subtitle: "Vertical Integration",
       description:
         "Luxe became fully independent of third-party vendors, offering clients a 100% bespoke, better-quality, and more affordable management solutions and services. By bringing all services in-house, we've created a seamless end-to-end experience that maximizes property performance while minimizing owner hassle.",
@@ -102,7 +92,7 @@ const AboutJourneyCardLists = () => {
     },
     {
       id: 7,
-      title: "September 2024 – Expansion Beyond Adelaide",
+      title: "September 2025 – Expansion Beyond Adelaide",
       subtitle: "Regional Growth",
       description:
         "Luxe expanded services to suburbs outside Adelaide, bringing its premium offering to more homeowners. This strategic expansion allowed us to serve a broader market while maintaining our high standards of personalized services and local expertise in each new area.",
@@ -128,8 +118,8 @@ const AboutJourneyCardLists = () => {
       category: "VISION",
       img: "https://images.pexels.com/photos/68704/pexels-photo-68704.jpeg?auto=compress&cs=tinysrgb&q=75",
     },
-  ];
-  const router = useRouter();
+  ]
+  const router = useRouter()
 
   return (
     <Box width="100%" position="relative" paddingY="120px">
@@ -162,9 +152,8 @@ const AboutJourneyCardLists = () => {
           maxWidth="900px"
           margin="0 auto"
         >
-          From a single property to a growing portfolio across Australia, follow
-          the Luxe Managements story as we revolutionize property management
-          through innovation, quality, and exceptional service.
+          From a single property to a growing portfolio across Australia, follow the Luxe Managements story as we
+          revolutionize property management through innovation, quality, and exceptional service.
         </Text>
       </Box>
 
@@ -205,12 +194,7 @@ const AboutJourneyCardLists = () => {
               borderRadius="50%"
               backgroundColor="white"
               border="2px solid #e0e0e0"
-              transform={[
-                "translateX(-50%)",
-                "translateX(-50%)",
-                "translateX(-50%)",
-                "translateX(-50%)",
-              ]}
+              transform={["translateX(-50%)", "translateX(-50%)", "translateX(-50%)", "translateX(-50%)"]}
               display="flex"
               alignItems="center"
               justifyContent="center"
@@ -227,12 +211,7 @@ const AboutJourneyCardLists = () => {
             {/* Content Container */}
             <Box
               display="flex"
-              flexDirection={[
-                "column",
-                "column",
-                "column",
-                index % 2 === 0 ? "row" : "row-reverse",
-              ]}
+              flexDirection={["column", "column", "column", index % 2 === 0 ? "row" : "row-reverse"]}
               paddingLeft={["50px", "50px", "80px", "0"]}
               paddingTop={["0", "0", "0", "60px"]}
             >
@@ -241,12 +220,7 @@ const AboutJourneyCardLists = () => {
                 width={["100%", "100%", "100%", "50%"]}
                 paddingRight={["0", "0", "0", index % 2 === 0 ? "120px" : "0"]}
                 paddingLeft={["0", "0", "0", index % 2 === 0 ? "0" : "120px"]}
-                textAlign={[
-                  "left",
-                  "left",
-                  "left",
-                  index % 2 === 0 ? "left" : "left",
-                ]}
+                textAlign={["left", "left", "left", index % 2 === 0 ? "left" : "left"]}
               >
                 {/* Category Tag */}
                 <Box
@@ -257,12 +231,7 @@ const AboutJourneyCardLists = () => {
                   borderRadius="6px"
                   marginBottom="24px"
                 >
-                  <Text
-                    fontSize="14px"
-                    fontWeight="600"
-                    letterSpacing="1px"
-                    color="#555"
-                  >
+                  <Text fontSize="14px" fontWeight="600" letterSpacing="1px" color="#555">
                     {item.category}
                   </Text>
                 </Box>
@@ -334,12 +303,7 @@ const AboutJourneyCardLists = () => {
                           transition: "all 0.3s ease",
                         }}
                       >
-                        <Text
-                          fontSize="24px"
-                          fontWeight="700"
-                          color="#333"
-                          marginBottom="8px"
-                        >
+                        <Text fontSize="24px" fontWeight="700" color="#333" marginBottom="8px">
                           {stat.value}
                         </Text>
                         <Text fontSize="14px" fontWeight="500" color="#777">
@@ -371,8 +335,7 @@ const AboutJourneyCardLists = () => {
                     left: 0,
                     right: 0,
                     bottom: 0,
-                    background:
-                      "linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(0,0,0,0.4) 100%)",
+                    background: "linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(0,0,0,0.4) 100%)",
                     zIndex: 1,
                   }}
                   _hover={{
@@ -384,7 +347,7 @@ const AboutJourneyCardLists = () => {
                   <Image
                     quality={70}
                     loading="lazy"
-                    src={item.img} // original src untouched
+                    src={item.img || "/placeholder.svg"} // original src untouched
                     alt={item.title ?? ""}
                     fill // makes the image fill the Box
                     style={{
@@ -394,20 +357,8 @@ const AboutJourneyCardLists = () => {
                   />
 
                   {/* Optional image overlay content */}
-                  <Box
-                    position="absolute"
-                    bottom="0"
-                    left="0"
-                    padding="30px"
-                    zIndex="2"
-                    width="100%"
-                  >
-                    <Text
-                      fontSize="16px"
-                      fontWeight="600"
-                      color="white"
-                      textShadow="0 1px 2px rgba(0,0,0,0.3)"
-                    >
+                  <Box position="absolute" bottom="0" left="0" padding="30px" zIndex="2" width="100%">
+                    <Text fontSize="16px" fontWeight="600" color="white" textShadow="0 1px 2px rgba(0,0,0,0.3)">
                       {item.id === 1
                         ? "Where it all began"
                         : item.id === 2
@@ -456,13 +407,7 @@ const AboutJourneyCardLists = () => {
         paddingX={["30px", "40px", "60px"]}
         textAlign="center"
       >
-        <Text
-          textStyle={"heading"}
-          fontWeight="700"
-          fontFamily="arial"
-          color="black"
-          marginBottom="30px"
-        >
+        <Text textStyle={"heading"} fontWeight="700" fontFamily="arial" color="black" marginBottom="30px">
           Join Us on Our Journey
         </Text>
 
@@ -476,9 +421,8 @@ const AboutJourneyCardLists = () => {
           margin="0 auto"
           marginBottom="50px"
         >
-          As we continue to grow and innovate, we're looking for property owners
-          who share our vision for exceptional hospitality and management
-          excellence.
+          As we continue to grow and innovate, we're looking for property owners who share our vision for exceptional
+          hospitality and management excellence.
         </Text>
 
         <Box
@@ -498,35 +442,14 @@ const AboutJourneyCardLists = () => {
             transition: "all 0.3s ease",
           }}
           onClick={() => {
-            router.push("/contact");
+            router.push("/contact")
           }}
         >
           <Text>Partner With Us</Text>
         </Box>
       </Box>
     </Box>
-  );
-};
+  )
+}
 
-//  <Box
-//               ml={{ md: "16px", lg: "24px" }}
-//               bg="#0A0F29"
-//               color="white"
-//               px={{ md: "16px", lg: "20px" }}
-//               py="10px"
-//               borderRadius="4px"
-//               cursor="pointer"
-//               transition="all 0.2s ease"
-//               _hover={{ bg: "#000" }}
-//               onClick={() => handleNavigate("/contact")}
-//             >
-//               <Text
-//                 fontSize={{ md: "13px", lg: "14px" }}
-//                 fontWeight="500"
-//                 whiteSpace="nowrap"
-//               >
-//                 Get a Quote
-//               </Text>
-//             </Box>
-
-export default AboutJourneyCardLists;
+export default AboutJourneyCardLists

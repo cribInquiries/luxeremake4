@@ -29,7 +29,7 @@ Use clear formatting, well-structured answers, and reference relevant FAQs when 
 
 Company Name: Luxe Managements
 Location: Adelaide, South Australia (serves Adelaide and surrounding regions)
-Founded: 2022
+Founded: 2023
 Mission: Redefine short-term rental management through quality, transparency, and premium experiences for both guests and property owners.
 
 📌 Contact:
