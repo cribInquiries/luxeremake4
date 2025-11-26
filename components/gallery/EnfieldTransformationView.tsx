@@ -54,7 +54,7 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
       description: "Open-concept kitchen & living space",
     },
     {
-      url: "/images/enfield-dining-living-photo.png",
+      url: "/images/enfield-dining-living-photonew.png",
       title: "Open-Plan Living",
       description: "Seamless kitchen-dining-lounge flow",
     },
@@ -148,23 +148,23 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="text-center p-8 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl border-2 border-blue-200 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="text-2xl md:text-3xl font-bold text-blue-600 mb-2">
-                <span className="text-blue-700">$5,000</span> Budget
+            <div className="text-center p-8 bg-blue-50 rounded-2xl border border-blue-100 shadow-sm hover:shadow-md transition-shadow">
+              <div className="text-2xl md:text-3xl font-bold mb-2">
+                <span className="text-blue-600">$5,000</span> <span className="text-gray-800">Budget</span>
               </div>
-              <div className="text-gray-700 font-medium">Full Furnishing</div>
+              <div className="text-gray-600 font-medium">Full Furnishing</div>
             </div>
-            <div className="text-center p-8 bg-gradient-to-br from-green-50 to-green-100 rounded-2xl border-2 border-green-200 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="text-2xl md:text-3xl font-bold text-green-600 mb-2">
-                <span className="text-green-700">5</span> Bedrooms
+            <div className="text-center p-8 bg-green-50 rounded-2xl border border-green-100 shadow-sm hover:shadow-md transition-shadow">
+              <div className="text-2xl md:text-3xl font-bold mb-2">
+                <span className="text-green-600">5</span> <span className="text-gray-800">Bedrooms</span>
               </div>
-              <div className="text-gray-700 font-medium">Group Accommodation</div>
+              <div className="text-gray-600 font-medium">Group Accommodation</div>
             </div>
-            <div className="text-center p-8 bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl border-2 border-purple-200 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="text-2xl md:text-3xl font-bold text-purple-600 mb-2">
-                Property <span className="text-purple-700">#1</span>
+            <div className="text-center p-8 bg-gray-50 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+              <div className="text-2xl md:text-3xl font-bold mb-2">
+                <span className="text-gray-800">Property</span> <span className="text-gray-700">#1</span>
               </div>
-              <div className="text-gray-700 font-medium">First Ever</div>
+              <div className="text-gray-600 font-medium">First Ever</div>
             </div>
           </div>
         </div>
@@ -321,13 +321,13 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            <div className="text-center p-8 bg-gray-50 rounded-2xl border-2 border-gray-200">
+            <div className="text-center p-8 bg-gray-50 rounded-2xl border border-gray-200">
               <div className="text-5xl font-bold text-gray-600 mb-3">$900</div>
               <div className="text-gray-800 font-semibold mb-2">Traditional Rent</div>
               <div className="text-gray-600 text-base font-medium">Per week, year-round</div>
             </div>
 
-            <div className="text-center p-8 bg-sky-50 rounded-2xl border-2 border-sky-200">
+            <div className="text-center p-8 bg-sky-50 rounded-2xl border border-sky-200">
               <div className="text-5xl font-bold text-sky-600 mb-3">92%</div>
               <div className="text-gray-800 font-semibold mb-2">Occupancy Rate</div>
               <div className="text-gray-600 text-base font-medium inline-flex items-center gap-2 justify-center">
