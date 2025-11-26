@@ -404,15 +404,6 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
               </LineChart>
             </ResponsiveContainer>
           </ChartContainer>
-
-          <div className="text-center p-10 md:p-12 mb-12 shadow-2xl border-4 border-green-400 bg-gradient-to-br from-green-500 to-emerald-500 rounded-3xl">
-            <p className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
-              So we made a decision that changed Luxe forever:
-            </p>
-            <p className="text-2xl md:text-3xl text-white font-medium drop-shadow-lg">
-              We created our own in-house cleaning team.
-            </p>
-          </div>
         </div>
       </section>
 
