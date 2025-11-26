@@ -148,16 +148,22 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="text-center p-8 bg-blue-50 rounded-xl">
-              <div className="text-2xl md:text-3xl font-bold text-blue-600 mb-2">$5,000 Budget</div>
+            <div className="text-center p-8 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl border-2 border-blue-200 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-2xl md:text-3xl font-bold text-blue-600 mb-2">
+                <span className="text-blue-700">$5,000</span> Budget
+              </div>
               <div className="text-gray-700 font-medium">Full Furnishing</div>
             </div>
-            <div className="text-center p-8 bg-green-50 rounded-xl">
-              <div className="text-2xl md:text-3xl font-bold text-green-600 mb-2">5 Bedrooms</div>
+            <div className="text-center p-8 bg-gradient-to-br from-green-50 to-green-100 rounded-2xl border-2 border-green-200 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-2xl md:text-3xl font-bold text-green-600 mb-2">
+                <span className="text-green-700">5</span> Bedrooms
+              </div>
               <div className="text-gray-700 font-medium">Group Accommodation</div>
             </div>
-            <div className="text-center p-8 bg-gray-100 rounded-xl">
-              <div className="text-2xl md:text-3xl font-bold text-gray-700 mb-2">Property #1</div>
+            <div className="text-center p-8 bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl border-2 border-purple-200 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-2xl md:text-3xl font-bold text-purple-600 mb-2">
+                Property <span className="text-purple-700">#1</span>
+              </div>
               <div className="text-gray-700 font-medium">First Ever</div>
             </div>
           </div>
@@ -249,7 +255,7 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
 
             {/* Luxe Solution */}
             <div className="bg-gradient-to-br from-green-900 via-emerald-900 to-green-950 rounded-3xl p-8 border border-green-700/50 shadow-2xl">
-              <h3 className="text-3xl font-bold text-green-400 mb-8">Luxe Solution</h3>
+              <h3 className="text-3xl font-bold text-green-300 mb-8">Luxe Solution</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <Check size={24} className="text-green-400 flex-shrink-0 mt-1" strokeWidth={3} />
