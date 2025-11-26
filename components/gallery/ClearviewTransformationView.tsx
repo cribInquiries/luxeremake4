@@ -75,36 +75,51 @@ export function ClearviewTransformationView({ property }: ClearviewTransformatio
         </section>
 
         {/* Property Details Section */}
-        <section className="py-16 bg-white border-b border-gray-200" data-section="clearview-property-details">
+        <section
+          className="py-16 bg-gradient-to-br from-gray-50 to-white border-b border-gray-200"
+          data-section="clearview-property-details"
+        >
           <div className="max-w-6xl mx-auto px-6 md:px-12">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              <div className="space-y-2" data-metric="clearview-adr">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div
+                className="space-y-2 bg-blue-50 rounded-2xl p-6 border-2 border-blue-300 shadow-md hover:shadow-lg transition-shadow"
+                data-metric="clearview-adr"
+              >
                 {/* CLEARVIEW ONLY - DO NOT SHARE WITH OTHER GALLERIES */}
-                <div className="text-4xl font-bold text-black" data-value="clearview-adr-value">
+                <div className="text-4xl md:text-5xl font-bold text-blue-600" data-value="clearview-adr-value">
                   $450
                 </div>
-                <div className="text-sm text-gray-900 uppercase tracking-wider font-medium">Average Daily Rate </div>
+                <div className="text-sm text-gray-700 uppercase tracking-wider font-semibold">Average Daily Rate</div>
               </div>
-              <div className="space-y-2" data-metric="clearview-bedrooms">
+              <div
+                className="space-y-2 bg-emerald-50 rounded-2xl p-6 border-2 border-emerald-300 shadow-md hover:shadow-lg transition-shadow"
+                data-metric="clearview-bedrooms"
+              >
                 {/* CLEARVIEW ONLY - DO NOT SHARE WITH OTHER GALLERIES */}
-                <div className="text-4xl font-bold text-black" data-value="clearview-bedrooms-value">
+                <div className="text-4xl md:text-5xl font-bold text-emerald-600" data-value="clearview-bedrooms-value">
                   6
                 </div>
-                <div className="text-sm text-gray-900 uppercase tracking-wider font-medium">Bedrooms</div>
+                <div className="text-sm text-gray-700 uppercase tracking-wider font-semibold">Bedrooms</div>
               </div>
-              <div className="space-y-2" data-metric="clearview-bathrooms">
+              <div
+                className="space-y-2 bg-purple-50 rounded-2xl p-6 border-2 border-purple-300 shadow-md hover:shadow-lg transition-shadow"
+                data-metric="clearview-bathrooms"
+              >
                 {/* CLEARVIEW ONLY - DO NOT SHARE WITH OTHER GALLERIES */}
-                <div className="text-4xl font-bold text-black" data-value="clearview-bathrooms-value">
+                <div className="text-4xl md:text-5xl font-bold text-purple-600" data-value="clearview-bathrooms-value">
                   {"3"}
                 </div>
-                <div className="text-sm text-gray-900 uppercase tracking-wider font-medium">Bathrooms </div>
+                <div className="text-sm text-gray-700 uppercase tracking-wider font-semibold">Bathrooms</div>
               </div>
-              <div className="space-y-2" data-metric="clearview-land-size">
+              <div
+                className="space-y-2 bg-amber-50 rounded-2xl p-6 border-2 border-amber-300 shadow-md hover:shadow-lg transition-shadow"
+                data-metric="clearview-land-size"
+              >
                 {/* CLEARVIEW ONLY - DO NOT SHARE WITH OTHER GALLERIES */}
-                <div className="text-4xl font-bold text-black" data-value="clearview-land-size-value">
+                <div className="text-4xl md:text-5xl font-bold text-amber-600" data-value="clearview-land-size-value">
                   346m²
                 </div>
-                <div className="text-sm text-gray-900 uppercase tracking-wider font-medium">Floor Size </div>
+                <div className="text-sm text-gray-700 uppercase tracking-wider font-semibold">Floor Size</div>
               </div>
             </div>
           </div>
@@ -157,7 +172,7 @@ export function ClearviewTransformationView({ property }: ClearviewTransformatio
         </section>
 
         {/* Revenue Transformation */}
-        <section className="py-28 bg-black text-white">
+        <section className="py-28 bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
           <div className="max-w-6xl mx-auto px-6 md:px-12">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-4">Revenue Transformation</h2>
@@ -167,7 +182,7 @@ export function ClearviewTransformationView({ property }: ClearviewTransformatio
             </div>
 
             {/* Annual Comparison */}
-            <div className="bg-white/5 backdrop-blur-md rounded-3xl p-4 md:p-12 shadow-lg overflow-hidden w-full">
+            <div className="bg-white/5 backdrop-blur-md rounded-3xl p-4 md:p-12 shadow-lg overflow-hidden w-full border border-white/10">
               <div className="w-full overflow-hidden">
                 <ChartContainer
                   config={{
@@ -203,8 +218,8 @@ export function ClearviewTransformationView({ property }: ClearviewTransformatio
                         width={60}
                       />
                       <ChartTooltip
-                        content={<ChartTooltipContent />}
-                        cursor={{ fill: "rgba(255,255,255,0.1)" }}
+                        content={<ChartTooltipContent className="bg-gray-900/95 border-white/20 text-white" />}
+                        cursor={{ fill: "rgba(16, 185, 129, 0.1)" }}
                         formatter={(value: number) => [`$${value.toLocaleString()}`, "Annual Revenue"]}
                       />
                       <Bar dataKey="annual" radius={[12, 12, 0, 0]} maxBarSize={150}>
