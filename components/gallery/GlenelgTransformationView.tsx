@@ -239,7 +239,7 @@ export function GlenelgTransformationView({ property }: GlenelgTransformationVie
                         sizes="(max-width: 1024px) 100vw, 50vw"
                       />
                     </div>
-                    <p className="text-gray-600 text-lg">Outdated orange countertops, dated tiling</p>
+                    <p className="text-gray-900 text-lg font-medium">{image.title} - Outdated and dated finishes</p>
                   </div>
                   <div className="space-y-4">
                     <div className="inline-block px-6 py-2 bg-green-600 text-white text-sm font-semibold rounded-full">
@@ -255,7 +255,7 @@ export function GlenelgTransformationView({ property }: GlenelgTransformationVie
                       />
                     </div>
                     <p className="text-gray-900 text-lg font-semibold">
-                      Modern herringbone backsplash, LED lighting, styled decor
+                      {image.title} - Modern, styled, and guest-ready
                     </p>
                   </div>
                 </div>
@@ -462,11 +462,11 @@ export function GlenelgTransformationView({ property }: GlenelgTransformationVie
               <div className="mt-8 flex justify-center gap-8">
                 <div className="flex items-center gap-2">
                   <div className="w-4 h-4 rounded-full bg-red-500" />
-                  <span className="text-gray-600">Traditional: $2,037/month</span>
+                  <span className="text-gray-900 font-medium">Traditional: $2,037/month</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-4 h-4 rounded-full bg-green-500" />
-                  <span className="text-gray-600">Luxe: $3,167/month avg</span>
+                  <span className="text-gray-900 font-medium">Luxe: $3,167/month avg</span>
                 </div>
               </div>
             </div>
@@ -484,19 +484,19 @@ export function GlenelgTransformationView({ property }: GlenelgTransformationVie
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center p-8 bg-gray-50 rounded-2xl transform hover:scale-105 transition-transform duration-300">
                 <div className="text-5xl font-bold text-black mb-3">{story.results.occupancyRate}%</div>
-                <div className="text-gray-600">Average Occupancy</div>
+                <div className="text-gray-700 font-medium">Average Occupancy</div>
               </div>
               <div className="text-center p-8 bg-gray-50 rounded-2xl transform hover:scale-105 transition-transform duration-300">
                 <div className="text-5xl font-bold text-black mb-3">$230</div>
-                <div className="text-gray-600">Nightly Rate</div>
+                <div className="text-gray-700 font-medium">Nightly Rate</div>
               </div>
               <div className="text-center p-8 bg-gray-50 rounded-2xl transform hover:scale-105 transition-transform duration-300">
                 <div className="text-5xl font-bold text-black mb-3">55%</div>
-                <div className="text-gray-600">Revenue Increase</div>
+                <div className="text-gray-700 font-medium">Revenue Increase</div>
               </div>
               <div className="text-center p-8 bg-gray-50 rounded-2xl transform hover:scale-105 transition-transform duration-300">
                 <div className="text-5xl font-bold text-black mb-3">4.9★</div>
-                <div className="text-gray-600">Guest Rating</div>
+                <div className="text-gray-700 font-medium">Guest Rating</div>
               </div>
             </div>
           </div>
@@ -513,11 +513,11 @@ export function GlenelgTransformationView({ property }: GlenelgTransformationVie
               sizes="100vw"
             />
           </div>
-          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-black/70" />
           <div className="relative h-full flex items-center justify-center px-6">
             <div className="max-w-4xl text-center">
               <div className="mb-8">
-                <span className="text-white/70 text-lg">Client Testimonial</span>
+                <span className="text-white/90 text-lg font-medium">Client Testimonial</span>
               </div>
               <p className="text-3xl md:text-4xl lg:text-5xl text-white font-light italic leading-relaxed text-balance mb-8">
                 "I was blown away by how seamlessly Luxe managed everything—from helping me find the right property, to
@@ -525,8 +525,8 @@ export function GlenelgTransformationView({ property }: GlenelgTransformationVie
                 I'd make with a standard rental is night and day. Best investment decision I've made."
               </p>
               <div className="flex items-center justify-center gap-2">
-                <Home className="w-6 h-6 text-white/70" />
-                <span className="text-white/70">Glenelg Property Owner</span>
+                <Home className="w-6 h-6 text-white/90" />
+                <span className="text-white/90 font-medium">Glenelg Property Owner</span>
               </div>
             </div>
           </div>
@@ -536,43 +536,45 @@ export function GlenelgTransformationView({ property }: GlenelgTransformationVie
         <section className="py-32 md:py-48 bg-gradient-to-br from-black via-gray-900 to-black text-white">
           <div className="max-w-5xl mx-auto px-6 md:px-12 text-center">
             <div className="mb-12">
-              <span className="text-sm font-semibold text-white/50 uppercase tracking-wider">
+              <span className="text-sm font-semibold text-white/70 uppercase tracking-wider">
                 Don't Leave Money on the Table
               </span>
             </div>
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 text-balance leading-tight">
               You're Missing Out Without Luxe
             </h2>
-            <p className="text-2xl md:text-3xl text-white/80 leading-relaxed mb-12 text-balance max-w-3xl mx-auto">
+            <p className="text-2xl md:text-3xl text-white/90 leading-relaxed mb-12 text-balance max-w-3xl mx-auto">
               While you're earning traditional rental income, properties like this are generating 55% more revenue.
               Every month you wait is money left on the table.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 max-w-4xl mx-auto">
-              <div className="p-6 bg-white/5 backdrop-blur-sm rounded-xl">
+              <div className="p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
                 <div className="text-4xl font-bold text-red-400 mb-2">$13,560</div>
-                <div className="text-white/70">Annual revenue you could be missing</div>
+                <div className="text-white/90 font-medium">Annual revenue you could be missing</div>
               </div>
-              <div className="p-6 bg-white/5 backdrop-blur-sm rounded-xl">
+              <div className="p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
                 <div className="text-4xl font-bold text-yellow-400 mb-2">$63k+</div>
-                <div className="text-white/70">Potential equity growth</div>
+                <div className="text-white/90 font-medium">Potential equity growth</div>
               </div>
-              <div className="p-6 bg-white/5 backdrop-blur-sm rounded-xl">
+              <div className="p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
                 <div className="text-4xl font-bold text-green-400 mb-2">88%+</div>
-                <div className="text-white/70">Occupancy rate achievable</div>
+                <div className="text-white/90 font-medium">Occupancy rate achievable</div>
               </div>
             </div>
 
             <div className="space-y-6">
-              <p className="text-2xl font-semibold">Your property has untapped potential.</p>
-              <p className="text-3xl md:text-4xl font-bold">Let Luxe unlock it.</p>
+              <p className="text-2xl font-semibold text-white">Your property has untapped potential.</p>
+              <p className="text-3xl md:text-4xl font-bold text-white">Let Luxe unlock it.</p>
             </div>
 
             <div className="mt-16">
               <button className="px-10 py-5 bg-white text-black text-lg font-bold rounded-full hover:bg-green-500 hover:text-white transition-all duration-300 shadow-2xl">
                 Book a Consultation Now
               </button>
-              <p className="text-white/60 mt-6">No obligation. Just expert insights into your property's potential.</p>
+              <p className="text-white/80 mt-6 font-medium">
+                No obligation. Just expert insights into your property's potential.
+              </p>
             </div>
           </div>
         </section>
