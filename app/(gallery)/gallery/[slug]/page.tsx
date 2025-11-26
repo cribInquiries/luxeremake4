@@ -2,6 +2,7 @@ import { properties } from "@/lib/data/properties"
 import { GlenelgTransformationView } from "@/components/gallery/GlenelgTransformationView"
 import { MelbourneStreetTransformationView } from "@/components/gallery/MelbourneStreetTransformationView"
 import { ClearviewTransformationView } from "@/components/gallery/ClearviewTransformationView"
+import { EnfieldTransformationView } from "@/components/gallery/EnfieldTransformationView"
 import { notFound } from "next/navigation"
 
 export default function PropertyDetailPage({ params }: { params: { slug: string } }) {
@@ -21,6 +22,10 @@ export default function PropertyDetailPage({ params }: { params: { slug: string 
 
   if (property.slug === "clearview-serene-family-home") {
     return <ClearviewTransformationView property={property} />
+  }
+
+  if (property.slug === "enfield-grand-residence") {
+    return <EnfieldTransformationView property={property} />
   }
 
   // For other properties, show a simple detail page

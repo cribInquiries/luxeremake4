@@ -276,6 +276,20 @@ export const properties: Property[] = [
     img: houseFiveImg1,
     subheading: "Family-friendly Enfield property with spacious living",
     location: "Enfield",
+    mainImage: "/images/enfield-main.jpeg",
+    carouselImages: [
+      "/images/enfield-kitchen.png",
+      "/images/enfield-dining-living-photo.png",
+      "/images/enfield-patio.png",
+      "/images/enfield-game-room.png",
+      "/images/enfield-bathroom1.png",
+      "/images/enfield-bathroom2.png",
+    ],
+    transformationStory: {
+      results: {
+        occupancyRate: 90,
+      },
+    },
     carasoleImg: [
       {
         img1: houseFiveImg1,
