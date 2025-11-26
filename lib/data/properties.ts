@@ -57,6 +57,8 @@ import houseSixImg9 from "@/public/images/dalts/houseSix/WEB/9.jpg"
 
 import stGallery1 from "@/public/images/stgallery1.jpg"
 
+import glenelgLead from "@/public/images/glenelg_lead.jpeg"
+
 export interface Property {
   slug: string
   labelName: string
@@ -102,7 +104,7 @@ export const properties: Property[] = [
     beds: 2,
     baths: 1,
     status: "active",
-    img: houseOneImg10 as StaticImageData,
+    img: glenelgLead as StaticImageData,
     subheading: "Complete transformation near Glenelg Beach",
     location: "Glenelg",
     mainImage: "/images/glenelg_lead.jpeg",
