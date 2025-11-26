@@ -1,40 +1,43 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Image from "next/image"
-import { Box } from "@chakra-ui/react"
-import { motion, AnimatePresence } from "framer-motion"
+import { useState } from "react";
+import Image from "next/image";
+import { Box } from "@chakra-ui/react"; // Importing Cheka UI Box
+import { motion, AnimatePresence } from "framer-motion";
 
-// import houseOneImg2 from "@/public/images/dalts/houseOne/WEB/2.jpg";
-// import houseOneImg10 from "@/public/images/dalts/houseOne/WEB/10.jpg";
-// import houseTwoImg1 from "@/public/images/dalts/houseTwo/WEB/1.jpg";
-// import houseTwoImg2 from "@/public/images/dalts/houseTwo/WEB/2.jpg";
-// import houseThreeImg1 from "@/public/images/dalts/houseThree/WEB/1.jpg";
-// import houseThreeImg2 from "@/public/images/dalts/houseThree/WEB/2.jpg";
-// import houseFourImg1 from "@/public/images/dalts/houseFour/WEB/1.jpg";
-// import houseFourImg2 from "@/public/images/dalts/houseFour/WEB/2.jpg";
-// import houseFourImg7 from "@/public/images/dalts/houseFour/WEB/7.jpg";
-// import houseFourImg10 from "@/public/images/dalts/houseFour/WEB/10.jpg";
+// Importing images
+import houseOneImg2 from "@/public/images/dalts/houseOne/WEB/2.jpg";
+import houseOneImg10 from "@/public/images/dalts/houseOne/WEB/10.jpg";
+import houseTwoImg1 from "@/public/images/dalts/houseTwo/WEB/1.jpg";
+import houseTwoImg2 from "@/public/images/dalts/houseTwo/WEB/2.jpg";
+import houseThreeImg1 from "@/public/images/dalts/houseThree/WEB/1.jpg";
+import houseThreeImg2 from "@/public/images/dalts/houseThree/WEB/2.jpg";
+import houseFourImg1 from "@/public/images/dalts/houseFour/WEB/1.jpg";
+import houseFourImg2 from "@/public/images/dalts/houseFour/WEB/2.jpg";
+import houseFourImg7 from "@/public/images/dalts/houseFour/WEB/7.jpg";
+import houseFourImg10 from "@/public/images/dalts/houseFour/WEB/10.jpg";
 
+// Main component
+// eslint-disable-next-line import/no-unused-modules
 export default function ImageCarousel() {
   const images = [
-    "/luxury-home-interior-1.jpg",
-    "/modern-living-room.png",
-    "/elegant-kitchen.png",
-    "/stylish-bedroom.jpg",
-    "/contemporary-bathroom.png",
-    "/luxury-dining-room.png",
-    "/outdoor-living-space.png",
-    "/home-entertainment-room.jpg",
-    "/luxury-home-interior-2.jpg",
-    "/premium-property-amenities.jpg",
-  ]
+    houseOneImg10,
+    houseOneImg2,
+    houseTwoImg1,
+    houseTwoImg2,
+    houseThreeImg1,
+    houseThreeImg2,
+    houseFourImg1,
+    houseFourImg2,
+    houseFourImg7,
+    houseFourImg10,
+  ];
 
-  const [currentImage, setCurrentImage] = useState(0)
+  const [currentImage, setCurrentImage] = useState(0);
 
   const handleThumbnailClick = (index: number) => {
-    setCurrentImage(index)
-  }
+    setCurrentImage(index);
+  };
 
   return (
     <Box
@@ -48,6 +51,7 @@ export default function ImageCarousel() {
       rounded={"16px"}
       h={["350px", "350px", "350px", "500px", "500px", "600px"]}
     >
+      {/* Main image carousel */}
       <AnimatePresence mode="wait">
         <motion.div
           key={currentImage}
@@ -70,6 +74,7 @@ export default function ImageCarousel() {
         </motion.div>
       </AnimatePresence>
 
+      {/* Thumbnails */}
       <Box
         position="absolute"
         bottom="0"
@@ -90,9 +95,14 @@ export default function ImageCarousel() {
             borderRadius="4px"
             transition="all 0.3s"
             _hover={{ transform: "scale(1.1)" }}
-            border={currentImage === index ? "2px solid white" : "2px solid transparent"}
+            border={
+              currentImage === index
+                ? "2px solid white"
+                : "2px solid transparent"
+            }
           >
             <Box>
+              {" "}
               <Image
                 quality={70}
                 loading="lazy"
@@ -108,5 +118,5 @@ export default function ImageCarousel() {
         ))}
       </Box>
     </Box>
-  )
+  );
 }

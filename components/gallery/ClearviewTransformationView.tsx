@@ -151,7 +151,7 @@ export function ClearviewTransformationView({ property }: ClearviewTransformatio
         <section className="bg-gray-50 py-28">
           <div className="max-w-7xl mx-auto px-6 md:px-12">
             <div className="text-center mb-20">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">The Finished Product</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">The Finished Product</h2>
               <p className="text-xl text-gray-700 font-medium">Luxe-styled rooms ready for premium guests</p>
             </div>
 
@@ -219,7 +219,7 @@ export function ClearviewTransformationView({ property }: ClearviewTransformatio
                       />
                       <ChartTooltip
                         content={<ChartTooltipContent className="bg-gray-900/95 border-white/20 text-white" />}
-                        cursor={{ fill: "rgba(16, 185, 129, 0.15)" }}
+                        cursor={{ fill: "rgba(16, 185, 129, 0.1)" }}
                         formatter={(value: number) => [`$${value.toLocaleString()}`, "Annual Revenue"]}
                       />
                       <Bar dataKey="annual" radius={[12, 12, 0, 0]} maxBarSize={150}>
@@ -263,8 +263,8 @@ export function ClearviewTransformationView({ property }: ClearviewTransformatio
               From Hesitation to High Performance
             </h2>
             <p className="text-2xl md:text-3xl text-white/85 leading-relaxed mb-12 text-balance max-w-3xl mx-auto [text-shadow:_0_2px_8px_rgb(0_0_0_/_40%)]">
-              This owner trusted Luxe with a tight deadline and watched their property transform into a $102k/year
-              revenue generator. What could we achieve for yours?
+              This owner trusted Luxe with a tight deadline and watched their property transform into a $102,200/year
+              revenue generator. What could we do for yours?
             </p>
 
             <div className="mt-16">
