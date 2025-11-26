@@ -288,14 +288,14 @@ export const properties: Property[] = [
     img: houseSixImg1,
     subheading: "Historic North Adelaide location with cosy charm",
     location: "North Adelaide",
-    mainImage: "/images/design-mode/mlounge1.avif",
+    mainImage: "/images/mexterior.jpeg",
     carouselImages: [
-      "/images/design-mode/mlounge1.avif",
-      "/images/design-mode/mkitchen.jpeg",
-      "/images/design-mode/mbathroom.jpeg",
-      "/images/mexterior.jpeg",
+      "/images/mkitchen.jpeg",
       "/images/mdining.jpeg",
+      "/images/mtv.jpeg",
       "/images/mpatio.jpeg",
+      "/images/mbathroom.jpeg",
+      "/images/mlookingout.jpeg",
     ],
     transformationStory: {
       results: {
