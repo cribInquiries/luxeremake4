@@ -1,62 +1,9 @@
 import type { StaticImageData } from "next/image"
 
-// Import house images
-import houseOneImg1 from "@/public/images/dalts/houseOne/WEB/1.jpg"
-import houseOneImg2 from "@/public/images/dalts/houseOne/WEB/2.jpg"
-import houseOneImg3 from "@/public/images/dalts/houseOne/WEB/3.jpg"
-import houseOneImg4 from "@/public/images/dalts/houseOne/WEB/4.jpg"
-import houseOneImg5 from "@/public/images/dalts/houseOne/WEB/5.jpg"
-import houseOneImg6 from "@/public/images/dalts/houseOne/WEB/6.jpg"
-import houseOneImg7 from "@/public/images/dalts/houseOne/WEB/7.jpg"
-import houseOneImg8 from "@/public/images/dalts/houseOne/WEB/8.jpg"
-import houseOneImg9 from "@/public/images/dalts/houseOne/WEB/9.jpg"
-import houseOneImg10 from "@/public/images/dalts/houseOne/WEB/10.jpg"
-
-import houseTwoImg1 from "@/public/images/dalts/houseTwo/WEB/1.jpg"
-import houseTwoImg2 from "@/public/images/dalts/houseTwo/WEB/2.jpg"
-import houseTwoImg3 from "@/public/images/dalts/houseTwo/WEB/3.jpg"
-import houseTwoImg4 from "@/public/images/dalts/houseTwo/WEB/4.jpg"
-import houseTwoImg5 from "@/public/images/dalts/houseTwo/WEB/5.jpg"
-import houseTwoImg6 from "@/public/images/dalts/houseTwo/WEB/6.jpg"
-import houseTwoImg7 from "@/public/images/dalts/houseTwo/WEB/7.jpg"
-import houseTwoImg8 from "@/public/images/dalts/houseTwo/WEB/8.jpg"
-import houseTwoImg9 from "@/public/images/dalts/houseTwo/WEB/9.jpg"
-import houseTwoImg10 from "@/public/images/dalts/houseTwo/WEB/10.jpg"
-
-import houseFourImg1 from "@/public/images/dalts/houseFour/WEB/1.jpg"
-import houseFourImg2 from "@/public/images/dalts/houseFour/WEB/2.jpg"
-import houseFourImg3 from "@/public/images/dalts/houseFour/WEB/3.jpg"
-import houseFourImg4 from "@/public/images/dalts/houseFour/WEB/4.jpg"
-import houseFourImg5 from "@/public/images/dalts/houseFour/WEB/5.jpg"
-import houseFourImg6 from "@/public/images/dalts/houseFour/WEB/6.jpg"
-import houseFourImg7 from "@/public/images/dalts/houseFour/WEB/7.jpg"
-import houseFourImg8 from "@/public/images/dalts/houseFour/WEB/8.jpg"
-import houseFourImg9 from "@/public/images/dalts/houseFour/WEB/9.jpg"
-import houseFourImg10 from "@/public/images/dalts/houseFour/WEB/10.jpg"
-
-import houseFiveImg1 from "@/public/images/dalts/houseFive/WEB/1.jpg"
-import houseFiveImg2 from "@/public/images/dalts/houseFive/WEB/2.jpg"
-import houseFiveImg3 from "@/public/images/dalts/houseFive/WEB/3.jpg"
-import houseFiveImg4 from "@/public/images/dalts/houseFive/WEB/4.jpg"
-import houseFiveImg5 from "@/public/images/dalts/houseFive/WEB/5.jpg"
-import houseFiveImg6 from "@/public/images/dalts/houseFive/WEB/6.jpg"
-import houseFiveImg7 from "@/public/images/dalts/houseFive/WEB/7.jpg"
-import houseFiveImg8 from "@/public/images/dalts/houseFive/WEB/8.jpg"
-import houseFiveImg9 from "@/public/images/dalts/houseFive/WEB/9.jpg"
-import houseFiveImg10 from "@/public/images/dalts/houseFive/WEB/10.jpg"
-
-import houseSixImg1 from "@/public/images/dalts/houseSix/WEB/1.jpg"
-import houseSixImg2 from "@/public/images/dalts/houseSix/WEB/2.jpg"
-import houseSixImg3 from "@/public/images/dalts/houseSix/WEB/3.jpg"
-import houseSixImg4 from "@/public/images/dalts/houseSix/WEB/4.jpg"
-import houseSixImg5 from "@/public/images/dalts/houseSix/WEB/5.jpg"
-import houseSixImg6 from "@/public/images/dalts/houseSix/WEB/6.jpg"
-import houseSixImg7 from "@/public/images/dalts/houseSix/WEB/7.jpg"
-import houseSixImg8 from "@/public/images/dalts/houseSix/WEB/8.jpg"
-import houseSixImg9 from "@/public/images/dalts/houseSix/WEB/9.jpg"
+// import houseOneImg1 from "@/public/images/dalts/houseOne/WEB/1.jpg"
+// ... all other imports removed as images don't exist
 
 import stGallery1 from "@/public/images/stgallery1.jpg"
-
 import glenelgLead from "@/public/images/glenelg_lead.jpeg"
 
 export interface Property {
@@ -69,7 +16,7 @@ export interface Property {
   beds: number | string
   baths: number | string
   status: "active" | "coming-soon"
-  img: StaticImageData
+  img: StaticImageData | string
   subheading: string
   location: string
   mainImage?: string
@@ -79,19 +26,21 @@ export interface Property {
       occupancyRate: number
     }
   }
-  carasoleImg: {
-    img1: StaticImageData
-    img2: StaticImageData
-    img3: StaticImageData
-    img4: StaticImageData
-    img5: StaticImageData
-    img6: StaticImageData
-    img7: StaticImageData
-    img8: StaticImageData
-    img9: StaticImageData
-    img10: StaticImageData
+  carasoleImg?: {
+    img1: StaticImageData | string
+    img2: StaticImageData | string
+    img3: StaticImageData | string
+    img4: StaticImageData | string
+    img5: StaticImageData | string
+    img6: StaticImageData | string
+    img7: StaticImageData | string
+    img8: StaticImageData | string
+    img9: StaticImageData | string
+    img10: StaticImageData | string
   }[]
 }
+
+const placeholderImg = "/placeholder.svg?height=400&width=600"
 
 export const properties: Property[] = [
   {
@@ -115,16 +64,16 @@ export const properties: Property[] = [
     },
     carasoleImg: [
       {
-        img1: houseOneImg1,
-        img2: houseOneImg2,
-        img3: houseOneImg3,
-        img4: houseOneImg4,
-        img5: houseOneImg5,
-        img6: houseOneImg6,
-        img7: houseOneImg7,
-        img8: houseOneImg8,
-        img9: houseOneImg9,
-        img10: houseOneImg10,
+        img1: placeholderImg,
+        img2: placeholderImg,
+        img3: placeholderImg,
+        img4: placeholderImg,
+        img5: placeholderImg,
+        img6: placeholderImg,
+        img7: placeholderImg,
+        img8: placeholderImg,
+        img9: placeholderImg,
+        img10: placeholderImg,
       },
     ],
   },
@@ -138,9 +87,9 @@ export const properties: Property[] = [
     beds: 6,
     baths: 4,
     status: "active",
-    img: houseOneImg10,
+    img: "/images/cmainshot.jpg",
     subheading:
-      "From dated décor to dream stay—this Clearview family home now earns $105k annually through strategic styling",
+      "From dated décor to dream stay—this Clearview family home earned $102k annually through strategic styling",
     location: "Clearview",
     mainImage: "/images/cmainshot.jpg",
     carouselImages: [
@@ -158,16 +107,16 @@ export const properties: Property[] = [
     },
     carasoleImg: [
       {
-        img1: houseOneImg10,
-        img2: houseOneImg2,
-        img3: houseOneImg3,
-        img4: houseOneImg4,
-        img5: houseOneImg5,
-        img6: houseOneImg6,
-        img7: houseOneImg7,
-        img8: houseOneImg8,
-        img9: houseOneImg9,
-        img10: houseOneImg1,
+        img1: placeholderImg,
+        img2: placeholderImg,
+        img3: placeholderImg,
+        img4: placeholderImg,
+        img5: placeholderImg,
+        img6: placeholderImg,
+        img7: placeholderImg,
+        img8: placeholderImg,
+        img9: placeholderImg,
+        img10: placeholderImg,
       },
     ],
   },
@@ -181,7 +130,7 @@ export const properties: Property[] = [
     beds: 2,
     baths: 1,
     status: "active",
-    img: houseTwoImg10,
+    img: "/images/west-beach-main.jpeg",
     subheading: "Steps from the shoreline in beautiful West Beach",
     location: "West Beach",
     mainImage: "/images/west-beach-main.jpeg",
@@ -192,16 +141,16 @@ export const properties: Property[] = [
     },
     carasoleImg: [
       {
-        img1: houseTwoImg10,
-        img2: houseTwoImg2,
-        img3: houseTwoImg3,
-        img4: houseTwoImg4,
-        img5: houseTwoImg5,
-        img6: houseTwoImg6,
-        img7: houseTwoImg7,
-        img8: houseTwoImg8,
-        img9: houseTwoImg9,
-        img10: houseTwoImg1,
+        img1: placeholderImg,
+        img2: placeholderImg,
+        img3: placeholderImg,
+        img4: placeholderImg,
+        img5: placeholderImg,
+        img6: placeholderImg,
+        img7: placeholderImg,
+        img8: placeholderImg,
+        img9: placeholderImg,
+        img10: placeholderImg,
       },
     ],
   },
@@ -234,16 +183,16 @@ export const properties: Property[] = [
     },
     carasoleImg: [
       {
-        img1: houseOneImg10,
-        img2: houseOneImg2,
-        img3: houseOneImg3,
-        img4: houseOneImg4,
-        img5: houseOneImg5,
-        img6: houseOneImg6,
-        img7: houseOneImg7,
-        img8: houseOneImg8,
-        img9: houseOneImg9,
-        img10: houseOneImg1,
+        img1: placeholderImg,
+        img2: placeholderImg,
+        img3: placeholderImg,
+        img4: placeholderImg,
+        img5: placeholderImg,
+        img6: placeholderImg,
+        img7: placeholderImg,
+        img8: placeholderImg,
+        img9: placeholderImg,
+        img10: placeholderImg,
       },
     ],
   },
@@ -257,7 +206,7 @@ export const properties: Property[] = [
     beds: 3,
     baths: 2,
     status: "active",
-    img: houseFourImg10,
+    img: "/images/seaford-main.jpeg",
     subheading: "5 minutes from Seaford Beach with coastal charm",
     location: "Seaford",
     mainImage: "/images/seaford-main.jpeg",
@@ -268,16 +217,16 @@ export const properties: Property[] = [
     },
     carasoleImg: [
       {
-        img1: houseFourImg10,
-        img2: houseFourImg2,
-        img3: houseFourImg3,
-        img4: houseFourImg4,
-        img5: houseFourImg5,
-        img6: houseFourImg6,
-        img7: houseFourImg7,
-        img8: houseFourImg8,
-        img9: houseFourImg9,
-        img10: houseFourImg1,
+        img1: placeholderImg,
+        img2: placeholderImg,
+        img3: placeholderImg,
+        img4: placeholderImg,
+        img5: placeholderImg,
+        img6: placeholderImg,
+        img7: placeholderImg,
+        img8: placeholderImg,
+        img9: placeholderImg,
+        img10: placeholderImg,
       },
     ],
   },
@@ -291,13 +240,13 @@ export const properties: Property[] = [
     beds: 5,
     baths: 3,
     status: "active",
-    img: houseFiveImg1,
+    img: "/images/enfield-game-room.png",
     subheading: "Family-friendly Enfield property with spacious living",
     location: "Enfield",
-    mainImage: "/images/enfield-main.jpeg",
+    mainImage: "/images/enfield-game-room.png",
     carouselImages: [
       "/images/enfield-kitchen.png",
-      "/images/enfield-dining-living-photo.png",
+      "/images/enfield-dining-living-photonew.png",
       "/images/enfield-patio.png",
       "/images/enfield-game-room.png",
       "/images/enfield-bathroom1.png",
@@ -310,16 +259,16 @@ export const properties: Property[] = [
     },
     carasoleImg: [
       {
-        img1: houseFiveImg1,
-        img2: houseFiveImg2,
-        img3: houseFiveImg3,
-        img4: houseFiveImg4,
-        img5: houseFiveImg5,
-        img6: houseFiveImg6,
-        img7: houseFiveImg7,
-        img8: houseFiveImg8,
-        img9: houseFiveImg9,
-        img10: houseFiveImg10,
+        img1: placeholderImg,
+        img2: placeholderImg,
+        img3: placeholderImg,
+        img4: placeholderImg,
+        img5: placeholderImg,
+        img6: placeholderImg,
+        img7: placeholderImg,
+        img8: placeholderImg,
+        img9: placeholderImg,
+        img10: placeholderImg,
       },
     ],
   },
@@ -333,7 +282,7 @@ export const properties: Property[] = [
     beds: 1,
     baths: 1,
     status: "active",
-    img: houseSixImg1,
+    img: "/images/mexterior.jpeg",
     subheading: "Historic North Adelaide location with cosy charm",
     location: "North Adelaide",
     mainImage: "/images/mexterior.jpeg",
@@ -352,16 +301,16 @@ export const properties: Property[] = [
     },
     carasoleImg: [
       {
-        img1: houseSixImg1,
-        img2: houseSixImg2,
-        img3: houseSixImg3,
-        img4: houseSixImg4,
-        img5: houseSixImg5,
-        img6: houseSixImg6,
-        img7: houseSixImg7,
-        img8: houseSixImg8,
-        img9: houseSixImg9,
-        img10: houseSixImg1,
+        img1: placeholderImg,
+        img2: placeholderImg,
+        img3: placeholderImg,
+        img4: placeholderImg,
+        img5: placeholderImg,
+        img6: placeholderImg,
+        img7: placeholderImg,
+        img8: placeholderImg,
+        img9: placeholderImg,
+        img10: placeholderImg,
       },
     ],
   },
@@ -375,21 +324,21 @@ export const properties: Property[] = [
     beds: "Coming Soon",
     baths: "Coming Soon",
     status: "coming-soon",
-    img: houseTwoImg1,
+    img: placeholderImg,
     subheading: "Exciting new property coming soon",
     location: "Coming Soon",
     carasoleImg: [
       {
-        img1: houseTwoImg1,
-        img2: houseTwoImg2,
-        img3: houseTwoImg3,
-        img4: houseTwoImg4,
-        img5: houseTwoImg5,
-        img6: houseTwoImg6,
-        img7: houseTwoImg7,
-        img8: houseTwoImg8,
-        img9: houseTwoImg9,
-        img10: houseTwoImg10,
+        img1: placeholderImg,
+        img2: placeholderImg,
+        img3: placeholderImg,
+        img4: placeholderImg,
+        img5: placeholderImg,
+        img6: placeholderImg,
+        img7: placeholderImg,
+        img8: placeholderImg,
+        img9: placeholderImg,
+        img10: placeholderImg,
       },
     ],
   },
@@ -403,21 +352,21 @@ export const properties: Property[] = [
     beds: "Coming Soon",
     baths: "Coming Soon",
     status: "coming-soon",
-    img: houseFourImg1,
+    img: placeholderImg,
     subheading: "Another exciting property coming soon",
     location: "Coming Soon",
     carasoleImg: [
       {
-        img1: houseFourImg1,
-        img2: houseFourImg2,
-        img3: houseFourImg3,
-        img4: houseFourImg4,
-        img5: houseFourImg5,
-        img6: houseFourImg6,
-        img7: houseFourImg7,
-        img8: houseFourImg8,
-        img9: houseFourImg9,
-        img10: houseFourImg10,
+        img1: placeholderImg,
+        img2: placeholderImg,
+        img3: placeholderImg,
+        img4: placeholderImg,
+        img5: placeholderImg,
+        img6: placeholderImg,
+        img7: placeholderImg,
+        img8: placeholderImg,
+        img9: placeholderImg,
+        img10: placeholderImg,
       },
     ],
   },
