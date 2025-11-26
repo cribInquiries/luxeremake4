@@ -54,7 +54,7 @@ export function SeafordTransformationView({ property }: SeafordTransformationVie
       <section className="relative min-h-screen w-full flex items-center justify-center bg-black overflow-hidden pb-20">
         <div className="absolute inset-0">
           <Image
-            src="/placeholder.svg?height=1080&width=1920"
+            src="/images/seafordnewliving.jpg"
             alt={property.title}
             fill
             className="object-cover"
@@ -243,7 +243,7 @@ export function SeafordTransformationView({ property }: SeafordTransformationVie
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="relative group overflow-hidden rounded-2xl shadow-xl aspect-[4/3]">
                 <Image
-                  src="/placeholder.svg?height=600&width=800"
+                  src="/images/seafordoldliving.png"
                   alt="Living room before - dated yellow walls and plaid furniture"
                   fill
                   className="object-cover"
@@ -255,7 +255,7 @@ export function SeafordTransformationView({ property }: SeafordTransformationVie
               </div>
               <div className="relative group overflow-hidden rounded-2xl shadow-xl aspect-[4/3]">
                 <Image
-                  src="/placeholder.svg?height=600&width=800"
+                  src="/images/seafordnewliving.jpg"
                   alt="Living room after - modern coastal design with arched windows"
                   fill
                   className="object-cover"
@@ -274,7 +274,7 @@ export function SeafordTransformationView({ property }: SeafordTransformationVie
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="relative group overflow-hidden rounded-2xl shadow-xl aspect-[4/3]">
                 <Image
-                  src="/placeholder.svg?height=600&width=800"
+                  src="/images/seafordoldkitchen.png"
                   alt="Kitchen before - dated with brown tiles"
                   fill
                   className="object-cover"
@@ -286,7 +286,7 @@ export function SeafordTransformationView({ property }: SeafordTransformationVie
               </div>
               <div className="relative group overflow-hidden rounded-2xl shadow-xl aspect-[4/3]">
                 <Image
-                  src="/placeholder.svg?height=600&width=800"
+                  src="/images/seafordnewkitchen.jpg"
                   alt="Kitchen after - modern white cabinets with coastal finishes"
                   fill
                   className="object-cover"
@@ -305,7 +305,7 @@ export function SeafordTransformationView({ property }: SeafordTransformationVie
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="relative group overflow-hidden rounded-2xl shadow-xl aspect-[4/3]">
                 <Image
-                  src="/placeholder.svg?height=600&width=800"
+                  src="/images/seafordoldbedroom.png"
                   alt="Bedroom before - yellow walls with dated wooden furniture"
                   fill
                   className="object-cover"
@@ -317,7 +317,7 @@ export function SeafordTransformationView({ property }: SeafordTransformationVie
               </div>
               <div className="relative group overflow-hidden rounded-2xl shadow-xl aspect-[4/3]">
                 <Image
-                  src="/placeholder.svg?height=600&width=800"
+                  src="/images/seafordnewbedroom.jpg"
                   alt="Bedroom after - modern gray tufted headboard with arched window"
                   fill
                   className="object-cover"

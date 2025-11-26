@@ -153,7 +153,17 @@ export function WestBeachTransformationView({ property }: WestBeachTransformatio
             <div className="mb-12">
               <h2 className="text-5xl md:text-6xl font-bold text-black mb-4">The Story</h2>
             </div>
-            <p className="text-xl md:text-2xl text-gray-700 leading-relaxed text-pretty">{property.description}</p>
+            <p className="text-xl md:text-2xl text-gray-700 leading-relaxed text-pretty">
+              This client was the very first homeowner to reach out to us through our website. He had just finished
+              renovating a beautiful property only a minute from the beach and wanted to turn it into something more
+              than a standard rental. After our initial consultation, we introduced him to Luxe's full-service Airbnb
+              transformation. We implemented our latest bedding system, prepared a premium care package, and completed a
+              full styling and setup tailored for high–occupancy coastal stays. Within days, the home was completely
+              guest-ready. The result? The property quickly became one of our top-performing Airbnbs in West Beach,
+              consistently achieving high occupancy, excellent guest reviews, and returns far beyond what a regular
+              rental could offer. What began as a simple enquiry became a long-term partnership—and a standout success
+              story for Luxe.
+            </p>
           </div>
         </section>
 
