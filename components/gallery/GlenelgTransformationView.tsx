@@ -79,23 +79,23 @@ export function GlenelgTransformationView({ property }: GlenelgTransformationVie
   const beforeAfterImages = [
     {
       title: "Kitchen",
-      before: "/images/glenelg-before-kitchen.jpeg",
-      after: "/images/glenelg-kitchen-after.jpeg",
+      before: "/images/glenelg_before_kitchen.jpeg",
+      after: "/images/glenelg_kitchen_after.jpeg",
     },
     {
       title: "Bathroom",
-      before: "/images/glenelg-before-bathroom.jpeg",
-      after: "/images/glenelg-after-bathroom.jpeg",
+      before: "/images/glenelg_before_bathroom.jpeg",
+      after: "/images/glenelg_after_bathroom.jpeg",
     },
     {
       title: "Bedroom",
-      before: "/images/glenelg-before-bedroom.jpeg",
-      after: "/images/glenelg-bed-after.jpeg",
+      before: "/images/glenelg_before_bedroom.jpeg",
+      after: "/images/glenelg_bed_after.jpeg",
     },
     {
       title: "Living Room",
-      before: "/images/glenelg-before-living.jpeg",
-      after: "/images/glenelg-after-living.jpeg",
+      before: "/images/glenelg_before_living.jpeg",
+      after: "/images/glenelg_after_living.jpeg",
     },
   ]
 
