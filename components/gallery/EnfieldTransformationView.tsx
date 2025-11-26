@@ -186,7 +186,7 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
               <p className="text-white/80 text-lg font-medium mb-4">Total Furnishing Budget</p>
               <p className="text-8xl md:text-9xl font-black text-white mb-4">$5K</p>
               <div className="h-1 w-32 bg-white/30 mx-auto mb-6" />
-              <p className="text-xl text-white/90 font-medium">For a 5-bedroom home</p>
+              <p className="text-xl text-white/95 font-medium">For a 5-bedroom home</p>
               <p className="text-white/70 mt-2">Brand new. Completely empty.</p>
             </div>
             <p className="text-pretty font-semibold text-black">
@@ -255,7 +255,7 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
 
             {/* Luxe Solution */}
             <div className="bg-gradient-to-br from-green-900 via-emerald-900 to-green-950 rounded-3xl p-8 border border-green-700/50 shadow-2xl">
-              <h3 className="text-3xl font-bold text-green-300 mb-8">Luxe Solution</h3>
+              <h3 className="text-3xl font-bold text-emerald-300 mb-8">Luxe Solution</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <Check size={24} className="text-green-400 flex-shrink-0 mt-1" strokeWidth={3} />
