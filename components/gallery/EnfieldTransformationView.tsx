@@ -2,10 +2,10 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowLeft, Sparkles } from "lucide-react"
+import { ArrowLeft, Sparkles, X, Check } from "lucide-react"
 import type { Property } from "@/lib/properties"
 import { Line, LineChart, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from "recharts"
-import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart"
+import { ChartTooltip, ChartTooltipContent } from "@/components/ui/chart"
 import { ImageLightbox } from "@/components/image-lightbox"
 import { useState } from "react"
 
@@ -128,39 +128,43 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
       {/* Property Stats */}
       <section className="py-16 bg-white border-b border-gray-200">
         <div className="max-w-5xl mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
             <div className="text-center">
-              <div className="text-4xl font-bold text-black mb-2">{property.beds}</div>
-              <div className="text-gray-800 font-medium">Bedrooms</div>
+              <div className="text-4xl md:text-5xl font-bold text-black mb-2">{property.beds}</div>
+              <div className="text-gray-700 font-medium">Bedrooms</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-black mb-2">{property.baths}</div>
-              <div className="text-gray-800 font-medium">Bathrooms</div>
+              <div className="text-4xl md:text-5xl font-bold text-black mb-2">{property.baths}</div>
+              <div className="text-gray-700 font-medium">Bathrooms</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-black mb-2">$2,000</div>
-              <div className="text-gray-800 font-medium">Peak Week</div>
+              <div className="text-4xl md:text-5xl font-bold text-black mb-2">$2,000</div>
+              <div className="text-gray-700 font-medium">Peak Week</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-black mb-2">92%</div>
+              <div className="text-gray-700 font-medium">Occupancy</div>
             </div>
           </div>
 
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="text-center p-6 bg-sky-50 rounded-xl">
-              <div className="text-2xl font-bold text-sky-600 mb-2">$5,000 Budget</div>
-              <div className="text-gray-800 font-medium">Full Furnishing</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="text-center p-8 bg-blue-50 rounded-xl">
+              <div className="text-2xl md:text-3xl font-bold text-blue-600 mb-2">$5,000 Budget</div>
+              <div className="text-gray-700 font-medium">Full Furnishing</div>
             </div>
-            <div className="text-center p-6 bg-green-50 rounded-xl">
-              <div className="text-2xl font-bold text-green-600 mb-2">5 Bedrooms</div>
-              <div className="text-gray-800 font-medium">Group Accommodation</div>
+            <div className="text-center p-8 bg-green-50 rounded-xl">
+              <div className="text-2xl md:text-3xl font-bold text-green-600 mb-2">5 Bedrooms</div>
+              <div className="text-gray-700 font-medium">Group Accommodation</div>
             </div>
-            <div className="text-center p-6 bg-gray-50 rounded-xl">
-              <div className="text-2xl font-bold text-gray-600 mb-2">Property #1</div>
-              <div className="text-gray-800 font-medium">First Ever</div>
+            <div className="text-center p-8 bg-gray-100 rounded-xl">
+              <div className="text-2xl md:text-3xl font-bold text-gray-700 mb-2">Property #1</div>
+              <div className="text-gray-700 font-medium">First Ever</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* The Challenge */}
+      {/* The Impossible Challenge Banner */}
       <section className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 md:px-12">
           <div className="mb-12">
@@ -186,52 +190,86 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
         </div>
       </section>
 
-      {/* The Hidden Challenge */}
-      <section className="py-20 md:py-28 bg-gradient-to-br from-gray-900 via-gray-800 to-black">
-        <div className="max-w-4xl mx-auto px-6 md:px-12">
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">The Hidden Challenge</h2>
-          <p className="text-2xl md:text-3xl text-white/90 mb-12 leading-relaxed">
-            But the home had a hidden challenge that threatened profitability:
-          </p>
+      {/* The $5,000 Miracle */}
+      <section className="py-20 md:py-28 bg-gradient-to-br from-gray-900 via-black to-gray-900">
+        <div className="max-w-5xl mx-auto px-6 md:px-12">
+          <h2 className="text-5xl md:text-7xl font-bold text-white mb-10 text-balance">The $5,000 Miracle</h2>
 
-          <ul className="space-y-4 mb-12 text-xl md:text-2xl text-white/80">
-            <li className="flex items-start gap-3">
-              <span className="text-white/50 mt-1">•</span>
-              <span>High-Gloss Flooring</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-white/50 mt-1">•</span>
-              <span>Ultra-white interior palette</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-white/50 mt-1">•</span>
-              <span>Massive feature carpet</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-white/50 mt-1">•</span>
-              <span>High-Gloss fingerprint prone surfaces</span>
-            </li>
-          </ul>
-
-          <p className="text-2xl md:text-3xl text-white font-semibold mb-16 leading-relaxed">
-            External cleaners quoted $400+ per stay. Making the operation unsustainable.
-          </p>
-
-          <div className="bg-gradient-to-br from-green-500 to-emerald-600 rounded-3xl p-10 md:p-12 mb-12 shadow-2xl">
-            <p className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
-              So we made a decision that changed Luxe forever:
-            </p>
-            <p className="text-2xl md:text-3xl text-white font-medium">We created our own in-house cleaning team.</p>
+          <div className="space-y-6 text-xl md:text-2xl text-white/90 leading-relaxed mb-12">
+            <p>For the first and only time, Luxe pushed itself to the absolute edge.</p>
+            <p>We worked late. We strategised every dollar. We designed with intention, not expense.</p>
+            <p>Room by room, we transformed the blank canvas into a fully realised luxury stay.</p>
           </div>
 
-          <p className="text-2xl md:text-3xl text-white/90 font-medium mb-6">
-            Trained in-house. Quality-controlled. Detail-obsessed.
+          <div className="flex flex-wrap justify-center gap-4 mb-16">
+            <div className="px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+              <span className="text-white font-semibold">Pool Table</span>
+            </div>
+            <div className="px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+              <span className="text-white font-semibold">Table Tennis</span>
+            </div>
+            <div className="px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+              <span className="text-white font-semibold">Premium Kitchen</span>
+            </div>
+            <div className="px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+              <span className="text-white font-semibold">Multiple Living Zones</span>
+            </div>
+            <div className="px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+              <span className="text-white font-semibold">Cohesive Styling</span>
+            </div>
+          </div>
+
+          <p className="text-xl md:text-2xl text-white mb-16 font-medium text-center">
+            The kind of setup that shouldn't have been possible for a home of this size. But possible is what we do.
           </p>
 
-          <p className="text-xl md:text-2xl text-white/70 italic leading-relaxed">
-            This wasn't just cost-saving — it became the foundation of the Luxe standard that every property benefits
-            from today.
-          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {/* The Challenge */}
+            <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700">
+              <h3 className="text-3xl font-bold text-white mb-8">The Challenge</h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <X size={24} className="text-red-500 flex-shrink-0 mt-1" />
+                  <span className="text-white/90 text-lg">Only $5,000 budget</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <X size={24} className="text-red-500 flex-shrink-0 mt-1" />
+                  <span className="text-white/90 text-lg">Five bedrooms to furnish</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <X size={24} className="text-red-500 flex-shrink-0 mt-1" />
+                  <span className="text-white/90 text-lg">High-end property expectations</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <X size={24} className="text-red-500 flex-shrink-0 mt-1" />
+                  <span className="text-white/90 text-lg">First property launch</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Luxe Solution */}
+            <div className="bg-gradient-to-br from-green-800 to-green-900 rounded-3xl p-8 border border-green-700">
+              <h3 className="text-3xl font-bold text-white mb-8">Luxe Solution</h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <Check size={24} className="text-green-400 flex-shrink-0 mt-1" />
+                  <span className="text-white/90 text-lg">Strategic furniture sourcing</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check size={24} className="text-green-400 flex-shrink-0 mt-1" />
+                  <span className="text-white/90 text-lg">Entertainment features added</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check size={24} className="text-green-400 flex-shrink-0 mt-1" />
+                  <span className="text-white/90 text-lg">Cohesive luxury aesthetic</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check size={24} className="text-green-400 flex-shrink-0 mt-1" />
+                  <span className="text-white/90 text-lg">Premium guest experience</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -301,40 +339,40 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
 
           <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg mb-12">
             <h3 className="text-3xl font-bold text-black mb-8 text-center">Monthly Revenue Comparison</h3>
-            <ChartContainer
-              config={{
-                traditional: {
-                  label: "Traditional Rent",
-                  color: "#ef4444",
-                },
-                luxe: {
-                  label: "Luxe Airbnb",
-                  color: "#10b981",
-                },
-              }}
-              className="h-[500px]"
-            >
+            <div className="h-[500px]">
               <ResponsiveContainer width="100%" height="100%">
-                <LineChart data={monthlyRevenueData} margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>
+                <LineChart data={monthlyRevenueData} margin={{ top: 20, right: 30, left: 60, bottom: 60 }}>
                   <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
                   <XAxis
                     dataKey="month"
                     tick={{ fill: "#374151", fontSize: 15, fontWeight: 600 }}
                     tickLine={false}
                     domain={[1, 12]}
+                    label={{
+                      value: "Month",
+                      position: "insideBottom",
+                      offset: -10,
+                      style: { fontSize: 16, fontWeight: 700, fill: "#111827" },
+                    }}
                   />
                   <YAxis
                     tick={{ fill: "#374151", fontSize: 15, fontWeight: 600 }}
                     tickLine={false}
                     axisLine={false}
                     tickFormatter={(value) => `$${value / 1000}k`}
+                    label={{
+                      value: "Monthly Revenue",
+                      angle: -90,
+                      position: "insideLeft",
+                      style: { fontSize: 16, fontWeight: 700, fill: "#111827" },
+                    }}
                   />
                   <ChartTooltip content={<ChartTooltipContent />} cursor={{ stroke: "#e5e7eb", strokeWidth: 2 }} />
                   <Line
                     type="monotone"
                     dataKey="traditional"
                     stroke="#ef4444"
-                    strokeWidth={3}
+                    strokeWidth={4}
                     name="Traditional Rent"
                     dot={false}
                   />
@@ -342,19 +380,68 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
                     type="monotone"
                     dataKey="luxe"
                     stroke="#10b981"
-                    strokeWidth={3}
+                    strokeWidth={4}
                     name="Luxe Airbnb"
-                    dot={{ fill: "#10b981", r: 5 }}
+                    dot={{ fill: "#10b981", r: 6 }}
                   />
                 </LineChart>
               </ResponsiveContainer>
-            </ChartContainer>
+            </div>
           </div>
 
           <div className="text-center p-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl shadow-2xl">
             <p className="text-4xl font-bold text-white mb-2">+$4,000 extra per year</p>
             <p className="text-white/95 text-xl font-medium">111% increase over traditional renting</p>
           </div>
+        </div>
+      </section>
+
+      {/* The Hidden Challenge */}
+      <section className="py-20 md:py-28 bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+        <div className="max-w-4xl mx-auto px-6 md:px-12">
+          <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">The Hidden Challenge</h2>
+          <p className="text-2xl md:text-3xl text-white/90 mb-12 leading-relaxed">
+            But the home had a hidden challenge that threatened profitability:
+          </p>
+
+          <ul className="space-y-4 mb-12 text-xl md:text-2xl text-white/80">
+            <li className="flex items-start gap-3">
+              <span className="text-white/50 mt-1">•</span>
+              <span>High-Gloss Flooring</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-white/50 mt-1">•</span>
+              <span>Ultra-white interior palette</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-white/50 mt-1">•</span>
+              <span>Massive feature carpet</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-white/50 mt-1">•</span>
+              <span>High-Gloss fingerprint prone surfaces</span>
+            </li>
+          </ul>
+
+          <p className="text-2xl md:text-3xl text-white font-semibold mb-16 leading-relaxed">
+            External cleaners quoted $400+ per stay. Making the operation unsustainable.
+          </p>
+
+          <div className="bg-gradient-to-br from-green-500 to-emerald-600 rounded-3xl p-10 md:p-12 mb-12 shadow-2xl">
+            <p className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
+              So we made a decision that changed Luxe forever:
+            </p>
+            <p className="text-2xl md:text-3xl text-white font-medium">We created our own in-house cleaning team.</p>
+          </div>
+
+          <p className="text-2xl md:text-3xl text-white/90 font-medium mb-6">
+            Trained in-house. Quality-controlled. Detail-obsessed.
+          </p>
+
+          <p className="text-xl md:text-2xl text-white/70 italic leading-relaxed">
+            This wasn't just cost-saving — it became the foundation of the Luxe standard that every property benefits
+            from today.
+          </p>
         </div>
       </section>
 
