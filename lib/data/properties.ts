@@ -80,6 +80,7 @@ export interface Property {
   subheading: string
   location: string
   mainImage?: string
+  carouselImages?: string[]
   transformationStory?: {
     results: {
       occupancyRate: number
@@ -253,6 +254,13 @@ export const properties: Property[] = [
     img: houseSixImg1,
     subheading: "Historic North Adelaide location with cosy charm",
     location: "North Adelaide",
+    mainImage: "/placeholder.svg?height=800&width=1200",
+    carouselImages: [
+      "/placeholder.svg?height=800&width=1200",
+      "/placeholder.svg?height=800&width=1200",
+      "/placeholder.svg?height=800&width=1200",
+      "/placeholder.svg?height=800&width=1200",
+    ],
     carasoleImg: [
       {
         img1: houseSixImg1,
@@ -265,40 +273,6 @@ export const properties: Property[] = [
         img8: houseSixImg8,
         img9: houseSixImg9,
         img10: houseSixImg9,
-      },
-    ],
-  },
-  {
-    slug: "cosy-glenelg-getaway",
-    labelName: "Glenelg",
-    title: "Cosy Glenelg Getaway",
-    category: "Property Management",
-    tags: ["Styling", "Renovation"],
-    description: "5 minutes from Glenelg Beach",
-    beds: 2,
-    baths: 1,
-    status: "active",
-    img: "/images/glenelg_lead.jpeg" as any,
-    subheading: "5 minutes from Glenelg Beach with modern updates",
-    location: "Glenelg",
-    mainImage: "/images/glenelg_lead.jpeg",
-    transformationStory: {
-      results: {
-        occupancyRate: 88,
-      },
-    },
-    carasoleImg: [
-      {
-        img1: houseOneImg1,
-        img2: houseOneImg2,
-        img3: houseOneImg3,
-        img4: houseOneImg4,
-        img5: houseOneImg5,
-        img6: houseOneImg6,
-        img7: houseOneImg7,
-        img8: houseOneImg8,
-        img9: houseOneImg9,
-        img10: houseOneImg10,
       },
     ],
   },

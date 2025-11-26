@@ -1,5 +1,6 @@
 import { properties } from "@/lib/properties"
 import { GlenelgTransformationView } from "@/components/gallery/GlenelgTransformationView"
+import { MelbourneStreetTransformationView } from "@/components/gallery/MelbourneStreetTransformationView"
 import { notFound } from "next/navigation"
 
 export default function PropertyDetailPage({ params }: { params: { slug: string } }) {
@@ -9,7 +10,10 @@ export default function PropertyDetailPage({ params }: { params: { slug: string 
     notFound()
   }
 
-  // For now, only Glenelg has the transformation view
+  if (property.slug === "melbourne-street-hideaway") {
+    return <MelbourneStreetTransformationView property={property} />
+  }
+
   if (property.slug === "cosy-glenelg-getaway") {
     return <GlenelgTransformationView property={property} />
   }
