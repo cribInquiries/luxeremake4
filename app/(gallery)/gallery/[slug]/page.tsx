@@ -3,6 +3,9 @@ import { GlenelgTransformationView } from "@/components/gallery/GlenelgTransform
 import { MelbourneStreetTransformationView } from "@/components/gallery/MelbourneStreetTransformationView"
 import { ClearviewTransformationView } from "@/components/gallery/ClearviewTransformationView"
 import { EnfieldTransformationView } from "@/components/gallery/EnfieldTransformationView"
+import { WestBeachTransformationView } from "@/components/gallery/WestBeachTransformationView"
+import { SeafordTransformationView } from "@/components/gallery/SeafordTransformationView"
+import { ParklandVistaTransformationView } from "@/components/gallery/ParklandVistaTransformationView"
 import { notFound } from "next/navigation"
 
 export default function PropertyDetailPage({ params }: { params: { slug: string } }) {
@@ -26,6 +29,18 @@ export default function PropertyDetailPage({ params }: { params: { slug: string 
 
   if (property.slug === "enfield-grand-residence") {
     return <EnfieldTransformationView property={property} />
+  }
+
+  if (property.slug === "west-beach-getaway") {
+    return <WestBeachTransformationView property={property} />
+  }
+
+  if (property.slug === "seaford-coastal-residence") {
+    return <SeafordTransformationView property={property} />
+  }
+
+  if (property.slug === "parkland-vista") {
+    return <ParklandVistaTransformationView />
   }
 
   // For other properties, show a simple detail page

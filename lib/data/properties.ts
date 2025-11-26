@@ -192,6 +192,12 @@ export const properties: Property[] = [
     img: houseTwoImg10,
     subheading: "Steps from the shoreline in beautiful West Beach",
     location: "West Beach",
+    mainImage: "/images/west-beach-main.jpeg",
+    transformationStory: {
+      results: {
+        occupancyRate: 91,
+      },
+    },
     carasoleImg: [
       {
         img1: houseTwoImg10,
@@ -220,6 +226,20 @@ export const properties: Property[] = [
     img: houseThreeImg10,
     subheading: "Heart of Adelaide CBD with stunning parkland views",
     location: "Adelaide CBD",
+    mainImage: "/images/parkland-vista-main.jpeg",
+    carouselImages: [
+      "/images/parkland-vista-living.jpeg",
+      "/images/parkland-vista-bedroom1.jpeg",
+      "/images/parkland-vista-bedroom2.jpeg",
+      "/images/parkland-vista-kitchen.jpeg",
+      "/images/parkland-vista-exterior.jpeg",
+      "/images/parkland-vista-patio.jpeg",
+    ],
+    transformationStory: {
+      results: {
+        occupancyRate: 93,
+      },
+    },
     carasoleImg: [
       {
         img1: houseThreeImg10,
@@ -248,6 +268,12 @@ export const properties: Property[] = [
     img: houseFourImg10,
     subheading: "5 minutes from Seaford Beach with coastal charm",
     location: "Seaford",
+    mainImage: "/images/seaford-main.jpeg",
+    transformationStory: {
+      results: {
+        occupancyRate: 89,
+      },
+    },
     carasoleImg: [
       {
         img1: houseFourImg10,
