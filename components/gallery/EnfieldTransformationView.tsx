@@ -343,7 +343,7 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
             </div>
           </div>
 
-          <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg mb-12">
+          <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg">
             <h3 className="text-3xl font-bold text-black mb-8 text-center">Monthly Revenue Comparison</h3>
             <ChartContainer
               config={{
