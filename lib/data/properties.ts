@@ -23,17 +23,6 @@ import houseTwoImg8 from "@/public/images/dalts/houseTwo/WEB/8.jpg"
 import houseTwoImg9 from "@/public/images/dalts/houseTwo/WEB/9.jpg"
 import houseTwoImg10 from "@/public/images/dalts/houseTwo/WEB/10.jpg"
 
-import houseThreeImg1 from "@/public/images/dalts/houseThree/WEB/1.jpg"
-import houseThreeImg2 from "@/public/images/dalts/houseThree/WEB/2.jpg"
-import houseThreeImg3 from "@/public/images/dalts/houseThree/WEB/3.jpg"
-import houseThreeImg4 from "@/public/images/dalts/houseThree/WEB/4.jpg"
-import houseThreeImg5 from "@/public/images/dalts/houseThree/WEB/5.jpg"
-import houseThreeImg6 from "@/public/images/dalts/houseThree/WEB/6.jpg"
-import houseThreeImg7 from "@/public/images/dalts/houseThree/WEB/7.jpg"
-import houseThreeImg8 from "@/public/images/dalts/houseThree/WEB/8.jpg"
-import houseThreeImg9 from "@/public/images/dalts/houseThree/WEB/9.jpg"
-import houseThreeImg10 from "@/public/images/dalts/houseThree/WEB/10.jpg"
-
 import houseFourImg1 from "@/public/images/dalts/houseFour/WEB/1.jpg"
 import houseFourImg2 from "@/public/images/dalts/houseFour/WEB/2.jpg"
 import houseFourImg3 from "@/public/images/dalts/houseFour/WEB/3.jpg"
@@ -244,16 +233,16 @@ export const properties: Property[] = [
     },
     carasoleImg: [
       {
-        img1: houseThreeImg10,
-        img2: houseThreeImg2,
-        img3: houseThreeImg3,
-        img4: houseThreeImg4,
-        img5: houseThreeImg5,
-        img6: houseThreeImg6,
-        img7: houseThreeImg7,
-        img8: houseThreeImg8,
-        img9: houseThreeImg9,
-        img10: houseThreeImg1,
+        img1: houseOneImg10,
+        img2: houseOneImg2,
+        img3: houseOneImg3,
+        img4: houseOneImg4,
+        img5: houseOneImg5,
+        img6: houseOneImg6,
+        img7: houseOneImg7,
+        img8: houseOneImg8,
+        img9: houseOneImg9,
+        img10: houseOneImg1,
       },
     ],
   },
@@ -413,21 +402,21 @@ export const properties: Property[] = [
     beds: "Coming Soon",
     baths: "Coming Soon",
     status: "coming-soon",
-    img: houseThreeImg1,
+    img: houseFourImg1,
     subheading: "Another exciting property coming soon",
     location: "Coming Soon",
     carasoleImg: [
       {
-        img1: houseThreeImg1,
-        img2: houseThreeImg2,
-        img3: houseThreeImg3,
-        img4: houseThreeImg4,
-        img5: houseThreeImg5,
-        img6: houseThreeImg6,
-        img7: houseThreeImg7,
-        img8: houseThreeImg8,
-        img9: houseThreeImg9,
-        img10: houseThreeImg10,
+        img1: houseFourImg1,
+        img2: houseFourImg2,
+        img3: houseFourImg3,
+        img4: houseFourImg4,
+        img5: houseFourImg5,
+        img6: houseFourImg6,
+        img7: houseFourImg7,
+        img8: houseFourImg8,
+        img9: houseFourImg9,
+        img10: houseFourImg10,
       },
     ],
   },
