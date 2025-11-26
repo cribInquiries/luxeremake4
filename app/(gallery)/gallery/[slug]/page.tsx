@@ -1,4 +1,4 @@
-import { properties } from "@/lib/properties"
+import { properties } from "@/lib/data/properties"
 import { GlenelgTransformationView } from "@/components/gallery/GlenelgTransformationView"
 import { MelbourneStreetTransformationView } from "@/components/gallery/MelbourneStreetTransformationView"
 import { notFound } from "next/navigation"

@@ -102,6 +102,40 @@ export interface Property {
 
 export const properties: Property[] = [
   {
+    slug: "cosy-glenelg-getaway",
+    labelName: "Glenelg",
+    title: "Cosy Glenelg Getaway",
+    category: "Property Management",
+    tags: ["Styling", "Renovation"],
+    description: "Beachside transformation",
+    beds: 2,
+    baths: 1,
+    status: "active",
+    img: houseOneImg10 as StaticImageData,
+    subheading: "Complete transformation near Glenelg Beach",
+    location: "Glenelg",
+    mainImage: "/images/glenelg_lead.jpeg",
+    transformationStory: {
+      results: {
+        occupancyRate: 95,
+      },
+    },
+    carasoleImg: [
+      {
+        img1: houseOneImg1,
+        img2: houseOneImg2,
+        img3: houseOneImg3,
+        img4: houseOneImg4,
+        img5: houseOneImg5,
+        img6: houseOneImg6,
+        img7: houseOneImg7,
+        img8: houseOneImg8,
+        img9: houseOneImg9,
+        img10: houseOneImg10,
+      },
+    ],
+  },
+  {
     slug: "clearview-serene-family-home",
     labelName: "Clearview",
     title: "Serene Family Home – Pool & Games Close to Adel CBD",
