@@ -141,8 +141,7 @@ export const properties: Property[] = [
     title: "Serene Family Home – Pool & Games Close to Adel CBD",
     category: "Property Management",
     tags: ["Styling"],
-    description:
-      "A fast-tracked transformation that turned an outdated six-bedroom family home into a $105,000/year Airbnb powerhouse. With tight deadlines and a strategic bedding system upgrade, this property now delivers exceptional guest experiences and industry-leading returns.",
+    description: "Family-friendly Clearview",
     beds: 6,
     baths: 4,
     status: "active",
