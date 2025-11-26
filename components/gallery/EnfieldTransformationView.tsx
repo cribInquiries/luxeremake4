@@ -390,8 +390,8 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
           </div>
 
           <div className="text-center p-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl shadow-2xl">
-            <p className="text-4xl font-bold text-white mb-2">+$4,000 extra per year</p>
-            <p className="text-white/95 text-xl font-medium">111% increase over traditional renting</p>
+            <p className="text-4xl font-bold text-white mb-2">+$21,000 extra per year</p>
+            <p className="text-white/95 text-xl font-medium">62.5% increase over traditional renting</p>
           </div>
         </div>
       </section>
