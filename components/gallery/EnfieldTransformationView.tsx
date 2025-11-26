@@ -148,23 +148,23 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="text-center p-8 bg-blue-50 rounded-2xl border border-blue-100 shadow-sm hover:shadow-md transition-shadow">
+            <div className="text-center p-8 bg-blue-100 rounded-2xl border-2 border-blue-300 shadow-sm hover:shadow-md transition-shadow">
               <div className="text-2xl md:text-3xl font-bold mb-2">
-                <span className="text-blue-600">$5,000</span> <span className="text-gray-800">Budget</span>
+                <span className="text-blue-700">$5,000</span> <span className="text-gray-900">Budget</span>
               </div>
-              <div className="text-gray-600 font-medium">Full Furnishing</div>
+              <div className="text-gray-700 font-medium">Full Furnishing</div>
             </div>
-            <div className="text-center p-8 bg-green-50 rounded-2xl border border-green-100 shadow-sm hover:shadow-md transition-shadow">
+            <div className="text-center p-8 bg-green-100 rounded-2xl border-2 border-green-300 shadow-sm hover:shadow-md transition-shadow">
               <div className="text-2xl md:text-3xl font-bold mb-2">
-                <span className="text-green-600">5</span> <span className="text-gray-800">Bedrooms</span>
+                <span className="text-green-700">5</span> <span className="text-gray-900">Bedrooms</span>
               </div>
-              <div className="text-gray-600 font-medium">Group Accommodation</div>
+              <div className="text-gray-700 font-medium">Group Accommodation</div>
             </div>
-            <div className="text-center p-8 bg-gray-50 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+            <div className="text-center p-8 bg-purple-100 rounded-2xl border-2 border-purple-300 shadow-sm hover:shadow-md transition-shadow">
               <div className="text-2xl md:text-3xl font-bold mb-2">
-                <span className="text-gray-800">Property</span> <span className="text-gray-700">#1</span>
+                <span className="text-purple-700">Property</span> <span className="text-gray-900">#1</span>
               </div>
-              <div className="text-gray-600 font-medium">First Ever</div>
+              <div className="text-gray-700 font-medium">First Ever</div>
             </div>
           </div>
         </div>
