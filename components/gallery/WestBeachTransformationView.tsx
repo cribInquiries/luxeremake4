@@ -48,7 +48,7 @@ export function WestBeachTransformationView({ property }: WestBeachTransformatio
         <section className="relative h-screen w-full flex items-center justify-center bg-black overflow-hidden">
           <div className="absolute inset-0">
             <Image
-              src={property.mainImage || "/placeholder.svg"}
+              src="/images/westlivingnew.jpg"
               alt={property.title}
               fill
               className="object-cover opacity-60 scale-125 transition-transform duration-[20s] ease-out hover:scale-[1.35]"
@@ -171,7 +171,7 @@ export function WestBeachTransformationView({ property }: WestBeachTransformatio
                 <div className="space-y-4">
                   <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-lg">
                     <Image
-                      src="/images/before-west-bathroom.jpg"
+                      src="/images/westbathroomold.jpg"
                       alt="Bathroom before Luxe transformation"
                       fill
                       className="object-cover grayscale-[30%] scale-110"
@@ -187,7 +187,7 @@ export function WestBeachTransformationView({ property }: WestBeachTransformatio
                 <div className="space-y-4">
                   <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl ring-4 ring-green-500/20">
                     <Image
-                      src="/images/design-mode/bathroomnew.jpg"
+                      src="/images/westnewbathroom.jpg"
                       alt="Bathroom after Luxe transformation"
                       fill
                       className="object-cover"
@@ -206,7 +206,7 @@ export function WestBeachTransformationView({ property }: WestBeachTransformatio
                 <div className="space-y-4">
                   <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-lg">
                     <Image
-                      src="/images/design-mode/kitchenold.jpg"
+                      src="/images/westkitchenold.jpg"
                       alt="Kitchen before Luxe transformation"
                       fill
                       className="object-cover grayscale-[30%] scale-110"
@@ -222,7 +222,7 @@ export function WestBeachTransformationView({ property }: WestBeachTransformatio
                 <div className="space-y-4">
                   <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl ring-4 ring-green-500/20">
                     <Image
-                      src="/images/design-mode/kitchennew.jpg"
+                      src="/images/westnewkitchen.jpg"
                       alt="Kitchen after Luxe transformation"
                       fill
                       className="object-cover"
@@ -241,7 +241,7 @@ export function WestBeachTransformationView({ property }: WestBeachTransformatio
                 <div className="space-y-4">
                   <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-lg">
                     <Image
-                      src="/images/design-mode/loungeold.jpg"
+                      src="/images/westoldliving.jpg"
                       alt="Lounge before Luxe transformation"
                       fill
                       className="object-cover grayscale-[30%] scale-110"
@@ -257,7 +257,7 @@ export function WestBeachTransformationView({ property }: WestBeachTransformatio
                 <div className="space-y-4">
                   <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl ring-4 ring-green-500/20">
                     <Image
-                      src="/images/design-mode/loungenew.jpg"
+                      src="/images/westlivingnew.jpg"
                       alt="Lounge after Luxe transformation"
                       fill
                       className="object-cover"
