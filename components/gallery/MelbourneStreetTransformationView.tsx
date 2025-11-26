@@ -94,14 +94,14 @@ export function MelbourneStreetTransformationView({ property }: MelbourneStreetT
         <section className="relative h-screen w-full flex items-end bg-black overflow-hidden">
           <div className="absolute inset-0">
             <Image
-              src={property.carouselImages[currentImageIndex] || "/placeholder.svg"}
-              alt={`${property.title} - Image ${currentImageIndex + 1}`}
+              src={property.mainImage || property.carouselImages[currentImageIndex] || "/placeholder.svg"}
+              alt={`${property.title} - Hero Image`}
               fill
               className="object-cover"
               priority
               sizes="100vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/30" />
           </div>
 
           {/* Slideshow Controls */}
@@ -136,14 +136,14 @@ export function MelbourneStreetTransformationView({ property }: MelbourneStreetT
 
           <div className="relative z-10 w-full max-w-5xl mx-auto px-6 md:px-12 pb-20">
             <div className="inline-block px-5 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-6">
-              <span className="text-sm font-semibold text-white uppercase tracking-wider">
-                Investment Success Story
-              </span>
+              <span className="text-sm font-bold text-white uppercase tracking-wider">Investment Success Story</span>
             </div>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight text-balance leading-[0.95]">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight text-balance leading-[0.95] [text-shadow:_0_4px_12px_rgb(0_0_0_/80)]">
               {property.title}
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 font-light text-balance max-w-3xl">{property.location}</p>
+            <p className="text-xl md:text-2xl text-white/95 font-medium text-balance max-w-3xl [text-shadow:_0_2px_8px_rgb(0_0_0_/60)]">
+              {property.location}
+            </p>
           </div>
         </section>
 
@@ -156,7 +156,7 @@ export function MelbourneStreetTransformationView({ property }: MelbourneStreetT
                   <span className="text-white font-bold text-lg">$</span>
                 </div>
                 <div>
-                  <div className="text-sm text-gray-600 font-medium">ADR</div>
+                  <div className="text-sm text-gray-700 font-semibold">ADR</div>
                   <div className="text-2xl font-bold text-black">$150</div>
                 </div>
               </div>
@@ -166,7 +166,7 @@ export function MelbourneStreetTransformationView({ property }: MelbourneStreetT
                   <Bed className="w-7 h-7 text-white" />
                 </div>
                 <div>
-                  <div className="text-sm text-gray-600 font-medium">Bedroom</div>
+                  <div className="text-sm text-gray-700 font-semibold">Bedroom</div>
                   <div className="text-2xl font-bold text-black">1</div>
                 </div>
               </div>
@@ -176,7 +176,7 @@ export function MelbourneStreetTransformationView({ property }: MelbourneStreetT
                   <Bath className="w-7 h-7 text-white" />
                 </div>
                 <div>
-                  <div className="text-sm text-gray-600 font-medium">Bathroom</div>
+                  <div className="text-sm text-gray-700 font-semibold">Bathroom</div>
                   <div className="text-2xl font-bold text-black">1</div>
                 </div>
               </div>
@@ -186,7 +186,7 @@ export function MelbourneStreetTransformationView({ property }: MelbourneStreetT
                   <Square className="w-7 h-7 text-white" />
                 </div>
                 <div>
-                  <div className="text-sm text-gray-600 font-medium">Land Size</div>
+                  <div className="text-sm text-gray-700 font-semibold">Land Size</div>
                   <div className="text-xl font-bold text-black whitespace-nowrap">40 m²</div>
                 </div>
               </div>
@@ -200,7 +200,9 @@ export function MelbourneStreetTransformationView({ property }: MelbourneStreetT
             <div className="mb-12">
               <h2 className="text-5xl md:text-6xl font-bold text-black mb-4">The Story</h2>
             </div>
-            <p className="text-xl md:text-2xl text-gray-700 leading-relaxed text-pretty">{property.description}</p>
+            <p className="text-xl md:text-2xl text-gray-800 leading-relaxed text-pretty font-normal">
+              {property.description}
+            </p>
           </div>
         </section>
 
@@ -209,14 +211,14 @@ export function MelbourneStreetTransformationView({ property }: MelbourneStreetT
           <div className="max-w-7xl mx-auto px-6 md:px-12">
             <div className="mb-16 text-center">
               <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">The Property</h2>
-              <p className="text-xl text-gray-600">Premium styling and design throughout</p>
+              <p className="text-xl text-gray-700 font-medium">Premium styling and design throughout</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="/images/design-mode/mbathroom.jpeg"
-                  alt="Modern bathroom"
+                  src={property.carouselImages[0] || "/placeholder.svg"}
+                  alt="Modern kitchen with sleek design"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 768px) 100vw, 33vw"
@@ -224,8 +226,8 @@ export function MelbourneStreetTransformationView({ property }: MelbourneStreetT
               </div>
               <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="/images/design-mode/mkitchen.jpeg"
-                  alt="Contemporary kitchen"
+                  src={property.carouselImages[1] || "/placeholder.svg"}
+                  alt="Contemporary dining area"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 768px) 100vw, 33vw"
@@ -233,8 +235,8 @@ export function MelbourneStreetTransformationView({ property }: MelbourneStreetT
               </div>
               <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="/images/design-mode/mlounge1.avif"
-                  alt="Stylish living area"
+                  src={property.carouselImages[2] || "/placeholder.svg"}
+                  alt="Stylish living area with TV"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 768px) 100vw, 33vw"
@@ -245,8 +247,8 @@ export function MelbourneStreetTransformationView({ property }: MelbourneStreetT
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
               <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="/images/mexterior.jpeg"
-                  alt="Elegant exterior of Melbourne Street property with inviting entrance"
+                  src={property.carouselImages[3] || "/placeholder.svg"}
+                  alt="Outdoor patio with seating area"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 768px) 100vw, 33vw"
@@ -254,8 +256,8 @@ export function MelbourneStreetTransformationView({ property }: MelbourneStreetT
               </div>
               <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="/images/mdining.jpeg"
-                  alt="Modern dining area with sophisticated table setting and ambient lighting"
+                  src={property.carouselImages[4] || "/placeholder.svg"}
+                  alt="Modern bathroom with laundry"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 768px) 100vw, 33vw"
@@ -263,8 +265,8 @@ export function MelbourneStreetTransformationView({ property }: MelbourneStreetT
               </div>
               <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="/images/mpatio.jpeg"
-                  alt="Outdoor patio space with stylish furniture and relaxing atmosphere"
+                  src={property.carouselImages[5] || "/placeholder.svg"}
+                  alt="Balcony view overlooking Melbourne Street"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 768px) 100vw, 33vw"
@@ -279,7 +281,9 @@ export function MelbourneStreetTransformationView({ property }: MelbourneStreetT
           <div className="max-w-6xl mx-auto px-6 md:px-12">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Revenue Performance</h2>
-              <p className="text-xl text-gray-600">Traditional renting vs. Working with Luxe Airbnb management</p>
+              <p className="text-xl text-gray-700 font-medium">
+                Traditional renting vs. Working with Luxe Airbnb management
+              </p>
             </div>
 
             <div className="bg-gray-50 rounded-3xl p-8 md:p-12 shadow-lg">
@@ -338,22 +342,22 @@ export function MelbourneStreetTransformationView({ property }: MelbourneStreetT
               <div className="mt-12 flex flex-wrap justify-center gap-8">
                 <div className="flex items-center gap-2">
                   <div className="w-4 h-4 bg-red-500" />
-                  <span className="text-gray-600">Traditional: $1,950/month</span>
+                  <span className="text-gray-800 font-medium">Traditional: $1,950/month</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-4 h-4 rounded-full bg-green-500" />
-                  <span className="text-gray-600">Luxe: $3,000/month avg</span>
+                  <span className="text-gray-800 font-medium">Luxe: $3,000/month avg</span>
                 </div>
               </div>
 
               <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="text-center p-6 bg-red-50 rounded-xl">
                   <div className="text-4xl font-bold text-red-600 mb-2">$23,400</div>
-                  <div className="text-gray-600">Traditional Annual Revenue</div>
+                  <div className="text-gray-800 font-semibold">Traditional Annual Revenue</div>
                 </div>
                 <div className="text-center p-6 bg-green-50 rounded-xl">
                   <div className="text-4xl font-bold text-green-600 mb-2">$36,000</div>
-                  <div className="text-gray-600">Luxe Annual Revenue</div>
+                  <div className="text-gray-800 font-semibold">Luxe Annual Revenue</div>
                 </div>
               </div>
 
