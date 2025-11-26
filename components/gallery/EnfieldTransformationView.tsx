@@ -126,7 +126,7 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
       </section>
 
       {/* Property Stats */}
-      <section className="py-20 bg-white border-b border-gray-200">
+      <section className="py-16 bg-white border-b border-gray-200">
         <div className="max-w-5xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
@@ -161,7 +161,7 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
       </section>
 
       {/* The Challenge */}
-      <section className="py-28 md:py-40 bg-gray-50">
+      <section className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 md:px-12">
           <div className="mb-12">
             <h2 className="text-5xl md:text-6xl font-bold text-black mb-4">The Impossible Challenge</h2>
@@ -187,7 +187,7 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
       </section>
 
       {/* The Hidden Challenge */}
-      <section className="py-28 md:py-40 bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+      <section className="py-20 md:py-28 bg-gradient-to-br from-gray-900 via-gray-800 to-black">
         <div className="max-w-4xl mx-auto px-6 md:px-12">
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">The Hidden Challenge</h2>
           <p className="text-2xl md:text-3xl text-white/90 mb-12 leading-relaxed">
@@ -236,7 +236,7 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
       </section>
 
       {/* Property Showcase */}
-      <section className="py-28 bg-white">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">The Finished Property</h2>
@@ -269,7 +269,7 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
       </section>
 
       {/* Performance Stats */}
-      <section className="py-28 bg-white">
+      <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Performance That Changed Everything</h2>
@@ -315,21 +315,19 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
               className="h-[500px]"
             >
               <ResponsiveContainer width="100%" height="100%">
-                <LineChart data={monthlyRevenueData}>
+                <LineChart data={monthlyRevenueData} margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>
                   <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
                   <XAxis
                     dataKey="month"
-                    tick={{ fill: "#374151", fontSize: 14 }}
+                    tick={{ fill: "#374151", fontSize: 15, fontWeight: 600 }}
                     tickLine={false}
-                    label={{ value: "Months Active", position: "insideBottom", offset: -5, fill: "#374151" }}
                     domain={[1, 12]}
                   />
                   <YAxis
-                    tick={{ fill: "#374151", fontSize: 14 }}
+                    tick={{ fill: "#374151", fontSize: 15, fontWeight: 600 }}
                     tickLine={false}
                     axisLine={false}
                     tickFormatter={(value) => `$${value / 1000}k`}
-                    label={{ value: "Revenue", angle: -90, position: "insideLeft", fill: "#374151" }}
                   />
                   <ChartTooltip content={<ChartTooltipContent />} cursor={{ stroke: "#e5e7eb", strokeWidth: 2 }} />
                   <Line
@@ -361,7 +359,7 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
       </section>
 
       {/* What Enfield Represents */}
-      <section className="py-28 md:py-40 bg-white">
+      <section className="py-20 md:py-28 bg-white">
         <div className="max-w-5xl mx-auto px-6 md:px-12">
           <h2 className="text-5xl md:text-6xl font-bold text-black mb-6 text-center">What Enfield Represents</h2>
           <p className="text-2xl md:text-3xl text-gray-700 text-center mb-16 leading-relaxed max-w-3xl mx-auto">
@@ -372,8 +370,8 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
             <div className="bg-sky-50 rounded-2xl p-10 text-center shadow-sm">
               <h3 className="text-3xl font-bold text-sky-600">Budget mastery</h3>
             </div>
-            <div className="bg-green-50 rounded-2xl p-10 text-center shadow-sm">
-              <h3 className="text-3xl font-bold text-green-600">Design at scale</h3>
+            <div className="bg-emerald-100 rounded-2xl p-10 text-center shadow-sm">
+              <h3 className="text-3xl font-bold text-emerald-700">Design at scale</h3>
             </div>
             <div className="bg-purple-50 rounded-2xl p-10 text-center shadow-sm">
               <h3 className="text-3xl font-bold text-purple-600">Problem solving</h3>
@@ -395,7 +393,7 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
       </section>
 
       {/* Enfield Set Our Standard */}
-      <section className="py-28 md:py-40 bg-gradient-to-br from-gray-900 via-black to-gray-900">
+      <section className="py-20 md:py-28 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative">
         <div className="max-w-4xl mx-auto px-6 md:px-12 text-center">
           <p className="text-sm md:text-base text-gray-400 uppercase tracking-wider font-semibold mb-6">
             The Foundation of Excellence
@@ -412,6 +410,8 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
 
           <p className="text-lg text-gray-400 mt-8">The first property that defined everything we do.</p>
         </div>
+
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-black pointer-events-none" />
       </section>
 
       {/* Image Lightbox */}
