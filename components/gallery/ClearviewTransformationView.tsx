@@ -222,7 +222,7 @@ export function ClearviewTransformationView({ property }: ClearviewTransformatio
                         cursor={{ fill: "rgba(16, 185, 129, 0.05)" }}
                         formatter={(value: number) => [`$${value.toLocaleString()}`, "Annual Revenue"]}
                       />
-                      <Bar dataKey="annual" radius={[12, 12, 0, 0]} maxBarSize={150}>
+                      <Bar dataKey="annual" radius={[12, 12, 0, 0]} maxBarSize={150} activeBar={false}>
                         {incomeComparisonData.map((entry, index) => (
                           <Cell key={`cell-${index}`} fill={entry.fill} />
                         ))}
