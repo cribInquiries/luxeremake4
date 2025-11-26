@@ -281,7 +281,7 @@ export const properties: Property[] = [
     img: houseOneImg1,
     subheading: "5 minutes from Glenelg Beach with modern updates",
     location: "Glenelg",
-    mainImage: "/placeholder-gallery.jpg",
+    mainImage: "/images/glenelg-lead.jpeg",
     transformationStory: {
       results: {
         occupancyRate: 88,

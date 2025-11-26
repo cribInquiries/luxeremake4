@@ -76,16 +76,44 @@ export function GlenelgTransformationView({ property }: GlenelgTransformationVie
     },
   ]
 
+  const beforeAfterImages = [
+    {
+      title: "Kitchen",
+      before: "/images/glenelg-before-kitchen.jpeg",
+      after: "/images/glenelg-kitchen-after.jpeg",
+    },
+    {
+      title: "Bathroom",
+      before: "/images/glenelg-before-bathroom.jpeg",
+      after: "/images/glenelg-after-bathroom.jpeg",
+    },
+    {
+      title: "Bedroom",
+      before: "/images/glenelg-before-bedroom.jpeg",
+      after: "/images/glenelg-bed-after.jpeg",
+    },
+    {
+      title: "Living Room",
+      before: "/images/glenelg-before-living.jpeg",
+      after: "/images/glenelg-after-living.jpeg",
+    },
+  ]
+
   return (
-    <div className="min-h-screen bg-white">
-      {/* Back Button */}
-      <Link
-        href="/gallery"
-        className="fixed top-6 left-6 z-50 w-12 h-12 rounded-full bg-black/80 backdrop-blur-md flex justify-center items-center hover:bg-black transition-all duration-300 group"
-        aria-label="Back to gallery"
-      >
-        <ArrowLeft size={24} className="text-white group-hover:-translate-x-1 transition-transform duration-300" />
-      </Link>
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      {/* Header */}
+      <div className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-10">
+        <div className="container mx-auto px-6 md:px-12 py-6 flex justify-between items-center">
+          <Link
+            href="/gallery"
+            className="w-12 h-12 rounded-full bg-black/80 backdrop-blur-md flex justify-center items-center hover:bg-black transition-all duration-300 group"
+            aria-label="Back to gallery"
+          >
+            <ArrowLeft size={24} className="text-white group-hover:-translate-x-1 transition-transform duration-300" />
+          </Link>
+          <h1 className="text-3xl md:text-4xl font-bold text-black">Glenelg Transformation Success Story</h1>
+        </div>
+      </div>
 
       {/* Scrollable Content */}
       <div className="h-full overflow-y-auto scroll-smooth">
@@ -196,149 +224,42 @@ export function GlenelgTransformationView({ property }: GlenelgTransformationVie
 
             {/* Side by Side Comparisons */}
             <div className="space-y-16">
-              {/* Kitchen Comparison */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div className="space-y-4">
-                  <div className="inline-block px-6 py-2 bg-gray-800 text-white text-sm font-semibold rounded-full">
-                    Before Luxe
+              {beforeAfterImages.map((image, index) => (
+                <div key={index} className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div className="space-y-4">
+                    <div className="inline-block px-6 py-2 bg-gray-800 text-white text-sm font-semibold rounded-full">
+                      Before Luxe
+                    </div>
+                    <div className="relative h-[400px] rounded-2xl overflow-hidden group">
+                      <Image
+                        src={image.before || "/placeholder.svg"}
+                        alt={`Before ${image.title} renovation`}
+                        fill
+                        className="object-cover grayscale-[40%] group-hover:scale-105 transition-transform duration-500"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                      />
+                    </div>
+                    <p className="text-gray-600 text-lg">Outdated orange countertops, dated tiling</p>
                   </div>
-                  <div className="relative h-[400px] rounded-2xl overflow-hidden group">
-                    <Image
-                      src="/placeholder-gallery.jpg"
-                      alt="Kitchen before renovation"
-                      fill
-                      className="object-cover grayscale-[40%] group-hover:scale-105 transition-transform duration-500"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                    />
+                  <div className="space-y-4">
+                    <div className="inline-block px-6 py-2 bg-green-600 text-white text-sm font-semibold rounded-full">
+                      After Luxe
+                    </div>
+                    <div className="relative h-[400px] rounded-2xl overflow-hidden group shadow-2xl">
+                      <Image
+                        src={image.after || "/placeholder.svg"}
+                        alt={`After ${image.title} renovation`}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                      />
+                    </div>
+                    <p className="text-gray-900 text-lg font-semibold">
+                      Modern herringbone backsplash, LED lighting, styled decor
+                    </p>
                   </div>
-                  <p className="text-gray-600 text-lg">Outdated orange countertops, dated tiling</p>
                 </div>
-                <div className="space-y-4">
-                  <div className="inline-block px-6 py-2 bg-green-600 text-white text-sm font-semibold rounded-full">
-                    After Luxe
-                  </div>
-                  <div className="relative h-[400px] rounded-2xl overflow-hidden group shadow-2xl">
-                    <Image
-                      src="/placeholder-gallery.jpg"
-                      alt="Kitchen after renovation"
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                    />
-                  </div>
-                  <p className="text-gray-900 text-lg font-semibold">
-                    Modern herringbone backsplash, LED lighting, styled decor
-                  </p>
-                </div>
-              </div>
-
-              {/* Bathroom Comparison */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div className="space-y-4">
-                  <div className="inline-block px-6 py-2 bg-gray-800 text-white text-sm font-semibold rounded-full">
-                    Before Luxe
-                  </div>
-                  <div className="relative h-[400px] rounded-2xl overflow-hidden group">
-                    <Image
-                      src="/placeholder-gallery.jpg"
-                      alt="Bathroom before renovation"
-                      fill
-                      className="object-cover grayscale-[40%] group-hover:scale-105 transition-transform duration-500"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                    />
-                  </div>
-                  <p className="text-gray-600 text-lg">Basic fixtures, old plumbing, uninviting atmosphere</p>
-                </div>
-                <div className="space-y-4">
-                  <div className="inline-block px-6 py-2 bg-green-600 text-white text-sm font-semibold rounded-full">
-                    After Luxe
-                  </div>
-                  <div className="relative h-[400px] rounded-2xl overflow-hidden group shadow-2xl">
-                    <Image
-                      src="/placeholder-gallery.jpg"
-                      alt="Bathroom after renovation"
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                    />
-                  </div>
-                  <p className="text-gray-900 text-lg font-semibold">
-                    Hotel-quality finishes, modern fixtures, ambient lighting
-                  </p>
-                </div>
-              </div>
-
-              {/* Bedroom Comparison */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div className="space-y-4">
-                  <div className="inline-block px-6 py-2 bg-gray-800 text-white text-sm font-semibold rounded-full">
-                    Before Luxe
-                  </div>
-                  <div className="relative h-[400px] rounded-2xl overflow-hidden group">
-                    <Image
-                      src="/placeholder-gallery.jpg"
-                      alt="Bedroom before renovation"
-                      fill
-                      className="object-cover grayscale-[40%] group-hover:scale-105 transition-transform duration-500"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                    />
-                  </div>
-                  <p className="text-gray-600 text-lg">Empty room, no character, worn carpet</p>
-                </div>
-                <div className="space-y-4">
-                  <div className="inline-block px-6 py-2 bg-green-600 text-white text-sm font-semibold rounded-full">
-                    After Luxe
-                  </div>
-                  <div className="relative h-[400px] rounded-2xl overflow-hidden group shadow-2xl">
-                    <Image
-                      src="/placeholder-gallery.jpg"
-                      alt="Bedroom after renovation"
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                    />
-                  </div>
-                  <p className="text-gray-900 text-lg font-semibold">
-                    Cozy retreat with quality linens, coastal styling, warm lighting
-                  </p>
-                </div>
-              </div>
-
-              {/* Living Room Comparison */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div className="space-y-4">
-                  <div className="inline-block px-6 py-2 bg-gray-800 text-white text-sm font-semibold rounded-full">
-                    Before Luxe
-                  </div>
-                  <div className="relative h-[400px] rounded-2xl overflow-hidden group">
-                    <Image
-                      src="/placeholder-gallery.jpg"
-                      alt="Living room before renovation"
-                      fill
-                      className="object-cover grayscale-[40%] group-hover:scale-105 transition-transform duration-500"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                    />
-                  </div>
-                  <p className="text-gray-600 text-lg">Empty room, no character, worn carpet</p>
-                </div>
-                <div className="space-y-4">
-                  <div className="inline-block px-6 py-2 bg-green-600 text-white text-sm font-semibold rounded-full">
-                    After Luxe
-                  </div>
-                  <div className="relative h-[400px] rounded-2xl overflow-hidden group shadow-2xl">
-                    <Image
-                      src="/placeholder-gallery.jpg"
-                      alt="Living room after renovation"
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                    />
-                  </div>
-                  <p className="text-gray-900 text-lg font-semibold">
-                    Stylish open-plan living with strategic furniture and artwork
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
