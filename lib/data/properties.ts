@@ -132,8 +132,7 @@ export const properties: Property[] = [
     title: "Serene Family Home – Pool & Games Close to Adel CBD",
     category: "Property Management",
     tags: ["Styling"],
-    description:
-      "Upon hearing about our Enfield success story, the owner of 74 Kent Ave reached out wanting to achieve similar results for his own property. Although initially uncertain about venturing into short-term rentals due to the perceived risks, he was open to exploring the potential. The home had strong fundamentals but required additional furnishing and some maintenance work before it was ready for short-term rental platforms. Our team stepped in to coordinate the necessary maintenance, complete the furnishing, and style the home to create a warm, functional, and guest-ready space. Once listed, the property quickly gained traction across platforms, delivering returns well above what traditional renting could offer. What began as a property in need of preparation evolved into a polished, high-performing investment supported by a smooth and reliable management experience.",
+    description: "Family-friendly Clearview",
     beds: 6,
     baths: 4,
     status: "active",

@@ -119,7 +119,17 @@ export function ClearviewTransformationView({ property }: ClearviewTransformatio
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-12 text-balance leading-tight">
               Fast-Tracked Transformation Under Tight Deadline
             </h2>
-            <p className="text-xl md:text-2xl text-gray-600 leading-relaxed text-pretty mb-8">{property.description}</p>
+            <p className="text-xl md:text-2xl text-gray-600 leading-relaxed text-pretty mb-8">
+              Upon hearing about our Enfield success story, the owner of 74 Kent Ave reached out wanting to achieve
+              similar results for his own property. Although initially uncertain about venturing into short-term rentals
+              due to the perceived risks, he was open to exploring the potential. The home had strong fundamentals but
+              required additional furnishing and some maintenance work before it was ready for short-term rental
+              platforms. Our team stepped in to coordinate the necessary maintenance, complete the furnishing, and style
+              the home to create a warm, functional, and guest-ready space. Once listed, the property quickly gained
+              traction across platforms, delivering returns well above what traditional renting could offer. What began
+              as a property in need of preparation evolved into a polished, high-performing investment supported by a
+              smooth and reliable management experience.
+            </p>
           </div>
         </section>
 
