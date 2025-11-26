@@ -10,7 +10,7 @@ import { X } from "lucide-react"
 import { Box, Text } from "@chakra-ui/react"
 import ScheduleConsultation from "@/components/luxeComponents/scheduleConsultation"
 
-const categories = ["All", "Property Management", "Interior Design", "Styling", "Renovation"]
+const categories = ["All", "Property Management", "Styling", "Renovation"]
 
 export default function GalleryPage() {
   const [activeCategory, setActiveCategory] = useState("All")

@@ -74,12 +74,14 @@ export function ParklandVistaTransformationView() {
 
         <div className="relative z-10 w-full max-w-5xl mx-auto px-6 md:px-12 text-center pb-8 md:pb-16">
           <div className="inline-block px-5 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-8 animate-[fadeInUp_1s_ease-out]">
-            <span className="text-sm font-semibold text-white uppercase tracking-wider">Transformation Story</span>
+            <span className="text-sm font-semibold text-white uppercase tracking-wider [text-shadow:_0_2px_8px_rgb(0_0_0_/_60%)]">
+              Transformation Story
+            </span>
           </div>
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-white mb-8 tracking-tight text-balance leading-[0.95] animate-[fadeInUp_1s_ease-out_0.2s_both]">
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-white mb-8 tracking-tight text-balance leading-[0.95] animate-[fadeInUp_1s_ease-out_0.2s_both] [text-shadow:_0_4px_16px_rgb(0_0_0_/_100%)]">
             {independentData.propertyName}
           </h1>
-          <p className="text-2xl md:text-3xl lg:text-4xl text-white/90 font-light text-balance max-w-4xl mx-auto animate-[fadeInUp_1s_ease-out_0.4s_both]">
+          <p className="text-2xl md:text-3xl lg:text-4xl text-white/95 font-light text-balance max-w-4xl mx-auto animate-[fadeInUp_1s_ease-out_0.4s_both] [text-shadow:_0_2px_12px_rgb(0_0_0_/_80%)]">
             {independentData.tagline}
           </p>
         </div>
@@ -90,19 +92,19 @@ export function ParklandVistaTransformationView() {
         <div className="max-w-6xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-all duration-300">
-              <div className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Bedrooms</div>
+              <div className="text-sm font-semibold text-gray-600 uppercase tracking-wider mb-2">Bedrooms</div>
               <div className="text-3xl font-bold text-black">{independentData.bedroomCount}</div>
             </div>
             <div className="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-all duration-300">
-              <div className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Bathrooms</div>
+              <div className="text-sm font-semibold text-gray-600 uppercase tracking-wider mb-2">Bathrooms</div>
               <div className="text-3xl font-bold text-black">{independentData.bathroomCount}</div>
             </div>
             <div className="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-all duration-300">
-              <div className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Sq Meters</div>
+              <div className="text-sm font-semibold text-gray-600 uppercase tracking-wider mb-2">Sq Meters</div>
               <div className="text-3xl font-bold text-black">{independentData.squareMeters}</div>
             </div>
             <div className="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-all duration-300">
-              <div className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Per Night</div>
+              <div className="text-sm font-semibold text-gray-600 uppercase tracking-wider mb-2">Per Night</div>
               <div className="text-3xl font-bold text-black">${independentData.pricePerNight}</div>
             </div>
           </div>
@@ -114,12 +116,14 @@ export function ParklandVistaTransformationView() {
         <div className="container px-6 max-w-4xl mx-auto">
           <div className="mb-12" data-content="about-property">
             <div className="mb-8">
-              <span className="text-sm font-semibold text-gray-400 uppercase tracking-wider">About This Property</span>
+              <span className="text-sm font-semibold text-gray-500 uppercase tracking-wider">About This Property</span>
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-black text-balance leading-tight">
               Property Overview
             </h2>
-            <p className="text-xl md:text-2xl text-gray-600 leading-relaxed text-pretty">{independentData.aboutText}</p>
+            <p className="text-xl md:text-2xl text-gray-800 leading-relaxed text-pretty font-normal">
+              {independentData.aboutText}
+            </p>
           </div>
         </div>
       </section>
@@ -128,7 +132,7 @@ export function ParklandVistaTransformationView() {
       <section className="py-16 md:py-24 bg-gray-100" data-content="before-after-showcase">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="mb-12 text-center">
-            <span className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Luxe Transformation</span>
+            <span className="text-sm font-semibold text-gray-600 uppercase tracking-wider">Luxe Transformation</span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mt-4 mb-6 text-balance">
               Before & After Luxe Management
             </h2>
@@ -179,7 +183,7 @@ export function ParklandVistaTransformationView() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="mb-12 text-center">
-            <span className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Property Gallery</span>
+            <span className="text-sm font-semibold text-gray-600 uppercase tracking-wider">Property Gallery</span>
             <h2 className="text-4xl md:text-5xl font-bold text-black mt-4 mb-6">Explore the Space</h2>
           </div>
 
@@ -203,7 +207,7 @@ export function ParklandVistaTransformationView() {
       <section className="py-16 md:py-24 bg-black">
         <div className="max-w-6xl mx-auto px-6 md:px-12">
           <div className="mb-10 text-center">
-            <span className="text-sm font-semibold text-white/50 uppercase tracking-wider">The Impact</span>
+            <span className="text-sm font-semibold text-white/60 uppercase tracking-wider">The Impact</span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-4 mb-6 text-balance">
               Revenue Impact Through Short-Term Rental Transformation
             </h2>
@@ -226,14 +230,14 @@ export function ParklandVistaTransformationView() {
                     <CartesianGrid strokeDasharray="3 3" stroke="#333" />
                     <XAxis
                       dataKey="period"
-                      tick={{ fill: "#999", fontSize: 14 }}
+                      tick={{ fill: "#fff", fontSize: 13 }}
                       tickLine={false}
                       angle={-45}
                       textAnchor="end"
                       height={70}
                       interval={0}
                     />
-                    <YAxis tick={{ fill: "#999", fontSize: 14 }} tickLine={false} axisLine={false} width={35} />
+                    <YAxis tick={{ fill: "#fff", fontSize: 13 }} tickLine={false} axisLine={false} width={40} />
                     <ChartTooltip content={<ChartTooltipContent />} cursor={{ fill: "rgba(255,255,255,0.05)" }} />
                     <Bar dataKey="income" radius={[8, 8, 0, 0]} maxBarSize={100}>
                       {incomeData.map((entry, index) => (
@@ -247,11 +251,11 @@ export function ParklandVistaTransformationView() {
             <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="flex items-center gap-2">
                 <div className="w-4 h-4 rounded-full bg-[#ef4444]" />
-                <span className="text-sm text-white/70">Before Luxe: $750/week</span>
+                <span className="text-base text-white/80 font-medium">Before Luxe: $750/week</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-4 h-4 rounded-full bg-[#10b981]" />
-                <span className="text-sm text-white/70">After Luxe: $1,400/week</span>
+                <span className="text-base text-white/80 font-medium">After Luxe: $1,400/week</span>
               </div>
             </div>
           </div>
@@ -262,14 +266,14 @@ export function ParklandVistaTransformationView() {
       <section className="py-20 md:py-32 bg-gradient-to-br from-black via-gray-900 to-black text-white">
         <div className="max-w-5xl mx-auto px-6 md:px-12 text-center">
           <div className="mb-8">
-            <span className="text-sm font-semibold text-white/50 uppercase tracking-wider">
+            <span className="text-sm font-semibold text-white/60 uppercase tracking-wider">
               Ready to Transform Your Property?
             </span>
           </div>
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-balance leading-tight">
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-balance leading-tight [text-shadow:_0_4px_16px_rgb(0_0_0_/_60%)]">
             Your Property Could Be Next
           </h2>
-          <p className="text-2xl md:text-3xl text-white/80 leading-relaxed mb-10 text-balance max-w-3xl mx-auto">
+          <p className="text-2xl md:text-3xl text-white/85 leading-relaxed mb-10 text-balance max-w-3xl mx-auto [text-shadow:_0_2px_8px_rgb(0_0_0_/_40%)]">
             This property owner trusted Luxe Managements with professional styling and photography, transforming their
             Adelaide retreat into a high-performing rental asset. What could we do for yours?
           </p>
@@ -280,7 +284,7 @@ export function ParklandVistaTransformationView() {
                 Book a Consultation Now
               </button>
             </Link>
-            <p className="text-white/60 mt-6 italic text-xl">
+            <p className="text-white/70 mt-6 italic text-xl [text-shadow:_0_2px_8px_rgb(0_0_0_/_40%)]">
               "Strategic vision. Exceptional results. That's the Luxe difference."
             </p>
           </div>

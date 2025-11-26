@@ -67,16 +67,17 @@ export function SeafordTransformationView({ property }: SeafordTransformationVie
         <div className="relative z-10 w-full max-w-5xl mx-auto px-6 md:px-12 text-center pb-8 md:pb-16">
           <div className="inline-flex items-center gap-2 px-5 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-8">
             <MapPin size={16} className="text-sky-300" />
-            <span className="text-sm font-semibold text-white uppercase tracking-wider">Coastal Success Story</span>
+            <span className="text-sm font-semibold text-white uppercase tracking-wider [text-shadow:_0_2px_8px_rgb(0_0_0_/_60%)]">
+              Coastal Success Story
+            </span>
           </div>
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-white mb-8 tracking-tight text-balance leading-[0.95] drop-shadow-lg">
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-white mb-8 tracking-tight text-balance leading-[0.95] [text-shadow:_0_4px_16px_rgb(0_0_0_/_100%)]">
             {property.title}
           </h1>
-          <p className="text-base md:text-lg text-white/70 mb-2">{property.subheading}</p>
-          <p
-            className="text-lg md:text-xl text-white font-medium italic max-w-2xl mx-auto"
-            style={{ textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}
-          >
+          <p className="text-base md:text-lg text-white/80 mb-2 [text-shadow:_0_2px_8px_rgb(0_0_0_/_60%)]">
+            {property.subheading}
+          </p>
+          <p className="text-lg md:text-xl text-white font-medium italic max-w-2xl mx-auto [text-shadow:_0_2px_12px_rgb(0_0_0_/_80%)]">
             Some properties test your creativity. Some test your design. But Seaford… tested our reach.
           </p>
         </div>
@@ -88,34 +89,34 @@ export function SeafordTransformationView({ property }: SeafordTransformationVie
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-4xl font-bold text-black mb-2">{property.beds}</div>
-              <div className="text-gray-600">Bedrooms</div>
+              <div className="text-gray-800 font-medium">Bedrooms</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-black mb-2">1</div>
-              <div className="text-gray-600">Bathroom</div>
+              <div className="text-gray-800 font-medium">Bathroom</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-black mb-2">$2,100</div>
-              <div className="text-gray-600">Peak Week</div>
+              <div className="text-gray-800 font-medium">Peak Week</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-black mb-2">$900</div>
-              <div className="text-gray-600">Avg/Week</div>
+              <div className="text-gray-800 font-medium">Avg/Week</div>
             </div>
           </div>
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center p-6 bg-sky-50 rounded-xl">
               <div className="text-2xl font-bold text-sky-600 mb-2">Owner-Occupied</div>
-              <div className="text-gray-700">Winter Months</div>
+              <div className="text-gray-800 font-medium">Winter Months</div>
             </div>
             <div className="text-center p-6 bg-green-50 rounded-xl">
               <div className="text-2xl font-bold text-green-600 mb-2">Luxe-Managed</div>
-              <div className="text-gray-700">Summer Season</div>
+              <div className="text-gray-800 font-medium">Summer Season</div>
             </div>
             <div className="text-center p-6 bg-blue-50 rounded-xl">
               <div className="text-2xl font-bold text-blue-600 mb-2">Coastal</div>
-              <div className="text-gray-700">5 mins from Seaford Beach</div>
+              <div className="text-gray-800 font-medium">5 mins from Seaford Beach</div>
             </div>
           </div>
         </div>
@@ -127,7 +128,7 @@ export function SeafordTransformationView({ property }: SeafordTransformationVie
           <div className="mb-12">
             <h2 className="text-5xl md:text-6xl font-bold text-black mb-4">The Challenge</h2>
           </div>
-          <div className="space-y-6 text-xl md:text-2xl text-gray-800 leading-relaxed">
+          <div className="space-y-6 text-xl md:text-2xl text-gray-800 leading-relaxed font-normal">
             <p className="text-pretty">
               A three-bedroom coastal home, far from central Adelaide — beautiful, quiet, and undeniably outside the
               usual orbit of most short-stay operators.

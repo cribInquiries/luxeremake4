@@ -109,17 +109,17 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
         <div className="relative z-10 w-full max-w-5xl mx-auto px-6 md:px-12 text-center">
           <div className="inline-flex items-center gap-2 px-5 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-8">
             <Sparkles size={16} className="text-gray-300" />
-            <span className="text-sm font-semibold text-white uppercase tracking-wider">
+            <span className="text-sm font-semibold text-white uppercase tracking-wider [text-shadow:_0_2px_8px_rgb(0_0_0_/_60%)]">
               Origin Story · Property #1
             </span>
           </div>
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-white mb-8 tracking-tight text-balance leading-[0.95]">
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-white mb-8 tracking-tight text-balance leading-[0.95] [text-shadow:_0_4px_16px_rgb(0_0_0_/_100%)]">
             {property.title}
           </h1>
-          <p className="text-2xl md:text-3xl lg:text-4xl text-gray-200 font-light text-balance max-w-4xl mx-auto mb-6">
+          <p className="text-2xl md:text-3xl lg:text-4xl text-gray-200 font-light text-balance max-w-4xl mx-auto mb-6 [text-shadow:_0_2px_12px_rgb(0_0_0_/_80%)]">
             The First. The Breakthrough. The Blueprint.
           </p>
-          <p className="text-lg md:text-xl text-white/70 italic max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-white/80 italic max-w-2xl mx-auto [text-shadow:_0_2px_8px_rgb(0_0_0_/_60%)]">
             Every company has a defining moment. For Luxe, it was a $5,000 miracle.
           </p>
         </div>
@@ -131,30 +131,30 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-4xl font-bold text-black mb-2">{property.beds}</div>
-              <div className="text-gray-600">Bedrooms</div>
+              <div className="text-gray-800 font-medium">Bedrooms</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-black mb-2">{property.baths}</div>
-              <div className="text-gray-600">Bathrooms</div>
+              <div className="text-gray-800 font-medium">Bathrooms</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-black mb-2">$2,000</div>
-              <div className="text-gray-600">Peak Week</div>
+              <div className="text-gray-800 font-medium">Peak Week</div>
             </div>
           </div>
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center p-6 bg-sky-50 rounded-xl">
               <div className="text-2xl font-bold text-sky-600 mb-2">$5,000 Budget</div>
-              <div className="text-gray-600">Full Furnishing</div>
+              <div className="text-gray-800 font-medium">Full Furnishing</div>
             </div>
             <div className="text-center p-6 bg-green-50 rounded-xl">
               <div className="text-2xl font-bold text-green-600 mb-2">5 Bedrooms</div>
-              <div className="text-gray-600">Group Accommodation</div>
+              <div className="text-gray-800 font-medium">Group Accommodation</div>
             </div>
             <div className="text-center p-6 bg-gray-50 rounded-xl">
               <div className="text-2xl font-bold text-gray-600 mb-2">Property #1</div>
-              <div className="text-gray-600">First Ever</div>
+              <div className="text-gray-800 font-medium">First Ever</div>
             </div>
           </div>
         </div>
@@ -166,7 +166,7 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
           <div className="mb-12">
             <h2 className="text-5xl md:text-6xl font-bold text-black mb-4">The Impossible Challenge</h2>
           </div>
-          <div className="space-y-6 text-xl md:text-2xl text-gray-700 leading-relaxed">
+          <div className="space-y-6 text-xl md:text-2xl text-gray-800 leading-relaxed font-normal">
             <p className="text-pretty">
               A brand-new, five-bedroom modern home in Adelaide. Bold. Bright. Architecturally pristine.
             </p>
@@ -191,7 +191,7 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">The Finished Property</h2>
-            <p className="text-xl text-gray-600">Every space designed to create an unforgettable stay</p>
+            <p className="text-xl text-gray-700 font-medium">Every space designed to create an unforgettable stay</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -224,20 +224,20 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
         <div className="max-w-6xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Performance That Changed Everything</h2>
-            <p className="text-xl text-gray-600">Revenue comparison: traditional rent vs Luxe management</p>
+            <p className="text-xl text-gray-700 font-medium">Revenue comparison: traditional rent vs Luxe management</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
             <div className="text-center p-8 bg-gray-50 rounded-2xl border-2 border-gray-200">
               <div className="text-5xl font-bold text-gray-600 mb-3">$900</div>
-              <div className="text-gray-700 font-semibold mb-2">Traditional Rent</div>
-              <div className="text-gray-500 text-sm">Per week, year-round</div>
+              <div className="text-gray-800 font-semibold mb-2">Traditional Rent</div>
+              <div className="text-gray-600 text-base font-medium">Per week, year-round</div>
             </div>
 
             <div className="text-center p-8 bg-green-50 rounded-2xl border-2 border-green-500 shadow-xl transform scale-105">
               <div className="text-5xl font-bold text-green-600 mb-3">$2,000</div>
-              <div className="text-gray-700 font-semibold mb-2">With Luxe Management</div>
-              <div className="text-gray-500 text-sm">Per week average</div>
+              <div className="text-gray-800 font-semibold mb-2">With Luxe Management</div>
+              <div className="text-gray-600 text-base font-medium">Per week average</div>
             </div>
           </div>
 
@@ -261,17 +261,17 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
                   <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
                   <XAxis
                     dataKey="month"
-                    tick={{ fill: "#666", fontSize: 14 }}
+                    tick={{ fill: "#374151", fontSize: 14 }}
                     tickLine={false}
-                    label={{ value: "Months Active", position: "insideBottom", offset: -5, fill: "#666" }}
+                    label={{ value: "Months Active", position: "insideBottom", offset: -5, fill: "#374151" }}
                     domain={[1, 12]}
                   />
                   <YAxis
-                    tick={{ fill: "#666", fontSize: 14 }}
+                    tick={{ fill: "#374151", fontSize: 14 }}
                     tickLine={false}
                     axisLine={false}
                     tickFormatter={(value) => `$${value / 1000}k`}
-                    label={{ value: "Revenue", angle: -90, position: "insideLeft", fill: "#666" }}
+                    label={{ value: "Revenue", angle: -90, position: "insideLeft", fill: "#374151" }}
                   />
                   <ChartTooltip content={<ChartTooltipContent />} cursor={{ stroke: "#e5e7eb", strokeWidth: 2 }} />
                   <Line
@@ -297,7 +297,7 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
 
           <div className="text-center p-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl shadow-2xl">
             <p className="text-4xl font-bold text-white mb-2">+$4,000 extra per year</p>
-            <p className="text-white/90 text-xl">111% increase over traditional renting</p>
+            <p className="text-white/95 text-xl font-medium">111% increase over traditional renting</p>
           </div>
         </div>
       </section>

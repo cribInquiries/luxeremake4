@@ -65,10 +65,10 @@ export function ClearviewTransformationView({ property }: ClearviewTransformatio
                 Transformation Success Story
               </span>
             </div>
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-white mb-8 tracking-tight text-balance leading-[0.95] animate-[fadeInUp_1s_ease-out_0.2s_both]">
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-white mb-8 tracking-tight text-balance leading-[0.95] animate-[fadeInUp_1s_ease-out_0.2s_both] [text-shadow:_0_4px_16px_rgb(0_0_0_/_100%)]">
               Serene Family Home in Clearview
             </h1>
-            <p className="text-2xl md:text-3xl lg:text-4xl text-white/90 font-light text-balance max-w-4xl mx-auto animate-[fadeInUp_1s_ease-out_0.4s_both]">
+            <p className="text-2xl md:text-3xl lg:text-4xl text-white/90 font-light text-balance max-w-4xl mx-auto animate-[fadeInUp_1s_ease-out_0.4s_both] [text-shadow:_0_2px_12px_rgb(0_0_0_/_80%)]">
               {property.subheading}
             </p>
           </div>
@@ -83,28 +83,28 @@ export function ClearviewTransformationView({ property }: ClearviewTransformatio
                 <div className="text-4xl font-bold text-black" data-value="clearview-adr-value">
                   $450
                 </div>
-                <div className="text-sm text-gray-600 uppercase tracking-wider">Average Daily Rate </div>
+                <div className="text-sm text-gray-900 uppercase tracking-wider font-medium">Average Daily Rate </div>
               </div>
               <div className="space-y-2" data-metric="clearview-bedrooms">
                 {/* CLEARVIEW ONLY - DO NOT SHARE WITH OTHER GALLERIES */}
                 <div className="text-4xl font-bold text-black" data-value="clearview-bedrooms-value">
                   6
                 </div>
-                <div className="text-sm text-gray-600 uppercase tracking-wider">Bedrooms</div>
+                <div className="text-sm text-gray-900 uppercase tracking-wider font-medium">Bedrooms</div>
               </div>
               <div className="space-y-2" data-metric="clearview-bathrooms">
                 {/* CLEARVIEW ONLY - DO NOT SHARE WITH OTHER GALLERIES */}
                 <div className="text-4xl font-bold text-black" data-value="clearview-bathrooms-value">
                   {"3"}
                 </div>
-                <div className="text-sm text-gray-600 uppercase tracking-wider">Bathrooms </div>
+                <div className="text-sm text-gray-900 uppercase tracking-wider font-medium">Bathrooms </div>
               </div>
               <div className="space-y-2" data-metric="clearview-land-size">
                 {/* CLEARVIEW ONLY - DO NOT SHARE WITH OTHER GALLERIES */}
                 <div className="text-4xl font-bold text-black" data-value="clearview-land-size-value">
                   346m²
                 </div>
-                <div className="text-sm text-gray-600 uppercase tracking-wider">Floor Size </div>
+                <div className="text-sm text-gray-900 uppercase tracking-wider font-medium">Floor Size </div>
               </div>
             </div>
           </div>
@@ -114,12 +114,12 @@ export function ClearviewTransformationView({ property }: ClearviewTransformatio
         <section className="py-28 md:py-40 bg-white" data-section="clearview-story">
           <div className="max-w-4xl mx-auto px-6 md:px-12">
             <div className="mb-12">
-              <span className="text-sm font-semibold text-gray-400 uppercase tracking-wider">The Journey</span>
+              <span className="text-sm font-semibold text-gray-500 uppercase tracking-wider">The Journey</span>
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-12 text-balance leading-tight">
               Fast-Tracked Transformation Under Tight Deadline
             </h2>
-            <p className="text-xl md:text-2xl text-gray-600 leading-relaxed text-pretty mb-8">
+            <p className="text-xl md:text-2xl text-gray-800 leading-relaxed text-pretty mb-8 font-normal">
               Upon hearing about our Enfield success story, the owner of 74 Kent Ave reached out wanting to achieve
               similar results for his own property. Although initially uncertain about venturing into short-term rentals
               due to the perceived risks, he was open to exploring the potential. The home had strong fundamentals but
@@ -137,7 +137,7 @@ export function ClearviewTransformationView({ property }: ClearviewTransformatio
           <div className="max-w-7xl mx-auto px-6 md:px-12">
             <div className="text-center mb-20">
               <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">The Finished Product</h2>
-              <p className="text-xl text-gray-600">Luxe-styled rooms ready for premium guests</p>
+              <p className="text-xl text-gray-700 font-medium">Luxe-styled rooms ready for premium guests</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -161,7 +161,9 @@ export function ClearviewTransformationView({ property }: ClearviewTransformatio
           <div className="max-w-6xl mx-auto px-6 md:px-12">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-4">Revenue Transformation</h2>
-              <p className="text-xl text-white/70">Traditional rental vs. Luxe-managed Airbnb performance</p>
+              <p className="text-xl text-white/80 font-medium">
+                Traditional rental vs. Luxe-managed Airbnb performance
+              </p>
             </div>
 
             {/* Annual Comparison */}
@@ -185,7 +187,7 @@ export function ClearviewTransformationView({ property }: ClearviewTransformatio
                       <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
                       <XAxis
                         dataKey="period"
-                        tick={{ fill: "#fff", fontSize: 9 }}
+                        tick={{ fill: "#fff", fontSize: 12 }}
                         tickLine={false}
                         angle={-45}
                         textAnchor="end"
@@ -193,11 +195,11 @@ export function ClearviewTransformationView({ property }: ClearviewTransformatio
                         interval={0}
                       />
                       <YAxis
-                        tick={{ fill: "#fff", fontSize: 9 }}
+                        tick={{ fill: "#fff", fontSize: 12 }}
                         tickLine={false}
                         axisLine={false}
                         tickFormatter={(value) => `$${value / 1000}k`}
-                        width={35}
+                        width={45}
                       />
                       <ChartTooltip
                         content={<ChartTooltipContent />}
@@ -217,19 +219,19 @@ export function ClearviewTransformationView({ property }: ClearviewTransformatio
             <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center p-6 bg-white/10 rounded-xl">
                 <div className="text-3xl font-bold text-red-400 mb-2">$41,600</div>
-                <div className="text-sm text-white/70">Traditional Rental</div>
+                <div className="text-sm text-white/80 font-medium">Traditional Rental</div>
               </div>
               <div className="flex items-center justify-center">
                 <DollarSign className="w-12 h-12 text-green-500" />
               </div>
               <div className="text-center p-6 bg-white/10 rounded-xl">
                 <div className="text-3xl font-bold text-green-400 mb-2">$102,200</div>
-                <div className="text-sm text-white/70">Luxe Airbnb</div>
+                <div className="text-sm text-white/80 font-medium">Luxe Airbnb</div>
               </div>
             </div>
             <div className="mt-6 text-center p-6 bg-green-500/20 rounded-xl border border-green-500/30">
               <p className="text-3xl font-bold text-green-400">+$60,600 additional annual revenue</p>
-              <p className="text-white/90 mt-2">145% revenue increase with Luxe Management</p>
+              <p className="text-white/90 mt-2 text-lg">145% revenue increase with Luxe Management</p>
             </div>
           </div>
         </section>
@@ -237,14 +239,14 @@ export function ClearviewTransformationView({ property }: ClearviewTransformatio
         <section className="py-32 md:py-48 bg-gradient-to-br from-black via-gray-900 to-black text-white">
           <div className="max-w-5xl mx-auto px-6 md:px-12 text-center">
             <div className="mb-12">
-              <span className="text-sm font-semibold text-white/50 uppercase tracking-wider">
+              <span className="text-sm font-semibold text-white/60 uppercase tracking-wider">
                 Ready to Transform Your Property?
               </span>
             </div>
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 text-balance leading-tight">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 text-balance leading-tight [text-shadow:_0_4px_16px_rgb(0_0_0_/_60%)]">
               From Hesitation to High Performance
             </h2>
-            <p className="text-2xl md:text-3xl text-white/80 leading-relaxed mb-12 text-balance max-w-3xl mx-auto">
+            <p className="text-2xl md:text-3xl text-white/85 leading-relaxed mb-12 text-balance max-w-3xl mx-auto [text-shadow:_0_2px_8px_rgb(0_0_0_/_40%)]">
               This owner trusted Luxe with a tight deadline and watched their property transform into a $102,200/year
               revenue generator. What could we do for yours?
             </p>
@@ -253,7 +255,7 @@ export function ClearviewTransformationView({ property }: ClearviewTransformatio
               <button className="px-12 md:px-16 py-6 md:py-7 bg-white text-black text-xl md:text-2xl font-bold rounded-full hover:bg-green-500 hover:text-white hover:scale-105 transition-all duration-300 shadow-2xl">
                 Book a Consultation Now
               </button>
-              <p className="text-white/60 mt-6 italic text-xl">
+              <p className="text-white/70 mt-6 italic text-xl [text-shadow:_0_2px_8px_rgb(0_0_0_/_40%)]">
                 "Fast turnarounds. Exceptional results. That's the Luxe difference."
               </p>
             </div>

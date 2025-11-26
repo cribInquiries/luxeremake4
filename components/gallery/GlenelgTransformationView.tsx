@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowLeft, TrendingUp, DollarSign, Check, Home, MapPin, Bed, Bath, Square } from "lucide-react"
+import { ArrowLeft, DollarSign, Check, Home, MapPin, Bed, Bath, Square } from "lucide-react"
 import type { Property } from "@/lib/properties"
 import { Line, LineChart, Bar, BarChart, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Cell } from "recharts"
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart"
@@ -16,12 +16,7 @@ export function GlenelgTransformationView({ property }: GlenelgTransformationVie
 
   const story = property.transformationStory
 
-  const propertyValueData = [
-    { period: "Before Luxe", value: 457000, fill: "#94a3b8" },
-    { period: "After Luxe", value: 520000, fill: "#10b981" },
-  ]
-
-  const incomeComparisonData = [
+  const revenueComparisonData = [
     { period: "Traditional Rental", annual: 24440, fill: "#ef4444" },
     { period: "With Luxe (Airbnb)", annual: 38000, fill: "#10b981" },
   ]
@@ -291,66 +286,6 @@ export function GlenelgTransformationView({ property }: GlenelgTransformationVie
           </div>
         </section>
 
-        {/* Property Value Impact */}
-        <section className="py-28 bg-black text-white">
-          <div className="max-w-6xl mx-auto px-6 md:px-12">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">Property Value Growth</h2>
-              <p className="text-xl text-white/70">Strategic improvements increased the property's market value</p>
-            </div>
-
-            <div className="bg-white/5 backdrop-blur-md rounded-3xl p-8 md:p-12 mb-12">
-              <ChartContainer
-                config={{
-                  value: {
-                    label: "Property Value (AUD)",
-                    color: "#10b981",
-                  },
-                }}
-                className="h-[450px]"
-              >
-                <ResponsiveContainer width="100%" height="100%">
-                  <BarChart data={propertyValueData}>
-                    <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
-                    <XAxis dataKey="period" tick={{ fill: "#fff", fontSize: 14 }} tickLine={false} />
-                    <YAxis
-                      tick={{ fill: "#fff", fontSize: 14 }}
-                      tickLine={false}
-                      axisLine={false}
-                      tickFormatter={(value) => `$${value / 1000}k`}
-                    />
-                    <ChartTooltip
-                      content={<ChartTooltipContent />}
-                      cursor={{ fill: "rgba(255,255,255,0.1)" }}
-                      formatter={(value: number) => [`$${value.toLocaleString()}`, "Value"]}
-                    />
-                    <Bar dataKey="value" radius={[12, 12, 0, 0]}>
-                      {propertyValueData.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={entry.fill} />
-                      ))}
-                    </Bar>
-                  </BarChart>
-                </ResponsiveContainer>
-              </ChartContainer>
-              <div className="mt-8 flex justify-center gap-12">
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-gray-400 mb-2">$457,000</div>
-                  <div className="text-sm text-gray-500">Before Luxe</div>
-                </div>
-                <TrendingUp className="w-8 h-8 text-green-500" />
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-green-500 mb-2">$520,000</div>
-                  <div className="text-sm text-white">After Luxe</div>
-                </div>
-              </div>
-              <div className="mt-6 text-center">
-                <p className="text-2xl font-bold text-green-500">+$63,000 equity growth</p>
-                <p className="text-white/70 mt-2">13.8% value increase through strategic improvements</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Revenue Comparison */}
         <section className="py-28 bg-gray-50">
           <div className="max-w-6xl mx-auto px-6 md:px-12">
@@ -372,7 +307,7 @@ export function GlenelgTransformationView({ property }: GlenelgTransformationVie
                 className="h-[450px]"
               >
                 <ResponsiveContainer width="100%" height="100%">
-                  <BarChart data={incomeComparisonData}>
+                  <BarChart data={revenueComparisonData}>
                     <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
                     <XAxis dataKey="period" tick={{ fill: "#666", fontSize: 14 }} tickLine={false} />
                     <YAxis
@@ -387,7 +322,7 @@ export function GlenelgTransformationView({ property }: GlenelgTransformationVie
                       formatter={(value: number) => [`$${value.toLocaleString()}`, "Annual Revenue"]}
                     />
                     <Bar dataKey="annual" radius={[12, 12, 0, 0]}>
-                      {incomeComparisonData.map((entry, index) => (
+                      {revenueComparisonData.map((entry, index) => (
                         <Cell key={`cell-${index}`} fill={entry.fill} />
                       ))}
                     </Bar>
@@ -502,8 +437,8 @@ export function GlenelgTransformationView({ property }: GlenelgTransformationVie
           </div>
         </section>
 
-        {/* Testimonial */}
-        <section className="relative h-screen w-full overflow-hidden">
+        {/* Client Testimonial */}
+        <section className="py-24 relative h-screen w-full overflow-hidden">
           <div className="absolute inset-0">
             <Image
               src={property.mainImage || "/placeholder-gallery.jpg"}
