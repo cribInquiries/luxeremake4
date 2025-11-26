@@ -79,6 +79,12 @@ export interface Property {
   img: StaticImageData
   subheading: string
   location: string
+  mainImage?: string
+  transformationStory?: {
+    results: {
+      occupancyRate: number
+    }
+  }
   carasoleImg: {
     img1: StaticImageData
     img2: StaticImageData
@@ -275,6 +281,12 @@ export const properties: Property[] = [
     img: houseOneImg1,
     subheading: "5 minutes from Glenelg Beach with modern updates",
     location: "Glenelg",
+    mainImage: "/placeholder-gallery.jpg",
+    transformationStory: {
+      results: {
+        occupancyRate: 88,
+      },
+    },
     carasoleImg: [
       {
         img1: houseOneImg1,
