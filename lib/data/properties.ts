@@ -288,13 +288,20 @@ export const properties: Property[] = [
     img: houseSixImg1,
     subheading: "Historic North Adelaide location with cosy charm",
     location: "North Adelaide",
-    mainImage: "/placeholder.svg?height=800&width=1200",
+    mainImage: "/images/design-mode/mlounge1.avif",
     carouselImages: [
-      "/placeholder.svg?height=800&width=1200",
-      "/placeholder.svg?height=800&width=1200",
-      "/placeholder.svg?height=800&width=1200",
-      "/placeholder.svg?height=800&width=1200",
+      "/images/design-mode/mlounge1.avif",
+      "/images/design-mode/mkitchen.jpeg",
+      "/images/design-mode/mbathroom.jpeg",
+      "/images/mexterior.jpeg",
+      "/images/mdining.jpeg",
+      "/images/mpatio.jpeg",
     ],
+    transformationStory: {
+      results: {
+        occupancyRate: 92,
+      },
+    },
     carasoleImg: [
       {
         img1: houseSixImg1,
