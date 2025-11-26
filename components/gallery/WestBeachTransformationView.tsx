@@ -17,18 +17,18 @@ export function WestBeachTransformationView({ property }: WestBeachTransformatio
   const story = property.transformationStory
 
   const monthlyRevenueData = [
-    { month: 1, traditional: 1950, luxe: 3000 },
-    { month: 2, traditional: 1950, luxe: 3100 },
-    { month: 3, traditional: 1950, luxe: 3000 },
-    { month: 4, traditional: 1950, luxe: 2900 },
-    { month: 5, traditional: 1950, luxe: 2800 },
-    { month: 6, traditional: 1950, luxe: 2700 },
-    { month: 7, traditional: 1950, luxe: 2600 },
-    { month: 8, traditional: 1950, luxe: 2700 },
-    { month: 9, traditional: 1950, luxe: 2800 },
-    { month: 10, traditional: 1950, luxe: 2900 },
-    { month: 11, traditional: 1950, luxe: 3000 },
-    { month: 12, traditional: 1950, luxe: 3050 },
+    { month: 1, traditional: 1950, luxe: 7440 },
+    { month: 2, traditional: 1950, luxe: 6960 },
+    { month: 3, traditional: 1950, luxe: 7200 },
+    { month: 4, traditional: 1950, luxe: 6720 },
+    { month: 5, traditional: 1950, luxe: 6480 },
+    { month: 6, traditional: 1950, luxe: 6240 },
+    { month: 7, traditional: 1950, luxe: 6000 },
+    { month: 8, traditional: 1950, luxe: 6240 },
+    { month: 9, traditional: 1950, luxe: 6480 },
+    { month: 10, traditional: 1950, luxe: 6720 },
+    { month: 11, traditional: 1950, luxe: 7200 },
+    { month: 12, traditional: 1950, luxe: 7440 },
   ]
 
   return (
@@ -92,7 +92,7 @@ export function WestBeachTransformationView({ property }: WestBeachTransformatio
                 </div>
                 <div>
                   <div className="text-sm text-gray-700 font-semibold">Bedroom</div>
-                  <div className="text-2xl font-bold text-black">1</div>
+                  <div className="text-2xl font-bold text-black">2</div>
                 </div>
               </div>
 
@@ -122,7 +122,7 @@ export function WestBeachTransformationView({ property }: WestBeachTransformatio
                 </div>
                 <div>
                   <div className="text-sm text-gray-700 font-semibold">ADR</div>
-                  <div className="text-2xl font-bold text-black">$150</div>
+                  <div className="text-2xl font-bold text-black">$240</div>
                 </div>
               </div>
             </div>
@@ -134,7 +134,7 @@ export function WestBeachTransformationView({ property }: WestBeachTransformatio
           <div className="max-w-5xl mx-auto px-6 md:px-12">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="text-4xl font-bold text-black mb-2">1</div>
+                <div className="text-4xl font-bold text-black mb-2">2</div>
                 <div className="text-gray-600">Bedrooms</div>
               </div>
               <div className="text-center">
@@ -146,13 +146,13 @@ export function WestBeachTransformationView({ property }: WestBeachTransformatio
                 <div className="text-gray-600">m²</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-black mb-2">$150</div>
+                <div className="text-4xl font-bold text-black mb-2">$240</div>
                 <div className="text-gray-600">ADR/Night</div>
               </div>
             </div>
             <div className="mt-12 text-center">
               <div className="inline-block px-8 py-4 bg-green-50 rounded-2xl">
-                <div className="text-3xl font-bold text-green-600">$36,000/year</div>
+                <div className="text-3xl font-bold text-green-600">$81,120/year</div>
                 <div className="text-gray-600 mt-1">Annual Revenue</div>
               </div>
             </div>
@@ -318,72 +318,71 @@ export function WestBeachTransformationView({ property }: WestBeachTransformatio
                     color: "#10b981",
                   },
                 }}
-                className="h-[500px]"
+                className="h-[550px]"
               >
                 <ResponsiveContainer width="100%" height="100%">
-                  <LineChart data={monthlyRevenueData}>
-                    <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
+                  <LineChart data={monthlyRevenueData} margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>
+                    <CartesianGrid strokeDasharray="3 3" stroke="#d1d5db" />
                     <XAxis
                       type="number"
                       dataKey="month"
-                      tick={{ fill: "#374151", fontSize: 14 }}
+                      tick={{ fill: "#1f2937", fontSize: 15, fontWeight: 600 }}
                       tickLine={false}
-                      label={{ value: "Months", position: "insideBottom", offset: -5, fill: "#374151" }}
+                      label={{
+                        value: "Months",
+                        position: "insideBottom",
+                        offset: -10,
+                        fill: "#1f2937",
+                        fontSize: 16,
+                        fontWeight: 600,
+                      }}
                     />
                     <YAxis
-                      tick={{ fill: "#374151", fontSize: 14 }}
+                      tick={{ fill: "#1f2937", fontSize: 15, fontWeight: 600 }}
                       tickLine={false}
                       axisLine={false}
-                      tickFormatter={(value) => `$${value / 1000}k`}
+                      tickFormatter={(value) => `$${(value / 1000).toFixed(1)}k`}
                     />
-                    <ChartTooltip content={<ChartTooltipContent />} cursor={{ stroke: "#d1d5db", strokeWidth: 1 }} />
+                    <ChartTooltip content={<ChartTooltipContent />} cursor={{ stroke: "#9ca3af", strokeWidth: 2 }} />
                     <Line
                       type="monotone"
                       dataKey="traditional"
                       stroke="#ef4444"
-                      strokeWidth={3}
+                      strokeWidth={4}
                       name="Traditional Rent"
-                      dot={{ fill: "#ef4444", r: 4 }}
-                      activeDot={{ r: 6 }}
+                      dot={{ fill: "#ef4444", r: 5 }}
+                      activeDot={{ r: 7 }}
                     />
                     <Line
                       type="monotone"
                       dataKey="luxe"
                       stroke="#10b981"
-                      strokeWidth={3}
+                      strokeWidth={4}
                       name="Luxe Airbnb"
-                      dot={{ fill: "#10b981", r: 4 }}
-                      activeDot={{ r: 6 }}
+                      dot={{ fill: "#10b981", r: 5 }}
+                      activeDot={{ r: 7 }}
                     />
                   </LineChart>
                 </ResponsiveContainer>
               </ChartContainer>
 
               <div className="mt-12 flex flex-wrap justify-center gap-8">
-                <div className="flex items-center gap-2">
-                  <div className="w-4 h-4 bg-red-500" />
-                  <span className="text-gray-900 font-medium text-base">Traditional: $1,950/month</span>
+                <div className="flex items-center gap-3 bg-white px-6 py-4 rounded-xl shadow-sm">
+                  <div className="w-6 h-6 bg-red-500 rounded" />
+                  <span className="text-gray-900 font-semibold text-lg">Traditional: $1,950/month</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-4 h-4 rounded-full bg-green-500" />
-                  <span className="text-gray-900 font-medium text-base">Luxe: $3,000/month avg</span>
-                </div>
-              </div>
-
-              <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="text-center p-6 bg-red-50 rounded-xl">
-                  <div className="text-4xl font-bold text-red-600 mb-2">$23,400</div>
-                  <div className="text-gray-900 font-semibold text-lg">Traditional Annual Revenue</div>
-                </div>
-                <div className="text-center p-6 bg-green-50 rounded-xl">
-                  <div className="text-4xl font-bold text-green-600 mb-2">$36,000</div>
-                  <div className="text-gray-900 font-semibold text-lg">Luxe Annual Revenue</div>
+                <div className="flex items-center gap-3 bg-white px-6 py-4 rounded-xl shadow-sm">
+                  <div className="w-6 h-6 bg-green-500 rounded" />
+                  <span className="text-gray-900 font-semibold text-lg">Luxe Airbnb: Average $6,760/month</span>
                 </div>
               </div>
 
-              <div className="mt-6 text-center p-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl">
-                <p className="text-3xl font-bold text-white">+$12,600 extra per year</p>
-                <p className="text-white/95 mt-2 text-lg font-medium">54% revenue increase with Luxe</p>
+              <div className="mt-8 text-center">
+                <div className="inline-block px-10 py-5 bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl border-2 border-green-200">
+                  <div className="text-4xl font-bold text-green-600 mb-2">+$57,570</div>
+                  <div className="text-gray-800 font-semibold text-lg">Additional Annual Revenue</div>
+                  <div className="text-gray-600 mt-1">247% increase with Luxe Management</div>
+                </div>
               </div>
             </div>
           </div>
