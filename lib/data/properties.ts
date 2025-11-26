@@ -216,7 +216,7 @@ export const properties: Property[] = [
   {
     slug: "parkland-vista",
     labelName: "Parkland Vista",
-    title: "The Adelaide Parklands Complex (Parkland Vista)",
+    title: "Parkland Vista Luxury Retreat",
     category: "Property Management",
     tags: ["Styling"],
     description: "Heart of Adelaide CBD",
@@ -226,7 +226,7 @@ export const properties: Property[] = [
     img: houseThreeImg10,
     subheading: "Heart of Adelaide CBD with stunning parkland views",
     location: "Adelaide CBD",
-    mainImage: "/images/stherophoto.jpg",
+    mainImage: "/images/stgallery1.jpg",
     carouselImages: [
       "/images/stgallery1.jpg",
       "/images/stgallery2.jpg",
