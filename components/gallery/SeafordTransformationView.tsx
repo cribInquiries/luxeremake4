@@ -106,17 +106,17 @@ export function SeafordTransformationView({ property }: SeafordTransformationVie
           </div>
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="text-center p-6 bg-sky-50 rounded-xl">
-              <div className="text-2xl font-bold text-sky-600 mb-2">Owner-Occupied</div>
-              <div className="text-gray-800 font-medium">Winter Months</div>
+            <div className="text-center p-6 bg-sky-100 rounded-xl border-4 border-sky-400 shadow-lg">
+              <div className="text-2xl font-bold text-sky-700 mb-2">Owner-Occupied</div>
+              <div className="text-sky-900 font-medium">Winter Months</div>
             </div>
-            <div className="text-center p-6 bg-green-50 rounded-xl">
-              <div className="text-2xl font-bold text-green-600 mb-2">Luxe-Managed</div>
-              <div className="text-gray-800 font-medium">Summer Season</div>
+            <div className="text-center p-6 bg-emerald-100 rounded-xl border-4 border-emerald-400 shadow-lg">
+              <div className="text-2xl font-bold text-emerald-700 mb-2">Luxe-Managed</div>
+              <div className="text-emerald-900 font-medium">Summer Season</div>
             </div>
-            <div className="text-center p-6 bg-blue-50 rounded-xl">
-              <div className="text-2xl font-bold text-blue-600 mb-2">Coastal</div>
-              <div className="text-gray-800 font-medium">5 mins from Seaford Beach</div>
+            <div className="text-center p-6 bg-blue-100 rounded-xl border-4 border-blue-400 shadow-lg">
+              <div className="text-2xl font-bold text-blue-700 mb-2">Coastal</div>
+              <div className="text-blue-900 font-medium">5 mins from Seaford Beach</div>
             </div>
           </div>
         </div>
