@@ -356,22 +356,48 @@ export function SeafordTransformationView({ property }: SeafordTransformationVie
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="text-center p-8 bg-red-500 rounded-2xl border-4 border-red-700 shadow-2xl shadow-red-600/50">
-              <div className="text-5xl font-bold text-white mb-3">$621</div>
-              <div className="text-white font-semibold mb-2">Traditional Rent</div>
-              <div className="text-red-100 text-sm">$32,320 yearly</div>
+            <div
+              className="text-center p-8 rounded-2xl border-4 shadow-2xl"
+              style={{
+                backgroundColor: "#ef4444",
+                borderColor: "#b91c1c",
+                boxShadow: "0 25px 50px -12px rgba(239, 68, 68, 0.5)",
+              }}
+            >
+              <div className="text-5xl font-bold mb-3" style={{ color: "#ffffff" }}>
+                $621
+              </div>
+              <div className="font-semibold mb-2" style={{ color: "#ffffff" }}>
+                Traditional Rent
+              </div>
+              <div className="text-sm" style={{ color: "#fee2e2" }}>
+                $32,320 yearly
+              </div>
             </div>
 
-            <div className="text-center p-8 bg-emerald-100 rounded-2xl border-3 border-emerald-400 shadow-xl transform scale-105">
-              <div className="text-5xl font-bold text-emerald-600 mb-3">$2,100</div>
-              <div className="text-gray-900 font-semibold mb-2">Peak Summer with Luxe</div>
-              <div className="text-gray-700 text-sm">Per week, high season</div>
+            <div className="text-center p-8 bg-emerald-100 rounded-2xl border-3 shadow-xl transform scale-105">
+              <div className="text-5xl font-bold mb-3">$2,100</div>
+              <div className="font-semibold mb-2">Peak Summer with Luxe</div>
+              <div className="text-sm">Per week, high season</div>
             </div>
 
-            <div className="text-center p-8 bg-blue-500 rounded-2xl border-4 border-blue-700 shadow-2xl shadow-blue-600/50">
-              <div className="text-5xl font-bold text-white mb-3">$900</div>
-              <div className="text-white font-semibold mb-2">Annual Average</div>
-              <div className="text-blue-100 text-sm">Per week, across year</div>
+            <div
+              className="text-center p-8 rounded-2xl border-4 shadow-2xl"
+              style={{
+                backgroundColor: "#3b82f6",
+                borderColor: "#1e40af",
+                boxShadow: "0 25px 50px -12px rgba(59, 130, 246, 0.5)",
+              }}
+            >
+              <div className="text-5xl font-bold mb-3" style={{ color: "#ffffff" }}>
+                $900
+              </div>
+              <div className="font-semibold mb-2" style={{ color: "#ffffff" }}>
+                Annual Average
+              </div>
+              <div className="text-sm" style={{ color: "#dbeafe" }}>
+                Per week, across year
+              </div>
             </div>
           </div>
 
