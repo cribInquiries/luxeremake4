@@ -166,26 +166,26 @@ export function SeafordTransformationView({ property }: SeafordTransformationVie
               <h3 className="text-2xl font-bold mb-4">The Problem</h3>
               <ul className="space-y-3 text-white/80">
                 <li className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-red-500/20 border-2 border-red-500 flex items-center justify-center">
-                    <X className="w-4 h-4 text-red-500 stroke-[3]" />
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-red-600 border-2 border-red-400 flex items-center justify-center shadow-lg">
+                    <X className="w-5 h-5 text-white stroke-[3]" />
                   </div>
                   <span>Distance from Adelaide CBD</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-red-500/20 border-2 border-red-500 flex items-center justify-center">
-                    <X className="w-4 h-4 text-red-500 stroke-[3]" />
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-red-600 border-2 border-red-400 flex items-center justify-center shadow-lg">
+                    <X className="w-5 h-5 text-white stroke-[3]" />
                   </div>
                   <span>Limited local operators</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-red-500/20 border-2 border-red-500 flex items-center justify-center">
-                    <X className="w-4 h-4 text-red-500 stroke-[3]" />
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-red-600 border-2 border-red-400 flex items-center justify-center shadow-lg">
+                    <X className="w-5 h-5 text-white stroke-[3]" />
                   </div>
                   <span>Seasonal management needs</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-red-500/20 border-2 border-red-500 flex items-center justify-center">
-                    <X className="w-4 h-4 text-red-500 stroke-[3]" />
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-red-600 border-2 border-red-400 flex items-center justify-center shadow-lg">
+                    <X className="w-5 h-5 text-white stroke-[3]" />
                   </div>
                   <span>Most companies refused</span>
                 </li>
@@ -258,28 +258,28 @@ export function SeafordTransformationView({ property }: SeafordTransformationVie
           <div className="mb-20">
             <h3 className="text-3xl font-bold text-black mb-8 text-center">Living Space</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="relative group overflow-hidden rounded-2xl shadow-xl aspect-[4/3]">
-                <Image
-                  src="/images/seafordoldliving.png"
-                  alt="Living room before - dated yellow walls and plaid furniture"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-                <div className="absolute top-4 left-4 bg-red-500 text-white px-4 py-2 rounded-full font-semibold text-sm">
-                  Before
+              <div>
+                <h4 className="text-xl font-semibold text-red-600 mb-3">Before</h4>
+                <div className="relative group overflow-hidden rounded-2xl shadow-xl aspect-[4/3]">
+                  <Image
+                    src="/images/seafordoldliving.png"
+                    alt="Living room before - dated yellow walls and plaid furniture"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
                 </div>
               </div>
-              <div className="relative group overflow-hidden rounded-2xl shadow-xl aspect-[4/3]">
-                <Image
-                  src="/images/seafordnewliving.jpg"
-                  alt="Living room after - modern coastal design with arched windows"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-                <div className="absolute top-4 right-4 bg-green-500 text-white px-4 py-2 rounded-full font-semibold text-sm">
-                  After
+              <div>
+                <h4 className="text-xl font-semibold text-emerald-600 mb-3">After</h4>
+                <div className="relative group overflow-hidden rounded-2xl shadow-xl aspect-[4/3] border-4 border-emerald-500">
+                  <Image
+                    src="/images/seafordnewliving.jpg"
+                    alt="Living room after - modern coastal design with arched windows"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
                 </div>
               </div>
             </div>
@@ -289,28 +289,28 @@ export function SeafordTransformationView({ property }: SeafordTransformationVie
           <div className="mb-20">
             <h3 className="text-3xl font-bold text-black mb-8 text-center">Kitchen</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="relative group overflow-hidden rounded-2xl shadow-xl aspect-[4/3]">
-                <Image
-                  src="/images/seafordoldkitchen.png"
-                  alt="Kitchen before - dated with brown tiles"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-                <div className="absolute top-4 left-4 bg-red-500 text-white px-4 py-2 rounded-full font-semibold text-sm">
-                  Before
+              <div>
+                <h4 className="text-xl font-semibold text-red-600 mb-3">Before</h4>
+                <div className="relative group overflow-hidden rounded-2xl shadow-xl aspect-[4/3]">
+                  <Image
+                    src="/images/seafordoldkitchen.png"
+                    alt="Kitchen before - dated with brown tiles"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
                 </div>
               </div>
-              <div className="relative group overflow-hidden rounded-2xl shadow-xl aspect-[4/3]">
-                <Image
-                  src="/images/seafordnewkitchen.jpg"
-                  alt="Kitchen after - modern white cabinets with coastal finishes"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-                <div className="absolute top-4 right-4 bg-green-500 text-white px-4 py-2 rounded-full font-semibold text-sm">
-                  After
+              <div>
+                <h4 className="text-xl font-semibold text-emerald-600 mb-3">After</h4>
+                <div className="relative group overflow-hidden rounded-2xl shadow-xl aspect-[4/3] border-4 border-emerald-500">
+                  <Image
+                    src="/images/seafordnewkitchen.jpg"
+                    alt="Kitchen after - modern white cabinets with coastal finishes"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
                 </div>
               </div>
             </div>
@@ -320,28 +320,28 @@ export function SeafordTransformationView({ property }: SeafordTransformationVie
           <div className="mb-20">
             <h3 className="text-3xl font-bold text-black mb-8 text-center">Bedroom</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="relative group overflow-hidden rounded-2xl shadow-xl aspect-[4/3]">
-                <Image
-                  src="/images/seafordoldbedroom.png"
-                  alt="Bedroom before - yellow walls with dated wooden furniture"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-                <div className="absolute top-4 left-4 bg-red-500 text-white px-4 py-2 rounded-full font-semibold text-sm">
-                  Before
+              <div>
+                <h4 className="text-xl font-semibold text-red-600 mb-3">Before</h4>
+                <div className="relative group overflow-hidden rounded-2xl shadow-xl aspect-[4/3]">
+                  <Image
+                    src="/images/seafordoldbedroom.png"
+                    alt="Bedroom before - yellow walls with dated wooden furniture"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
                 </div>
               </div>
-              <div className="relative group overflow-hidden rounded-2xl shadow-xl aspect-[4/3]">
-                <Image
-                  src="/images/seafordnewbedroom.jpg"
-                  alt="Bedroom after - modern gray tufted headboard with arched window"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-                <div className="absolute top-4 right-4 bg-green-500 text-white px-4 py-2 rounded-full font-semibold text-sm">
-                  After
+              <div>
+                <h4 className="text-xl font-semibold text-emerald-600 mb-3">After</h4>
+                <div className="relative group overflow-hidden rounded-2xl shadow-xl aspect-[4/3] border-4 border-emerald-500">
+                  <Image
+                    src="/images/seafordnewbedroom.jpg"
+                    alt="Bedroom after - modern gray tufted headboard with arched window"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
                 </div>
               </div>
             </div>
