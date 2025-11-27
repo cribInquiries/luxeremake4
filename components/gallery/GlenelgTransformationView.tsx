@@ -96,22 +96,17 @@ export function GlenelgTransformationView({ property }: GlenelgTransformationVie
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
-      {/* Header */}
-      <div className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-10">
-        <div className="container mx-auto px-6 md:px-12 py-6 flex justify-between items-center">
-          <Link
-            href="/gallery"
-            className="w-12 h-12 rounded-full bg-black/80 backdrop-blur-md flex justify-center items-center hover:bg-black transition-all duration-300 group"
-            aria-label="Back to gallery"
-          >
-            <ArrowLeft size={24} className="text-white group-hover:-translate-x-1 transition-transform duration-300" />
-          </Link>
-          <h1 className="text-3xl md:text-4xl font-bold text-black">Glenelg Transformation Success Story</h1>
-        </div>
-      </div>
-
       {/* Scrollable Content */}
       <div className="h-full overflow-y-auto scroll-smooth">
+        {/* Back Button - positioned over hero */}
+        <Link
+          href="/gallery"
+          className="fixed top-6 left-6 z-20 w-12 h-12 rounded-full bg-black/80 backdrop-blur-md flex justify-center items-center hover:bg-black transition-all duration-300 group"
+          aria-label="Back to gallery"
+        >
+          <ArrowLeft size={24} className="text-white group-hover:-translate-x-1 transition-transform duration-300" />
+        </Link>
+
         {/* Hero Section */}
         <section className="relative h-screen w-full flex items-center justify-center bg-black overflow-hidden animate-[fadeIn_0.8s_ease-out]">
           <div className="absolute inset-0 animate-[zoom_30s_ease-in-out_infinite]">
