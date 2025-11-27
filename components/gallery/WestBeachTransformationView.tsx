@@ -117,36 +117,6 @@ export function WestBeachTransformationView({ property }: WestBeachTransformatio
           </div>
         </section>
 
-        {/* Details Section */}
-        <section className="py-20 bg-white border-b border-gray-200">
-          <div className="max-w-5xl mx-auto px-6 md:px-12">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-black mb-2">{property.bedrooms}</div>
-                <div className="text-gray-600">Bedrooms</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-black mb-2">{property.bathrooms}</div>
-                <div className="text-gray-600">Bathrooms</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-black mb-2">{property.sqft}</div>
-                <div className="text-gray-600">sqm</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-black mb-2">$250</div>
-                <div className="text-gray-600">ADR/Night</div>
-              </div>
-            </div>
-            <div className="mt-12 text-center">
-              <div className="inline-block px-8 py-4 bg-green-50 rounded-2xl">
-                <div className="text-3xl font-bold text-green-600">$64,000/year</div>
-                <div className="text-gray-600 mt-1">Annual Revenue</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* The Story */}
         <section className="py-28 md:py-40 bg-gray-50">
           <div className="max-w-4xl mx-auto px-6 md:px-12">
@@ -285,55 +255,54 @@ export function WestBeachTransformationView({ property }: WestBeachTransformatio
             <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl border border-gray-100">
               <ChartContainer
                 config={{
-                  revenue: {
-                    label: "Monthly Revenue",
+                  traditional: {
+                    label: "Traditional Rent",
+                    color: "#ef4444",
+                  },
+                  luxe: {
+                    label: "Luxe Airbnb",
                     color: "#10b981",
                   },
                 }}
-                className="h-[350px] md:h-[500px]"
+                className="h-[400px] w-full"
               >
-                <div className="w-full h-full overflow-hidden">
-                  <ResponsiveContainer width="100%" height="100%">
-                    <LineChart data={monthlyRevenueData} margin={{ left: 10, right: 20, bottom: 60, top: 20 }}>
-                      <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" opacity={0.5} />
-                      <XAxis
-                        dataKey="month"
-                        tick={{ fill: "#6b7280", fontSize: 11 }}
-                        tickLine={false}
-                        angle={-45}
-                        textAnchor="end"
-                        height={80}
-                        interval={0}
-                      />
-                      <YAxis
-                        width={50}
-                        tick={{ fill: "#6b7280", fontSize: 11 }}
-                        tickLine={false}
-                        axisLine={false}
-                        tickFormatter={(value) => `$${(value / 1000).toFixed(1)}k`}
-                      />
-                      <ChartTooltip content={<ChartTooltipContent />} cursor={{ stroke: "#d1d5db", strokeWidth: 1 }} />
-                      <Line
-                        type="monotone"
-                        dataKey="traditional"
-                        stroke="#ef4444"
-                        strokeWidth={3}
-                        name="Traditional Rent"
-                        dot={{ fill: "#ef4444", r: 4 }}
-                        activeDot={{ r: 6 }}
-                      />
-                      <Line
-                        type="monotone"
-                        dataKey="luxe"
-                        stroke="#10b981"
-                        strokeWidth={3}
-                        name="Luxe Airbnb"
-                        dot={{ fill: "#10b981", r: 4 }}
-                        activeDot={{ r: 6 }}
-                      />
-                    </LineChart>
-                  </ResponsiveContainer>
-                </div>
+                <ResponsiveContainer width="100%" height="100%">
+                  <LineChart data={monthlyRevenueData} margin={{ left: 20, right: 30, bottom: 20, top: 20 }}>
+                    <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" vertical={false} />
+                    <XAxis
+                      dataKey="month"
+                      tick={{ fill: "#6b7280", fontSize: 12 }}
+                      tickLine={false}
+                      axisLine={{ stroke: "#e5e7eb" }}
+                    />
+                    <YAxis
+                      tick={{ fill: "#6b7280", fontSize: 12 }}
+                      tickLine={false}
+                      axisLine={{ stroke: "#e5e7eb" }}
+                      tickFormatter={(value) => `$${(value / 1000).toFixed(1)}k`}
+                      domain={[0, 7000]}
+                    />
+                    <ChartTooltip content={<ChartTooltipContent />} cursor={false} />
+                    <Line
+                      type="monotone"
+                      dataKey="traditional"
+                      stroke="#ef4444"
+                      strokeWidth={3}
+                      name="Traditional Rent"
+                      dot={{ fill: "#ef4444", r: 5 }}
+                      activeDot={{ r: 7 }}
+                    />
+                    <Line
+                      type="monotone"
+                      dataKey="luxe"
+                      stroke="#10b981"
+                      strokeWidth={3}
+                      name="Luxe Airbnb"
+                      dot={{ fill: "#10b981", r: 5 }}
+                      activeDot={{ r: 7 }}
+                    />
+                  </LineChart>
+                </ResponsiveContainer>
               </ChartContainer>
 
               <div className="mt-10 flex flex-wrap justify-center gap-6">
