@@ -151,26 +151,54 @@ export function SeafordTransformationView({ property }: SeafordTransformationVie
               <h3 className="text-2xl font-bold mb-4 text-white">The Problem</h3>
               <ul className="space-y-3 text-white/80">
                 <li className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-red-600 border-2 border-red-400 flex items-center justify-center shadow-lg shadow-red-500/50">
-                    <X className="w-4 h-4 text-white stroke-[5]" />
+                  <div
+                    className="flex-shrink-0 w-6 h-6 rounded-full border-2 flex items-center justify-center shadow-lg"
+                    style={{
+                      backgroundColor: "#ff0000",
+                      borderColor: "#cc0000",
+                      boxShadow: "0 0 20px rgba(255, 0, 0, 0.6)",
+                    }}
+                  >
+                    <X className="w-4 h-4 stroke-[5]" style={{ color: "#ffffff" }} />
                   </div>
                   <span>Distance from Adelaide CBD</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-red-600 border-2 border-red-400 flex items-center justify-center shadow-lg shadow-red-500/50">
-                    <X className="w-4 h-4 text-white stroke-[5]" />
+                  <div
+                    className="flex-shrink-0 w-6 h-6 rounded-full border-2 flex items-center justify-center shadow-lg"
+                    style={{
+                      backgroundColor: "#ff0000",
+                      borderColor: "#cc0000",
+                      boxShadow: "0 0 20px rgba(255, 0, 0, 0.6)",
+                    }}
+                  >
+                    <X className="w-4 h-4 stroke-[5]" style={{ color: "#ffffff" }} />
                   </div>
                   <span>Limited local operators</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-red-600 border-2 border-red-400 flex items-center justify-center shadow-lg shadow-red-500/50">
-                    <X className="w-4 h-4 text-white stroke-[5]" />
+                  <div
+                    className="flex-shrink-0 w-6 h-6 rounded-full border-2 flex items-center justify-center shadow-lg"
+                    style={{
+                      backgroundColor: "#ff0000",
+                      borderColor: "#cc0000",
+                      boxShadow: "0 0 20px rgba(255, 0, 0, 0.6)",
+                    }}
+                  >
+                    <X className="w-4 h-4 stroke-[5]" style={{ color: "#ffffff" }} />
                   </div>
                   <span>Seasonal management needs</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-red-600 border-2 border-red-400 flex items-center justify-center shadow-lg shadow-red-500/50">
-                    <X className="w-4 h-4 text-white stroke-[5]" />
+                  <div
+                    className="flex-shrink-0 w-6 h-6 rounded-full border-2 flex items-center justify-center shadow-lg"
+                    style={{
+                      backgroundColor: "#ff0000",
+                      borderColor: "#cc0000",
+                      boxShadow: "0 0 20px rgba(255, 0, 0, 0.6)",
+                    }}
+                  >
+                    <X className="w-4 h-4 stroke-[5]" style={{ color: "#ffffff" }} />
                   </div>
                   <span>Most companies refused</span>
                 </li>
@@ -356,46 +384,47 @@ export function SeafordTransformationView({ property }: SeafordTransformationVie
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Traditional Rent */}
             <div
-              className="text-center p-8 rounded-2xl border-4 shadow-2xl"
+              className="text-center p-8 rounded-2xl border-3 shadow-xl"
               style={{
-                backgroundColor: "#ef4444",
-                borderColor: "#b91c1c",
-                boxShadow: "0 25px 50px -12px rgba(239, 68, 68, 0.5)",
+                backgroundColor: "rgba(254, 226, 226, 0.9)",
+                borderColor: "#fca5a5",
               }}
             >
-              <div className="text-5xl font-bold mb-3" style={{ color: "#ffffff" }}>
+              <div className="text-5xl font-bold mb-3" style={{ color: "#dc2626" }}>
                 $621
               </div>
-              <div className="font-semibold mb-2" style={{ color: "#ffffff" }}>
+              <div className="font-semibold mb-2" style={{ color: "#991b1b" }}>
                 Traditional Rent
               </div>
-              <div className="text-sm" style={{ color: "#fee2e2" }}>
+              <div className="text-sm" style={{ color: "#7f1d1d" }}>
                 $32,320 yearly
               </div>
             </div>
 
+            {/* Peak Summer with Luxe */}
             <div className="text-center p-8 bg-emerald-100 rounded-2xl border-3 shadow-xl transform scale-105">
               <div className="text-5xl font-bold mb-3">$2,100</div>
               <div className="font-semibold mb-2">Peak Summer with Luxe</div>
               <div className="text-sm">Per week, high season</div>
             </div>
 
+            {/* Annual Average */}
             <div
-              className="text-center p-8 rounded-2xl border-4 shadow-2xl"
+              className="text-center p-8 rounded-2xl border-3 shadow-xl"
               style={{
-                backgroundColor: "#3b82f6",
-                borderColor: "#1e40af",
-                boxShadow: "0 25px 50px -12px rgba(59, 130, 246, 0.5)",
+                backgroundColor: "rgba(219, 234, 254, 0.9)",
+                borderColor: "#93c5fd",
               }}
             >
-              <div className="text-5xl font-bold mb-3" style={{ color: "#ffffff" }}>
+              <div className="text-5xl font-bold mb-3" style={{ color: "#2563eb" }}>
                 $900
               </div>
-              <div className="font-semibold mb-2" style={{ color: "#ffffff" }}>
+              <div className="font-semibold mb-2" style={{ color: "#1e40af" }}>
                 Annual Average
               </div>
-              <div className="text-sm" style={{ color: "#dbeafe" }}>
+              <div className="text-sm" style={{ color: "#1e3a8a" }}>
                 Per week, across year
               </div>
             </div>
