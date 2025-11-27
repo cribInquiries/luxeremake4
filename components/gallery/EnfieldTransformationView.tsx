@@ -94,7 +94,10 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
       </Link>
 
       {/* Hero Section */}
-      <section className="relative h-screen w-full flex items-center justify-center bg-gradient-to-br from-gray-900 via-black to-gray-900 overflow-hidden">
+      <section
+        className="relative h-screen w-full flex items-center justify-center bg-gradient-to-br from-gray-900 via-black to-gray-900 overflow-hidden animate-[fadeIn_0.8s_ease-out]"
+        aria-label="Hero Section"
+      >
         <div className="absolute inset-0 opacity-30">
           <Image
             src="/images/enfield-game-room.png"

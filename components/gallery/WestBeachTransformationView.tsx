@@ -45,7 +45,7 @@ export function WestBeachTransformationView({ property }: WestBeachTransformatio
       {/* Scrollable Content */}
       <div className="h-full overflow-y-auto scroll-smooth">
         {/* Hero Section - Cover */}
-        <section className="relative h-screen w-full flex items-center justify-center bg-black overflow-hidden">
+        <section className="relative h-screen w-full flex items-center justify-center bg-black overflow-hidden animate-[fadeIn_0.8s_ease-out]">
           <div className="absolute inset-0">
             <Image
               src="/images/westlivingnew.jpg"

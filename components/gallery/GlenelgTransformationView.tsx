@@ -113,7 +113,7 @@ export function GlenelgTransformationView({ property }: GlenelgTransformationVie
       {/* Scrollable Content */}
       <div className="h-full overflow-y-auto scroll-smooth">
         {/* Hero Section */}
-        <section className="relative h-screen w-full flex items-center justify-center bg-black overflow-hidden">
+        <section className="relative h-screen w-full flex items-center justify-center bg-black overflow-hidden animate-[fadeIn_0.8s_ease-out]">
           <div className="absolute inset-0 animate-[zoom_30s_ease-in-out_infinite]">
             <Image
               src={property.mainImage || "/placeholder-gallery.jpg"}

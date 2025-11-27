@@ -91,7 +91,7 @@ export function MelbourneStreetTransformationView({ property }: MelbourneStreetT
       {/* Scrollable Content */}
       <div className="h-full overflow-y-auto scroll-smooth">
         {/* Hero Section with Slideshow */}
-        <section className="relative h-screen w-full flex items-end bg-black overflow-hidden">
+        <section className="relative h-screen w-full flex items-end bg-black overflow-hidden animate-[fadeIn_0.8s_ease-out]">
           <div className="absolute inset-0">
             <Image
               src={property.mainImage || property.carouselImages[currentImageIndex] || "/placeholder.svg"}
