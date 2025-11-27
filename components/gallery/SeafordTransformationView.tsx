@@ -356,28 +356,28 @@ export function SeafordTransformationView({ property }: SeafordTransformationVie
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="text-center p-8 bg-red-50 rounded-2xl border-2 border-red-200">
+            <div className="text-center p-8 bg-red-100 rounded-2xl border-2 border-red-300 shadow-lg">
               <div className="text-5xl font-bold text-red-600 mb-3">$621</div>
-              <div className="text-gray-800 font-semibold mb-2">Traditional Rent</div>
+              <div className="text-gray-900 font-semibold mb-2">Traditional Rent</div>
               <div className="text-gray-600 text-sm">$32,320 yearly</div>
             </div>
 
-            <div className="text-center p-8 bg-green-50 rounded-2xl border-2 border-green-500 shadow-xl transform scale-105">
-              <div className="text-5xl font-bold text-green-600 mb-3">$2,100</div>
-              <div className="text-gray-800 font-semibold mb-2">Peak Summer with Luxe</div>
-              <div className="text-gray-600 text-sm">Per week, high season</div>
+            <div className="text-center p-8 bg-emerald-100 rounded-2xl border-3 border-emerald-400 shadow-xl transform scale-105">
+              <div className="text-5xl font-bold text-emerald-600 mb-3">$2,100</div>
+              <div className="text-gray-900 font-semibold mb-2">Peak Summer with Luxe</div>
+              <div className="text-gray-700 text-sm">Per week, high season</div>
             </div>
 
-            <div className="text-center p-8 bg-blue-50 rounded-2xl border-2 border-blue-200">
+            <div className="text-center p-8 bg-blue-100 rounded-2xl border-2 border-blue-300 shadow-lg">
               <div className="text-5xl font-bold text-blue-600 mb-3">$900</div>
-              <div className="text-gray-800 font-semibold mb-2">Annual Average</div>
+              <div className="text-gray-900 font-semibold mb-2">Annual Average</div>
               <div className="text-gray-600 text-sm">Per week, across year</div>
             </div>
           </div>
 
-          <div className="mt-12 text-center p-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl shadow-2xl">
-            <p className="text-4xl font-bold text-white mb-2">$27,680 extra per year</p>
-            <p className="text-white/90 text-xl">86% increase over traditional renting</p>
+          <div className="mt-12 text-center p-10 bg-emerald-500 rounded-2xl shadow-2xl border-2 border-emerald-400">
+            <p className="text-5xl font-bold text-white mb-3">$27,680 extra per year</p>
+            <p className="text-white text-xl font-medium">86% increase over traditional renting</p>
           </div>
         </div>
       </section>
