@@ -76,7 +76,7 @@ export function WestBeachTransformationView({ property }: WestBeachTransformatio
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="flex items-center gap-3 p-4 bg-blue-50 rounded-xl shadow-sm border-2 border-blue-200">
                 <div className="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center shrink-0">
-                  <MapPin className="w-6 h-6 text-white" />
+                  <MapPin className="w-6 h-6 text-white stroke-white fill-none" strokeWidth={2} />
                 </div>
                 <div>
                   <div className="text-sm text-gray-600 font-medium">Location</div>
@@ -86,7 +86,7 @@ export function WestBeachTransformationView({ property }: WestBeachTransformatio
 
               <div className="flex items-center gap-3 p-4 bg-emerald-50 rounded-xl shadow-sm border-2 border-emerald-200">
                 <div className="w-12 h-12 rounded-full bg-emerald-600 flex items-center justify-center shrink-0">
-                  <Bed className="w-6 h-6 text-white" />
+                  <Bed className="w-6 h-6 text-white stroke-white" strokeWidth={2} />
                 </div>
                 <div>
                   <div className="text-sm text-gray-600 font-medium">Bedrooms</div>
@@ -96,7 +96,7 @@ export function WestBeachTransformationView({ property }: WestBeachTransformatio
 
               <div className="flex items-center gap-3 p-4 bg-purple-50 rounded-xl shadow-sm border-2 border-purple-200">
                 <div className="w-12 h-12 rounded-full bg-purple-600 flex items-center justify-center shrink-0">
-                  <Bath className="w-6 h-6 text-white" />
+                  <Bath className="w-6 h-6 text-white stroke-white" strokeWidth={2} />
                 </div>
                 <div>
                   <div className="text-sm text-gray-600 font-medium">Bathrooms</div>
@@ -106,7 +106,7 @@ export function WestBeachTransformationView({ property }: WestBeachTransformatio
 
               <div className="flex items-center gap-3 p-4 bg-amber-50 rounded-xl shadow-sm border-2 border-amber-200">
                 <div className="w-12 h-12 rounded-full bg-amber-600 flex items-center justify-center shrink-0">
-                  <Square className="w-6 h-6 text-white" />
+                  <Square className="w-6 h-6 text-white stroke-white" strokeWidth={2} />
                 </div>
                 <div>
                   <div className="text-sm text-gray-600 font-medium">Land Size</div>
