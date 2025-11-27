@@ -32,7 +32,7 @@ export default function GalleryPage() {
   const mappedProperties = properties.map((property) => ({
     id: property.slug,
     title: property.title,
-    shortDescription: property.description,
+    shortDescription: property.shortDescription || property.description,
     mainImage: property.img,
     categories: [property.category],
     services: property.tags,

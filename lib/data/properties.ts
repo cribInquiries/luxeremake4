@@ -67,6 +67,7 @@ export interface Property {
   category: string
   tags: string[]
   description: string
+  shortDescription?: string
   beds: number | string
   baths: number | string
   bedrooms?: number
@@ -181,6 +182,7 @@ export const properties: Property[] = [
     title: "2-Bedroom West Beach Getaway",
     category: "Property Management",
     tags: ["Styling"],
+    shortDescription: "Steps from the shoreline in beautiful West Beach",
     description:
       "This client was the very first homeowner to reach out to us through our website. He had just finished renovating a beautiful property only a minute from the beach and wanted to turn it into something more than a standard rental. After our initial consultation, we introduced him to Luxe's full-service Airbnb transformation. We implemented our latest bedding system, prepared a premium care package, and completed a full styling and setup tailored for high-occupancy coastal stays. Within days, the home was completely guest-ready. The result? The property quickly became one of our top-performing Airbnbs in West Beach, consistently achieving high occupancy, excellent guest reviews, and returns far beyond what a regular rental could offer. What began as a simple enquiry became a long-term partnership—and a standout success story for Luxe.",
     beds: 2,
