@@ -368,25 +368,65 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            <div className="text-center p-8 bg-gray-50 rounded-2xl border border-gray-200">
-              <div className="text-5xl font-bold text-gray-600 mb-3">$900</div>
-              <div className="text-gray-800 font-semibold mb-2">Traditional Rent</div>
-              <div className="text-gray-600 text-base font-medium">Per week, year-round</div>
+            {/* Traditional Rent Card */}
+            <div
+              className="text-center p-8 rounded-2xl border-4 shadow-xl"
+              style={{
+                backgroundColor: "rgba(254, 226, 226, 0.9)",
+                borderColor: "#fca5a5",
+              }}
+            >
+              <div className="text-5xl font-bold mb-3" style={{ color: "#dc2626" }}>
+                $900
+              </div>
+              <div className="font-semibold mb-2" style={{ color: "#991b1b" }}>
+                Traditional Rent
+              </div>
+              <div className="text-base font-medium" style={{ color: "#7f1d1d" }}>
+                Per week, year-round
+              </div>
             </div>
 
-            <div className="text-center p-8 bg-sky-50 rounded-2xl border border-sky-200">
-              <div className="text-5xl font-bold text-sky-600 mb-3">92%</div>
-              <div className="text-gray-800 font-semibold mb-2">Occupancy Rate</div>
-              <div className="text-gray-600 text-base font-medium inline-flex items-center gap-2 justify-center">
+            {/* Occupancy Rate Card */}
+            <div
+              className="text-center p-8 rounded-2xl border-4 shadow-xl"
+              style={{
+                backgroundColor: "rgba(224, 242, 254, 0.9)",
+                borderColor: "#7dd3fc",
+              }}
+            >
+              <div className="text-5xl font-bold mb-3" style={{ color: "#0284c7" }}>
+                92%
+              </div>
+              <div className="font-semibold mb-2" style={{ color: "#075985" }}>
+                Occupancy Rate
+              </div>
+              <div
+                className="text-base font-medium inline-flex items-center gap-2 justify-center"
+                style={{ color: "#0c4a6e" }}
+              >
                 Consistently high
                 <span className="inline-block w-2 h-2 bg-sky-500 rounded-full animate-pulse" />
               </div>
             </div>
 
-            <div className="text-center p-8 bg-green-50 rounded-2xl border-2 border-green-500 shadow-xl">
-              <div className="text-5xl font-bold text-green-600 mb-3">$2,000</div>
-              <div className="text-gray-800 font-semibold mb-2">With Luxe Management</div>
-              <div className="text-gray-600 text-base font-medium">Per week average</div>
+            {/* With Luxe Management Card */}
+            <div
+              className="text-center p-8 rounded-2xl border-4 shadow-xl"
+              style={{
+                backgroundColor: "rgba(220, 252, 231, 0.9)",
+                borderColor: "#86efac",
+              }}
+            >
+              <div className="text-5xl font-bold mb-3" style={{ color: "#16a34a" }}>
+                $2,000
+              </div>
+              <div className="font-semibold mb-2" style={{ color: "#15803d" }}>
+                With Luxe Management
+              </div>
+              <div className="text-base font-medium" style={{ color: "#14532d" }}>
+                Per week average
+              </div>
             </div>
           </div>
 
