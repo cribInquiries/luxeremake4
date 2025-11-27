@@ -74,9 +74,9 @@ export function WestBeachTransformationView({ property }: WestBeachTransformatio
         <section className="py-16 bg-gray-50 border-b border-gray-200">
           <div className="max-w-4xl mx-auto px-6 md:px-12">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div className="flex items-center gap-3 p-4 bg-blue-50 rounded-xl shadow-sm border-2 border-blue-200">
-                <div className="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center shrink-0">
-                  <MapPin className="w-6 h-6 text-white stroke-white fill-none" strokeWidth={2} />
+              <div className="flex items-center gap-3 p-4 bg-blue-100 rounded-xl shadow-sm border-2 border-blue-400">
+                <div className="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center shrink-0 shadow-md">
+                  <MapPin className="w-6 h-6 text-white" strokeWidth={2.5} fill="none" />
                 </div>
                 <div>
                   <div className="text-sm text-gray-600 font-medium">Location</div>
