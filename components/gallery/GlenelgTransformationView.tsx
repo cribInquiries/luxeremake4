@@ -232,9 +232,9 @@ export function GlenelgTransformationView({ property }: GlenelgTransformationVie
                     <p className="text-gray-900 text-lg font-medium">{image.title} - Outdated and dated finishes</p>
                   </div>
                   <div className="space-y-4">
-                    <div className="inline-flex items-center gap-2 px-6 py-2 bg-green-600 text-white text-sm font-semibold rounded-full">
+                    <div className="inline-flex items-center gap-2 px-6 py-2 bg-emerald-600 text-white text-sm font-semibold rounded-full shadow-lg">
                       <div className="w-5 h-5 rounded-full bg-white flex items-center justify-center">
-                        <Check className="w-3 h-3 text-green-600 stroke-[3]" />
+                        <Check className="w-4 h-4 text-emerald-600 stroke-[3]" />
                       </div>
                       After Luxe
                     </div>
@@ -271,7 +271,7 @@ export function GlenelgTransformationView({ property }: GlenelgTransformationVie
                   key={index}
                   className="flex gap-4 p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow duration-300"
                 >
-                  <div className="shrink-0 w-10 h-10 rounded-full bg-green-600 flex items-center justify-center mt-1 shadow-md">
+                  <div className="shrink-0 w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center mt-1 shadow-md">
                     <Check className="w-6 h-6 text-white stroke-[3]" />
                   </div>
                   <div>
