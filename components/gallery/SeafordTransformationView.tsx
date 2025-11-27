@@ -151,26 +151,26 @@ export function SeafordTransformationView({ property }: SeafordTransformationVie
               <h3 className="text-2xl font-bold mb-4 text-white">The Problem</h3>
               <ul className="space-y-3 text-white/80">
                 <li className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-red-500 border-2 border-red-400 flex items-center justify-center shadow-lg">
-                    <X className="w-4 h-4 text-white stroke-[4]" />
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-red-600 border-3 border-red-400 flex items-center justify-center shadow-lg shadow-red-500/50">
+                    <X className="w-4 h-4 text-red-100 stroke-[5]" />
                   </div>
                   <span>Distance from Adelaide CBD</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-red-500 border-2 border-red-400 flex items-center justify-center shadow-lg">
-                    <X className="w-4 h-4 text-white stroke-[4]" />
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-red-600 border-3 border-red-400 flex items-center justify-center shadow-lg shadow-red-500/50">
+                    <X className="w-4 h-4 text-red-100 stroke-[5]" />
                   </div>
                   <span>Limited local operators</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-red-500 border-2 border-red-400 flex items-center justify-center shadow-lg">
-                    <X className="w-4 h-4 text-white stroke-[4]" />
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-red-600 border-3 border-red-400 flex items-center justify-center shadow-lg shadow-red-500/50">
+                    <X className="w-4 h-4 text-red-100 stroke-[5]" />
                   </div>
                   <span>Seasonal management needs</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-red-500 border-2 border-red-400 flex items-center justify-center shadow-lg">
-                    <X className="w-4 h-4 text-white stroke-[4]" />
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-red-600 border-3 border-red-400 flex items-center justify-center shadow-lg shadow-red-500/50">
+                    <X className="w-4 h-4 text-red-100 stroke-[5]" />
                   </div>
                   <span>Most companies refused</span>
                 </li>
@@ -356,7 +356,7 @@ export function SeafordTransformationView({ property }: SeafordTransformationVie
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="text-center p-8 bg-red-100 rounded-2xl border-4 border-red-500 shadow-xl">
+            <div className="text-center p-8 bg-red-50 rounded-2xl border-[6px] border-red-500 shadow-2xl shadow-red-500/30">
               <div className="text-5xl font-bold text-red-600 mb-3">$621</div>
               <div className="text-gray-900 font-semibold mb-2">Traditional Rent</div>
               <div className="text-gray-600 text-sm">$32,320 yearly</div>
@@ -368,7 +368,7 @@ export function SeafordTransformationView({ property }: SeafordTransformationVie
               <div className="text-gray-700 text-sm">Per week, high season</div>
             </div>
 
-            <div className="text-center p-8 bg-blue-100 rounded-2xl border-4 border-blue-500 shadow-xl">
+            <div className="text-center p-8 bg-blue-50 rounded-2xl border-[6px] border-blue-500 shadow-2xl shadow-blue-500/30">
               <div className="text-5xl font-bold text-blue-600 mb-3">$900</div>
               <div className="text-gray-900 font-semibold mb-2">Annual Average</div>
               <div className="text-gray-600 text-sm">Per week, across year</div>
