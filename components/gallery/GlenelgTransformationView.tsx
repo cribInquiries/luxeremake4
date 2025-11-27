@@ -296,131 +296,116 @@ export function GlenelgTransformationView({ property }: GlenelgTransformationVie
 
             {/* Annual Comparison */}
             <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg mb-12">
-              <h3 className="text-2xl font-bold text-black mb-8 text-center">Annual Revenue Comparison</h3>
-              <div className="flex justify-center">
-                <ChartContainer
-                  config={{
-                    annual: {
-                      label: "Annual Revenue (AUD)",
-                      color: "#10b981",
-                    },
-                  }}
-                  className="h-[400px] w-full max-w-3xl"
-                >
-                  <ResponsiveContainer width="100%" height="100%">
-                    <BarChart data={revenueComparisonData} margin={{ top: 20, right: 30, left: 30, bottom: 20 }}>
-                      <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" vertical={false} />
-                      <XAxis
-                        dataKey="period"
-                        tick={{ fill: "#374151", fontSize: 15, fontWeight: 600 }}
-                        tickLine={false}
-                        axisLine={false}
-                      />
-                      <YAxis
-                        tick={{ fill: "#374151", fontSize: 15, fontWeight: 600 }}
-                        tickLine={false}
-                        axisLine={false}
-                        tickFormatter={(value) => `$${value / 1000}k`}
-                      />
-                      <ChartTooltip
-                        content={<ChartTooltipContent />}
-                        cursor={false}
-                        formatter={(value: number) => [`$${value.toLocaleString()}`, "Annual Revenue"]}
-                      />
-                      <Bar dataKey="annual" radius={[12, 12, 0, 0]} maxBarSize={120}>
-                        {revenueComparisonData.map((entry, index) => (
-                          <Cell key={`cell-${index}`} fill={entry.fill} />
-                        ))}
-                      </Bar>
-                    </BarChart>
-                  </ResponsiveContainer>
-                </ChartContainer>
-              </div>
+              <h3 className="text-2xl font-bold text-black mb-8">Annual Revenue Comparison</h3>
+              <ChartContainer
+                config={{
+                  annual: {
+                    label: "Annual Revenue (AUD)",
+                    color: "#10b981",
+                  },
+                }}
+                className="h-[450px]"
+              >
+                <ResponsiveContainer width="100%" height="100%">
+                  <BarChart data={revenueComparisonData}>
+                    <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
+                    <XAxis
+                      dataKey="period"
+                      tick={{ fill: "#374151", fontSize: 15, fontWeight: 600 }}
+                      tickLine={false}
+                    />
+                    <YAxis
+                      tick={{ fill: "#374151", fontSize: 15, fontWeight: 600 }}
+                      tickLine={false}
+                      axisLine={false}
+                      tickFormatter={(value) => `$${value / 1000}k`}
+                    />
+                    <ChartTooltip
+                      content={<ChartTooltipContent />}
+                      cursor={{ fill: "rgba(0,0,0,0.05)" }}
+                      formatter={(value: number) => [`$${value.toLocaleString()}`, "Annual Revenue"]}
+                    />
+                    <Bar dataKey="annual" radius={[12, 12, 0, 0]}>
+                      {revenueComparisonData.map((entry, index) => (
+                        <Cell key={`cell-${index}`} fill={entry.fill} />
+                      ))}
+                    </Bar>
+                  </BarChart>
+                </ResponsiveContainer>
+              </ChartContainer>
               <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="text-center p-6 bg-red-50 rounded-xl border-2 border-red-200">
+                <div className="text-center p-6 bg-red-50 rounded-xl">
                   <div className="text-4xl md:text-5xl font-bold text-red-600 mb-2">$24,440</div>
                   <div className="text-base font-semibold text-gray-700">Traditional Rental</div>
                 </div>
                 <div className="flex items-center justify-center">
-                  <DollarSign className="w-12 h-12 text-emerald-500" />
+                  <DollarSign className="w-12 h-12 text-green-500" />
                 </div>
-                <div className="text-center p-6 bg-emerald-50 rounded-xl border-2 border-emerald-200">
-                  <div className="text-4xl md:text-5xl font-bold text-emerald-600 mb-2">$38,000</div>
+                <div className="text-center p-6 bg-green-50 rounded-xl">
+                  <div className="text-4xl md:text-5xl font-bold text-green-600 mb-2">$38,000</div>
                   <div className="text-base font-semibold text-gray-700">Luxe Airbnb</div>
                 </div>
               </div>
-              <div className="mt-6 text-center p-8 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-2xl shadow-2xl border-4 border-emerald-400">
-                <p className="text-3xl md:text-4xl font-bold text-white mb-2">+$13,560 additional annual revenue</p>
-                <p className="text-white text-xl font-semibold">55% revenue increase with Luxe Management</p>
+              <div className="mt-6 text-center p-6 bg-emerald-600 rounded-xl shadow-lg border-2 border-emerald-500">
+                <p className="text-3xl font-bold text-white">+$13,560 additional annual revenue</p>
+                <p className="text-white mt-2 font-medium">55% revenue increase with Luxe Managements</p>
               </div>
             </div>
 
             {/* Monthly Timeline */}
             <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg">
-              <h3 className="text-2xl font-bold text-black mb-8 text-center">Monthly Revenue Performance</h3>
-              <div className="flex justify-center">
-                <ChartContainer
-                  config={{
-                    traditional: {
-                      label: "Traditional Rental",
-                      color: "#ef4444",
-                    },
-                    airbnb: {
-                      label: "Luxe Airbnb",
-                      color: "#10b981",
-                    },
-                  }}
-                  className="h-[400px] w-full"
-                >
-                  <ResponsiveContainer width="100%" height="100%">
-                    <LineChart data={revenueTimelineData} margin={{ top: 20, right: 30, left: 30, bottom: 20 }}>
-                      <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" vertical={false} />
-                      <XAxis
-                        dataKey="month"
-                        tick={{ fill: "#374151", fontSize: 14, fontWeight: 500 }}
-                        tickLine={false}
-                        axisLine={false}
-                      />
-                      <YAxis
-                        tick={{ fill: "#374151", fontSize: 14, fontWeight: 500 }}
-                        tickLine={false}
-                        axisLine={false}
-                        tickFormatter={(value) => `$${value / 1000}k`}
-                      />
-                      <ChartTooltip
-                        content={<ChartTooltipContent />}
-                        cursor={{ stroke: "#e5e7eb", strokeWidth: 1, strokeDasharray: "5 5" }}
-                      />
-                      <Line
-                        type="monotone"
-                        dataKey="traditional"
-                        stroke="#ef4444"
-                        strokeWidth={3}
-                        dot={{ fill: "#ef4444", r: 5, strokeWidth: 2, stroke: "#fff" }}
-                        activeDot={{ r: 7 }}
-                        name="Traditional Rental"
-                      />
-                      <Line
-                        type="monotone"
-                        dataKey="airbnb"
-                        stroke="#10b981"
-                        strokeWidth={3}
-                        dot={{ fill: "#10b981", r: 5, strokeWidth: 2, stroke: "#fff" }}
-                        activeDot={{ r: 7 }}
-                        name="Luxe Airbnb"
-                      />
-                    </LineChart>
-                  </ResponsiveContainer>
-                </ChartContainer>
-              </div>
-              <div className="mt-8 flex flex-wrap justify-center gap-6 md:gap-8">
-                <div className="flex items-center gap-2 px-4 py-2 bg-red-50 rounded-lg border border-red-200">
+              <h3 className="text-2xl font-bold text-black mb-8">Monthly Revenue Performance</h3>
+              <ChartContainer
+                config={{
+                  traditional: {
+                    label: "Traditional Rental",
+                    color: "#ef4444",
+                  },
+                  airbnb: {
+                    label: "Luxe Airbnb",
+                    color: "#10b981",
+                  },
+                }}
+                className="h-[450px]"
+              >
+                <ResponsiveContainer width="100%" height="100%">
+                  <LineChart data={revenueTimelineData}>
+                    <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
+                    <XAxis dataKey="month" tick={{ fill: "#666", fontSize: 14 }} tickLine={false} />
+                    <YAxis
+                      tick={{ fill: "#666", fontSize: 14 }}
+                      tickLine={false}
+                      axisLine={false}
+                      tickFormatter={(value) => `$${value / 1000}k`}
+                    />
+                    <ChartTooltip content={<ChartTooltipContent />} cursor={{ stroke: "#e5e7eb", strokeWidth: 2 }} />
+                    <Line
+                      type="monotone"
+                      dataKey="traditional"
+                      stroke="#ef4444"
+                      strokeWidth={3}
+                      dot={{ fill: "#ef4444", r: 6 }}
+                      name="Traditional Rental"
+                    />
+                    <Line
+                      type="monotone"
+                      dataKey="airbnb"
+                      stroke="#10b981"
+                      strokeWidth={3}
+                      dot={{ fill: "#10b981", r: 6 }}
+                      name="Luxe Airbnb"
+                    />
+                  </LineChart>
+                </ResponsiveContainer>
+              </ChartContainer>
+              <div className="mt-8 flex justify-center gap-8">
+                <div className="flex items-center gap-2">
                   <div className="w-4 h-4 rounded-full bg-red-500" />
-                  <span className="text-gray-900 font-semibold">Traditional: $2,037/month</span>
+                  <span className="text-gray-900 font-medium">Traditional: $2,037/month</span>
                 </div>
-                <div className="flex items-center gap-2 px-4 py-2 bg-emerald-50 rounded-lg border border-emerald-200">
-                  <div className="w-4 h-4 rounded-full bg-emerald-500" />
-                  <span className="text-gray-900 font-semibold">Luxe: $3,167/month avg</span>
+                <div className="flex items-center gap-2">
+                  <div className="w-4 h-4 rounded-full bg-green-500" />
+                  <span className="text-gray-900 font-medium">Luxe: $3,167/month avg</span>
                 </div>
               </div>
             </div>
