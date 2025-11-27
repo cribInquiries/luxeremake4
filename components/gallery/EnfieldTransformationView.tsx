@@ -238,19 +238,55 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
               <h3 className="text-3xl font-bold text-white mb-8">The Challenge</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <X size={24} className="text-red-400 flex-shrink-0 mt-1" strokeWidth={3} />
+                  <div
+                    className="flex-shrink-0 w-6 h-6 rounded-full border-2 flex items-center justify-center shadow-lg mt-1"
+                    style={{
+                      backgroundColor: "#ff0000",
+                      borderColor: "#cc0000",
+                      boxShadow: "0 0 20px rgba(255, 0, 0, 0.6)",
+                    }}
+                  >
+                    <X className="w-4 h-4 stroke-[5]" style={{ color: "#ffffff" }} />
+                  </div>
                   <span className="text-white/90 text-lg">Only $5,000 budget</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <X size={24} className="text-red-400 flex-shrink-0 mt-1" strokeWidth={3} />
+                  <div
+                    className="flex-shrink-0 w-6 h-6 rounded-full border-2 flex items-center justify-center shadow-lg mt-1"
+                    style={{
+                      backgroundColor: "#ff0000",
+                      borderColor: "#cc0000",
+                      boxShadow: "0 0 20px rgba(255, 0, 0, 0.6)",
+                    }}
+                  >
+                    <X className="w-4 h-4 stroke-[5]" style={{ color: "#ffffff" }} />
+                  </div>
                   <span className="text-white/90 text-lg">Five bedrooms to furnish</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <X size={24} className="text-red-400 flex-shrink-0 mt-1" strokeWidth={3} />
+                  <div
+                    className="flex-shrink-0 w-6 h-6 rounded-full border-2 flex items-center justify-center shadow-lg mt-1"
+                    style={{
+                      backgroundColor: "#ff0000",
+                      borderColor: "#cc0000",
+                      boxShadow: "0 0 20px rgba(255, 0, 0, 0.6)",
+                    }}
+                  >
+                    <X className="w-4 h-4 stroke-[5]" style={{ color: "#ffffff" }} />
+                  </div>
                   <span className="text-white/90 text-lg">High-end property expectations</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <X size={24} className="text-red-400 flex-shrink-0 mt-1" strokeWidth={3} />
+                  <div
+                    className="flex-shrink-0 w-6 h-6 rounded-full border-2 flex items-center justify-center shadow-lg mt-1"
+                    style={{
+                      backgroundColor: "#ff0000",
+                      borderColor: "#cc0000",
+                      boxShadow: "0 0 20px rgba(255, 0, 0, 0.6)",
+                    }}
+                  >
+                    <X className="w-4 h-4 stroke-[5]" style={{ color: "#ffffff" }} />
+                  </div>
                   <span className="text-white/90 text-lg">First property launch</span>
                 </div>
               </div>
@@ -261,19 +297,27 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
               <h3 className="text-3xl font-bold text-emerald-300 mb-8">Luxe Solution</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <Check size={24} className="text-green-400 flex-shrink-0 mt-1" strokeWidth={3} />
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500 border-2 border-emerald-400 flex items-center justify-center">
+                    <Check className="w-4 h-4 text-white stroke-[3]" />
+                  </div>
                   <span className="text-white/90 text-lg">Strategic furniture sourcing</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Check size={24} className="text-green-400 flex-shrink-0 mt-1" strokeWidth={3} />
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500 border-2 border-emerald-400 flex items-center justify-center">
+                    <Check className="w-4 h-4 text-white stroke-[3]" />
+                  </div>
                   <span className="text-white/90 text-lg">Entertainment features added</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Check size={24} className="text-green-400 flex-shrink-0 mt-1" strokeWidth={3} />
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500 border-2 border-emerald-400 flex items-center justify-center">
+                    <Check className="w-4 h-4 text-white stroke-[3]" />
+                  </div>
                   <span className="text-white/90 text-lg">Cohesive luxury aesthetic</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Check size={24} className="text-green-400 flex-shrink-0 mt-1" strokeWidth={3} />
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500 border-2 border-emerald-400 flex items-center justify-center">
+                    <Check className="w-4 h-4 text-white stroke-[3]" />
+                  </div>
                   <span className="text-white/90 text-lg">Premium guest experience</span>
                 </div>
               </div>
