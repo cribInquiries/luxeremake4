@@ -142,56 +142,42 @@ export function SeafordTransformationView({ property }: SeafordTransformationVie
         </div>
       </section>
 
-      {/* The Solution */}
-      <section className="py-28 bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
-        <div className="max-w-4xl mx-auto px-6 md:px-12">
-          <div className="mb-12">
-            <h2 className="text-5xl md:text-6xl font-bold mb-4">Going Beyond the City Line</h2>
-          </div>
-          <div className="space-y-6 text-xl md:text-2xl leading-relaxed text-white/90">
-            <p className="text-pretty">
-              At Luxe, we've built a team that doesn't shy away from distance — they embrace it.
-            </p>
-            <p className="text-pretty">
-              Cleaners and contractors who travel through thick and thin to deliver the same standard of excellence
-              guests expect in the CBD.
-            </p>
-            <p className="text-pretty font-semibold text-white">
-              No shortcuts. No compromises. Just consistency, wherever the map takes us.
-            </p>
-          </div>
-
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
-              <h3 className="text-2xl font-bold mb-4">The Problem</h3>
+      {/* Problem & Solution */}
+      <section className="py-28 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12">
+          <div className="grid md:grid-cols-2 gap-12">
+            {/* Problem */}
+            <div className="p-8 bg-red-500/10 backdrop-blur-sm rounded-2xl border border-red-500/20">
+              <h3 className="text-2xl font-bold mb-4 text-red-400">The Problem</h3>
               <ul className="space-y-3 text-white/80">
                 <li className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-red-600 border-2 border-red-400 flex items-center justify-center shadow-lg">
-                    <X className="w-5 h-5 text-white stroke-[3]" />
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-red-500 border-4 border-red-400 flex items-center justify-center shadow-2xl">
+                    <X className="w-6 h-6 text-white stroke-[4]" />
                   </div>
                   <span>Distance from Adelaide CBD</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-red-600 border-2 border-red-400 flex items-center justify-center shadow-lg">
-                    <X className="w-5 h-5 text-white stroke-[3]" />
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-red-500 border-4 border-red-400 flex items-center justify-center shadow-2xl">
+                    <X className="w-6 h-6 text-white stroke-[4]" />
                   </div>
                   <span>Limited local operators</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-red-600 border-2 border-red-400 flex items-center justify-center shadow-lg">
-                    <X className="w-5 h-5 text-white stroke-[3]" />
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-red-500 border-4 border-red-400 flex items-center justify-center shadow-2xl">
+                    <X className="w-6 h-6 text-white stroke-[4]" />
                   </div>
                   <span>Seasonal management needs</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-red-600 border-2 border-red-400 flex items-center justify-center shadow-lg">
-                    <X className="w-5 h-5 text-white stroke-[3]" />
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-red-500 border-4 border-red-400 flex items-center justify-center shadow-2xl">
+                    <X className="w-6 h-6 text-white stroke-[4]" />
                   </div>
                   <span>Most companies refused</span>
                 </li>
               </ul>
             </div>
 
+            {/* Solution */}
             <div className="p-8 bg-green-500/10 backdrop-blur-sm rounded-2xl border border-green-500/20">
               <h3 className="text-2xl font-bold mb-4 text-green-400">Luxe Solution</h3>
               <ul className="space-y-3 text-white/80">
@@ -259,7 +245,9 @@ export function SeafordTransformationView({ property }: SeafordTransformationVie
             <h3 className="text-3xl font-bold text-black mb-8 text-center">Living Space</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <h4 className="text-xl font-semibold text-red-600 mb-3">Before</h4>
+                <div className="inline-block px-6 py-2 bg-red-100 border-2 border-red-300 rounded-full mb-3">
+                  <h4 className="text-lg font-semibold text-red-600">Before</h4>
+                </div>
                 <div className="relative group overflow-hidden rounded-2xl shadow-xl aspect-[4/3]">
                   <Image
                     src="/images/seafordoldliving.png"
@@ -271,7 +259,9 @@ export function SeafordTransformationView({ property }: SeafordTransformationVie
                 </div>
               </div>
               <div>
-                <h4 className="text-xl font-semibold text-emerald-600 mb-3">After</h4>
+                <div className="inline-block px-6 py-2 bg-emerald-100 border-2 border-emerald-400 rounded-full mb-3">
+                  <h4 className="text-lg font-semibold text-emerald-600">After</h4>
+                </div>
                 <div className="relative group overflow-hidden rounded-2xl shadow-xl aspect-[4/3] border-4 border-emerald-500">
                   <Image
                     src="/images/seafordnewliving.jpg"
@@ -290,7 +280,9 @@ export function SeafordTransformationView({ property }: SeafordTransformationVie
             <h3 className="text-3xl font-bold text-black mb-8 text-center">Kitchen</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <h4 className="text-xl font-semibold text-red-600 mb-3">Before</h4>
+                <div className="inline-block px-6 py-2 bg-red-100 border-2 border-red-300 rounded-full mb-3">
+                  <h4 className="text-lg font-semibold text-red-600">Before</h4>
+                </div>
                 <div className="relative group overflow-hidden rounded-2xl shadow-xl aspect-[4/3]">
                   <Image
                     src="/images/seafordoldkitchen.png"
@@ -302,7 +294,9 @@ export function SeafordTransformationView({ property }: SeafordTransformationVie
                 </div>
               </div>
               <div>
-                <h4 className="text-xl font-semibold text-emerald-600 mb-3">After</h4>
+                <div className="inline-block px-6 py-2 bg-emerald-100 border-2 border-emerald-400 rounded-full mb-3">
+                  <h4 className="text-lg font-semibold text-emerald-600">After</h4>
+                </div>
                 <div className="relative group overflow-hidden rounded-2xl shadow-xl aspect-[4/3] border-4 border-emerald-500">
                   <Image
                     src="/images/seafordnewkitchen.jpg"
@@ -321,7 +315,9 @@ export function SeafordTransformationView({ property }: SeafordTransformationVie
             <h3 className="text-3xl font-bold text-black mb-8 text-center">Bedroom</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <h4 className="text-xl font-semibold text-red-600 mb-3">Before</h4>
+                <div className="inline-block px-6 py-2 bg-red-100 border-2 border-red-300 rounded-full mb-3">
+                  <h4 className="text-lg font-semibold text-red-600">Before</h4>
+                </div>
                 <div className="relative group overflow-hidden rounded-2xl shadow-xl aspect-[4/3]">
                   <Image
                     src="/images/seafordoldbedroom.png"
@@ -333,7 +329,9 @@ export function SeafordTransformationView({ property }: SeafordTransformationVie
                 </div>
               </div>
               <div>
-                <h4 className="text-xl font-semibold text-emerald-600 mb-3">After</h4>
+                <div className="inline-block px-6 py-2 bg-emerald-100 border-2 border-emerald-400 rounded-full mb-3">
+                  <h4 className="text-lg font-semibold text-emerald-600">After</h4>
+                </div>
                 <div className="relative group overflow-hidden rounded-2xl shadow-xl aspect-[4/3] border-4 border-emerald-500">
                   <Image
                     src="/images/seafordnewbedroom.jpg"
