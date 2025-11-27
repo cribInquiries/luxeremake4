@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowLeft, MapPin } from "lucide-react"
+import { ArrowLeft, MapPin, X, Check } from "lucide-react"
 import type { Property } from "@/lib/properties"
 import { Line, LineChart, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from "recharts"
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart"
@@ -166,19 +166,27 @@ export function SeafordTransformationView({ property }: SeafordTransformationVie
               <h3 className="text-2xl font-bold mb-4">The Problem</h3>
               <ul className="space-y-3 text-white/80">
                 <li className="flex items-start gap-3">
-                  <span className="text-red-400 mt-1">✗</span>
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-red-500/20 border-2 border-red-500 flex items-center justify-center">
+                    <X className="w-4 h-4 text-red-500 stroke-[3]" />
+                  </div>
                   <span>Distance from Adelaide CBD</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-red-400 mt-1">✗</span>
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-red-500/20 border-2 border-red-500 flex items-center justify-center">
+                    <X className="w-4 h-4 text-red-500 stroke-[3]" />
+                  </div>
                   <span>Limited local operators</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-red-400 mt-1">✗</span>
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-red-500/20 border-2 border-red-500 flex items-center justify-center">
+                    <X className="w-4 h-4 text-red-500 stroke-[3]" />
+                  </div>
                   <span>Seasonal management needs</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-red-400 mt-1">✗</span>
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-red-500/20 border-2 border-red-500 flex items-center justify-center">
+                    <X className="w-4 h-4 text-red-500 stroke-[3]" />
+                  </div>
                   <span>Most companies refused</span>
                 </li>
               </ul>
@@ -188,19 +196,27 @@ export function SeafordTransformationView({ property }: SeafordTransformationVie
               <h3 className="text-2xl font-bold mb-4 text-green-400">Luxe Solution</h3>
               <ul className="space-y-3 text-white/80">
                 <li className="flex items-start gap-3">
-                  <span className="text-green-400 mt-1">✓</span>
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500 border-2 border-emerald-400 flex items-center justify-center">
+                    <Check className="w-4 h-4 text-white stroke-[3]" />
+                  </div>
                   <span>Travel-ready cleaning team</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-green-400 mt-1">✓</span>
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500 border-2 border-emerald-400 flex items-center justify-center">
+                    <Check className="w-4 h-4 text-white stroke-[3]" />
+                  </div>
                   <span>Remote management systems</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-green-400 mt-1">✓</span>
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500 border-2 border-emerald-400 flex items-center justify-center">
+                    <Check className="w-4 h-4 text-white stroke-[3]" />
+                  </div>
                   <span>Flexible seasonal operation</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-green-400 mt-1">✓</span>
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500 border-2 border-emerald-400 flex items-center justify-center">
+                    <Check className="w-4 h-4 text-white stroke-[3]" />
+                  </div>
                   <span>CBD-level excellence everywhere</span>
                 </li>
               </ul>
