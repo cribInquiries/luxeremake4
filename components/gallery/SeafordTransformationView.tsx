@@ -87,19 +87,19 @@ export function SeafordTransformationView({ property }: SeafordTransformationVie
       <section className="py-20 bg-white border-b border-gray-200">
         <div className="max-w-5xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
+            <div className="text-center p-6 bg-gray-50 rounded-xl border-4 border-gray-300 shadow-md">
               <div className="text-4xl font-bold text-black mb-2">{property.beds}</div>
               <div className="text-gray-800 font-medium">Bedrooms</div>
             </div>
-            <div className="text-center">
+            <div className="text-center p-6 bg-gray-50 rounded-xl border-4 border-gray-300 shadow-md">
               <div className="text-4xl font-bold text-black mb-2">1</div>
               <div className="text-gray-800 font-medium">Bathroom</div>
             </div>
-            <div className="text-center">
+            <div className="text-center p-6 bg-gray-50 rounded-xl border-4 border-gray-300 shadow-md">
               <div className="text-4xl font-bold text-black mb-2">$2,100</div>
               <div className="text-gray-800 font-medium">Peak Week</div>
             </div>
-            <div className="text-center">
+            <div className="text-center p-6 bg-gray-50 rounded-xl border-4 border-gray-300 shadow-md">
               <div className="text-4xl font-bold text-black mb-2">$900</div>
               <div className="text-gray-800 font-medium">Avg/Week</div>
             </div>
