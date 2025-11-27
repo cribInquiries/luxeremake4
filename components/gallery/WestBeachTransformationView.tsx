@@ -4,6 +4,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowLeft, MapPin, Bed, Bath, Square } from "lucide-react"
 import type { Property } from "@/lib/properties"
+import { Line, LineChart, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from "recharts"
+import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart"
 
 interface WestBeachTransformationViewProps {
   property: Property
@@ -15,18 +17,18 @@ export function WestBeachTransformationView({ property }: WestBeachTransformatio
   const story = property.transformationStory
 
   const monthlyRevenueData = [
-    { month: 1, traditional: 1950, luxe: 7440 },
-    { month: 2, traditional: 1950, luxe: 6960 },
-    { month: 3, traditional: 1950, luxe: 7200 },
-    { month: 4, traditional: 1950, luxe: 6720 },
-    { month: 5, traditional: 1950, luxe: 6480 },
-    { month: 6, traditional: 1950, luxe: 6240 },
-    { month: 7, traditional: 1950, luxe: 6000 },
-    { month: 8, traditional: 1950, luxe: 6240 },
-    { month: 9, traditional: 1950, luxe: 6480 },
-    { month: 10, traditional: 1950, luxe: 6720 },
-    { month: 11, traditional: 1950, luxe: 7200 },
-    { month: 12, traditional: 1950, luxe: 7440 },
+    { month: "Jan", traditional: 2300, luxe: 5900 },
+    { month: "Feb", traditional: 2300, luxe: 6000 },
+    { month: "Mar", traditional: 2300, luxe: 5500 },
+    { month: "Apr", traditional: 2300, luxe: 5000 },
+    { month: "May", traditional: 2300, luxe: 4500 },
+    { month: "Jun", traditional: 2300, luxe: 4100 },
+    { month: "Jul", traditional: 2300, luxe: 4000 },
+    { month: "Aug", traditional: 2300, luxe: 4100 },
+    { month: "Sep", traditional: 2300, luxe: 4500 },
+    { month: "Oct", traditional: 2300, luxe: 5000 },
+    { month: "Nov", traditional: 2300, luxe: 5500 },
+    { month: "Dec", traditional: 2300, luxe: 5900 },
   ]
 
   return (
@@ -57,14 +59,12 @@ export function WestBeachTransformationView({ property }: WestBeachTransformatio
 
           <div className="relative z-10 w-full max-w-5xl mx-auto px-6 md:px-12 text-center">
             <div className="inline-block px-5 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-8">
-              <span className="text-sm font-semibold text-white uppercase tracking-wider [text-shadow:_0_2px_8px_rgb(0_0_0_/_60%)]">
-                Success Story
-              </span>
+              <span className="text-sm font-semibold text-white uppercase tracking-wider">Success Story</span>
             </div>
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-white mb-8 tracking-tight text-balance leading-[0.95] [text-shadow:_0_4px_16px_rgb(0_0_0_/_100%)]">
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-white mb-8 tracking-tight text-balance leading-[0.95]">
               {property.title}
             </h1>
-            <p className="text-2xl md:text-3xl lg:text-4xl text-white/95 font-light text-balance max-w-4xl mx-auto [text-shadow:_0_2px_12px_rgb(0_0_0_/_80%)]">
+            <p className="text-2xl md:text-3xl lg:text-4xl text-white/90 font-light text-balance max-w-4xl mx-auto">
               {property.subheading}
             </p>
           </div>
@@ -73,54 +73,44 @@ export function WestBeachTransformationView({ property }: WestBeachTransformatio
         {/* Property Details Section */}
         <section className="py-16 bg-gray-50 border-b border-gray-200">
           <div className="max-w-4xl mx-auto px-6 md:px-12">
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
-              <div className="flex items-center gap-3 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
-                <div className="w-14 h-14 rounded-full bg-black flex items-center justify-center shrink-0">
-                  <MapPin className="w-7 h-7 text-white" />
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm">
+                <div className="w-12 h-12 rounded-full bg-black flex items-center justify-center shrink-0">
+                  <MapPin className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <div className="text-sm text-gray-700 font-semibold">Location</div>
-                  <div className="text-2xl font-bold text-black">West Beach</div>
+                  <div className="text-sm text-gray-500 font-medium">Location</div>
+                  <div className="text-lg font-bold text-black">West Beach</div>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
-                <div className="w-14 h-14 rounded-full bg-black flex items-center justify-center shrink-0">
-                  <Bed className="w-7 h-7 text-white" />
+              <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm">
+                <div className="w-12 h-12 rounded-full bg-black flex items-center justify-center shrink-0">
+                  <Bed className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <div className="text-sm text-gray-700 font-semibold">Bedroom</div>
-                  <div className="text-2xl font-bold text-black">2</div>
+                  <div className="text-sm text-gray-500 font-medium">Bedrooms</div>
+                  <div className="text-lg font-bold text-black">{property.bedrooms}</div>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
-                <div className="w-14 h-14 rounded-full bg-black flex items-center justify-center shrink-0">
-                  <Bath className="w-7 h-7 text-white" />
+              <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm">
+                <div className="w-12 h-12 rounded-full bg-black flex items-center justify-center shrink-0">
+                  <Bath className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <div className="text-sm text-gray-700 font-semibold">Bathroom</div>
-                  <div className="text-2xl font-bold text-black">1</div>
+                  <div className="text-sm text-gray-500 font-medium">Bathrooms</div>
+                  <div className="text-lg font-bold text-black">{property.bathrooms}</div>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
-                <div className="w-14 h-14 rounded-full bg-black flex items-center justify-center shrink-0">
-                  <Square className="w-7 h-7 text-white" />
+              <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm">
+                <div className="w-12 h-12 rounded-full bg-black flex items-center justify-center shrink-0">
+                  <Square className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <div className="text-sm text-gray-700 font-semibold">Land Size</div>
-                  <div className="text-xl font-bold text-black whitespace-nowrap">40 m²</div>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-3 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
-                <div className="w-14 h-14 rounded-full bg-black flex items-center justify-center shrink-0">
-                  <div className="text-sm font-bold text-white">ADR</div>
-                </div>
-                <div>
-                  <div className="text-sm text-gray-700 font-semibold">ADR</div>
-                  <div className="text-2xl font-bold text-black">$240</div>
+                  <div className="text-sm text-gray-500 font-medium">Land Size</div>
+                  <div className="text-lg font-bold text-black">{property.sqft} sqm</div>
                 </div>
               </div>
             </div>
@@ -132,19 +122,19 @@ export function WestBeachTransformationView({ property }: WestBeachTransformatio
           <div className="max-w-5xl mx-auto px-6 md:px-12">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="text-4xl font-bold text-black mb-2">2</div>
+                <div className="text-4xl font-bold text-black mb-2">{property.bedrooms}</div>
                 <div className="text-gray-600">Bedrooms</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-black mb-2">1</div>
+                <div className="text-4xl font-bold text-black mb-2">{property.bathrooms}</div>
                 <div className="text-gray-600">Bathrooms</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-black mb-2">40</div>
-                <div className="text-gray-600">m²</div>
+                <div className="text-4xl font-bold text-black mb-2">{property.sqft}</div>
+                <div className="text-gray-600">sqm</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-black mb-2">$240</div>
+                <div className="text-4xl font-bold text-black mb-2">$250</div>
                 <div className="text-gray-600">ADR/Night</div>
               </div>
             </div>
@@ -161,19 +151,9 @@ export function WestBeachTransformationView({ property }: WestBeachTransformatio
         <section className="py-28 md:py-40 bg-gray-50">
           <div className="max-w-4xl mx-auto px-6 md:px-12">
             <div className="mb-12">
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-black mb-4">The Story</h2>
+              <h2 className="text-5xl md:text-6xl font-bold text-black mb-4">The Story</h2>
             </div>
-            <p className="text-xl md:text-2xl text-gray-800 leading-relaxed text-pretty font-normal">
-              This client was the very first homeowner to reach out to us through our website. He had just finished
-              renovating a beautiful property only a minute from the beach and wanted to turn it into something more
-              than a standard rental. After our initial consultation, we introduced him to Luxe's full-service Airbnb
-              transformation. We implemented our latest bedding system, prepared a premium care package, and completed a
-              full styling and setup tailored for high–occupancy coastal stays. Within days, the home was completely
-              guest-ready. The result? The property quickly became one of our top-performing Airbnbs in West Beach,
-              consistently achieving high occupancy, excellent guest reviews, and returns far beyond what a regular
-              rental could offer. What began as a simple enquiry became a long-term partnership—and a standout success
-              story for Luxe.
-            </p>
+            <p className="text-xl md:text-2xl text-gray-700 leading-relaxed text-pretty">{property.description}</p>
           </div>
         </section>
 
@@ -299,48 +279,89 @@ export function WestBeachTransformationView({ property }: WestBeachTransformatio
           <div className="max-w-6xl mx-auto px-6 md:px-12">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Revenue Performance</h2>
-              <p className="text-xl text-gray-800 font-medium">
-                Traditional renting vs. Working with Luxe Airbnb management
-              </p>
+              <p className="text-xl text-gray-600">Traditional renting vs. Working with Luxe Airbnb management</p>
             </div>
 
-            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl">
-              {/* Monthly Revenue Indicators */}
-              <div className="flex flex-wrap justify-center gap-6 mb-8">
-                <div className="flex items-center gap-3 px-6 py-3 bg-red-50 rounded-full border border-red-200">
-                  <div className="w-4 h-4 bg-red-500 rounded-full" />
-                  <span className="text-gray-900 font-semibold">Traditional Rent: $2,300/month</span>
+            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl border border-gray-100">
+              <ChartContainer
+                config={{
+                  revenue: {
+                    label: "Monthly Revenue",
+                    color: "#10b981",
+                  },
+                }}
+                className="h-[350px] md:h-[500px]"
+              >
+                <div className="w-full h-full overflow-hidden">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <LineChart data={monthlyRevenueData} margin={{ left: 10, right: 20, bottom: 60, top: 20 }}>
+                      <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" opacity={0.5} />
+                      <XAxis
+                        dataKey="month"
+                        tick={{ fill: "#6b7280", fontSize: 11 }}
+                        tickLine={false}
+                        angle={-45}
+                        textAnchor="end"
+                        height={80}
+                        interval={0}
+                      />
+                      <YAxis
+                        width={50}
+                        tick={{ fill: "#6b7280", fontSize: 11 }}
+                        tickLine={false}
+                        axisLine={false}
+                        tickFormatter={(value) => `$${(value / 1000).toFixed(1)}k`}
+                      />
+                      <ChartTooltip content={<ChartTooltipContent />} cursor={{ stroke: "#d1d5db", strokeWidth: 1 }} />
+                      <Line
+                        type="monotone"
+                        dataKey="traditional"
+                        stroke="#ef4444"
+                        strokeWidth={3}
+                        name="Traditional Rent"
+                        dot={{ fill: "#ef4444", r: 4 }}
+                        activeDot={{ r: 6 }}
+                      />
+                      <Line
+                        type="monotone"
+                        dataKey="luxe"
+                        stroke="#10b981"
+                        strokeWidth={3}
+                        name="Luxe Airbnb"
+                        dot={{ fill: "#10b981", r: 4 }}
+                        activeDot={{ r: 6 }}
+                      />
+                    </LineChart>
+                  </ResponsiveContainer>
                 </div>
-                <div className="flex items-center gap-3 px-6 py-3 bg-green-50 rounded-full border border-green-200">
-                  <div className="w-4 h-4 bg-green-500 rounded-full" />
-                  <span className="text-gray-900 font-semibold">Luxe Airbnb: $5,333/month avg</span>
+              </ChartContainer>
+
+              <div className="mt-10 flex flex-wrap justify-center gap-6">
+                <div className="flex items-center gap-3 px-4 py-2 bg-red-50 rounded-full">
+                  <div className="w-3 h-3 rounded-full bg-red-500" />
+                  <span className="text-sm font-medium text-gray-700">Traditional Rent: $2,300/month</span>
+                </div>
+                <div className="flex items-center gap-3 px-4 py-2 bg-green-50 rounded-full">
+                  <div className="w-3 h-3 rounded-full bg-green-500" />
+                  <span className="text-sm font-medium text-gray-700">Luxe Airbnb: $5,333/month avg</span>
                 </div>
               </div>
 
-              {/* Annual Revenue Boxes */}
-              <div className="grid md:grid-cols-2 gap-6 mb-6">
-                {/* Traditional Annual Revenue */}
-                <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-3xl p-8 md:p-12 border-2 border-red-200 shadow-lg">
-                  <div className="text-5xl md:text-6xl font-bold text-red-600 mb-3">$27,600</div>
-                  <div className="text-lg md:text-xl text-gray-800 font-semibold">Traditional Annual Revenue</div>
+              <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="text-center p-8 bg-gradient-to-br from-red-50 to-red-100 rounded-2xl border border-red-200">
+                  <div className="text-5xl font-bold text-red-600 mb-2">$27,600</div>
+                  <div className="text-gray-700 font-medium">Traditional Annual Revenue</div>
                 </div>
-
-                {/* Luxe Annual Revenue */}
-                <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-3xl p-8 md:p-12 border-2 border-green-200 shadow-lg">
-                  <div className="text-5xl md:text-6xl font-bold text-green-600 mb-3">$64,000</div>
-                  <div className="text-lg md:text-xl text-gray-800 font-semibold">Luxe Annual Revenue</div>
+                <div className="text-center p-8 bg-gradient-to-br from-green-50 to-green-100 rounded-2xl border border-green-200">
+                  <div className="text-5xl font-bold text-green-600 mb-2">$64,000</div>
+                  <div className="text-gray-700 font-medium">Luxe Annual Revenue</div>
                 </div>
               </div>
 
-              {/* Extra Revenue Banner */}
-              <div className="bg-gradient-to-r from-green-500 to-emerald-500 rounded-3xl p-8 md:p-12 text-white shadow-2xl">
-                <div className="text-5xl md:text-6xl lg:text-7xl font-bold mb-3 drop-shadow-lg">+$36,400</div>
-                <div className="text-xl md:text-2xl font-semibold mb-2 drop-shadow">
-                  Extra revenue per year with Luxe
-                </div>
-                <div className="text-lg md:text-xl font-medium opacity-95 drop-shadow">
-                  277% increase in annual income
-                </div>
+              <div className="mt-8 text-center p-8 bg-gradient-to-r from-green-500 via-emerald-500 to-green-600 rounded-2xl shadow-xl">
+                <p className="text-4xl md:text-5xl font-bold text-white mb-2">+$36,400</p>
+                <p className="text-xl text-white/95 font-medium">Extra revenue per year with Luxe</p>
+                <p className="text-white/80 mt-3 text-lg">277% increase in annual income</p>
               </div>
             </div>
           </div>
@@ -358,57 +379,23 @@ export function WestBeachTransformationView({ property }: WestBeachTransformatio
           </div>
         </section>
 
-        {/* Your Turn CTA Section */}
-        <section className="py-28 md:py-40 bg-gradient-to-br from-gray-900 via-black to-gray-900">
-          <div className="max-w-5xl mx-auto px-6 md:px-12 text-center">
-            <div className="mb-6">
-              <span className="text-sm font-bold text-white/70 uppercase tracking-wider">Your Turn</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 text-balance leading-tight">
-              Every Day Without Luxe Is Revenue Lost
-            </h2>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-4 text-balance max-w-3xl mx-auto">
-              This property owner took action. Now they're earning{" "}
-              <span className="text-green-400 font-bold">277% more</span>.
-            </p>
-            <p className="text-2xl md:text-3xl text-white font-semibold mb-12 text-balance">
-              What's your property capable of?
-            </p>
-
-            <div className="mt-12">
-              <button className="px-12 md:px-16 py-6 md:py-7 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xl md:text-2xl font-bold rounded-full hover:from-green-600 hover:to-emerald-600 hover:scale-105 transition-all duration-300 shadow-2xl">
-                Book a Consultation Now
-              </button>
-              <p className="text-white/70 mt-6 text-lg">
-                No obligation. Just expert insights into your property's potential.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Final CTA */}
         <section className="py-32 md:py-48 bg-gradient-to-br from-black via-gray-900 to-black text-white">
           <div className="max-w-5xl mx-auto px-6 md:px-12 text-center">
             <div className="mb-8">
-              <span className="text-sm font-semibold text-white/60 uppercase tracking-wider">
-                Stop Leaving Money on the Table
-              </span>
+              <span className="text-sm font-semibold text-white/50 uppercase tracking-wider">Your Turn</span>
             </div>
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 text-balance leading-tight [text-shadow:_0_4px_16px_rgb(0_0_0_/_60%)]">
-              Your Property Deserves the Luxe Treatment
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 text-balance leading-tight">
+              Every Day Without Luxe Is Revenue Lost
             </h2>
-            <p className="text-2xl md:text-3xl text-white/85 leading-relaxed mb-12 text-balance max-w-3xl mx-auto [text-shadow:_0_2px_8px_rgb(0_0_0_/_40%)]">
-              From purchase guidance to complete transformation and ongoing management—this is what we do. And we'd love
-              to show you what's possible with your property.
+            <p className="text-2xl md:text-3xl text-white/80 leading-relaxed mb-12 text-balance max-w-3xl mx-auto">
+              This property owner took action. Now they&#39;re earning 277% more. What&#39;s your property capable of?
             </p>
 
             <div className="mt-16">
-              <button className="px-12 md:px-16 py-6 md:py-7 bg-white text-black text-xl md:text-2xl font-bold rounded-full hover:bg-gray-100 hover:scale-105 transition-all duration-300 shadow-2xl">
-                Book Your Free Consultation
+              <button className="px-10 py-5 bg-white text-black text-lg font-bold rounded-full hover:bg-green-500 hover:text-white transition-all duration-300 shadow-2xl">
+                Book a Consultation Now
               </button>
-              <p className="text-white/70 mt-6 text-lg [text-shadow:_0_2px_8px_rgb(0_0_0_/_40%)]">
-                Let's unlock your property's true potential together.
-              </p>
+              <p className="text-white/60 mt-6">No obligation. Just expert insights into your property's potential.</p>
             </div>
           </div>
         </section>
