@@ -58,6 +58,7 @@ import houseSixImg9 from "@/public/images/dalts/houseSix/WEB/9.jpg"
 import stGallery1 from "@/public/images/stgallery1.jpg"
 
 import glenelgLead from "@/public/images/glenelg_lead.jpeg"
+import westLivingNew from "@/public/images/westlivingnew.jpg"
 
 export interface Property {
   slug: string
@@ -181,10 +182,10 @@ export const properties: Property[] = [
     beds: 2,
     baths: 1,
     status: "active",
-    img: houseTwoImg10,
+    img: westLivingNew as StaticImageData,
     subheading: "Steps from the shoreline in beautiful West Beach",
     location: "West Beach",
-    mainImage: "/images/west-beach-main.jpeg",
+    mainImage: "/images/westlivingnew.jpg",
     transformationStory: {
       results: {
         occupancyRate: 91,

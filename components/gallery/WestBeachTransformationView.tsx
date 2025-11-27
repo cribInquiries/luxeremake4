@@ -74,43 +74,43 @@ export function WestBeachTransformationView({ property }: WestBeachTransformatio
         <section className="py-16 bg-gray-50 border-b border-gray-200">
           <div className="max-w-4xl mx-auto px-6 md:px-12">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm">
-                <div className="w-12 h-12 rounded-full bg-black flex items-center justify-center shrink-0">
+              <div className="flex items-center gap-3 p-4 bg-blue-50 rounded-xl shadow-sm border-2 border-blue-200">
+                <div className="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center shrink-0">
                   <MapPin className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <div className="text-sm text-gray-500 font-medium">Location</div>
-                  <div className="text-lg font-bold text-black">West Beach</div>
+                  <div className="text-sm text-gray-600 font-medium">Location</div>
+                  <div className="text-lg font-bold text-gray-900">West Beach</div>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm">
-                <div className="w-12 h-12 rounded-full bg-black flex items-center justify-center shrink-0">
+              <div className="flex items-center gap-3 p-4 bg-emerald-50 rounded-xl shadow-sm border-2 border-emerald-200">
+                <div className="w-12 h-12 rounded-full bg-emerald-600 flex items-center justify-center shrink-0">
                   <Bed className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <div className="text-sm text-gray-500 font-medium">Bedrooms</div>
-                  <div className="text-lg font-bold text-black">{property.bedrooms}</div>
+                  <div className="text-sm text-gray-600 font-medium">Bedrooms</div>
+                  <div className="text-lg font-bold text-gray-900">{property.bedrooms}</div>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm">
-                <div className="w-12 h-12 rounded-full bg-black flex items-center justify-center shrink-0">
+              <div className="flex items-center gap-3 p-4 bg-purple-50 rounded-xl shadow-sm border-2 border-purple-200">
+                <div className="w-12 h-12 rounded-full bg-purple-600 flex items-center justify-center shrink-0">
                   <Bath className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <div className="text-sm text-gray-500 font-medium">Bathrooms</div>
-                  <div className="text-lg font-bold text-black">{property.bathrooms}</div>
+                  <div className="text-sm text-gray-600 font-medium">Bathrooms</div>
+                  <div className="text-lg font-bold text-gray-900">{property.bathrooms}</div>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm">
-                <div className="w-12 h-12 rounded-full bg-black flex items-center justify-center shrink-0">
+              <div className="flex items-center gap-3 p-4 bg-amber-50 rounded-xl shadow-sm border-2 border-amber-200">
+                <div className="w-12 h-12 rounded-full bg-amber-600 flex items-center justify-center shrink-0">
                   <Square className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <div className="text-sm text-gray-500 font-medium">Land Size</div>
-                  <div className="text-lg font-bold text-black">{property.sqft} sqm</div>
+                  <div className="text-sm text-gray-600 font-medium">Land Size</div>
+                  <div className="text-lg font-bold text-gray-900">{property.sqft} sqm</div>
                 </div>
               </div>
             </div>
