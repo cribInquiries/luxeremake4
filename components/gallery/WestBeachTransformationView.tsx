@@ -4,8 +4,6 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowLeft, MapPin, Bed, Bath, Square } from "lucide-react"
 import type { Property } from "@/lib/properties"
-import { Line, LineChart, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from "recharts"
-import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart"
 
 interface WestBeachTransformationViewProps {
   property: Property
@@ -306,82 +304,42 @@ export function WestBeachTransformationView({ property }: WestBeachTransformatio
               </p>
             </div>
 
-            <div className="bg-gray-50 rounded-3xl p-8 md:p-12 shadow-lg">
-              <ChartContainer
-                config={{
-                  traditional: {
-                    label: "Traditional Rent",
-                    color: "#ef4444",
-                  },
-                  luxe: {
-                    label: "Luxe Airbnb",
-                    color: "#10b981",
-                  },
-                }}
-                className="h-[550px]"
-              >
-                <ResponsiveContainer width="100%" height="100%">
-                  <LineChart data={monthlyRevenueData} margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>
-                    <CartesianGrid strokeDasharray="3 3" stroke="#d1d5db" />
-                    <XAxis
-                      type="number"
-                      dataKey="month"
-                      tick={{ fill: "#1f2937", fontSize: 15, fontWeight: 600 }}
-                      tickLine={false}
-                      label={{
-                        value: "Months",
-                        position: "insideBottom",
-                        offset: -10,
-                        fill: "#1f2937",
-                        fontSize: 16,
-                        fontWeight: 600,
-                      }}
-                    />
-                    <YAxis
-                      tick={{ fill: "#1f2937", fontSize: 15, fontWeight: 600 }}
-                      tickLine={false}
-                      axisLine={false}
-                      tickFormatter={(value) => `$${(value / 1000).toFixed(1)}k`}
-                    />
-                    <ChartTooltip content={<ChartTooltipContent />} cursor={{ stroke: "#9ca3af", strokeWidth: 2 }} />
-                    <Line
-                      type="monotone"
-                      dataKey="traditional"
-                      stroke="#ef4444"
-                      strokeWidth={4}
-                      name="Traditional Rent"
-                      dot={{ fill: "#ef4444", r: 5 }}
-                      activeDot={{ r: 7 }}
-                    />
-                    <Line
-                      type="monotone"
-                      dataKey="luxe"
-                      stroke="#10b981"
-                      strokeWidth={4}
-                      name="Luxe Airbnb"
-                      dot={{ fill: "#10b981", r: 5 }}
-                      activeDot={{ r: 7 }}
-                    />
-                  </LineChart>
-                </ResponsiveContainer>
-              </ChartContainer>
-
-              <div className="mt-12 flex justify-center gap-8 text-base">
-                <div className="flex items-center gap-3">
-                  <div className="w-6 h-6 bg-red-500 rounded" />
-                  <span className="text-gray-900 font-semibold text-lg">Traditional Rent: $1,950/month</span>
+            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl">
+              {/* Monthly Revenue Indicators */}
+              <div className="flex flex-wrap justify-center gap-6 mb-8">
+                <div className="flex items-center gap-3 px-6 py-3 bg-red-50 rounded-full border border-red-200">
+                  <div className="w-4 h-4 bg-red-500 rounded-full" />
+                  <span className="text-gray-900 font-semibold">Traditional Rent: $2,300/month</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-6 h-6 bg-green-500 rounded" />
-                  <span className="text-gray-900 font-semibold text-lg">Luxe Airbnb: Average $5,333/month</span>
+                <div className="flex items-center gap-3 px-6 py-3 bg-green-50 rounded-full border border-green-200">
+                  <div className="w-4 h-4 bg-green-500 rounded-full" />
+                  <span className="text-gray-900 font-semibold">Luxe Airbnb: $5,333/month avg</span>
                 </div>
               </div>
 
-              <div className="mt-8 text-center">
-                <div className="inline-block px-10 py-5 bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl border-2 border-green-200">
-                  <div className="text-4xl font-bold text-green-600 mb-2">+$40,600</div>
-                  <div className="text-gray-800 font-semibold text-lg">Additional Annual Revenue</div>
-                  <div className="text-gray-600 mt-1">173% increase with Luxe Management</div>
+              {/* Annual Revenue Boxes */}
+              <div className="grid md:grid-cols-2 gap-6 mb-6">
+                {/* Traditional Annual Revenue */}
+                <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-3xl p-8 md:p-12 border-2 border-red-200 shadow-lg">
+                  <div className="text-5xl md:text-6xl font-bold text-red-600 mb-3">$27,600</div>
+                  <div className="text-lg md:text-xl text-gray-800 font-semibold">Traditional Annual Revenue</div>
+                </div>
+
+                {/* Luxe Annual Revenue */}
+                <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-3xl p-8 md:p-12 border-2 border-green-200 shadow-lg">
+                  <div className="text-5xl md:text-6xl font-bold text-green-600 mb-3">$64,000</div>
+                  <div className="text-lg md:text-xl text-gray-800 font-semibold">Luxe Annual Revenue</div>
+                </div>
+              </div>
+
+              {/* Extra Revenue Banner */}
+              <div className="bg-gradient-to-r from-green-500 to-emerald-500 rounded-3xl p-8 md:p-12 text-white shadow-2xl">
+                <div className="text-5xl md:text-6xl lg:text-7xl font-bold mb-3 drop-shadow-lg">+$36,400</div>
+                <div className="text-xl md:text-2xl font-semibold mb-2 drop-shadow">
+                  Extra revenue per year with Luxe
+                </div>
+                <div className="text-lg md:text-xl font-medium opacity-95 drop-shadow">
+                  277% increase in annual income
                 </div>
               </div>
             </div>
@@ -397,6 +355,34 @@ export function WestBeachTransformationView({ property }: WestBeachTransformatio
             <p className="text-xl md:text-2xl text-gray-700 leading-relaxed text-pretty">
               Discover how our transformation services enhance your property&#39;s guest experience.
             </p>
+          </div>
+        </section>
+
+        {/* Your Turn CTA Section */}
+        <section className="py-28 md:py-40 bg-gradient-to-br from-gray-900 via-black to-gray-900">
+          <div className="max-w-5xl mx-auto px-6 md:px-12 text-center">
+            <div className="mb-6">
+              <span className="text-sm font-bold text-white/70 uppercase tracking-wider">Your Turn</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 text-balance leading-tight">
+              Every Day Without Luxe Is Revenue Lost
+            </h2>
+            <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-4 text-balance max-w-3xl mx-auto">
+              This property owner took action. Now they're earning{" "}
+              <span className="text-green-400 font-bold">277% more</span>.
+            </p>
+            <p className="text-2xl md:text-3xl text-white font-semibold mb-12 text-balance">
+              What's your property capable of?
+            </p>
+
+            <div className="mt-12">
+              <button className="px-12 md:px-16 py-6 md:py-7 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xl md:text-2xl font-bold rounded-full hover:from-green-600 hover:to-emerald-600 hover:scale-105 transition-all duration-300 shadow-2xl">
+                Book a Consultation Now
+              </button>
+              <p className="text-white/70 mt-6 text-lg">
+                No obligation. Just expert insights into your property's potential.
+              </p>
+            </div>
           </div>
         </section>
 
