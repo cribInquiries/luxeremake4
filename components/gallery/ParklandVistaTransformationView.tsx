@@ -214,7 +214,7 @@ export function ParklandVistaTransformationView() {
           </div>
 
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-4 md:p-8 mb-8">
-            <h3 className="text-2xl font-bold text-white mb-6">Weekly Income - Before & After STR</h3>
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">Weekly Income - Before & After STR</h3>
             <div className="w-full overflow-hidden">
               <ChartContainer
                 config={{
@@ -230,16 +230,25 @@ export function ParklandVistaTransformationView() {
                     <CartesianGrid strokeDasharray="3 3" stroke="#333" />
                     <XAxis
                       dataKey="period"
-                      tick={{ fill: "#fff", fontSize: 13 }}
+                      tick={{ fill: "#fff", fontSize: 16, fontWeight: 600 }}
                       tickLine={false}
                       angle={-45}
                       textAnchor="end"
                       height={70}
                       interval={0}
                     />
-                    <YAxis tick={{ fill: "#fff", fontSize: 13 }} tickLine={false} axisLine={false} width={40} />
-                    <ChartTooltip content={<ChartTooltipContent />} cursor={{ fill: "rgba(255,255,255,0.05)" }} />
-                    <Bar dataKey="income" radius={[8, 8, 0, 0]} maxBarSize={100}>
+                    <YAxis
+                      tick={{ fill: "#fff", fontSize: 16, fontWeight: 600 }}
+                      tickLine={false}
+                      axisLine={false}
+                      width={60}
+                    />
+                    <ChartTooltip
+                      content={<ChartTooltipContent />}
+                      cursor={{ fill: "rgba(0,0,0,0.3)" }}
+                      formatter={(value: number) => [`$${value.toLocaleString()}`, "Weekly Income"]}
+                    />
+                    <Bar dataKey="income" radius={[8, 8, 0, 0]} maxBarSize={120}>
                       {incomeData.map((entry, index) => (
                         <Cell key={`cell-${index}`} fill={entry.fill} />
                       ))}
@@ -248,14 +257,14 @@ export function ParklandVistaTransformationView() {
                 </ResponsiveContainer>
               </ChartContainer>
             </div>
-            <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="flex items-center gap-2">
-                <div className="w-4 h-4 rounded-full bg-[#ef4444]" />
-                <span className="text-base text-white/80 font-medium">Before Luxe: $750/week</span>
+            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="flex items-center gap-3">
+                <div className="w-5 h-5 rounded-full bg-[#ef4444]" />
+                <span className="text-lg md:text-xl text-white font-semibold">Before Luxe: $750/week</span>
               </div>
-              <div className="flex items-center gap-2">
-                <div className="w-4 h-4 rounded-full bg-[#10b981]" />
-                <span className="text-base text-white/80 font-medium">After Luxe: $1,400/week</span>
+              <div className="flex items-center gap-3">
+                <div className="w-5 h-5 rounded-full bg-[#10b981]" />
+                <span className="text-lg md:text-xl text-white font-semibold">After Luxe: $1,400/week</span>
               </div>
             </div>
           </div>

@@ -492,17 +492,35 @@ export function GlenelgTransformationView({ property }: GlenelgTransformationVie
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 max-w-4xl mx-auto">
-              <div className="p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
-                <div className="text-4xl font-bold text-red-400 mb-2">$13,560</div>
-                <div className="text-white/90 font-medium">Annual revenue you could be missing</div>
+              <div
+                className="p-6 rounded-xl border-4 shadow-lg"
+                style={{
+                  backgroundColor: "rgba(239, 68, 68, 0.2)",
+                  borderColor: "#ef4444",
+                }}
+              >
+                <div className="text-4xl font-bold text-red-600 mb-2">$13,560</div>
+                <div className="text-gray-900 font-medium">Annual revenue you could be missing</div>
               </div>
-              <div className="p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
-                <div className="text-4xl font-bold text-yellow-400 mb-2">$63k+</div>
-                <div className="text-white/90 font-medium">Potential equity growth</div>
+              <div
+                className="p-6 rounded-xl border-4 shadow-lg"
+                style={{
+                  backgroundColor: "rgba(251, 191, 36, 0.2)",
+                  borderColor: "#f59e0b",
+                }}
+              >
+                <div className="text-4xl font-bold text-amber-600 mb-2">$63k+</div>
+                <div className="text-gray-900 font-medium">Potential equity growth</div>
               </div>
-              <div className="p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
-                <div className="text-4xl font-bold text-green-400 mb-2">88%+</div>
-                <div className="text-white/90 font-medium">Occupancy rate achievable</div>
+              <div
+                className="p-6 rounded-xl border-4 shadow-lg"
+                style={{
+                  backgroundColor: "rgba(34, 197, 94, 0.2)",
+                  borderColor: "#22c55e",
+                }}
+              >
+                <div className="text-4xl font-bold text-green-600 mb-2">88%+</div>
+                <div className="text-gray-900 font-medium">Occupancy rate achievable</div>
               </div>
             </div>
 
