@@ -427,6 +427,89 @@ export default function PricingClient() {
         </div>
       </section>
 
+      {/* Fixed Pricing Section */}
+      <section className="bg-black px-4 py-20 text-white sm:px-6 sm:py-32" aria-labelledby="fixed-pricing-section">
+        <div className="mx-auto max-w-5xl">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <h2
+              id="fixed-pricing-section"
+              className="mb-6 text-4xl font-semibold tracking-tight sm:mb-8 sm:text-5xl md:text-6xl lg:text-7xl"
+            >
+              Fixed Pricing Available
+            </h2>
+            <p className="mx-auto mb-8 max-w-3xl text-lg text-gray-400 sm:mb-12 sm:text-xl md:text-2xl">
+              Prefer predictable monthly costs? We offer customized fixed-rate management packages tailored to your
+              property and investment goals.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mx-auto grid max-w-4xl gap-6 sm:grid-cols-3 sm:gap-8"
+          >
+            {[
+              {
+                title: "Consultation",
+                description: "Discuss your property goals and requirements",
+              },
+              {
+                title: "Custom Quote",
+                description: "Receive a tailored fixed-rate proposal",
+              },
+              {
+                title: "Lock It In",
+                description: "Predictable monthly costs, same premium service",
+              },
+            ].map((step, i) => (
+              <motion.div
+                key={step.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.6, delay: i * 0.15 }}
+                className="rounded-2xl bg-white/5 p-6 text-center backdrop-blur-sm sm:rounded-3xl sm:p-8"
+              >
+                <div className="mb-4 flex items-center justify-center">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-xl font-bold text-black sm:h-16 sm:w-16 sm:text-2xl">
+                    {i + 1}
+                  </div>
+                </div>
+                <h3 className="mb-3 text-xl font-semibold sm:text-2xl">{step.title}</h3>
+                <p className="text-sm text-gray-400 sm:text-base">{step.description}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="mt-12 text-center sm:mt-16"
+          >
+            <motion.a
+              href="/contact"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-base font-medium text-black transition-all hover:bg-gray-100 sm:px-8 sm:py-4 sm:text-lg"
+              aria-label="Book a consultation for fixed pricing"
+            >
+              Book a consultation
+              <ArrowRight size={20} aria-hidden="true" />
+            </motion.a>
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section
         className="flex min-h-[60vh] flex-col items-center justify-center px-4 py-20 text-center sm:min-h-[70vh] sm:px-6 sm:py-32"
