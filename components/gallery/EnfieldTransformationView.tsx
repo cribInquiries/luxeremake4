@@ -132,19 +132,19 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
       <section className="py-16 bg-white border-b border-gray-200">
         <div className="max-w-5xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-            <div className="text-center">
+            <div className="text-center p-6 bg-gray-50 rounded-2xl border-4 border-gray-300 shadow-md">
               <div className="text-4xl md:text-5xl font-bold text-black mb-2">{property.beds}</div>
               <div className="text-gray-700 font-medium">Bedrooms</div>
             </div>
-            <div className="text-center">
+            <div className="text-center p-6 bg-gray-50 rounded-2xl border-4 border-gray-300 shadow-md">
               <div className="text-4xl md:text-5xl font-bold text-black mb-2">{property.baths}</div>
               <div className="text-gray-700 font-medium">Bathrooms</div>
             </div>
-            <div className="text-center">
+            <div className="text-center p-6 bg-gray-50 rounded-2xl border-4 border-gray-300 shadow-md">
               <div className="text-4xl md:text-5xl font-bold text-black mb-2">$2,000</div>
               <div className="text-gray-700 font-medium">Peak Week</div>
             </div>
-            <div className="text-center">
+            <div className="text-center p-6 bg-gray-50 rounded-2xl border-4 border-gray-300 shadow-md">
               <div className="text-4xl md:text-5xl font-bold text-black mb-2">92%</div>
               <div className="text-gray-700 font-medium">Occupancy</div>
             </div>
@@ -570,7 +570,7 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
             <p className="text-2xl md:text-3xl text-black font-medium leading-relaxed">
               This home didn't just teach us how to manage properties.
             </p>
-            <p className="text-2xl md:text-3xl font-bold text-cyan-500 leading-relaxed">
+            <p className="text-2xl md:text-4xl font-bold text-cyan-500 leading-relaxed">
               It taught us how to build excellence from constraints.
             </p>
           </div>
