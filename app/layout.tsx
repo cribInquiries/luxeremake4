@@ -1,3 +1,4 @@
+import "./globals.css"
 import type { ReactNode } from "react"
 import dynamic from "next/dynamic"
 import type { Metadata } from "next"
@@ -6,7 +7,6 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import LuxeAiAssistance from "@/components/luxeComponents/LuxeAiAssistance"
 import Loading from "./loading"
 import { StructuredData } from "@/components/seo/StructuredData"
-import { Suspense } from "react"
 
 import { Inter } from "next/font/google"
 const inter = Inter({
@@ -146,16 +146,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Analytics />
         <SpeedInsights />
 
-        
-          <ClientProviderWithFallback>
-            <LuxeAiAssistance />
-            {children}
-          </ClientProviderWithFallback>
-      
+        <ClientProviderWithFallback>
+          <LuxeAiAssistance />
+          {children}
+        </ClientProviderWithFallback>
       </body>
     </html>
   )
 }
-
-
-import './globals.css'
