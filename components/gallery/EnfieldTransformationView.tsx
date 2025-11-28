@@ -525,7 +525,13 @@ export function EnfieldTransformationView({ property }: EnfieldTransformationVie
             External cleaners quoted $400+ per stay. Making the operation unsustainable.
           </p>
 
-          <div className="bg-gradient-to-br from-green-600 to-emerald-600 rounded-3xl p-10 md:p-12 mb-12 shadow-2xl">
+          <div
+            className="rounded-3xl p-10 md:p-12 mb-12 shadow-2xl border-4"
+            style={{
+              background: "linear-gradient(to bottom right, #10b981, #059669)",
+              borderColor: "#059669",
+            }}
+          >
             <p className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
               So we made a decision that changed Luxe forever:
             </p>

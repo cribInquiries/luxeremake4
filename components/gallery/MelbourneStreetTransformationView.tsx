@@ -151,7 +151,7 @@ export function MelbourneStreetTransformationView({ property }: MelbourneStreetT
         <section className="py-20 bg-gray-50 border-b border-gray-200">
           <div className="max-w-4xl mx-auto px-6 md:px-12">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-              <div className="flex items-center gap-3 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div className="flex items-center gap-3 p-6 bg-gray-50 rounded-xl border-4 border-gray-300 shadow-md hover:shadow-lg transition-shadow duration-300">
                 <div className="w-14 h-14 rounded-full bg-black flex items-center justify-center shrink-0">
                   <span className="text-white font-bold text-lg">$</span>
                 </div>
@@ -161,7 +161,7 @@ export function MelbourneStreetTransformationView({ property }: MelbourneStreetT
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div className="flex items-center gap-3 p-6 bg-gray-50 rounded-xl border-4 border-gray-300 shadow-md hover:shadow-lg transition-shadow duration-300">
                 <div className="w-14 h-14 rounded-full bg-black flex items-center justify-center shrink-0">
                   <Bed className="w-7 h-7 text-white" />
                 </div>
@@ -171,7 +171,7 @@ export function MelbourneStreetTransformationView({ property }: MelbourneStreetT
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div className="flex items-center gap-3 p-6 bg-gray-50 rounded-xl border-4 border-gray-300 shadow-md hover:shadow-lg transition-shadow duration-300">
                 <div className="w-14 h-14 rounded-full bg-black flex items-center justify-center shrink-0">
                   <Bath className="w-7 h-7 text-white" />
                 </div>
@@ -181,7 +181,7 @@ export function MelbourneStreetTransformationView({ property }: MelbourneStreetT
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div className="flex items-center gap-3 p-6 bg-gray-50 rounded-xl border-4 border-gray-300 shadow-md hover:shadow-lg transition-shadow duration-300">
                 <div className="w-14 h-14 rounded-full bg-black flex items-center justify-center shrink-0">
                   <Square className="w-7 h-7 text-white" />
                 </div>
@@ -361,17 +361,39 @@ export function MelbourneStreetTransformationView({ property }: MelbourneStreetT
               </div>
 
               <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="text-center p-6 bg-red-50 rounded-xl">
-                  <div className="text-4xl font-bold text-red-600 mb-2">$23,400</div>
+                <div
+                  className="text-center p-6 rounded-xl border-4"
+                  style={{
+                    backgroundColor: "rgba(254, 226, 226, 0.8)",
+                    borderColor: "#ef4444",
+                  }}
+                >
+                  <div className="text-4xl font-bold mb-2" style={{ color: "#dc2626" }}>
+                    $23,400
+                  </div>
                   <div className="text-gray-800 font-semibold">Traditional Annual Revenue</div>
                 </div>
-                <div className="text-center p-6 bg-green-50 rounded-xl">
-                  <div className="text-4xl font-bold text-green-600 mb-2">$36,000</div>
+                <div
+                  className="text-center p-6 rounded-xl border-4"
+                  style={{
+                    backgroundColor: "rgba(209, 250, 229, 0.8)",
+                    borderColor: "#10b981",
+                  }}
+                >
+                  <div className="text-4xl font-bold mb-2" style={{ color: "#059669" }}>
+                    $36,000
+                  </div>
                   <div className="text-gray-800 font-semibold">Luxe Annual Revenue</div>
                 </div>
               </div>
 
-              <div className="mt-6 text-center p-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl">
+              <div
+                className="mt-6 text-center p-6 rounded-xl shadow-xl"
+                style={{
+                  background: "linear-gradient(to right, #10b981, #059669)",
+                  border: "4px solid #059669",
+                }}
+              >
                 <p className="text-3xl font-bold text-white">+$12,600 extra per year</p>
                 <p className="text-white/90 mt-2">54% revenue increase with Luxe</p>
               </div>
