@@ -1,5 +1,3 @@
-/* eslint-disable import/no-unused-modules */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { type NextRequest, NextResponse } from "next/server"
 import { GoogleGenerativeAI } from "@google/generative-ai"
 
@@ -145,8 +143,9 @@ Now answer the following user query in the voice of Luxe Managements:
     const text = await response.text()
 
     return NextResponse.json({ text })
-  } catch (error: any) {
-    console.error("BACKEND ERROR:", error.message)
-    return NextResponse.json({ error: "Failed to generate content.", details: error.message }, { status: 500 })
+  } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : "Unknown error occurred"
+    console.error("BACKEND ERROR:", errorMessage)
+    return NextResponse.json({ error: "Failed to generate content.", details: errorMessage }, { status: 500 })
   }
 }

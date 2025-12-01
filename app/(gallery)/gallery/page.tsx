@@ -23,7 +23,7 @@ export default function GalleryPage() {
     location?: string
     bedrooms?: number
     bathrooms?: number
-    carasoleImg?: any
+    carasoleImg?: Array<{ src: string; alt: string }>
     status?: string
   } | null>(null)
   const [modalOpen, setModalOpen] = useState(false)
@@ -256,7 +256,9 @@ export default function GalleryPage() {
                 backgroundColor="#f5f5f5"
               >
                 <Box width={["95%", "95%", "95%", "90%", "85%", "80%"]}>
-                  <DefaultSlider items={clickedImage.carasoleImg?.[0]} />
+                  {clickedImage.carasoleImg && clickedImage.carasoleImg.length > 0 && (
+                    <DefaultSlider items={clickedImage.carasoleImg} />
+                  )}
                 </Box>
 
                 {/* Navigation Arrows */}
