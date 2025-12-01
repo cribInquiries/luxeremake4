@@ -29,8 +29,9 @@ export function StructuredData() {
     ],
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+61-123-456-789",
+      telephone: "+61-406-631-461",
       contactType: "customer service",
+      email: "info@luxemanagements.com",
       availableLanguage: "English",
       areaServed: "Adelaide, South Australia",
     },
@@ -43,7 +44,8 @@ export function StructuredData() {
     name: "Luxe Managements",
     image: "https://www.luxemanagements.com/logo.png",
     url: "https://www.luxemanagements.com",
-    telephone: "+61 123 456 789",
+    telephone: "+61 406 631 461",
+    email: "info@luxemanagements.com",
     priceRange: "$$",
     address: {
       "@type": "PostalAddress",
@@ -62,6 +64,12 @@ export function StructuredData() {
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         opens: "09:00",
         closes: "17:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "Saturday",
+        opens: "10:00",
+        closes: "14:00",
       },
     ],
     aggregateRating: {
