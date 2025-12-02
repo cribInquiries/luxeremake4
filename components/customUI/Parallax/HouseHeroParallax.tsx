@@ -1,130 +1,82 @@
-// components/HouseHeroParallax.js
-import React from "react";
-import { Box, VStack } from "@chakra-ui/react";
-import Image from "next/image";
-import { Parallax, ParallaxProvider } from "react-scroll-parallax";
+import { Box, VStack } from "@chakra-ui/react"
+import Image from "next/image"
+import { Parallax, ParallaxProvider } from "react-scroll-parallax"
 
 // your full products array
 const products = [
   {
-   
     link: "https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&q=75",
   },
   {
-   
     link: "https://images.pexels.com/photos/2631746/pexels-photo-2631746.jpeg?auto=compress&cs=tinysrgb&q=75",
   },
   {
-   
     link: "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&q=75",
   },
   {
-   
     link: "https://images.pexels.com/photos/1590336/pexels-photo-1590336.jpeg?auto=compress&cs=tinysrgb&q=75",
   },
   {
-   
     link: "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&q=75",
   },
   {
-   
     link: "https://images.pexels.com/photos/262405/pexels-photo-262405.jpeg?auto=compress&cs=tinysrgb&q=75",
   },
   {
-   
     link: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&q=75",
   },
   {
-   
     link: "https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg?auto=compress&cs=tinysrgb&q=75",
   },
   {
-   
     link: "https://images.pexels.com/photos/2480608/pexels-photo-2480608.jpeg?auto=compress&cs=tinysrgb&q=75",
   },
   {
-   
     link: "https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg?auto=compress&cs=tinysrgb&q=75",
   },
   {
-   
     link: "https://images.pexels.com/photos/323775/pexels-photo-323775.jpeg?auto=compress&cs=tinysrgb&q=75",
   },
   {
-   
     link: "https://images.pexels.com/photos/2371975/pexels-photo-2371975.jpeg?auto=compress&cs=tinysrgb&q=75",
   },
   {
-   
     link: "https://images.pexels.com/photos/1586298/pexels-photo-1586298.jpeg?auto=compress&cs=tinysrgb&q=75",
   },
   {
-   
     link: "https://images.pexels.com/photos/2462015/pexels-photo-2462015.jpeg?auto=compress&cs=tinysrgb&q=75",
   },
   {
-   
     link: "https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&q=75",
   },
   {
-   
     link: "https://images.pexels.com/photos/2631746/pexels-photo-2631746.jpeg?auto=compress&cs=tinysrgb&q=75",
   },
   {
-   
     link: "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&q=75",
   },
   {
-   
     link: "https://images.pexels.com/photos/1590336/pexels-photo-1590336.jpeg?auto=compress&cs=tinysrgb&q=75",
   },
   {
-   
     link: "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&q=75",
   },
   {
-   
     link: "https://images.pexels.com/photos/262405/pexels-photo-262405.jpeg?auto=compress&cs=tinysrgb&q=75",
   },
   {
-   
     link: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&q=75",
   },
   {
-   
     link: "https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg?auto=compress&cs=tinysrgb&q=75",
   },
   {
-   
     link: "https://images.pexels.com/photos/2480608/pexels-photo-2480608.jpeg?auto=compress&cs=tinysrgb&q=75",
   },
   {
-   
     link: "https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg?auto=compress&cs=tinysrgb&q=75",
   },
-  // {
-   
-  //   link: "https://images.pexels.com/photos/323775/pexels-photo-323775.jpeg?auto=compress&cs=tinysrgb&q=75",
-  // },
-  // {
-   
-  //   link: "https://images.pexels.com/photos/2371975/pexels-photo-2371975.jpeg?auto=compress&cs=tinysrgb&q=75",
-  // },
-  // {
-   
-  //   link: "https://images.pexels.com/photos/1586298/pexels-photo-1586298.jpeg?auto=compress&cs=tinysrgb&q=75",
-  // },
-  // {
-   
-  //   link: "https://images.pexels.com/photos/2462015/pexels-photo-2462015.jpeg?auto=compress&cs=tinysrgb&q=75",
-  // },
-  // {
-   
-  //   link: "https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&q=75",
-  // },
-
-  // …and any others…
-];
+]
 
 // custom Pexels loader (resize & compress)
 const pexelsLoader = ({
@@ -132,17 +84,17 @@ const pexelsLoader = ({
   width,
   quality,
 }: {
-  src: string;
-  width: number;
-  quality?: number;
-}) => `${src}?auto=compress&cs=tinysrgb&w=${width}&q=${quality || 75}`;
+  src: string
+  width: number
+  quality?: number
+}) => `${src}?auto=compress&cs=tinysrgb&w=${width}&q=${quality || 75}`
 
 export default function HouseHeroParallax() {
-  const chunkSize = 8;
-  const chunked = [];
+  const chunkSize = 8
+  const chunked = []
 
   for (let i = 0; i < products.length; i += chunkSize) {
-    chunked.push(products.slice(i, i + chunkSize));
+    chunked.push(products.slice(i, i + chunkSize))
   }
 
   return (
@@ -170,14 +122,14 @@ export default function HouseHeroParallax() {
                   transition="all 0.5s ease"
                 >
                   <Image
-                    
-                  
-                    quality={70}
+                    priority={idx === 0 && i < 3}
+                    quality={75}
                     loader={pexelsLoader}
-                    src={product.link}
+                    src={product.link || "/placeholder.svg"}
                     alt={"Stunning house collage"}
-                    layout="fill"
-                    objectFit="cover"
+                    fill
+                    sizes="(max-width: 640px) 200px, 500px"
+                    style={{ objectFit: "cover" }}
                   />
                 </Box>
               ))}
@@ -186,5 +138,5 @@ export default function HouseHeroParallax() {
         </Parallax>
       ))}
     </ParallaxProvider>
-  );
+  )
 }
